@@ -1,0 +1,263 @@
+TITLE: Overview of course material: Physics 321, Classical Mechanics
+AUTHOR: Department of Physics and Astronomy, Michigan State University, USA
+
+
+===== Lecture notes as Jupyter-book =====
+
+
+
+
+
+
+
+
+
+
+The teaching material is produced in various formats for printing and on-screen reading.
+
+
+======= Classical Mechanics  Notes =======
+
+===== Week 2 January 10-14: Introduction to the course, simple motion problems and forces =====
+
+
+
+ * LaTeX PDF:
+   * For printing:
+     * "Standard one-page format":"http://mhjensen.github.io/Physics321/doc/pub/week2/pdf/week2.pdf"
+ * HTML:
+   * "Plain html": "http://mhjensen.github.io/Physics321/doc/pub/week2/html/week2.html"
+   * "reveal.js beige slide style":"http://mhjensen.github.io/Physics321/doc/pub/week2/html/week2-reveal.html"
+   * "Bootstrap  slide style, easy for reading on mobile devices":"http://mhjensen.github.io/Physics321/doc/pub/week2/html/week2-bs.html"
+ * iPython notebook:
+   * "ipynb file":"http://mhjensen.github.io/Physics321/doc/pub/week2/ipynb/week2.ipynb"
+
+
+===== Week 3 January 17-21: From simple motion problems to forces, analytical and numerical approaches =====
+
+
+
+ * LaTeX PDF:
+   * For printing:
+     * "Standard one-page format":"http://mhjensen.github.io/Physics321/doc/pub/week3/pdf/week3.pdf"
+ * HTML:
+   * "Plain html": "http://mhjensen.github.io/Physics321/doc/pub/week3/html/week3.html"
+   * "reveal.js beige slide style":"http://mhjensen.github.io/Physics321/doc/pub/week3/html/week3-reveal.html"
+   * "Bootstrap  slide style, easy for reading on mobile devices":"http://mhjensen.github.io/Physics321/doc/pub/week3/html/week3-bs.html"
+ * iPython notebook:
+   * "ipynb file":"http://mhjensen.github.io/Physics321/doc/pub/week3/ipynb/week3.ipynb"
+
+
+===== Week 4 January 24-28: Forces, Analytical studies, simple experiments and numerical approaches =====
+
+
+
+ * LaTeX PDF:
+   * For printing:
+     * "Standard one-page format":"http://mhjensen.github.io/Physics321/doc/pub/week4/pdf/week4.pdf"
+ * HTML:
+   * "Plain html": "http://mhjensen.github.io/Physics321/doc/pub/week4/html/week4.html"
+   * "reveal.js beige slide style":"http://mhjensen.github.io/Physics321/doc/pub/week4/html/week4-reveal.html"
+   * "Bootstrap  slide style, easy for reading on mobile devices":"http://mhjensen.github.io/Physics321/doc/pub/week4/html/week4-bs.html"
+ * iPython notebook:
+   * "ipynb file":"http://mhjensen.github.io/Physics321/doc/pub/week4/ipynb/week4.ipynb"
+
+
+===== Week 5 January 31-February 4: Work and energy, conservative forces and conservation of important quantities =====
+
+
+
+ * LaTeX PDF:
+   * For printing:
+     * "Standard one-page format":"http://mhjensen.github.io/Physics321/doc/pub/week5/pdf/week5.pdf"
+ * HTML:
+   * "Plain html": "http://mhjensen.github.io/Physics321/doc/pub/week5/html/week5.html"
+   * "reveal.js beige slide style":"http://mhjensen.github.io/Physics321/doc/pub/week5/html/week5-reveal.html"
+   * "Bootstrap  slide style, easy for reading on mobile devices":"http://mhjensen.github.io/Physics321/doc/pub/week5/html/week5-bs.html"
+ * iPython notebook:
+   * "ipynb file":"http://mhjensen.github.io/Physics321/doc/pub/week5/ipynb/week5.ipynb"
+
+
+===== Week 6 February 7-11: Conservative forces, momentum and angular momentum conservation =====
+
+
+
+ * LaTeX PDF:
+   * For printing:
+     * "Standard one-page format":"http://mhjensen.github.io/Physics321/doc/pub/week6/pdf/week6.pdf"
+ * HTML:
+   * "Plain html": "http://mhjensen.github.io/Physics321/doc/pub/week6/html/week6.html"
+   * "reveal.js beige slide style":"http://mhjensen.github.io/Physics321/doc/pub/week6/html/week6-reveal.html"
+   * "Bootstrap  slide style, easy for reading on mobile devices":"http://mhjensen.github.io/Physics321/doc/pub/week6/html/week6-bs.html"
+ * iPython notebook:
+   * "ipynb file":"http://mhjensen.github.io/Physics321/doc/pub/week6/ipynb/week6.ipynb"
+
+
+===== Week 7 February 14-18: Summary conservative forces and start Harmonic oscillations =====
+
+
+
+ * LaTeX PDF:
+   * For printing:
+     * "Standard one-page format":"http://mhjensen.github.io/Physics321/doc/pub/week7/pdf/week7.pdf"
+ * HTML:
+   * "Plain html": "http://mhjensen.github.io/Physics321/doc/pub/week7/html/week7.html"
+   * "reveal.js beige slide style":"http://mhjensen.github.io/Physics321/doc/pub/week7/html/week7-reveal.html"
+   * "Bootstrap  slide style, easy for reading on mobile devices":"http://mhjensen.github.io/Physics321/doc/pub/week7/html/week7-bs.html"
+ * iPython notebook:
+   * "ipynb file":"http://mhjensen.github.io/Physics321/doc/pub/week7/ipynb/week7.ipynb"
+
+
+===== Week 8 February 21-25: Harmonic oscillations and various types of motion =====
+
+
+
+ * LaTeX PDF:
+   * For printing:
+     * "Standard one-page format":"http://mhjensen.github.io/Physics321/doc/pub/week8/pdf/week8.pdf"
+ * HTML:
+   * "Plain html": "http://mhjensen.github.io/Physics321/doc/pub/week8/html/week8.html"
+   * "reveal.js beige slide style":"http://mhjensen.github.io/Physics321/doc/pub/week8/html/week8-reveal.html"
+   * "Bootstrap  slide style, easy for reading on mobile devices":"http://mhjensen.github.io/Physics321/doc/pub/week8/html/week8-bs.html"
+ * iPython notebook:
+   * "ipynb file":"http://mhjensen.github.io/Physics321/doc/pub/week8/ipynb/week8.ipynb"
+
+
+===== Week 9 February 28-March 4: Harmonic oscillations and damped motion =====
+
+
+
+ * LaTeX PDF:
+   * For printing:
+     * "Standard one-page format":"http://mhjensen.github.io/Physics321/doc/pub/week9/pdf/week9.pdf"
+ * HTML:
+   * "Plain html": "http://mhjensen.github.io/Physics321/doc/pub/week9/html/week9.html"
+   * "reveal.js beige slide style":"http://mhjensen.github.io/Physics321/doc/pub/week9/html/week9-reveal.html"
+   * "Bootstrap  slide style, easy for reading on mobile devices":"http://mhjensen.github.io/Physics321/doc/pub/week9/html/week9-bs.html"
+ * iPython notebook:
+   * "ipynb file":"http://mhjensen.github.io/Physics321/doc/pub/week9/ipynb/week9.ipynb"
+
+
+===== Week 11 March 14-18: Harmonic oscillations: forced oscilaltions ann Fourier Series =====
+
+
+
+ * LaTeX PDF:
+   * For printing:
+     * "Standard one-page format":"http://mhjensen.github.io/Physics321/doc/pub/week10/pdf/week10.pdf"
+ * HTML:
+   * "Plain html": "http://mhjensen.github.io/Physics321/doc/pub/week10/html/week10.html"
+   * "reveal.js beige slide style":"http://mhjensen.github.io/Physics321/doc/pub/week10/html/week10-reveal.html"
+   * "Bootstrap  slide style, easy for reading on mobile devices":"http://mhjensen.github.io/Physics321/doc/pub/week10/html/week10-bs.html"
+ * iPython notebook:
+   * "ipynb file":"http://mhjensen.github.io/Physics321/doc/pub/week10/ipynb/week10.ipynb"
+
+
+===== Week 12 March 21-28: Two-body problems and Central Forces =====
+
+
+
+ * LaTeX PDF:
+   * For printing:
+     * "Standard one-page format":"http://mhjensen.github.io/Physics321/doc/pub/week11/pdf/week11.pdf"
+ * HTML:
+   * "Plain html": "http://mhjensen.github.io/Physics321/doc/pub/week11/html/week11.html"
+   * "reveal.js beige slide style":"http://mhjensen.github.io/Physics321/doc/pub/week11/html/week11-reveal.html"
+   * "Bootstrap  slide style, easy for reading on mobile devices":"http://mhjensen.github.io/Physics321/doc/pub/week11/html/week11-bs.html"
+ * iPython notebook:
+   * "ipynb file":"http://mhjensen.github.io/Physics321/doc/pub/week11/ipynb/week11.ipynb"
+
+
+===== Week 13 March 28- April 1: Two-body problems and Central Forces =====
+
+
+
+ * LaTeX PDF:
+   * For printing:
+     * "Standard one-page format":"http://mhjensen.github.io/Physics321/doc/pub/week12/pdf/week12.pdf"
+ * HTML:
+   * "Plain html": "http://mhjensen.github.io/Physics321/doc/pub/week12/html/week12.html"
+   * "reveal.js beige slide style":"http://mhjensen.github.io/Physics321/doc/pub/week12/html/week12-reveal.html"
+   * "Bootstrap  slide style, easy for reading on mobile devices":"http://mhjensen.github.io/Physics321/doc/pub/week12/html/week12-bs.html"
+ * iPython notebook:
+   * "ipynb file":"http://mhjensen.github.io/Physics321/doc/pub/week12/ipynb/week12.ipynb"
+
+
+===== Week 14 April 4-8: Two-body problems and scattering =====
+
+
+
+ * LaTeX PDF:
+   * For printing:
+     * "Standard one-page format":"http://mhjensen.github.io/Physics321/doc/pub/week13/pdf/week13.pdf"
+ * HTML:
+   * "Plain html": "http://mhjensen.github.io/Physics321/doc/pub/week13/html/week13.html"
+   * "reveal.js beige slide style":"http://mhjensen.github.io/Physics321/doc/pub/week13/html/week13-reveal.html"
+   * "Bootstrap  slide style, easy for reading on mobile devices":"http://mhjensen.github.io/Physics321/doc/pub/week13/html/week13-bs.html"
+ * iPython notebook:
+   * "ipynb file":"http://mhjensen.github.io/Physics321/doc/pub/week13/ipynb/week13.ipynb"
+
+
+===== Week 15 April 11-15:  Two-body scattering and Lagrangians and the Calculus of Variations =====
+
+
+
+ * LaTeX PDF:
+   * For printing:
+     * "Standard one-page format":"http://mhjensen.github.io/Physics321/doc/pub/week14/pdf/week14.pdf"
+ * HTML:
+   * "Plain html": "http://mhjensen.github.io/Physics321/doc/pub/week14/html/week14.html"
+   * "reveal.js beige slide style":"http://mhjensen.github.io/Physics321/doc/pub/week14/html/week14-reveal.html"
+   * "Bootstrap  slide style, easy for reading on mobile devices":"http://mhjensen.github.io/Physics321/doc/pub/week14/html/week14-bs.html"
+ * iPython notebook:
+   * "ipynb file":"http://mhjensen.github.io/Physics321/doc/pub/week14/ipynb/week14.ipynb"
+
+
+===== Week 16 April 18-22: Lagrangians and the Calculus of Variations =====
+
+
+
+ * LaTeX PDF:
+   * For printing:
+     * "Standard one-page format":"http://mhjensen.github.io/Physics321/doc/pub/week15/pdf/week15.pdf"
+ * HTML:
+   * "Plain html": "http://mhjensen.github.io/Physics321/doc/pub/week15/html/week15.html"
+   * "reveal.js beige slide style":"http://mhjensen.github.io/Physics321/doc/pub/week15/html/week15-reveal.html"
+   * "Bootstrap  slide style, easy for reading on mobile devices":"http://mhjensen.github.io/Physics321/doc/pub/week15/html/week15-bs.html"
+ * iPython notebook:
+   * "ipynb file":"http://mhjensen.github.io/Physics321/doc/pub/week15/ipynb/week15.ipynb"
+
+
+===== Week 17 April 25-29: TBA =====
+
+
+
+ * LaTeX PDF:
+   * For printing:
+     * "Standard one-page format":"http://mhjensen.github.io/Physics321/doc/pub/week16/pdf/week16.pdf"
+ * HTML:
+   * "Plain html": "http://mhjensen.github.io/Physics321/doc/pub/week16/html/week16.html"
+   * "reveal.js beige slide style":"http://mhjensen.github.io/Physics321/doc/pub/week16/html/week16-reveal.html"
+   * "Bootstrap  slide style, easy for reading on mobile devices":"http://mhjensen.github.io/Physics321/doc/pub/week16/html/week16-bs.html"
+ * iPython notebook:
+   * "ipynb file":"http://mhjensen.github.io/Physics321/doc/pub/week16/ipynb/week16.ipynb"
+
+
+===== Week 18 May 2-6: Finals week =====
+
+
+
+ * LaTeX PDF:
+   * For printing:
+     * "Standard one-page format":"http://mhjensen.github.io/Physics321/doc/pub/week17/pdf/week17.pdf"
+ * HTML:
+   * "Plain html": "http://mhjensen.github.io/Physics321/doc/pub/week17/html/week17.html"
+   * "reveal.js beige slide style":"http://mhjensen.github.io/Physics321/doc/pub/week17/html/week17-reveal.html"
+   * "Bootstrap  slide style, easy for reading on mobile devices":"http://mhjensen.github.io/Physics321/doc/pub/week17/html/week17-bs.html"
+ * iPython notebook:
+   * "ipynb file":"http://mhjensen.github.io/Physics321/doc/pub/week17/ipynb/week17.ipynb"
+
+
+
+
+   
