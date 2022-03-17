@@ -7,18 +7,32 @@ The lectures will start with the basic ideas of quantum computing. Thereafter, t
 
 - Day 1: basics of quantum computing and central algorithms and intro to Qiskit (gates, how to use IBM’s 5-qubit computer etc)
 - Day 2: Discussions of Entaglement, quantum state preparation, solving quantum mechanical problems, simulation of the Schroedinger equation, many-body problems, simple Hamiltonians like pairing hamiltonian, Lipkin model, simple spin hamiltonians
-- Day 3: Continuation of themes from day 2, quantum tomography, tests of error correction on IBM’s 5-qubit machine, quantum field theory and quantum computing
+- Day 3: Continuation of themes from day 2, quantum tomography, tests of error correction on IBM’s 5-qubit machine, quantum field theory and quantum computing.
+- Possible teachers:
+  -  Ben Hall on many-body and QC
+  -  Ryan LaRose, error correction
+  -  Jacob Watkins, quantum simulations
+  -  Giovanni Pederiva, QFT and QC
 
 
 
 ## Course Content and detailed plan
 The lecture plan is as follows.
-
+Add lab tour. Split into advanced and basic participants. 
+Require: quantum mechanics at undergrad level, linear algebra, python programming. Add refresher on python and other material. In person plus hybrid, lectures on zoom, recorded. Breakout sessions could be online.
 ### Monday June 20
 
 - Lectures 9am-12.30pm
-- Lunch  1230pm-2pm
-- Lectures and hands-on sessions 2pm-5pm
+  - 9am-945am
+  - 10am-1045am
+  - coffee break 1045-11am
+  - 11-1145
+  - 12-1245
+- Lunch  1245pm-2pm
+- Hands-on sessions 2pm-5pm, with small break. Tie in on day one lectures
+  - 2pm-245pm
+  - 3pm-345pm
+  - 4pm-5pm
 
 ### Tuesday June 21
 
