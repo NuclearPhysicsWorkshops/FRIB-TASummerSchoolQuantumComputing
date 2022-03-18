@@ -1,3 +1,20 @@
 running mako on course.do.txt to make tmp_mako__course.do.txt
 Translating doconce text in tmp_mako__course.do.txt to html
 output in course.html
+running mako on course.do.txt to make tmp_mako__course.do.txt
+*** mako error: mako.exceptions.SyntaxException
+   (SyntaxError) EOL while scanning string literal (<unknown>, line 6) ("pub_url = 'http://mhjensen.github.io/Physics321/do") at line: 9 char: 1
+This could indicate that the mako template code is not compatible with the version of Python currently used by DocOnce and mako, which is Python 3.9.10
+running mako on course.do.txt to make tmp_mako__course.do.txt
+*** mako error: mako.exceptions.SyntaxException
+   (SyntaxError) EOL while scanning string literal (<unknown>, line 6) ("pub_url = 'http://mhjensen.github.io/Physics321/do") at line: 9 char: 1
+This could indicate that the mako template code is not compatible with the version of Python currently used by DocOnce and mako, which is Python 3.9.10
+avoided abortion because of --no-abort
+*** mako error:
+running mako on course.do.txt to make tmp_mako__course.do.txt
+*** mako error: mako.exceptions.SyntaxException
+   (SyntaxError) EOL while scanning string literal (<unknown>, line 6) ("pub_url = 'http://mhjensen.github.io/Physics321/do") at line: 9 char: 1
+This could indicate that the mako template code is not compatible with the version of Python currently used by DocOnce and mako, which is Python 3.9.10
+running mako on course.do.txt to make tmp_mako__course.do.txt
+Translating doconce text in tmp_mako__course.do.txt to html
+output in course.html
