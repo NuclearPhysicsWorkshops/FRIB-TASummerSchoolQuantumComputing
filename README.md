@@ -56,17 +56,22 @@ All the above topics will be supported by examples, hands-on exercises and proje
 
 ## Detailed lecture plan 
 
-Lectures are 50 min and there is a small break of 10 min between each
-lecture. Longer breaks at 1030am-11am and 3pm-330pm.
-In-person attendance is the main teaching modus, but lectures will be broadcasted via zoom. The lectures will also be recorded and we will offer breakout sessions via zoom for the hands-on sessions.
+Lectures are 50 minutes and there is a small break of 10 minutes
+between each lecture. Longer breaks at 1030am-11am and 3pm-330pm.
+In-person attendance is the main teaching modus, but lectures will be
+broadcasted via zoom. The lectures will also be recorded and we will
+offer breakout sessions via zoom for the hands-on sessions.
 
-Acronyms for teachers (teaching team will be updated)
+### Teachers (teaching team will be updated)
 - AB = Alexei Bazavov
 - BH = Benjamin Hall
 - DL = Dean Lee
 - JW = Jacob Watkins
 - MHJ = Morten Hjorth-Jensen
 - RL = Ryan Larose
+
+
+
 ### Monday June 20 (Teachers AB, BH, DL, JW, MHJ, and RL)
 - 8am-830am: Welcome and registration
 - 830am-930am: Introduction to quantum computing, qubits and systems of qubits
@@ -108,7 +113,7 @@ Acronyms for teachers (teaching team will be updated)
 You are expected to have operating programming skills in programming
 languages like Python (preferred) and/or Fortran, C++, Julia or
 similar and knowledge of quantum mechanics at an intermediate level
-(senior undergraduate and beginning graduate). Knowlegde of linear
+(senior undergraduate and/or beginning graduate). Knowlegde of linear
 algebra is essential.  Additional modules for self-teaching on Python
-and quantum mechanics are also provided.
+and quantum mechanics are also provided. 
 
