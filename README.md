@@ -32,9 +32,10 @@ the lattice, in-medium similarity renormalization group and coupled
 cluster theories.
 
 
-## Organizers
+## Organizers:
 Alexei Bazavov (MSU), Scott Bogner (MSU), Heiki Hergert (MSU), Matthew Hirn (MSU), Morten Hjorth-Jensen (MSU), Dean Lee (MSU), Huey-Wen Lin (MSU), and Andrea Shindler (MSU)
-### Contact person: Morten Hjorth-Jensen, hjensen@msu.edu
+### Contact person:
+Morten Hjorth-Jensen, hjensen@msu.edu
 
 ## Aims and Learning Outcomes
 
