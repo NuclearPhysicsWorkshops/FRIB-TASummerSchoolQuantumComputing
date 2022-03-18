@@ -34,7 +34,7 @@ cluster theories.
 
 ## Aims and Learning Outcomes
 
-###  The following topics will be covered
+###  The following topics will be covered (text to come)
 - 
 - 
 All the above topics will be supported by examples, hands-on exercises and project work.
@@ -52,7 +52,7 @@ All the above topics will be supported by examples, hands-on exercises and proje
 ## Detailed lecture plan 
 
 Lectures are 50 min and there is a small break of 10 min between each
-lecture. Longer breaks at 1030am-11am and 4pm-430pm.
+lecture. Longer breaks at 1030am-11am and 3pm-330pm.
 In-person attendance is the main teaching modus, but lectures will be broadcasted via zoom. The lectures will also be recorded and we will offer breakout sessions via zoom for the hands-on sessions.
 
 Acronyms for teachers (teaching team will be updated)
@@ -96,7 +96,7 @@ Acronyms for teachers (teaching team will be updated)
 - 3pm-330pm: Break, coffee, tea etc
 - 330pm-6pm: hands-on sessions and problem solving
 
-##  Learning outcomes
+##  Learning outcomes (text to come)
 
 ## Prerequisites
 
