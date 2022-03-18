@@ -10,21 +10,21 @@ DATE: June 20-22
 pub_url = 'http://mhjensen.github.io/Physics321/doc/pub'
 published = ['lecture1', 'lecture2', 'lecture3', 'lecture4', 'handson1', 'lecture5', 'lecture6', 'lecture7', 'lecture8', 'handson2', 'lecture9', 'lecture10', 'lecture11', 'lecture12', 'handson3',]
 chapters = {
- 'lecture1': 'Lecture 1, Monday June 20, 9am-950am: Introduction to quantum computing, qubits and systems of qubits',
- 'lecture2': 'Lecture 2, Monday June 20, 10am-1050am: Measurements, Superposition and Entanglement',
- 'lecture3': 'Lecture 3, Monday June 20, 11am-1150am: Gates, unitary transformations and quantum circuits',
- 'lecture4': 'Lecture 4, Monday June 20, 12pm-1250pm: Quantum algorithms and implementation on a real quantum computer',
- 'handson1': 'Lecture 1, Monday June 20, 2pm-5pm, first hands-on session',
- 'lecture5': 'Lecture 1, Tuesday June 21, 9am-950am: Quantum algorithms for quantum mechanical systems',
- 'lecture6': 'Lecture 2, Tuesday June 21, 10am-1050am: Quantum simulation of the Schroedinger equation',
- 'lecture7': 'Lecture 3, Tuesday June 21, 11am-1150am: Quantum computing and nuclear few- and many-body systems',
-  'lecture8': 'Lecture 4, Tuesday June 21, 12pm-1250pm:  Quantum simulations on a real quantum computer',
- 'handson2': 'Lecture 2, Tuesday June 20, 2pm-5pm second hands-on session',
- 'lecture9': 'Lecture 9, Wednesday June 22, 9am-950am: ',
- 'lecture10': 'Lecture 10, Wednesday June 22, 10am-1050am: ',
- 'lecture11': 'Lecture 11, Wednesday June 22, 11am-1150am: ',
- 'lecture12': 'Lecture 12, Wednesday June 22, 12pm-1250pm: ',
- 'handson3': 'Lecture 3, Wednesday June 22, 2pm-5pm third hands-on session',
+ 'lecture1': 'Monday June 20, 9am-950am: Introduction to quantum computing, qubits and systems of qubits',
+ 'lecture2': 'Monday June 20, 10am-1050am: Measurements, Superposition and Entanglement',
+ 'lecture3': 'Monday June 20, 11am-1150am: Gates, unitary transformations and quantum circuits',
+ 'lecture4': 'Monday June 20, 12pm-1250pm: Quantum algorithms and implementation on a real quantum computer',
+ 'handson1': 'Monday June 20, 2pm-5pm, first hands-on session',
+ 'lecture5': 'Tuesday June 21, 9am-950am: Quantum algorithms for quantum mechanical systems',
+ 'lecture6': 'Tuesday June 21, 10am-1050am: Quantum simulation of the Schroedinger equation',
+ 'lecture7': 'Tuesday June 21, 11am-1150am: Quantum computing and nuclear few- and many-body systems',
+  'lecture8': 'Tuesday June 21, 12pm-1250pm:  Quantum simulations on a real quantum computer',
+ 'handson2': 'Tuesday June 20, 2pm-5pm second hands-on session',
+ 'lecture9': 'Wednesday June 22, 9am-950am: ',
+ 'lecture10': 'Wednesday June 22, 10am-1050am: ',
+ 'lecture11': 'Wednesday June 22, 11am-1150am: ',
+ 'lecture12': 'Wednesday June 22, 12pm-1250pm: ',
+ 'handson3': 'Wednesday June 22, 2pm-5pm third hands-on session',
 }
 %>
 

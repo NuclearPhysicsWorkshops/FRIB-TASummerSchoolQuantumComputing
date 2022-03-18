@@ -19,7 +19,7 @@ The teaching material is produced in various formats for printing and on-screen 
 
 ======= Classical Mechanics  Notes =======
 
-===== Lecture 1, Monday June 20, 9am-950am: Introduction to quantum computing, qubits and systems of qubits =====
+===== Monday June 20, 9am-950am: Introduction to quantum computing, qubits and systems of qubits =====
 
 
 
@@ -34,7 +34,7 @@ The teaching material is produced in various formats for printing and on-screen 
    * "ipynb file":"http://mhjensen.github.io/Physics321/doc/pub/lecture1/ipynb/lecture1.ipynb"
 
 
-===== Lecture 2, Monday June 20, 10am-1050am: Measurements, Superposition and Entanglement =====
+===== Monday June 20, 10am-1050am: Measurements, Superposition and Entanglement =====
 
 
 
@@ -49,7 +49,7 @@ The teaching material is produced in various formats for printing and on-screen 
    * "ipynb file":"http://mhjensen.github.io/Physics321/doc/pub/lecture2/ipynb/lecture2.ipynb"
 
 
-===== Lecture 3, Monday June 20, 11am-1150am: Gates, unitary transformations and quantum circuits =====
+===== Monday June 20, 11am-1150am: Gates, unitary transformations and quantum circuits =====
 
 
 
@@ -64,7 +64,7 @@ The teaching material is produced in various formats for printing and on-screen 
    * "ipynb file":"http://mhjensen.github.io/Physics321/doc/pub/lecture3/ipynb/lecture3.ipynb"
 
 
-===== Lecture 4, Monday June 20, 12pm-1250pm: Quantum algorithms and implementation on a real quantum computer =====
+===== Monday June 20, 12pm-1250pm: Quantum algorithms and implementation on a real quantum computer =====
 
 
 
@@ -79,7 +79,7 @@ The teaching material is produced in various formats for printing and on-screen 
    * "ipynb file":"http://mhjensen.github.io/Physics321/doc/pub/lecture4/ipynb/lecture4.ipynb"
 
 
-===== Lecture 1, Monday June 20, 2pm-5pm, first hands-on session =====
+===== Monday June 20, 2pm-5pm, first hands-on session =====
 
 
 
@@ -94,7 +94,7 @@ The teaching material is produced in various formats for printing and on-screen 
    * "ipynb file":"http://mhjensen.github.io/Physics321/doc/pub/handson1/ipynb/handson1.ipynb"
 
 
-===== Lecture 1, Tuesday June 21, 9am-950am: Quantum algorithms for quantum mechanical systems =====
+===== Tuesday June 21, 9am-950am: Quantum algorithms for quantum mechanical systems =====
 
 
 
@@ -109,7 +109,7 @@ The teaching material is produced in various formats for printing and on-screen 
    * "ipynb file":"http://mhjensen.github.io/Physics321/doc/pub/lecture5/ipynb/lecture5.ipynb"
 
 
-===== Lecture 2, Tuesday June 21, 10am-1050am: Quantum simulation of the Schroedinger equation =====
+===== Tuesday June 21, 10am-1050am: Quantum simulation of the Schroedinger equation =====
 
 
 
@@ -124,7 +124,7 @@ The teaching material is produced in various formats for printing and on-screen 
    * "ipynb file":"http://mhjensen.github.io/Physics321/doc/pub/lecture6/ipynb/lecture6.ipynb"
 
 
-===== Lecture 3, Tuesday June 21, 11am-1150am: Quantum computing and nuclear few- and many-body systems =====
+===== Tuesday June 21, 11am-1150am: Quantum computing and nuclear few- and many-body systems =====
 
 
 
@@ -139,7 +139,7 @@ The teaching material is produced in various formats for printing and on-screen 
    * "ipynb file":"http://mhjensen.github.io/Physics321/doc/pub/lecture7/ipynb/lecture7.ipynb"
 
 
-===== Lecture 4, Tuesday June 21, 12pm-1250pm:  Quantum simulations on a real quantum computer =====
+===== Tuesday June 21, 12pm-1250pm:  Quantum simulations on a real quantum computer =====
 
 
 
@@ -154,7 +154,7 @@ The teaching material is produced in various formats for printing and on-screen 
    * "ipynb file":"http://mhjensen.github.io/Physics321/doc/pub/lecture8/ipynb/lecture8.ipynb"
 
 
-===== Lecture 2, Tuesday June 20, 2pm-5pm second hands-on session =====
+===== Tuesday June 20, 2pm-5pm second hands-on session =====
 
 
 
@@ -169,7 +169,7 @@ The teaching material is produced in various formats for printing and on-screen 
    * "ipynb file":"http://mhjensen.github.io/Physics321/doc/pub/handson2/ipynb/handson2.ipynb"
 
 
-===== Lecture 9, Wednesday June 22, 9am-950am:  =====
+===== Wednesday June 22, 9am-950am:  =====
 
 
 
@@ -184,7 +184,7 @@ The teaching material is produced in various formats for printing and on-screen 
    * "ipynb file":"http://mhjensen.github.io/Physics321/doc/pub/lecture9/ipynb/lecture9.ipynb"
 
 
-===== Lecture 10, Wednesday June 22, 10am-1050am:  =====
+===== Wednesday June 22, 10am-1050am:  =====
 
 
 
@@ -199,7 +199,7 @@ The teaching material is produced in various formats for printing and on-screen 
    * "ipynb file":"http://mhjensen.github.io/Physics321/doc/pub/lecture10/ipynb/lecture10.ipynb"
 
 
-===== Lecture 11, Wednesday June 22, 11am-1150am:  =====
+===== Wednesday June 22, 11am-1150am:  =====
 
 
 
@@ -214,7 +214,7 @@ The teaching material is produced in various formats for printing and on-screen 
    * "ipynb file":"http://mhjensen.github.io/Physics321/doc/pub/lecture11/ipynb/lecture11.ipynb"
 
 
-===== Lecture 12, Wednesday June 22, 12pm-1250pm:  =====
+===== Wednesday June 22, 12pm-1250pm:  =====
 
 
 
@@ -229,7 +229,7 @@ The teaching material is produced in various formats for printing and on-screen 
    * "ipynb file":"http://mhjensen.github.io/Physics321/doc/pub/lecture12/ipynb/lecture12.ipynb"
 
 
-===== Lecture 3, Wednesday June 22, 2pm-5pm third hands-on session =====
+===== Wednesday June 22, 2pm-5pm third hands-on session =====
 
 
 
