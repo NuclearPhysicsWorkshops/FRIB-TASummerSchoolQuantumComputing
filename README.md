@@ -18,7 +18,7 @@ All the above topics will be supported by examples, hands-on exercises and proje
 
 ## Practicalities
 
-1. Four lectures per day Monday through Wednesday, starting at 830am, see schedule below
+1. Five lectures per day Monday through Wednesday, starting at 830am, see schedule below
 2. Hands-on sessions in the afternoons till 6pm
 
 
@@ -27,37 +27,45 @@ All the above topics will be supported by examples, hands-on exercises and proje
 
 ## Detailed lecture plan
 
-Lectures are 50 min and there is a small break of 10 min between each lecture. Longer breaks at 1030am-11am and 3pm-330pm.
+Lectures are 50 min and there is a small break of 10 min between each lecture. Longer breaks at 1030am-11am and 4pm-430pm.
 Acronyms for teachers
 - AB = Alexei Bazavov
 - DL = Dean Lee
 - MHJ = Morten Hjorth-Jensen
 
 ### Monday June 20
-- 8am-9am: Welcome and registration
-- 9am-950am: Introduction to quantum computing, qubits and systems of qubits
-- 10am-1050am: Measurements, Superposition and Entanglement
-- 11am-1150am: Gates, unitary transformations and quantum circuits
-- 12pm-1250pm: Quantum algorithms and implementation on a real quantum computer
-- 1250pm-2pm: Lunch
-- 3pm-6pm: hands-on sessions and problem solving
+- 8am-830am: Welcome and registration
+- 830am-930am: Introduction to quantum computing, qubits and systems of qubits
+- 930am-1030am: Measurements, Superposition and Entanglement
+- 1030am-11am: Break, coffee, tea etc
+- 11am-12pm: Gates, unitary transformations and quantum circuits
+- 12pm-1pm: Lunch
+- 1pm-2pm: Quantum algorithms and implementation on a real quantum computer
+- 2pm-3pm:
+- 3pm-330pm: Break, coffee, tea etc
+- 330pm-6pm: hands-on sessions and problem solving
 
 ### Tuesday June 21
-- 9am-950am: Quantum algorithms for quantum mechanical systems
-- 10am-1050am: Quantum simulation of the Schroedinger equation
-- 11am-1150am: Quantum computing and nuclear few- and many-body systems
-- 12pm-1250pm:  Quantum simulations on a real quantum computer
-- 1250pm-2pm: Lunch
-- 3pm-6pm: hands-on sessions and problem solving and tour of FRIB
+- 830am-930am: Quantum algorithms for quantum mechanical systems
+- 930am-1030am: Quantum simulation of the Schroedinger equation
+- 1030am-11am: Break, coffee, tea etc
+- 11am-12pm: Quantum computing and nuclear few- and many-body systems
+- 12pm-1pm: Lunch
+- 1pm-2pm:  Quantum simulations on a real quantum computer
+- 2pm-3pm:
+- 3pm-330pm: Break, coffee, tea etc
+- 330pm-6pm: hands-on sessions and problem solving and tour of FRIB
 
-
-### Tuesday June 21
-- 9am-950am: Quantum Field theory and quantum computing, part I
-- 10am-1050am: Quantum Field theory and quantum computing, part II
-- 11am-1150am: Quantum error corrections, part I
-- 12pm-1250pm:  Quantum error corrections, part II
-- 1250pm-2pm: Lunch
-- 2pm-5pm: hands-on sessions and problem solving
+### Wednesday June 22
+- 830am-930am: Quantum Field theory and quantum computing, part I
+- 930am-1030am: Quantum Field theory and quantum computing, part II
+- 1030am-11am: Break, coffee, tea etc
+- 11am-12pm: Quantum error corrections, part I
+- 12pm-1pm: Lunch
+- 1pm-2pm: Quantum error corrections, part II  
+- 2pm-3pm:
+- 3pm-330pm: Break, coffee, tea etc
+- 330pm-6pm: hands-on sessions and problem solving
 
 ##  Learning outcomes
 
