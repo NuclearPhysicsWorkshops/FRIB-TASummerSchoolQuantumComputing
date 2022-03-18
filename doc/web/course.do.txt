@@ -49,7 +49,7 @@ chapters = {
 The teaching material is produced in various formats for printing and on-screen reading.
 
 
-======= Classical Mechanics  Notes =======
+======= Quantum Computing and Nuclear Few- and Many-Body Problems =======
 
 % for ch in published:
 ===== ${chapters[ch]} =====

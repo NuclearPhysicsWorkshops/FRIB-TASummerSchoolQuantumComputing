@@ -17,7 +17,7 @@ DATE: June 20-22
 The teaching material is produced in various formats for printing and on-screen reading.
 
 
-======= Classical Mechanics  Notes =======
+======= Quantum Computing and Nuclear Few- and Many-Body Problems =======
 
 ===== Monday June 20, 9am-950am: Introduction to quantum computing, qubits and systems of qubits =====
 
