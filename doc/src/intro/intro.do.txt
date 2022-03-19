@@ -1,0 +1,108 @@
+TITLE: Introduction to the FRIB-TA Summer School: Quantum Computing and Nuclear Few- and Many-Body Problems with teaching plan and learning outcomes
+AUTHOR: Facility for Rare Isotope Beams, Michigan State University, USA
+DATE: June 20
+
+
+
+===== Introduction =====
+
+
+
+
+
+
+===== Software and needed installations =====
+
+We will make extensive use of Python as programming language and its
+myriad of available libraries.  You will find
+Jupyter notebooks invaluable in your work.  You can run _R_
+codes in the Jupyter/IPython notebooks, with the immediate benefit of
+visualizing your data. You can also use compiled languages like C++,
+Rust, Julia, Fortran etc if you prefer. The focus in these lectures will be
+on Python.
+
+
+If you have Python installed (we strongly recommend Python3) and you feel
+pretty familiar with installing different packages, we recommend that
+you install the following Python packages via _pip_ as 
+
+o pip install numpy scipy matplotlib ipython scikit-learn mglearn sympy pandas pillow 
+
+For Python3, replace _pip_ with _pip3_.
+
+For OSX users we recommend, after having installed Xcode, to
+install _brew_. Brew allows for a seamless installation of additional
+software via for example 
+
+o brew install python3
+
+For Linux users, with its variety of distributions like for example the widely popular Ubuntu distribution,
+you can use _pip_ as well and simply install Python as 
+
+o sudo apt-get install python3  (or python for pyhton2.7)
+
+etc etc. 
+
+
+
+===== Python installers =====
+
+If you don't want to perform these operations separately and venture
+into the hassle of exploring how to set up dependencies and paths, we
+recommend two widely used distrubutions which set up all relevant
+dependencies for Python, namely 
+
+* "Anaconda":"https://docs.anaconda.com/", 
+
+which is an open source
+distribution of the Python and R programming languages for large-scale
+data processing, predictive analytics, and scientific computing, that
+aims to simplify package management and deployment. Package versions
+are managed by the package management system _conda_. 
+
+* "Enthought canopy":"https://www.enthought.com/product/canopy/" 
+
+is a Python
+distribution for scientific and analytic computing distribution and
+analysis environment, available for free and under a commercial
+license.
+
+Furthermore, "Google's Colab":"https://colab.research.google.com/notebooks/welcome.ipynb" is a free Jupyter notebook environment that requires 
+no setup and runs entirely in the cloud. Try it out!
+
+===== Useful Python libraries =====
+Here we list several useful Python libraries we strongly recommend (if you use anaconda many of these are already there)
+
+* "NumPy":"https://www.numpy.org/" is a highly popular library for large, multi-dimensional arrays and matrices, along with a large collection of high-level mathematical functions to operate on these arrays
+* "The pandas":"https://pandas.pydata.org/" library provides high-performance, easy-to-use data structures and data analysis tools 
+* "Xarray":"http://xarray.pydata.org/en/stable/" is a Python package that makes working with labelled multi-dimensional arrays simple, efficient, and fun!
+* "Scipy":"https://www.scipy.org/" (pronounced “Sigh Pie”) is a Python-based ecosystem of open-source software for mathematics, science, and engineering. 
+* "Matplotlib":"https://matplotlib.org/" is a Python 2D plotting library which produces publication quality figures in a variety of hardcopy formats and interactive environments across platforms.
+* "Autograd":"https://github.com/HIPS/autograd" can automatically differentiate native Python and Numpy code. It can handle a large subset of Python's features, including loops, ifs, recursion and closures, and it can even take derivatives of derivatives of derivatives
+* "SymPy":"https://www.sympy.org/en/index.html" is a Python library for symbolic mathematics. 
+* "scikit-learn":"https://scikit-learn.org/stable/" has simple and efficient tools for machine learning, data mining and data analysis
+* "TensorFlow":"https://www.tensorflow.org/" is a Python library for fast numerical computing created and released by Google
+* "Keras":"https://keras.io/" is a high-level neural networks API, written in Python and capable of running on top of TensorFlow, CNTK, or Theano
+* And many more such as "pytorch":"https://pytorch.org/",  "Theano":"https://pypi.org/project/Theano/" etc 
+
+===== Installing R, C++, cython or Julia =====
+
+You will also find it convenient to utilize _R_. We will mainly
+use Python during lectures and in various projects and exercises.
+Those of you
+already familiar with _R_ should feel free to continue using _R_, keeping
+however an eye on the parallel Python set ups. Similarly, if you are a
+Python afecionado, feel free to explore _R_ as well.  Jupyter/Ipython
+notebook allows you to run _R_ codes interactively in your
+browser. The software library _R_ is tuned to statistically analysis
+and allows for an easy usage of the tools we will discuss in these
+lectures.
+
+To install _R_ with Jupyter notebook 
+"follow the link here":"https://mpacer.org/maths/r-kernel-for-ipython-notebook"
+
+
+
+
+
+
