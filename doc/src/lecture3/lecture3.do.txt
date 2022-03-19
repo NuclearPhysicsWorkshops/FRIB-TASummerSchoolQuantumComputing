@@ -1,4 +1,4 @@
-TITLE: Introduction to quantum computing, qubits and systems of qubits
+TITLE:  Gates, unitary transformations and quantum circuits
 AUTHOR: Facility for Rare Isotope Beams, Michigan State University, USA
 DATE: June 20
 
