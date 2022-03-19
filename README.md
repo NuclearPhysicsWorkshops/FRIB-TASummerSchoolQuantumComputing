@@ -1,6 +1,6 @@
 # FRIB-TA Summer School: Quantum Computing and Nuclear Few- and Many-Body Problems
 
-### Venue: Facility of Rare Isotope Beams and National Superconducting Cyclotron Laboratory, 640 S. Shaw Lane, Michigan State University, East Lansing, 48824 Michigan
+### Venue: Facility for Rare Isotope Beams and National Superconducting Cyclotron Laboratory, 640 S. Shaw Lane, Michigan State University, East Lansing, 48824 Michigan
 
 All learning material and teaching schedule pertinent to the course is
 avaliable at this GitHub address. A simple _git clone_ of the material
