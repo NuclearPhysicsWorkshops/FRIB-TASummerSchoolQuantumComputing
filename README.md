@@ -40,9 +40,23 @@ Morten Hjorth-Jensen, hjensen@msu.edu
 ## Aims and Learning Outcomes
 
 ###  The following topics will be covered (text to come)
-- 
-- 
-All the above topics will be supported by examples, hands-on exercises and project work.
+- Basic elements of quantum computing (first day) with introduction to relevant software, including
+   - Introduction to quantum computing, qubits and systems of qubits
+   - Measurements, Superposition and Entanglement
+   - Gates, unitary transformations and quantum circuits
+   - Quantum algorithms and implementation on a real quantum computer
+
+- Simulating quantum-mechanical few- and many-body systems
+   - Quantum algorithms for quantum mechanical systems
+   - Quantum simulation of the Schroedinger equation
+   - Quantum computing and nuclear few- and many-body systems
+   - Quantum state preparation and Quantum simulations
+   - Quantum simulations on a real quantum computer
+
+- Quantum field theory and quantum computing
+- Quantum error correction
+
+All of the above topics will be supported by examples, hands-on exercises and project work.
 
 
 ## Practicalities
