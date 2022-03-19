@@ -1,5 +1,5 @@
 TITLE: FRIB-TA Summer School: Quantum Computing and Nuclear Few- and Many-Body Problems
-AUTHOR: Facility for Rare Ion Beams, Michigan State University, USA
+AUTHOR: Facility for Rare Isotope Beams, Michigan State University, USA
 DATE: June 20-22
 
 
