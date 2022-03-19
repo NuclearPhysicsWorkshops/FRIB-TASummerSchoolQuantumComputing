@@ -1,0 +1,174 @@
+<!--
+HTML file automatically generated from DocOnce source
+(https://github.com/doconce/doconce/)
+doconce format html intro.do.txt --pygments_html_style=perldoc --html_style=solarized3 --html_links_in_new_window --html_output=intro-solarized --no_mako
+-->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="DocOnce: https://github.com/doconce/doconce/" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Introduction to the FRIB-TA Summer School: Quantum Computing and Nuclear Few- and Many-Body Problems with teaching plan and learning outcomes">
+<title>Introduction to the FRIB-TA Summer School: Quantum Computing and Nuclear Few- and Many-Body Problems with teaching plan and learning outcomes</title>
+<link href="https://cdn.rawgit.com/doconce/doconce/master/bundled/html_styles/style_solarized_box/css/solarized_light_code.css" rel="stylesheet" type="text/css" title="light"/>
+<script src="https://cdn.rawgit.com/doconce/doconce/master/bundled/html_styles/style_solarized_box/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<link href="https://thomasf.github.io/solarized-css/solarized-light.min.css" rel="stylesheet">
+<style type="text/css">
+h1 {color: #b58900;}  /* yellow */
+/* h1 {color: #cb4b16;}  orange */
+/* h1 {color: #d33682;}  magenta, the original choice of thomasf */
+code { padding: 0px; background-color: inherit; }
+pre {
+  border: 0pt solid #93a1a1;
+  box-shadow: none;
+}
+div { text-align: justify; text-justify: inter-word; }
+.tab {
+  padding-left: 1.5em;
+}
+div.toc p,a {
+  line-height: 1.3;
+  margin-top: 1.1;
+  margin-bottom: 1.1;
+}
+</style>
+</head>
+
+<!-- tocinfo
+{'highest level': 2,
+ 'sections': [('Introduction', 2, None, 'introduction'),
+              ('Software and needed installations',
+               2,
+               None,
+               'software-and-needed-installations'),
+              ('Python installers', 2, None, 'python-installers'),
+              ('Useful Python libraries', 2, None, 'useful-python-libraries'),
+              ('Installing R, C++, cython or Julia',
+               2,
+               None,
+               'installing-r-c-cython-or-julia')]}
+end of tocinfo -->
+
+<body>
+<!-- ------------------- main content ---------------------- -->
+<center>
+<h1>Introduction to the FRIB-TA Summer School: Quantum Computing and Nuclear Few- and Many-Body Problems with teaching plan and learning outcomes</h1>
+</center>  <!-- document title -->
+
+<!-- author(s): Facility for Rare Isotope Beams, Michigan State University, USA -->
+<center>
+<b>Facility for Rare Isotope Beams, Michigan State University, USA</b> 
+</center>
+<!-- institution(s) -->
+<br>
+<center>
+<h4>June 20</h4>
+</center> <!-- date -->
+<br>
+<h2 id="introduction">Introduction </h2>
+<h2 id="software-and-needed-installations">Software and needed installations </h2>
+
+<p>We will make extensive use of Python as programming language and its
+myriad of available libraries.  You will find
+Jupyter notebooks invaluable in your work.  You can run <b>R</b>
+codes in the Jupyter/IPython notebooks, with the immediate benefit of
+visualizing your data. You can also use compiled languages like C++,
+Rust, Julia, Fortran etc if you prefer. The focus in these lectures will be
+on Python.
+</p>
+
+<p>If you have Python installed (we strongly recommend Python3) and you feel
+pretty familiar with installing different packages, we recommend that
+you install the following Python packages via <b>pip</b> as 
+</p>
+
+<ol>
+<li> pip install numpy scipy matplotlib ipython scikit-learn mglearn sympy pandas pillow</li> 
+</ol>
+<p>For Python3, replace <b>pip</b> with <b>pip3</b>.</p>
+
+<p>For OSX users we recommend, after having installed Xcode, to
+install <b>brew</b>. Brew allows for a seamless installation of additional
+software via for example 
+</p>
+
+<ol>
+<li> brew install python3</li>
+</ol>
+<p>For Linux users, with its variety of distributions like for example the widely popular Ubuntu distribution,
+you can use <b>pip</b> as well and simply install Python as 
+</p>
+
+<ol>
+<li> sudo apt-get install python3  (or python for pyhton2.7)</li>
+</ol>
+<p>etc etc. </p>
+<h2 id="python-installers">Python installers </h2>
+
+<p>If you don't want to perform these operations separately and venture
+into the hassle of exploring how to set up dependencies and paths, we
+recommend two widely used distrubutions which set up all relevant
+dependencies for Python, namely 
+</p>
+
+<ul>
+<li> <a href="https://docs.anaconda.com/" target="_blank">Anaconda</a>,</li> 
+</ul>
+<p>which is an open source
+distribution of the Python and R programming languages for large-scale
+data processing, predictive analytics, and scientific computing, that
+aims to simplify package management and deployment. Package versions
+are managed by the package management system <b>conda</b>. 
+</p>
+
+<ul>
+<li> <a href="https://www.enthought.com/product/canopy/" target="_blank">Enthought canopy</a></li> 
+</ul>
+<p>is a Python
+distribution for scientific and analytic computing distribution and
+analysis environment, available for free and under a commercial
+license.
+</p>
+
+<p>Furthermore, <a href="https://colab.research.google.com/notebooks/welcome.ipynb" target="_blank">Google's Colab</a> is a free Jupyter notebook environment that requires 
+no setup and runs entirely in the cloud. Try it out!
+</p>
+<h2 id="useful-python-libraries">Useful Python libraries </h2>
+<p>Here we list several useful Python libraries we strongly recommend (if you use anaconda many of these are already there)</p>
+
+<ul>
+<li> <a href="https://www.numpy.org/" target="_blank">NumPy</a> is a highly popular library for large, multi-dimensional arrays and matrices, along with a large collection of high-level mathematical functions to operate on these arrays</li>
+<li> <a href="https://pandas.pydata.org/" target="_blank">The pandas</a> library provides high-performance, easy-to-use data structures and data analysis tools</li> 
+<li> <a href="http://xarray.pydata.org/en/stable/" target="_blank">Xarray</a> is a Python package that makes working with labelled multi-dimensional arrays simple, efficient, and fun!</li>
+<li> <a href="https://www.scipy.org/" target="_blank">Scipy</a> (pronounced &#8220;Sigh Pie&#8221;) is a Python-based ecosystem of open-source software for mathematics, science, and engineering.</li> 
+<li> <a href="https://matplotlib.org/" target="_blank">Matplotlib</a> is a Python 2D plotting library which produces publication quality figures in a variety of hardcopy formats and interactive environments across platforms.</li>
+<li> <a href="https://github.com/HIPS/autograd" target="_blank">Autograd</a> can automatically differentiate native Python and Numpy code. It can handle a large subset of Python's features, including loops, ifs, recursion and closures, and it can even take derivatives of derivatives of derivatives</li>
+<li> <a href="https://www.sympy.org/en/index.html" target="_blank">SymPy</a> is a Python library for symbolic mathematics.</li> 
+<li> <a href="https://scikit-learn.org/stable/" target="_blank">scikit-learn</a> has simple and efficient tools for machine learning, data mining and data analysis</li>
+<li> <a href="https://www.tensorflow.org/" target="_blank">TensorFlow</a> is a Python library for fast numerical computing created and released by Google</li>
+<li> <a href="https://keras.io/" target="_blank">Keras</a> is a high-level neural networks API, written in Python and capable of running on top of TensorFlow, CNTK, or Theano</li>
+<li> And many more such as <a href="https://pytorch.org/" target="_blank">pytorch</a>,  <a href="https://pypi.org/project/Theano/" target="_blank">Theano</a> etc</li> 
+</ul>
+<h2 id="installing-r-c-cython-or-julia">Installing R, C++, cython or Julia </h2>
+
+<p>You will also find it convenient to utilize <b>R</b>. We will mainly
+use Python during lectures and in various projects and exercises.
+Those of you
+already familiar with <b>R</b> should feel free to continue using <b>R</b>, keeping
+however an eye on the parallel Python set ups. Similarly, if you are a
+Python afecionado, feel free to explore <b>R</b> as well.  Jupyter/Ipython
+notebook allows you to run <b>R</b> codes interactively in your
+browser. The software library <b>R</b> is tuned to statistically analysis
+and allows for an easy usage of the tools we will discuss in these
+lectures.
+</p>
+
+<p>To install <b>R</b> with Jupyter notebook 
+<a href="https://mpacer.org/maths/r-kernel-for-ipython-notebook" target="_blank">follow the link here</a>
+</p>
+
+<!-- ------------------- end of main content --------------- -->
+</body>
+</html>
+
