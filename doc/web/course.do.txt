@@ -7,7 +7,7 @@ DATE: June 20-22
 
 
 <%
-pub_url = 'http://mhjensen.github.io/Physics321/doc/pub'
+pub_url = 'https://nuclearphysicsworkshops.github.io/FRIB-TASummerSchoolQuantumComputing/doc/pub'
 published = ['intro', 'lecture1', 'lecture2', 'lecture3', 'lecture4', 'handson1', 'lecture5', 'lecture6', 'lecture7', 'lecture8', 'handson2', 'lecture9', 'lecture10', 'lecture11', 'lecture12', 'handson3',]
 chapters = {
  'intro': 'Introduction to the summer school with teaching plans and learning outcomes',
