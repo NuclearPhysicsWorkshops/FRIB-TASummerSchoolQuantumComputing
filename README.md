@@ -80,9 +80,9 @@ offer breakout sessions via zoom for the hands-on sessions.
 - AB = Alexei Bazavov
 - BH = Benjamin Hall
 - DL = Dean Lee
-- JW = Jacob Watkins (TBC)
+- JW = Jacob Watkins
 - MHJ = Morten Hjorth-Jensen
-- RL = Ryan Larose (TBC)
+- RL = Ryan Larose
 
 
 
