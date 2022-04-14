@@ -98,7 +98,7 @@ offer breakout sessions via zoom for the hands-on sessions.
 - 3pm-330pm: Break, coffee, tea etc
 - 330pm-6pm: hands-on sessions and problem solving
 
-### Tuesday June 21  (Teachers AB, BH, DL, JW, MHJ, and RL)
+### Tuesday June 21  (Teachers BH, JW, and MHJ +?)
 - 830am-930am: Quantum algorithms for quantum mechanical systems
 - 930am-1030am: Quantum simulation of the Schroedinger equation
 - 1030am-11am: Break, coffee, tea etc
@@ -109,7 +109,7 @@ offer breakout sessions via zoom for the hands-on sessions.
 - 3pm-330pm: Break, coffee, tea etc
 - 330pm-6pm: hands-on sessions and problem solving and tour of FRIB
 
-### Wednesday June 22   (Teachers AB, BH, DL, JW, MHJ, and RL)
+### Wednesday June 22   (Teachers AB, BH, DL, and RL)
 - 830am-930am: Quantum Field theory and quantum computing, part I
 - 930am-1030am: Quantum Field theory and quantum computing, part II
 - 1030am-11am: Break, coffee, tea etc
