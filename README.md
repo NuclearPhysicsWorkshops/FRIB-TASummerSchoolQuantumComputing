@@ -33,7 +33,7 @@ cluster theories.
 
 
 ## Organizers:
-Alexei Bazavov (MSU), Scott Bogner (MSU), Heiki Hergert (MSU), Matthew Hirn (MSU), Morten Hjorth-Jensen (MSU), Dean Lee (MSU), Huey-Wen Lin (MSU), and Andrea Shindler (MSU)
+Alexei Bazavov (MSU), Scott Bogner (MSU), Heiko Hergert (MSU), Matthew Hirn (MSU), Morten Hjorth-Jensen (MSU), Dean Lee (MSU), Huey-Wen Lin (MSU), and Andrea Shindler (MSU)
 ### Contact person:
 Morten Hjorth-Jensen, hjensen@msu.edu
 
@@ -83,10 +83,11 @@ offer breakout sessions via zoom for the hands-on sessions.
 - JW = Jacob Watkins
 - MHJ = Morten Hjorth-Jensen
 - RL = Ryan Larose
+- QZ - Zhenrong Qian
 
 
 
-### Monday June 20 (Teachers AB, BH, DL, JW, MHJ, and RL)
+### Monday June 20 (Teachers AB, BH, DL, JW, MHJ, RL, and QZ)
 - 8am-830am: Welcome and registration
 - 830am-930am: Introduction to quantum computing, qubits and systems of qubits
 - 930am-1030am: Measurements, Superposition and Entanglement
@@ -98,7 +99,7 @@ offer breakout sessions via zoom for the hands-on sessions.
 - 3pm-330pm: Break, coffee, tea etc
 - 330pm-6pm: hands-on sessions and problem solving
 
-### Tuesday June 21  (Teachers BH, JW, and MHJ +?)
+### Tuesday June 21  (Teachers BH, JW, MHJ, and ZQ)
 - 830am-930am: Quantum algorithms for quantum mechanical systems
 - 930am-1030am: Quantum simulation of the Schroedinger equation
 - 1030am-11am: Break, coffee, tea etc
