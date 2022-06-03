@@ -88,7 +88,7 @@ offer breakout sessions via zoom for the hands-on sessions.
 
 
 
-### Monday June 20 (Teachers AB, BH, DL, JW, MHJ, RL, and QZ++)
+### Monday June 20 (Teachers AB, BH, DL, JB, JW, MHJ, RL, and QZ++)
 - 8am-830am: Welcome and registration
 - 830am-930am: Introduction to quantum computing, qubits and systems of qubits
 - 930am-1030am: Measurements, Superposition and Entanglement
