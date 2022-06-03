@@ -81,13 +81,14 @@ offer breakout sessions via zoom for the hands-on sessions.
 - BH = Benjamin Hall
 - DL = Dean Lee
 - JW = Jacob Watkins
+- JB = Joey Bonitati
 - MHJ = Morten Hjorth-Jensen
 - RL = Ryan Larose
 - QZ - Zhenrong Qian
 
 
 
-### Monday June 20 (Teachers AB, BH, DL, JW, MHJ, RL, and QZ)
+### Monday June 20 (Teachers AB, BH, DL, JW, MHJ, RL, and QZ++)
 - 8am-830am: Welcome and registration
 - 830am-930am: Introduction to quantum computing, qubits and systems of qubits
 - 930am-1030am: Measurements, Superposition and Entanglement
@@ -99,7 +100,7 @@ offer breakout sessions via zoom for the hands-on sessions.
 - 3pm-330pm: Break, coffee, tea etc
 - 330pm-6pm: hands-on sessions and problem solving
 
-### Tuesday June 21  (Teachers BH, JW, MHJ, and ZQ)
+### Tuesday June 21  (Teachers BH, JW, MHJ, and ZQ++)
 - 830am-930am: Quantum algorithms for quantum mechanical systems
 - 930am-1030am: Quantum simulation of the Schroedinger equation
 - 1030am-11am: Break, coffee, tea etc
@@ -110,7 +111,7 @@ offer breakout sessions via zoom for the hands-on sessions.
 - 3pm-330pm: Break, coffee, tea etc
 - 330pm-6pm: hands-on sessions and problem solving and tour of FRIB
 
-### Wednesday June 22   (Teachers AB, BH, DL, and RL)
+### Wednesday June 22   (Teachers AB, BH, DL, and RL++)
 - 830am-930am: Quantum Field theory and quantum computing, part I
 - 930am-1030am: Quantum Field theory and quantum computing, part II
 - 1030am-11am: Break, coffee, tea etc
