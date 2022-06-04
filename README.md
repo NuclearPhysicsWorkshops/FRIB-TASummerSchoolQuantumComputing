@@ -88,7 +88,7 @@ offer breakout sessions via zoom for the hands-on sessions.
 
 
 
-### Monday June 20 (Teachers AB, BH, DL, JB, JW, MHJ, RL, and QZ++)
+### Monday June 20 
 - 8am-830am: Welcome and registration
 - 830am-930am: Introduction to quantum computing, qubits and systems of qubits
 - 930am-1030am: Measurements, Superposition and Entanglement
@@ -97,10 +97,11 @@ offer breakout sessions via zoom for the hands-on sessions.
 - 12pm-1pm: Lunch
 - 1pm-2pm: Preparing for hands-on session, Quantum algorithms and implementation on a real quantum computer, part I
 - 2pm-3pm: Quantum algorithms and implementation on a real quantum computer, part II
-- 3pm-330pm: Break, coffee, tea etc
-- 330pm-6pm: hands-on sessions and problem solving
+- 3pm-4pm: Break, coffee, tea or
+- 3pm-4pm: Tour for FRIB for those interested, please let us know if you are interested in a tour of FRIB.
+- 4pm-6pm: hands-on sessions and problem solving
 
-### Tuesday June 21  (Teachers BH, JW, MHJ, and ZQ++)
+### Tuesday June 21
 - 830am-930am: Quantum algorithms for quantum mechanical systems
 - 930am-1030am: Quantum simulation of the Schroedinger equation
 - 1030am-11am: Break, coffee, tea etc
@@ -111,7 +112,7 @@ offer breakout sessions via zoom for the hands-on sessions.
 - 3pm-330pm: Break, coffee, tea etc
 - 330pm-6pm: hands-on sessions and problem solving and tour of FRIB
 
-### Wednesday June 22   (Teachers AB, BH, DL, and RL++)
+### Wednesday June 22
 - 830am-930am: Quantum Field theory and quantum computing, part I
 - 930am-1030am: Quantum Field theory and quantum computing, part II
 - 1030am-11am: Break, coffee, tea etc
