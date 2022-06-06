@@ -66,6 +66,10 @@ All of the above topics will be supported by examples, hands-on exercises and pr
 
 
 ## Possible textbooks
+- Scherer, The Mathematics of Quantum Computing, see https://link.springer.com/book/10.1007/978-3-030-12358-1
+- Chuang and Nielsen, Quantum Computation and Quantum Information, https://www.cambridge.org/highereducation/books/quantum-computation-and-quantum-information/01E10196D0A682A6AEFFEA52D53BE9AE#overview
+- Hunt, Quantum Computing for programmers, https://www.cambridge.org/core/books/quantum-computing-for-programmers/BA1C887BE4AC0D0D5653E71FFBEF61C6
+
 
 
 ## Detailed lecture plan 
@@ -91,9 +95,9 @@ offer breakout sessions via zoom for the hands-on sessions.
 ### Monday June 20 
 - 8am-830am: Welcome and registration
 - 830am-930am: Introduction to quantum computing, qubits and systems of qubits
-- 930am-1030am: Measurements, Superposition and Entanglement
+- 930am-1030am: Measurements, Superposition, Entanglement, gates, unitary transformations and quantum circuits
 - 1030am-11am: Break, coffee, tea etc
-- 11am-12pm: Gates, unitary transformations and quantum circuits
+- 11am-12pm: Hands-on session with applications and introduction to software libraries
 - 12pm-1pm: Lunch
 - 1pm-2pm: Preparing for hands-on session, Quantum algorithms and implementation on a real quantum computer, part I
 - 2pm-3pm: Quantum algorithms and implementation on a real quantum computer, part II
