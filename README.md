@@ -63,6 +63,7 @@ All of the above topics will be supported by examples, hands-on exercises and pr
 
 1. Five lectures per day Monday through Wednesday, starting at 830am, see schedule below
 2. Hands-on sessions in the afternoons till 6pm
+3. For all lecture days we provide relevant jupyter-notebooks you can work on
 
 
 ## Possible textbooks
@@ -99,35 +100,33 @@ offer breakout sessions via zoom for the hands-on sessions.
 - 1030am-11am: Break, coffee, tea etc
 - 11am-12pm: Hands-on session with applications and introduction to software libraries
 - 12pm-1pm: Lunch
-- 1pm-2pm: Preparing for hands-on session, Quantum algorithms and implementation on a real quantum computer, part I
-- 2pm-3pm: Quantum algorithms and implementation on a real quantum computer, part II
-- 3pm-4pm: Break, coffee, tea or
-- 3pm-4pm: Tour for FRIB for those interested, please let us know if you are interested in a tour of FRIB.
-- 4pm-6pm: hands-on sessions and problem solving
+- 1pm-2pm: Quantum algorithms (VQE and Phase estimation) for solving quantum mechanical problems, getting started with simpler problems
+- 2pm-3pm: Quantum algorithms (VQE and Phase estimation) for solving quantum mechanical problems, hands-on part
+- 3pm-4pm: Break, coffee, tea or tour for FRIB for those interested. Please let us know if you are interested in a tour of FRIB.
+- 4pm-6pm: Hands-on sessions and problem solving
 
 ### Tuesday June 21
-- 830am-930am: Quantum algorithms for quantum mechanical systems
-- 930am-1030am: Quantum simulation of the Schroedinger equation
+- 830am-930am: Many-body theory and nuclear few- and many-body systems
+- 930am-1030am: Quantum algorithms and nuclear few- and many-body systems
 - 1030am-11am: Break, coffee, tea etc
-- 11am-12pm: Quantum computing and nuclear few- and many-body systems
+- 11am-12pm: Hands-on session quantum algorithms and nuclear physics with applications
 - 12pm-1pm: Lunch
-- 1pm-2pm:  Preparing for hands-on session, Quantum state preparation and Quantum simulations
-- 2pm-3pm:  Quantum simulations on a real quantum computer
+- 1pm-2pm:  Time evolution, Suzuki-Trotter approximation and quantum simulations
+- 2pm-3pm:  Implementation of time evolution, Trotterization and quantum simulations, hands-on part
 - 3pm-330pm: Break, coffee, tea etc
-- 330pm-6pm: hands-on sessions and problem solving and tour of FRIB
+- 330pm-6pm: Hands-on sessions and problem solving
 
 ### Wednesday June 22
-- 830am-930am: Quantum Field theory and quantum computing, part I
-- 930am-1030am: Quantum Field theory and quantum computing, part II
+- 830am-930am: Noise, error correction and mitigation, part I
+- 930am-1030am: Noise, error correction and mitigation, part II
 - 1030am-11am: Break, coffee, tea etc
-- 11am-12pm: Quantum error corrections, part I
+- 11am-12pm: Practicing error correction and mitigation, hands-on part
 - 12pm-1pm: Lunch
-- 1pm-2pm: Quantum error corrections, part II  
-- 2pm-3pm: Implementations on real quantum computers 
+- 1pm-2pm: Wrapping up and defining nuclear many-body system to study for hands-on session.
+- 2pm-3pm: Start hands-on session
 - 3pm-330pm: Break, coffee, tea etc
-- 330pm-6pm: hands-on sessions and problem solving
+- 330pm-6pm: Hands-on sessions and problem solving
 
-##  Learning outcomes (text to come)
 
 ## Prerequisites
 
