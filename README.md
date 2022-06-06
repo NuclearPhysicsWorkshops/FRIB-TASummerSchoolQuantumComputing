@@ -61,7 +61,7 @@ All of the above topics will be supported by examples, hands-on exercises and pr
 
 ## Practicalities
 
-1. Five lectures per day Monday through Wednesday, starting at 830am, see schedule below
+1. Two-three lectures per day Monday through Wednesday, starting at 830am, see schedule below
 2. Hands-on sessions in the afternoons till 6pm
 3. For all lecture days we provide relevant jupyter-notebooks you can work on
 
@@ -69,13 +69,15 @@ All of the above topics will be supported by examples, hands-on exercises and pr
 ## Possible textbooks
 - Scherer, The Mathematics of Quantum Computing, see https://link.springer.com/book/10.1007/978-3-030-12358-1
 - Chuang and Nielsen, Quantum Computation and Quantum Information, https://www.cambridge.org/highereducation/books/quantum-computation-and-quantum-information/01E10196D0A682A6AEFFEA52D53BE9AE#overview
-- Hunt, Quantum Computing for programmers, https://www.cambridge.org/core/books/quantum-computing-for-programmers/BA1C887BE4AC0D0D5653E71FFBEF61C6
+- Hundt, Quantum Computing for programmers, https://www.cambridge.org/core/books/quantum-computing-for-programmers/BA1C887BE4AC0D0D5653E71FFBEF61C6
 
 ## Good resources
 With the hands-on programming component we strongly recommend that you install Qiskit on your computer before the school starts. 
 - For Qiskit, follow the  instructions at https://qiskit.org/documentation/getting_started.html
 - We strongly recommend using the Jupyter notebook environment at https://quantum-computing.ibm.com/. This environment has Qiskit already set up and is free, just requires an email to register. It has built in support for Jupyter notebooks and should be sufficient for everything needed.
 - See also Ryan Larose's (from 2019) Quantum computing bootcamp with Qiskit - https://github.com/rmlarose/qcbq.
+- See also https://www.ryanlarose.com/external-resources.html
+
 ## Detailed lecture plan 
 
 Lectures are 50 minutes and there is a small break of 10 minutes
@@ -98,37 +100,37 @@ offer breakout sessions via zoom for the hands-on sessions.
 
 ### Monday June 20 
 - 8am-830am: Welcome and registration
-- 830am-930am: Introduction to quantum computing, qubits and systems of qubits
-- 930am-1030am: Measurements, Superposition, Entanglement, gates, unitary transformations and quantum circuits
+- 830am-930am: Introduction to quantum computing, qubits, systems of qubits, gates and quantum circuits (AB)
+- 930am-1030am: Measurements, Superposition, Entanglement (AB)
 - 1030am-11am: Break, coffee, tea etc
-- 11am-12pm: Hands-on session with applications and introduction to software libraries
+- 11am-12pm: Hands-on session with applications and introduction to software libraries (AB, JW, RL) 
 - 12pm-1pm: Lunch
-- 1pm-2pm: Quantum algorithms (VQE and Phase estimation) for solving quantum mechanical problems, getting started with simpler problems
-- 2pm-3pm: Quantum algorithms (VQE and Phase estimation) for solving quantum mechanical problems, hands-on part
+- 1pm-2pm: Quantum algorithms (Time evolution) for solving quantum mechanical problems (DL, JB, JW, and ZQ), simple problems
+- 2pm-3pm: Quantum algorithms (Phase estimation) for solving quantum mechanical problems (DL, JB, JW, and ZQ), simple problems
 - 3pm-4pm: Break, coffee, tea or tour for FRIB for those interested. Please let us know if you are interested in a tour of FRIB.
-- 4pm-6pm: Hands-on sessions and problem solving
+- 4pm-6pm: Hands-on sessions and problem solving (AB+all)
 
 ### Tuesday June 21
-- 830am-930am: Many-body theory and nuclear few- and many-body systems
-- 930am-1030am: Quantum algorithms and nuclear few- and many-body systems
+- 830-930am: Time evolution, Suzuki-Trotter approximation and quantum simulations (DL and JW) (advanced topic)
+- 930am-1030am: Introduction to VQE and simple model (BH) 
 - 1030am-11am: Break, coffee, tea etc
-- 11am-12pm: Hands-on session quantum algorithms and nuclear physics with applications
-- 12pm-1pm: Lunch
-- 1pm-2pm:  Time evolution, Suzuki-Trotter approximation and quantum simulations
-- 2pm-3pm:  Implementation of time evolution, Trotterization and quantum simulations, hands-on part
-- 3pm-330pm: Break, coffee, tea etc
-- 330pm-6pm: Hands-on sessions and problem solving
+- 11am-12pm: Many-body theory and nuclear few- and many-body systems (BH and MHJ)
+- 12pm-130pm: Lunch
+- 130pm-230pm:  Quantum algorithms (VQE) and nuclear physics with applications (BH and MHJ), part 1
+- 230pm-330pm:  Quantum algorithms (VQE) and nuclear physics with applications (BH and MHJ), part 2
+- 330pm-4pm: Break, coffee, tea etc
+- 4pm-6pm: Hands-on sessions and problem solving (BH and JW+all)
 
 ### Wednesday June 22
-- 830am-930am: Noise, error correction and mitigation, part I
-- 930am-1030am: Noise, error correction and mitigation, part II
+- 830am-930am: Noise, error correction and mitigation, part I (RL)
+- 930am-1030am: Noise, error correction and mitigation, part II (RL)
 - 1030am-11am: Break, coffee, tea etc
-- 11am-12pm: Practicing error correction and mitigation, hands-on part
-- 12pm-1pm: Lunch
-- 1pm-2pm: Wrapping up and defining nuclear many-body system to study for hands-on session.
-- 2pm-3pm: Start hands-on session
-- 3pm-330pm: Break, coffee, tea etc
-- 330pm-6pm: Hands-on sessions and problem solving
+- 11am-12pm: Practicing error correction and mitigation, hands-on part (RL)
+- 12pm-130pm: Lunch
+- 130pm-230pm: Wrapping up and defining nuclear many-body system to study for hands-on session (All)
+- 230pm-330pm: Start hands-on session (RL)
+- 330pm-4pm: Break, coffee, tea etc
+- 4pm-6pm: Hands-on sessions and problem solving (all)
 
 
 ## Prerequisites
