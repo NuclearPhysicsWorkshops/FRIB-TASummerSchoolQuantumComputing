@@ -84,7 +84,7 @@ In-person attendance is the main teaching modus, but lectures will be
 broadcasted via zoom. The lectures will also be recorded and we will
 offer breakout sessions via zoom for the hands-on sessions.
 
-### Teachers (teaching team will be updated)
+### Teachers
 - AB = Alexei Bazavov
 - BH = Benjamin Hall
 - DL = Dean Lee
