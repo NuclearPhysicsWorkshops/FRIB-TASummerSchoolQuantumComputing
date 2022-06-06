@@ -71,8 +71,11 @@ All of the above topics will be supported by examples, hands-on exercises and pr
 - Chuang and Nielsen, Quantum Computation and Quantum Information, https://www.cambridge.org/highereducation/books/quantum-computation-and-quantum-information/01E10196D0A682A6AEFFEA52D53BE9AE#overview
 - Hunt, Quantum Computing for programmers, https://www.cambridge.org/core/books/quantum-computing-for-programmers/BA1C887BE4AC0D0D5653E71FFBEF61C6
 
-
-
+## Good resources
+With the hands-on programming component we strongly recommend that you install Qiskit on your computer before the school starts. 
+- For Qiskit, follow the  instructions at https://qiskit.org/documentation/getting_started.html
+- We strongly recommend using the Jupyter notebook environment at https://quantum-computing.ibm.com/. This environment has Qiskit already set up and is free, just requires an email to register. It has built in support for Jupyter notebooks and should be sufficient for everything needed.
+- See also Ryan Larose's (from 2019) Quantum computing bootcamp with Qiskit - https://github.com/rmlarose/qcbq.
 ## Detailed lecture plan 
 
 Lectures are 50 minutes and there is a small break of 10 minutes
