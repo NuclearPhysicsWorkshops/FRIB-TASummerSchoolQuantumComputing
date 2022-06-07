@@ -67,6 +67,7 @@ All of the above topics will be supported by examples, hands-on exercises and pr
 
 
 ## Possible textbooks
+- Qiskit textbook, free online, see https://qiskit.org/textbook/preface.html
 - Scherer, The Mathematics of Quantum Computing, see https://link.springer.com/book/10.1007/978-3-030-12358-1
 - Chuang and Nielsen, Quantum Computation and Quantum Information, https://www.cambridge.org/highereducation/books/quantum-computation-and-quantum-information/01E10196D0A682A6AEFFEA52D53BE9AE#overview
 - Hundt, Quantum Computing for programmers, https://www.cambridge.org/core/books/quantum-computing-for-programmers/BA1C887BE4AC0D0D5653E71FFBEF61C6
@@ -138,7 +139,7 @@ offer breakout sessions via zoom for the hands-on sessions.
 You are expected to have operating programming skills in programming
 languages like Python (preferred) and/or Fortran, C++, Julia or
 similar and knowledge of quantum mechanics at an intermediate level
-(senior undergraduate and/or beginning graduate). Knowlegde of linear
+(senior undergraduate and/or beginning graduate). Knowledge of linear
 algebra is essential.  Additional modules for self-teaching on Python
 and quantum mechanics are also provided. 
 
