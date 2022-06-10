@@ -1,6 +1,6 @@
 # FRIB-TA Summer School: Quantum Computing and Nuclear Few- and Many-Body Problems
 
-### Venue: Facility for Rare Isotope Beams and National Superconducting Cyclotron Laboratory, 640 S. Shaw Lane, Michigan State University, East Lansing, 48824 Michigan
+### Venue: Auditorium 1200, Facility for Rare Isotope Beams and National Superconducting Cyclotron Laboratory, 640 S. Shaw Lane, Michigan State University, East Lansing, 48824 Michigan
 
 All learning material and teaching schedule pertinent to the course is
 avaliable at this GitHub address. A simple _git clone_ of the material
@@ -27,10 +27,7 @@ with the basic ideas of quantum computing. Thereafter, through
 examples from nuclear physics, we will elucidate how different quantum
 algorithms can be used to study these systems. The results from
 various quantum computing algorithms will be compared to standard
-methods like full configuration interaction theory, field theories on
-the lattice, in-medium similarity renormalization group and coupled
-cluster theories.
-
+nuclear few- and many-body methods 
 
 ## Organizers:
 Alexei Bazavov (MSU), Scott Bogner (MSU), Heiko Hergert (MSU), Matthew Hirn (MSU), Morten Hjorth-Jensen (MSU), Dean Lee (MSU), Huey-Wen Lin (MSU), and Andrea Shindler (MSU)
@@ -61,8 +58,8 @@ All of the above topics will be supported by examples, hands-on exercises and pr
 
 ## Practicalities
 
-1. Two-three lectures per day Monday through Wednesday, starting at 830am, see schedule below
-2. Hands-on sessions in the afternoons till 6pm
+1. Lectures Monday through Wednesday, starting at 830am, see schedule below
+2. Hands-on sessions before lunch and in the afternoons till 6pm
 3. For all lecture days we provide relevant jupyter-notebooks you can work on
 
 
@@ -81,11 +78,11 @@ With the hands-on programming component we strongly recommend that you install Q
 
 ## Detailed lecture plan 
 
-Lectures are 50 minutes and there is a small break of 10 minutes
+The duration of each lecture is approximately 45-50 minutes and there is a small break of 10-15 minutes
 between each lecture. Longer breaks at 1030am-11am and 3pm-330pm.
-In-person attendance is the main teaching modus, but lectures will be
-broadcasted via zoom. The lectures will also be recorded and we will
-offer breakout sessions via zoom for the hands-on sessions.
+In-person attendance is the main teaching modus, but lectures and hands-on sessions will be
+broadcasted via zoom for those who cannot attend in person. The zoom link will be sent to those who have expressed that they cannot attend in person. The lectures will also be recorded.
+
 
 ### Teachers
 - AB = Alexei Bazavov
@@ -105,7 +102,7 @@ offer breakout sessions via zoom for the hands-on sessions.
 - 930am-1030am: Measurements, Superposition, Entanglement (AB)
 - 1030am-11am: Break, coffee, tea etc
 - 11am-12pm: Hands-on session with applications and introduction to software libraries (AB, JW, RL) 
-- 12pm-1pm: Lunch
+- 12pm-1pm: Lunch (shorter lunch, else 1h30m lunches)
 - 1pm-2pm: Quantum algorithms (Time evolution) for solving quantum mechanical problems (DL, JB, JW, and ZQ), simple problems
 - 2pm-3pm: Quantum algorithms (Phase estimation) for solving quantum mechanical problems (DL, JB, JW, and ZQ), simple problems
 - 3pm-4pm: Break, coffee, tea or tour for FRIB for those interested. Please let us know if you are interested in a tour of FRIB.
@@ -132,6 +129,7 @@ offer breakout sessions via zoom for the hands-on sessions.
 - 230pm-330pm: Start hands-on session (RL)
 - 330pm-4pm: Break, coffee, tea etc
 - 4pm-6pm: Hands-on sessions and problem solving (all)
+- 6pm: End of school
 
 
 ## Prerequisites
