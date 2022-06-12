@@ -79,7 +79,7 @@ With the hands-on programming component we strongly recommend that you install Q
 ## Detailed lecture plan 
 
 The duration of each lecture is approximately 45-50 minutes and there is a small break of 10-15 minutes
-between each lecture. Longer breaks at 1030am-11am and 3pm-330pm.
+between each lecture. Longer breaks at 1030am-11am and 3pm-330pm, except for Monday where there is also the possibility fora guided FRIB tour.
 In-person attendance is the main teaching modus, but lectures and hands-on sessions will be
 broadcasted via zoom for those who cannot attend in person. The zoom link will be sent to those who have expressed that they cannot attend in person. The lectures will also be recorded.
 
