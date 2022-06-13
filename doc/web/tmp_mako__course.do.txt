@@ -13,8 +13,7 @@ DATE: June 20-22
 
 
 
-
-The teaching material is produced in various formats for printing and on-screen reading.
+The teaching material is provided as jupyter-notebooks and/or PDF files. Lunches are 12pm-130pm Tuesday and Wednesday and 12pm-1pm on Monday. Monday at 3-4pm for those interested there is the possibility to join a guided tour of FRIB. Coffee breaks are 1030am-11 all days  and 3-4pm on Monday and 330pm-4pm on Tuesday and Wednesday.
 
 
 ======= Quantum Computing and Nuclear Few- and Many-Body Problems =======
@@ -26,25 +25,17 @@ The teaching material is produced in various formats for printing and on-screen 
  * PDF version:
    * For printing:
      * "PDF format":"https://nuclearphysicsworkshops.github.io/FRIB-TASummerSchoolQuantumComputing/doc/pub/intro/pdf/intro.pdf"
- * HTML:
-   * "Plain html": "https://nuclearphysicsworkshops.github.io/FRIB-TASummerSchoolQuantumComputing/doc/pub/intro/html/intro.html"
-   * "reveal.js beige slide style":"https://nuclearphysicsworkshops.github.io/FRIB-TASummerSchoolQuantumComputing/doc/pub/intro/html/intro-reveal.html"
-   * "Bootstrap  slide style, easy for reading on mobile devices":"https://nuclearphysicsworkshops.github.io/FRIB-TASummerSchoolQuantumComputing/doc/pub/intro/html/intro-bs.html"
  * iPython notebook:
    * "ipynb file":"https://nuclearphysicsworkshops.github.io/FRIB-TASummerSchoolQuantumComputing/doc/pub/intro/ipynb/intro.ipynb"
 
 
-===== Monday June 20, 830am-930am: Introduction to quantum computing, qubits and systems of qubits =====
+===== Monday June 20, 830am-930am: Introduction to quantum computing, qubits, systems of qubits, gates and quantum circuits =====
 
 
 
  * PDF version:
    * For printing:
      * "PDF format":"https://nuclearphysicsworkshops.github.io/FRIB-TASummerSchoolQuantumComputing/doc/pub/lecture1/pdf/lecture1.pdf"
- * HTML:
-   * "Plain html": "https://nuclearphysicsworkshops.github.io/FRIB-TASummerSchoolQuantumComputing/doc/pub/lecture1/html/lecture1.html"
-   * "reveal.js beige slide style":"https://nuclearphysicsworkshops.github.io/FRIB-TASummerSchoolQuantumComputing/doc/pub/lecture1/html/lecture1-reveal.html"
-   * "Bootstrap  slide style, easy for reading on mobile devices":"https://nuclearphysicsworkshops.github.io/FRIB-TASummerSchoolQuantumComputing/doc/pub/lecture1/html/lecture1-bs.html"
  * iPython notebook:
    * "ipynb file":"https://nuclearphysicsworkshops.github.io/FRIB-TASummerSchoolQuantumComputing/doc/pub/lecture1/ipynb/lecture1.ipynb"
 
@@ -56,205 +47,149 @@ The teaching material is produced in various formats for printing and on-screen 
  * PDF version:
    * For printing:
      * "PDF format":"https://nuclearphysicsworkshops.github.io/FRIB-TASummerSchoolQuantumComputing/doc/pub/lecture2/pdf/lecture2.pdf"
- * HTML:
-   * "Plain html": "https://nuclearphysicsworkshops.github.io/FRIB-TASummerSchoolQuantumComputing/doc/pub/lecture2/html/lecture2.html"
-   * "reveal.js beige slide style":"https://nuclearphysicsworkshops.github.io/FRIB-TASummerSchoolQuantumComputing/doc/pub/lecture2/html/lecture2-reveal.html"
-   * "Bootstrap  slide style, easy for reading on mobile devices":"https://nuclearphysicsworkshops.github.io/FRIB-TASummerSchoolQuantumComputing/doc/pub/lecture2/html/lecture2-bs.html"
  * iPython notebook:
    * "ipynb file":"https://nuclearphysicsworkshops.github.io/FRIB-TASummerSchoolQuantumComputing/doc/pub/lecture2/ipynb/lecture2.ipynb"
 
 
-===== Monday June 20, 11am-12pm: Gates, unitary transformations and quantum circuits =====
+===== Monday June 20, 11am-12pm: Hands-on session with applications and introduction to software libraries =====
 
 
 
  * PDF version:
    * For printing:
      * "PDF format":"https://nuclearphysicsworkshops.github.io/FRIB-TASummerSchoolQuantumComputing/doc/pub/lecture3/pdf/lecture3.pdf"
- * HTML:
-   * "Plain html": "https://nuclearphysicsworkshops.github.io/FRIB-TASummerSchoolQuantumComputing/doc/pub/lecture3/html/lecture3.html"
-   * "reveal.js beige slide style":"https://nuclearphysicsworkshops.github.io/FRIB-TASummerSchoolQuantumComputing/doc/pub/lecture3/html/lecture3-reveal.html"
-   * "Bootstrap  slide style, easy for reading on mobile devices":"https://nuclearphysicsworkshops.github.io/FRIB-TASummerSchoolQuantumComputing/doc/pub/lecture3/html/lecture3-bs.html"
  * iPython notebook:
    * "ipynb file":"https://nuclearphysicsworkshops.github.io/FRIB-TASummerSchoolQuantumComputing/doc/pub/lecture3/ipynb/lecture3.ipynb"
 
 
-===== Monday June 20, 1pm-3pm: Quantum algorithms and implementation on a real quantum computer, parts I and II =====
+===== Monday June 20, 1pm-3pm: Quantum algorithms (Time evolution and Phase Estimation) for solving quantum mechanical problems and simple problems =====
 
 
 
  * PDF version:
    * For printing:
      * "PDF format":"https://nuclearphysicsworkshops.github.io/FRIB-TASummerSchoolQuantumComputing/doc/pub/lecture4/pdf/lecture4.pdf"
- * HTML:
-   * "Plain html": "https://nuclearphysicsworkshops.github.io/FRIB-TASummerSchoolQuantumComputing/doc/pub/lecture4/html/lecture4.html"
-   * "reveal.js beige slide style":"https://nuclearphysicsworkshops.github.io/FRIB-TASummerSchoolQuantumComputing/doc/pub/lecture4/html/lecture4-reveal.html"
-   * "Bootstrap  slide style, easy for reading on mobile devices":"https://nuclearphysicsworkshops.github.io/FRIB-TASummerSchoolQuantumComputing/doc/pub/lecture4/html/lecture4-bs.html"
  * iPython notebook:
    * "ipynb file":"https://nuclearphysicsworkshops.github.io/FRIB-TASummerSchoolQuantumComputing/doc/pub/lecture4/ipynb/lecture4.ipynb"
 
 
-===== Monday June 20, 3pm-6pm, first hands-on session =====
+===== Monday June 20, 4pm-6pm, Hands-on session =====
 
 
 
  * PDF version:
    * For printing:
      * "PDF format":"https://nuclearphysicsworkshops.github.io/FRIB-TASummerSchoolQuantumComputing/doc/pub/handson1/pdf/handson1.pdf"
- * HTML:
-   * "Plain html": "https://nuclearphysicsworkshops.github.io/FRIB-TASummerSchoolQuantumComputing/doc/pub/handson1/html/handson1.html"
-   * "reveal.js beige slide style":"https://nuclearphysicsworkshops.github.io/FRIB-TASummerSchoolQuantumComputing/doc/pub/handson1/html/handson1-reveal.html"
-   * "Bootstrap  slide style, easy for reading on mobile devices":"https://nuclearphysicsworkshops.github.io/FRIB-TASummerSchoolQuantumComputing/doc/pub/handson1/html/handson1-bs.html"
  * iPython notebook:
    * "ipynb file":"https://nuclearphysicsworkshops.github.io/FRIB-TASummerSchoolQuantumComputing/doc/pub/handson1/ipynb/handson1.ipynb"
 
 
-===== Tuesday June 21, 830am-930am: Quantum algorithms for quantum mechanical systems =====
+===== Tuesday June 21, 830am-930am: Time evolution, Suzuki-Trotter approximation and quantum simulations (advanced topic) =====
 
 
 
  * PDF version:
    * For printing:
      * "PDF format":"https://nuclearphysicsworkshops.github.io/FRIB-TASummerSchoolQuantumComputing/doc/pub/lecture5/pdf/lecture5.pdf"
- * HTML:
-   * "Plain html": "https://nuclearphysicsworkshops.github.io/FRIB-TASummerSchoolQuantumComputing/doc/pub/lecture5/html/lecture5.html"
-   * "reveal.js beige slide style":"https://nuclearphysicsworkshops.github.io/FRIB-TASummerSchoolQuantumComputing/doc/pub/lecture5/html/lecture5-reveal.html"
-   * "Bootstrap  slide style, easy for reading on mobile devices":"https://nuclearphysicsworkshops.github.io/FRIB-TASummerSchoolQuantumComputing/doc/pub/lecture5/html/lecture5-bs.html"
  * iPython notebook:
    * "ipynb file":"https://nuclearphysicsworkshops.github.io/FRIB-TASummerSchoolQuantumComputing/doc/pub/lecture5/ipynb/lecture5.ipynb"
 
 
-===== Tuesday June 21, 930am-1030am: Quantum simulation of the Schroedinger equation =====
+===== Tuesday June 21, 930am-1030am: Introduction to VQE and simple model =====
 
 
 
  * PDF version:
    * For printing:
      * "PDF format":"https://nuclearphysicsworkshops.github.io/FRIB-TASummerSchoolQuantumComputing/doc/pub/lecture6/pdf/lecture6.pdf"
- * HTML:
-   * "Plain html": "https://nuclearphysicsworkshops.github.io/FRIB-TASummerSchoolQuantumComputing/doc/pub/lecture6/html/lecture6.html"
-   * "reveal.js beige slide style":"https://nuclearphysicsworkshops.github.io/FRIB-TASummerSchoolQuantumComputing/doc/pub/lecture6/html/lecture6-reveal.html"
-   * "Bootstrap  slide style, easy for reading on mobile devices":"https://nuclearphysicsworkshops.github.io/FRIB-TASummerSchoolQuantumComputing/doc/pub/lecture6/html/lecture6-bs.html"
  * iPython notebook:
    * "ipynb file":"https://nuclearphysicsworkshops.github.io/FRIB-TASummerSchoolQuantumComputing/doc/pub/lecture6/ipynb/lecture6.ipynb"
 
 
-===== Tuesday June 21, 11am-12pm: Quantum computing and nuclear few- and many-body systems =====
+===== Tuesday June 21, 11am-12pm: Many-body theory and nuclear few- and many-body systems =====
 
 
 
  * PDF version:
    * For printing:
      * "PDF format":"https://nuclearphysicsworkshops.github.io/FRIB-TASummerSchoolQuantumComputing/doc/pub/lecture7/pdf/lecture7.pdf"
- * HTML:
-   * "Plain html": "https://nuclearphysicsworkshops.github.io/FRIB-TASummerSchoolQuantumComputing/doc/pub/lecture7/html/lecture7.html"
-   * "reveal.js beige slide style":"https://nuclearphysicsworkshops.github.io/FRIB-TASummerSchoolQuantumComputing/doc/pub/lecture7/html/lecture7-reveal.html"
-   * "Bootstrap  slide style, easy for reading on mobile devices":"https://nuclearphysicsworkshops.github.io/FRIB-TASummerSchoolQuantumComputing/doc/pub/lecture7/html/lecture7-bs.html"
  * iPython notebook:
    * "ipynb file":"https://nuclearphysicsworkshops.github.io/FRIB-TASummerSchoolQuantumComputing/doc/pub/lecture7/ipynb/lecture7.ipynb"
 
 
-===== Tuesday June 21, 1pm-3pm:  Quantum simulations on a real quantum computer, parts I and II =====
+===== Tuesday June 21, 130pm-330pm:  Quantum algorithms (VQE) and nuclear physics with applications, parts I and II =====
 
 
 
  * PDF version:
    * For printing:
      * "PDF format":"https://nuclearphysicsworkshops.github.io/FRIB-TASummerSchoolQuantumComputing/doc/pub/lecture8/pdf/lecture8.pdf"
- * HTML:
-   * "Plain html": "https://nuclearphysicsworkshops.github.io/FRIB-TASummerSchoolQuantumComputing/doc/pub/lecture8/html/lecture8.html"
-   * "reveal.js beige slide style":"https://nuclearphysicsworkshops.github.io/FRIB-TASummerSchoolQuantumComputing/doc/pub/lecture8/html/lecture8-reveal.html"
-   * "Bootstrap  slide style, easy for reading on mobile devices":"https://nuclearphysicsworkshops.github.io/FRIB-TASummerSchoolQuantumComputing/doc/pub/lecture8/html/lecture8-bs.html"
  * iPython notebook:
    * "ipynb file":"https://nuclearphysicsworkshops.github.io/FRIB-TASummerSchoolQuantumComputing/doc/pub/lecture8/ipynb/lecture8.ipynb"
 
 
-===== Tuesday June 20, 3pm-6pm second hands-on session and tour of FRIB =====
+===== Tuesday June 20, 4pm-6pm second hands-on session =====
 
 
 
  * PDF version:
    * For printing:
      * "PDF format":"https://nuclearphysicsworkshops.github.io/FRIB-TASummerSchoolQuantumComputing/doc/pub/handson2/pdf/handson2.pdf"
- * HTML:
-   * "Plain html": "https://nuclearphysicsworkshops.github.io/FRIB-TASummerSchoolQuantumComputing/doc/pub/handson2/html/handson2.html"
-   * "reveal.js beige slide style":"https://nuclearphysicsworkshops.github.io/FRIB-TASummerSchoolQuantumComputing/doc/pub/handson2/html/handson2-reveal.html"
-   * "Bootstrap  slide style, easy for reading on mobile devices":"https://nuclearphysicsworkshops.github.io/FRIB-TASummerSchoolQuantumComputing/doc/pub/handson2/html/handson2-bs.html"
  * iPython notebook:
    * "ipynb file":"https://nuclearphysicsworkshops.github.io/FRIB-TASummerSchoolQuantumComputing/doc/pub/handson2/ipynb/handson2.ipynb"
 
 
-===== Wednesday June 22, 830am-930am: Quantum Field theory and quantum computing, part I =====
+===== Wednesday June 22, 830am-930am: Noise, error correction and mitigation, part I =====
 
 
 
  * PDF version:
    * For printing:
      * "PDF format":"https://nuclearphysicsworkshops.github.io/FRIB-TASummerSchoolQuantumComputing/doc/pub/lecture9/pdf/lecture9.pdf"
- * HTML:
-   * "Plain html": "https://nuclearphysicsworkshops.github.io/FRIB-TASummerSchoolQuantumComputing/doc/pub/lecture9/html/lecture9.html"
-   * "reveal.js beige slide style":"https://nuclearphysicsworkshops.github.io/FRIB-TASummerSchoolQuantumComputing/doc/pub/lecture9/html/lecture9-reveal.html"
-   * "Bootstrap  slide style, easy for reading on mobile devices":"https://nuclearphysicsworkshops.github.io/FRIB-TASummerSchoolQuantumComputing/doc/pub/lecture9/html/lecture9-bs.html"
  * iPython notebook:
    * "ipynb file":"https://nuclearphysicsworkshops.github.io/FRIB-TASummerSchoolQuantumComputing/doc/pub/lecture9/ipynb/lecture9.ipynb"
 
 
-===== Wednesday June 22, 930am-1030am: Quantum Field theory and quantum computing, part II =====
+===== Wednesday June 22, 930am-1030am: Noise, error correction and mitigation, part II =====
 
 
 
  * PDF version:
    * For printing:
      * "PDF format":"https://nuclearphysicsworkshops.github.io/FRIB-TASummerSchoolQuantumComputing/doc/pub/lecture10/pdf/lecture10.pdf"
- * HTML:
-   * "Plain html": "https://nuclearphysicsworkshops.github.io/FRIB-TASummerSchoolQuantumComputing/doc/pub/lecture10/html/lecture10.html"
-   * "reveal.js beige slide style":"https://nuclearphysicsworkshops.github.io/FRIB-TASummerSchoolQuantumComputing/doc/pub/lecture10/html/lecture10-reveal.html"
-   * "Bootstrap  slide style, easy for reading on mobile devices":"https://nuclearphysicsworkshops.github.io/FRIB-TASummerSchoolQuantumComputing/doc/pub/lecture10/html/lecture10-bs.html"
  * iPython notebook:
    * "ipynb file":"https://nuclearphysicsworkshops.github.io/FRIB-TASummerSchoolQuantumComputing/doc/pub/lecture10/ipynb/lecture10.ipynb"
 
 
-===== Wednesday June 22, 11am-12pm: Quantum error corrections, part I =====
+===== Wednesday June 22, 11am-12pm: Practicing error correction and mitigation, hands-on part =====
 
 
 
  * PDF version:
    * For printing:
      * "PDF format":"https://nuclearphysicsworkshops.github.io/FRIB-TASummerSchoolQuantumComputing/doc/pub/lecture11/pdf/lecture11.pdf"
- * HTML:
-   * "Plain html": "https://nuclearphysicsworkshops.github.io/FRIB-TASummerSchoolQuantumComputing/doc/pub/lecture11/html/lecture11.html"
-   * "reveal.js beige slide style":"https://nuclearphysicsworkshops.github.io/FRIB-TASummerSchoolQuantumComputing/doc/pub/lecture11/html/lecture11-reveal.html"
-   * "Bootstrap  slide style, easy for reading on mobile devices":"https://nuclearphysicsworkshops.github.io/FRIB-TASummerSchoolQuantumComputing/doc/pub/lecture11/html/lecture11-bs.html"
  * iPython notebook:
    * "ipynb file":"https://nuclearphysicsworkshops.github.io/FRIB-TASummerSchoolQuantumComputing/doc/pub/lecture11/ipynb/lecture11.ipynb"
 
 
-===== Wednesday June 22, 1pm-3pm: Quantum error corrections, part II and Implementation on real quantum computers =====
+===== Wednesday June 22, 130pm-330pm: Wrapping up and defining nuclear many-body system to study for hands-on session and start hands-on session =====
 
 
 
  * PDF version:
    * For printing:
      * "PDF format":"https://nuclearphysicsworkshops.github.io/FRIB-TASummerSchoolQuantumComputing/doc/pub/lecture12/pdf/lecture12.pdf"
- * HTML:
-   * "Plain html": "https://nuclearphysicsworkshops.github.io/FRIB-TASummerSchoolQuantumComputing/doc/pub/lecture12/html/lecture12.html"
-   * "reveal.js beige slide style":"https://nuclearphysicsworkshops.github.io/FRIB-TASummerSchoolQuantumComputing/doc/pub/lecture12/html/lecture12-reveal.html"
-   * "Bootstrap  slide style, easy for reading on mobile devices":"https://nuclearphysicsworkshops.github.io/FRIB-TASummerSchoolQuantumComputing/doc/pub/lecture12/html/lecture12-bs.html"
  * iPython notebook:
    * "ipynb file":"https://nuclearphysicsworkshops.github.io/FRIB-TASummerSchoolQuantumComputing/doc/pub/lecture12/ipynb/lecture12.ipynb"
 
 
-===== Wednesday June 22, 3pm-6pm third hands-on session =====
+===== Wednesday June 22, 4pm-6pm Hands-on session and problem solving =====
 
 
 
  * PDF version:
    * For printing:
      * "PDF format":"https://nuclearphysicsworkshops.github.io/FRIB-TASummerSchoolQuantumComputing/doc/pub/handson3/pdf/handson3.pdf"
- * HTML:
-   * "Plain html": "https://nuclearphysicsworkshops.github.io/FRIB-TASummerSchoolQuantumComputing/doc/pub/handson3/html/handson3.html"
-   * "reveal.js beige slide style":"https://nuclearphysicsworkshops.github.io/FRIB-TASummerSchoolQuantumComputing/doc/pub/handson3/html/handson3-reveal.html"
-   * "Bootstrap  slide style, easy for reading on mobile devices":"https://nuclearphysicsworkshops.github.io/FRIB-TASummerSchoolQuantumComputing/doc/pub/handson3/html/handson3-bs.html"
  * iPython notebook:
    * "ipynb file":"https://nuclearphysicsworkshops.github.io/FRIB-TASummerSchoolQuantumComputing/doc/pub/handson3/ipynb/handson3.ipynb"
 
@@ -262,3 +197,11 @@ The teaching material is produced in various formats for printing and on-screen 
 
 
    
+
+
+
+
+
+
+
+
