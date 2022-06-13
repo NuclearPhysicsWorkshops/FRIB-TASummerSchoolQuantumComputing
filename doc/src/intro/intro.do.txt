@@ -28,8 +28,14 @@ nuclear few- and many-body methods
 
 === Organizers: ===
 Alexei Bazavov (MSU), Scott Bogner (MSU), Heiko Hergert (MSU), Matthew Hirn (MSU), Morten Hjorth-Jensen (MSU), Dean Lee (MSU), Huey-Wen Lin (MSU), and Andrea Shindler (MSU)
-### Contact person:
-Morten Hjorth-Jensen, hjensen@msu.edu
+
+Contact person: Morten Hjorth-Jensen, hjensen@msu.edu
+
+=== Additional material in these slides ===
+
+In addition to containing information about the school, we provide a reminder on _numpy_ and a brief introduction to Qiskit. Please take a look at these notes before coming to the school. This material is provided at the end of the these introductory notes.
+
+
 
 ===== Aims and Learning Outcomes =====
 
@@ -223,5 +229,375 @@ running a _git pull_ gives you immediately the latest updates.
 
 
 
+!split
+===== Numpy examples and Important Matrix and vector handling packages =====
+
+There are several central software libraries for linear algebra and eigenvalue problems. Several of the more
+popular ones have been wrapped into ofter software packages like those from the widely used text _Numerical Recipes_. The original source codes in many of the available packages are often taken from the widely used
+software package LAPACK, which follows two other popular packages
+developed in the 1970s, namely EISPACK and LINPACK.  We describe them shortly here.
+
+  * LINPACK: package for linear equations and least square problems.
+  * LAPACK:package for solving symmetric, unsymmetric and generalized eigenvalue problems. From LAPACK's website URL: "http://www.netlib.org" it is possible to download for free all source codes from this library. Both C/C++ and Fortran versions are available.
+  * BLAS (I, II and III): (Basic Linear Algebra Subprograms) are routines that provide standard building blocks for performing basic vector and matrix operations. Blas I is vector operations, II vector-matrix operations and III matrix-matrix operations. Highly parallelized and efficient codes, all available for download from URL: "http://www.netlib.org".
+
+!split
+===== Basic Matrix Features =====
+
+!bblock Matrix properties reminder
+!bt
+\[
+ \mathbf{A} =
+      \begin{bmatrix} a_{11} & a_{12} & a_{13} & a_{14} \\
+                                 a_{21} & a_{22} & a_{23} & a_{24} \\
+                                   a_{31} & a_{32} & a_{33} & a_{34} \\
+                                  a_{41} & a_{42} & a_{43} & a_{44}
+             \end{bmatrix}\qquad
+\mathbf{I} =
+      \begin{bmatrix} 1 & 0 & 0 & 0 \\
+                                 0 & 1 & 0 & 0 \\
+                                 0 & 0 & 1 & 0 \\
+                                 0 & 0 & 0 & 1
+             \end{bmatrix}
+\]
+!et
+
+
+
+The inverse of a matrix is defined by
+
+!bt
+\[
+\mathbf{A}^{-1} \cdot \mathbf{A} = I
+\]
+!et
+
+
+|----------------------------------------------------------------------|
+|       Relations      |       Name      | matrix elements             |
+|----------------------------------------------------------------------|
+| $A=A^{T}$         | symmetric       | $a_{ij}=a_{ji}$            |
+| $A=\left (A^{T}\right )^{-1}$ | real orthogonal | $\sum_k a_{ik}a_{jk}=\sum_k a_{ki} a_{kj}=\delta_{ij}$ |
+| $A=A^{ * }$          | real matrix     | $a_{ij}=a_{ij}^{*}$       |
+| $A=A^{\dagger}$     |  hermitian      | $a_{ij}=a_{ji}^{*}$       |
+| $A=\left(A^{\dagger}\right )^{-1}$ | unitary | $\sum_k a_{ik}a_{jk}^{*}=\sum_k a_{ki}^{ * } a_{kj}=\delta_{ij}$ |
+|----------------------------------------------------------------------|
+
+!eblock
+
+!split
+=== Some famous Matrices ===
+
+  * Diagonal if $a_{ij}=0$ for $i\ne j$
+  * Upper triangular if $a_{ij}=0$ for $i>j$
+  * Lower triangular if $a_{ij}=0$ for $i<j$
+  * Upper Hessenberg if $a_{ij}=0$ for $i>j+1$
+  * Lower Hessenberg if $a_{ij}=0$ for $i<j+1$
+  * Tridiagonal if $a_{ij}=0$ for $|i -j|>1$
+  * Lower banded with bandwidth $p$: $a_{ij}=0$ for $i>j+p$
+  * Upper banded with bandwidth $p$: $a_{ij}=0$ for $i<j+p$
+  * Banded, block upper triangular, block lower triangular....
+
+
+!split
+=== More Basic Matrix Features ===
+
+!bblock Some Equivalent Statements
+For an $N\times N$ matrix  $\mathbf{A}$ the following properties are all equivalent
+
+  * If the inverse of $\mathbf{A}$ exists, $\mathbf{A}$ is nonsingular.
+  * The equation $\mathbf{Ax}=0$ implies $\mathbf{x}=0$.
+  * The rows of $\mathbf{A}$ form a basis of $R^N$.
+  * The columns of $\mathbf{A}$ form a basis of $R^N$.
+  * $\mathbf{A}$ is a product of elementary matrices.
+  * $0$ is not eigenvalue of $\mathbf{A}$.
+!eblock
+
+!split
+===== Numpy and arrays =====
+"Numpy":"http://www.numpy.org/" provides an easy way to handle arrays in Python. The standard way to import this library is as
+
+!bc pycod
+import numpy as np
+!ec
+Here follows a simple example where we set up an array of ten elements, all determined by random numbers drawn according to the normal distribution,
+!bc pycod
+n = 10
+x = np.random.normal(size=n)
+print(x)
+!ec
+We defined a vector $x$ with $n=10$ elements with its values given by the Normal distribution $N(0,1)$.
+Another alternative is to declare a vector as follows
+!bc pycod
+import numpy as np
+x = np.array([1, 2, 3])
+print(x)
+!ec
+Here we have defined a vector with three elements, with $x_0=1$, $x_1=2$ and $x_2=3$. Note that both Python and C++
+start numbering array elements from $0$ and on. This means that a vector with $n$ elements has a sequence of entities $x_0, x_1, x_2, \dots, x_{n-1}$. We could also let (recommended) Numpy to compute the logarithms of a specific array as
+!bc pycod
+import numpy as np
+x = np.log(np.array([4, 7, 8]))
+print(x)
+!ec
+
+In the last example we used Numpy's unary function $np.log$. This function is
+highly tuned to compute array elements since the code is vectorized
+and does not require looping. We normaly recommend that you use the
+Numpy intrinsic functions instead of the corresponding _log_ function
+from Python's _math_ module. The looping is done explicitely by the
+_np.log_ function. The alternative, and slower way to compute the
+logarithms of a vector would be to write
+
+!bc pycod
+import numpy as np
+from math import log
+x = np.array([4, 7, 8])
+for i in range(0, len(x)):
+    x[i] = log(x[i])
+print(x)
+!ec
+We note that our code is much longer already and we need to import the _log_ function from the _math_ module. 
+The attentive reader will also notice that the output is $[1, 1, 2]$. Python interprets automagically our numbers as integers (like the _automatic_ keyword in C++). To change this we could define our array elements to be double precision numbers as
+!bc pycod
+import numpy as np
+x = np.log(np.array([4, 7, 8], dtype = np.float64))
+print(x)
+!ec
+or simply write them as double precision numbers (Python uses 64 bits as default for floating point type variables), that is
+!bc pycod
+import numpy as np
+x = np.log(np.array([4.0, 7.0, 8.0]))
+print(x)
+!ec
+To check the number of bytes (remember that one byte contains eight bits for double precision variables), you can use simple use the _itemsize_ functionality (the array $x$ is actually an object which inherits the functionalities defined in Numpy) as 
+!bc pycod
+import numpy as np
+x = np.log(np.array([4.0, 7.0, 8.0]))
+print(x.itemsize)
+!ec
+
+!split
+===== Matrices in Python =====
+
+Having defined vectors, we are now ready to try out matrices. We can
+define a $3 \times 3 $ real matrix $\bm{A}$ as (recall that we user
+lowercase letters for vectors and uppercase letters for matrices)
+
+!bc pycod
+import numpy as np
+A = np.log(np.array([ [4.0, 7.0, 8.0], [3.0, 10.0, 11.0], [4.0, 5.0, 7.0] ]))
+print(A)
+!ec
+If we use the _shape_ function we would get $(3, 3)$ as output, that is verifying that our matrix is a $3\times 3$ matrix. We can slice the matrix and print for example the first column (Python organized matrix elements in a row-major order, see below) as
+!bc pycod
+import numpy as np
+A = np.log(np.array([ [4.0, 7.0, 8.0], [3.0, 10.0, 11.0], [4.0, 5.0, 7.0] ]))
+# print the first column, row-major order and elements start with 0
+print(A[:,0]) 
+!ec
+We can continue this was by printing out other columns or rows. The example here prints out the second column
+!bc pycod
+import numpy as np
+A = np.log(np.array([ [4.0, 7.0, 8.0], [3.0, 10.0, 11.0], [4.0, 5.0, 7.0] ]))
+# print the first column, row-major order and elements start with 0
+print(A[1,:]) 
+!ec 
+Numpy contains many other functionalities that allow us to slice, subdivide etc etc arrays. We strongly recommend that you look up the "Numpy website for more details":"http://www.numpy.org/". Useful functions when defining a matrix are the _np.zeros_ function which declares a matrix of a given dimension and sets all elements to zero
+!bc pycod
+import numpy as np
+n = 10
+# define a matrix of dimension 10 x 10 and set all elements to zero
+A = np.zeros( (n, n) )
+print(A) 
+!ec 
+or initializing all elements to 
+!bc pycod
+import numpy as np
+n = 10
+# define a matrix of dimension 10 x 10 and set all elements to one
+A = np.ones( (n, n) )
+print(A) 
+!ec 
+or as unitarily distributed random numbers (see the material on random number generators in the statistics part)
+!bc pycod
+import numpy as np
+n = 10
+# define a matrix of dimension 10 x 10 and set all elements to random numbers with x \in [0, 1]
+A = np.random.rand(n, n)
+print(A) 
+!ec 
+
+As we will see throughout these lectures, there are several extremely useful functionalities in Numpy.
+As an example, consider the discussion of the covariance matrix. Suppose we have defined three vectors
+$\bm{x}, \bm{y}, \bm{z}$ with $n$ elements each. The covariance matrix is defined as 
+!bt
+\[
+\bm{\Sigma} = \begin{bmatrix} \sigma_{xx} & \sigma_{xy} & \sigma_{xz} \\
+                              \sigma_{yx} & \sigma_{yy} & \sigma_{yz} \\
+                              \sigma_{zx} & \sigma_{zy} & \sigma_{zz} 
+             \end{bmatrix},
+\]
+!et
+where for example
+!bt
+\[
+\sigma_{xy} =\frac{1}{n} \sum_{i=0}^{n-1}(x_i- \overline{x})(y_i- \overline{y}).
+\]
+!et
+The Numpy function _np.cov_ calculates the covariance elements using the factor $1/(n-1)$ instead of $1/n$ since it assumes we do not have the exact mean values. 
+The following simple function uses the _np.vstack_ function which takes each vector of dimension $1\times n$ and produces a $3\times n$ matrix $\bm{W}$
+!bt
+\[
+\bm{W} = \begin{bmatrix} x_0 & x_1 & x_2 & \dots & x_{n-2} & x_{n-1} \\
+                         y_0 & y_1 & y_2 & \dots & y_{n-2} & y_{n-1} \\
+			 z_0 & z_1 & z_2 & \dots & z_{n-2} & z_{n-1} \\
+             \end{bmatrix},
+\]
+!et
+
+which in turn is converted into into the $3\times 3$ covariance matrix
+$\bm{\Sigma}$ via the Numpy function _np.cov()_. We note that we can also calculate
+the mean value of each set of samples $\bm{x}$ etc using the Numpy
+function _np.mean(x)_. We can also extract the eigenvalues of the
+covariance matrix through the _np.linalg.eig()_ function.
+
+!bc pycod
+# Importing various packages
+import numpy as np
+
+n = 100
+x = np.random.normal(size=n)
+print(np.mean(x))
+y = 4+3*x+np.random.normal(size=n)
+print(np.mean(y))
+z = x**3+np.random.normal(size=n)
+print(np.mean(z))
+W = np.vstack((x, y, z))
+Sigma = np.cov(W)
+print(Sigma)
+Eigvals, Eigvecs = np.linalg.eig(Sigma)
+print(Eigvals)
+!ec
+
+
+!bc pycod
+import numpy as np
+import matplotlib.pyplot as plt
+from scipy import sparse
+eye = np.eye(4)
+print(eye)
+sparse_mtx = sparse.csr_matrix(eye)
+print(sparse_mtx)
+x = np.linspace(-10,10,100)
+y = np.sin(x)
+plt.plot(x,y,marker='x')
+plt.show()
+!ec
+
+!split
+===== Meet the Pandas =====
+
+
+Another useful Python package is
+"pandas":"https://pandas.pydata.org/", which is an open source library
+providing high-performance, easy-to-use data structures and data
+analysis tools for Python. _pandas_ stands for panel data, a term borrowed from econometrics and is an efficient library for data analysis with an emphasis on tabular data.
+_pandas_ has two major classes, the _DataFrame_ class with two-dimensional data objects and tabular data organized in columns and the class _Series_ with a focus on one-dimensional data objects. Both classes allow you to index data easily as we will see in the examples below. 
+_pandas_ allows you also to perform mathematical operations on the data, spanning from simple reshapings of vectors and matrices to statistical operations. 
+
+The following simple example shows how we can, in an easy way make tables of our data. Here we define a data set which includes names, place of birth and date of birth, and displays the data in an easy to read way. We will see repeated use of _pandas_, in particular in connection with classification of data. 
+
+!bc pycod 
+import pandas as pd
+from IPython.display import display
+data = {'First Name': ["Frodo", "Bilbo", "Aragorn II", "Samwise"],
+        'Last Name': ["Baggins", "Baggins","Elessar","Gamgee"],
+        'Place of birth': ["Shire", "Shire", "Eriador", "Shire"],
+        'Date of Birth T.A.': [2968, 2890, 2931, 2980]
+        }
+data_pandas = pd.DataFrame(data)
+display(data_pandas)
+!ec
+
+In the above we have imported _pandas_ with the shorthand _pd_, the latter has become the standard way we import _pandas_. We make then a list of various variables
+and reorganize the aboves lists into a _DataFrame_ and then print out  a neat table with specific column labels as *Name*, *place of birth* and *date of birth*.
+Displaying these results, we see that the indices are given by the default numbers from zero to three.
+_pandas_ is extremely flexible and we can easily change the above indices by defining a new type of indexing as
+!bc pycod
+data_pandas = pd.DataFrame(data,index=['Frodo','Bilbo','Aragorn','Sam'])
+display(data_pandas)
+!ec
+Thereafter we display the content of the row which begins with the index _Aragorn_
+!bc pycod
+display(data_pandas.loc['Aragorn'])
+!ec
+
+We can easily append data to this, for example
+!bc pycod
+new_hobbit = {'First Name': ["Peregrin"],
+              'Last Name': ["Took"],
+              'Place of birth': ["Shire"],
+              'Date of Birth T.A.': [2990]
+              }
+data_pandas=data_pandas.append(pd.DataFrame(new_hobbit, index=['Pippin']))
+display(data_pandas)
+!ec
+
+
+Here are other examples where we use the _DataFrame_ functionality to handle arrays, now with more interesting features for us, namely numbers. We set up a matrix 
+of dimensionality $10\times 5$ and compute the mean value and standard deviation of each column. Similarly, we can perform mathematial operations like squaring the matrix elements and many other operations. 
+!bc pycod
+import numpy as np
+import pandas as pd
+from IPython.display import display
+np.random.seed(100)
+# setting up a 10 x 5 matrix
+rows = 10
+cols = 5
+a = np.random.randn(rows,cols)
+df = pd.DataFrame(a)
+display(df)
+print(df.mean())
+print(df.std())
+display(df**2)
+!ec
+
+Thereafter we can select specific columns only and plot final results
+!bc pycod
+df.columns = ['First', 'Second', 'Third', 'Fourth', 'Fifth']
+df.index = np.arange(10)
+
+display(df)
+print(df['Second'].mean() )
+print(df.info())
+print(df.describe())
+
+from pylab import plt, mpl
+plt.style.use('seaborn')
+mpl.rcParams['font.family'] = 'serif'
+
+df.cumsum().plot(lw=2.0, figsize=(10,6))
+plt.show()
+
+
+df.plot.bar(figsize=(10,6), rot=15)
+plt.show()
+!ec
+We can produce a $4\times 4$ matrix
+!bc pycod
+b = np.arange(16).reshape((4,4))
+print(b)
+df1 = pd.DataFrame(b)
+print(df1)
+!ec
+and many other operations. 
+
+The _Series_ class is another important class included in
+_pandas_. You can view it as a specialization of _DataFrame_ but where
+we have just a single column of data. It shares many of the same features as _DataFrame. As with _DataFrame_,
+most operations are vectorized, achieving thereby a high performance when dealing with computations of arrays, in particular labeled arrays.
+As we will see below it leads also to a very concice code close to the mathematical operations we may be interested in.
+For multidimensional arrays, we recommend strongly "xarray":"http://xarray.pydata.org/en/stable/". _xarray_ has much of the same flexibility as _pandas_, but allows for the extension to higher dimensions than two. We will see examples later of the usage of both _pandas_ and _xarray_. 
 
 
