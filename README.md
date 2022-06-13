@@ -103,13 +103,13 @@ broadcasted via zoom for those who cannot attend in person. The zoom link will b
 - 1030am-11am: Break, coffee, tea etc
 - 11am-12pm: Hands-on session with applications and introduction to software libraries (AB, JW, RL) 
 - 12pm-1pm: Lunch (shorter lunch, else 1h30m lunches)
-- 1pm-2pm: Quantum algorithms (Time evolution) for solving quantum mechanical problems (DL, JB, JW, and ZQ), simple problems
-- 2pm-3pm: Quantum algorithms (Phase estimation) for solving quantum mechanical problems (DL, JB, JW, and ZQ), simple problems
+- 1pm-2pm: Algorithms for quantum dynamics (DL), simple problems
+- 2pm-3pm: Quantum phase estimation and adiabatic evolution (ZQ and JB), simple problems
 - 3pm-4pm: Break, coffee, tea or tour for FRIB for those interested. Please let us know if you are interested in a tour of FRIB.
 - 4pm-6pm: Hands-on sessions and problem solving (AB+all)
 
 ### Tuesday June 21
-- 830-930am: Time evolution, Suzuki-Trotter approximation and quantum simulations (DL and JW) (advanced topic)
+- 830-930am: Hamiltonian simulation: a general overview (JW)
 - 930am-1030am: Introduction to VQE and simple model (BH) 
 - 1030am-11am: Break, coffee, tea etc
 - 11am-12pm: Many-body theory and nuclear few- and many-body systems (BH and MHJ)
