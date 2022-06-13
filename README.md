@@ -51,7 +51,7 @@ Morten Hjorth-Jensen, hjensen@msu.edu
    - Quantum simulations on a real quantum computer
 
 - Quantum field theory and quantum computing
-- Quantum error correction
+- Quantum error correction and mitigation
 
 All of the above topics will be supported by examples, hands-on exercises and project work.
 
