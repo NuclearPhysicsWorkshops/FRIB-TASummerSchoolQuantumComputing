@@ -87,6 +87,7 @@ broadcasted via zoom for those who cannot attend in person. The zoom link will b
 ### Teachers
 - AB = Alexei Bazavov
 - BH = Benjamin Hall
+- DJ = Danny Jammoa
 - DL = Dean Lee
 - JW = Jacob Watkins
 - JB = Joey Bonitati
@@ -125,8 +126,8 @@ broadcasted via zoom for those who cannot attend in person. The zoom link will b
 - 1030am-11am: Break, coffee, tea etc
 - 11am-12pm: Practicing error correction and mitigation, hands-on part (RL)
 - 12pm-130pm: Lunch
-- 130pm-230pm: Wrapping up and defining nuclear many-body system to study for hands-on session (All)
-- 230pm-330pm: Start hands-on session (RL)
+- 130pm-230pm: Wrapping up and defining nuclear many-body system to study for hands-on session and possible advanced topics (JB, BH and MHJ+All)
+- 230pm-330pm: Start hands-on session
 - 330pm-4pm: Break, coffee, tea etc
 - 4pm-6pm: Hands-on sessions and problem solving (all)
 - 6pm: End of school
