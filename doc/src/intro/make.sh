@@ -60,8 +60,8 @@ doconce subst "% Add user's preamble" "\g<1>\n\\usepackage{simplewick}" $name.te
 doconce replace 'section{' 'section*{' $name.tex
 pdflatex -shell-escape $name
 pdflatex -shell-escape $name
-mv -f $name.pdf ${name}-minted.pdf
-cp $name.tex ${name}-plain-minted.tex
+mv -f $name.pdf ${name}.pdf
+cp $name.tex ${name}-plain.tex
 
 
 
@@ -88,8 +88,7 @@ cp ${name}.ipynb $dest/$name/ipynb
 ipynb_tarfile=ipynb-${name}-src.tar.gz
 if [ ! -f ${ipynb_tarfile} ]; then
 cat > README.txt <<EOF
-This IPython notebook ${name}.ipynb does not require any additional
-programs.
+#This IPython notebook ${name}.ipynb does not require any additional programs.
 EOF
 tar czf ${ipynb_tarfile} README.txt
 fi
