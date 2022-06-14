@@ -111,37 +111,37 @@ in person. The lectures will also be recorded.
 
 ===  Monday June 20  ===
 * 8am-830am: Welcome and registration
-* 830am-930am: Introduction to quantum computing, qubits, systems of qubits, gates and quantum circuits (AB)
-* 930am-1030am: Measurements, Superposition, Entanglement (AB)
+* 830am-930am: "Introduction to quantum computing, qubits, systems of qubits, gates and quantum circuits (AB)":"https://nuclearphysicsworkshops.github.io/FRIB-TASummerSchoolQuantumComputing/doc/web/course.html"
+* 930am-1030am: "Measurements, Superposition, Entanglement (AB)":"https://nuclearphysicsworkshops.github.io/FRIB-TASummerSchoolQuantumComputing/doc/web/course.html"
 * 1030am-11am: Break, coffee, tea etc
-* 11am-12pm: Hands-on session with applications and introduction to software libraries (AB, JW, RL) 
+* 11am-12pm: "Hands-on session with applications and introduction to software libraries (AB, JW, RL)":"https://nuclearphysicsworkshops.github.io/FRIB-TASummerSchoolQuantumComputing/doc/web/course.html"
 * 12pm-1pm: Lunch (shorter lunch, else 1h30m lunches)
-* 1pm-2pm: Algorithms for quantum dynamics (DL), simple problems
-* 2pm-3pm: Quantum phase estimation and adiabatic evolution (ZQ and JB), simple problems
+* 1pm-2pm: "Algorithms for quantum dynamics (DL), simple problems":"https://nuclearphysicsworkshops.github.io/FRIB-TASummerSchoolQuantumComputing/doc/web/course.html"
+* 2pm-3pm: "Quantum phase estimation and adiabatic evolution (ZQ and JB), simple problems":"https://nuclearphysicsworkshops.github.io/FRIB-TASummerSchoolQuantumComputing/doc/web/course.html"
 * 3pm-4pm: Break, coffee, tea or tour for FRIB for those interested. Please let us know if you are interested in a tour of FRIB.
-* 4pm-6pm: Hands-on sessions and problem solving (AB+all)
+* 4pm-6pm: "Hands-on sessions and problem solving (AB+all)":"https://nuclearphysicsworkshops.github.io/FRIB-TASummerSchoolQuantumComputing/doc/web/course.html"
 
 === Tuesday June 21 ===
-* 830-930am: Hamiltonian simulation: a general overview (JW)
-* 930am-1030am: Introduction to VQE and simple model (BH) 
+* 830-930am: "Hamiltonian simulation: a general overview (JW)":"https://nuclearphysicsworkshops.github.io/FRIB-TASummerSchoolQuantumComputing/doc/web/course.html"
+* 930am-1030am: "Introduction to VQE and simple model (BH)":"https://nuclearphysicsworkshops.github.io/FRIB-TASummerSchoolQuantumComputing/doc/web/course.html" 
 * 1030am-11am: Break, coffee, tea etc
-* 11am-12pm: Many-body theory and nuclear few- and many-body systems (BH and MHJ)
+* 11am-12pm: "Many-body theory and nuclear few- and many-body systems (BH and MHJ)":"https://nuclearphysicsworkshops.github.io/FRIB-TASummerSchoolQuantumComputing/doc/web/course.html"
 * 12pm-130pm: Lunch
-* 130pm-230pm:  Quantum algorithms (VQE) and nuclear physics with applications (BH and MHJ), part 1
-* 230pm-330pm:  Quantum algorithms (VQE) and nuclear physics with applications (BH and MHJ), part 2
+* 130pm-230pm:  "Quantum algorithms (VQE) and nuclear physics with applications (BH and MHJ), part 1":"https://nuclearphysicsworkshops.github.io/FRIB-TASummerSchoolQuantumComputing/doc/web/course.html"
+* 230pm-330pm:  "Quantum algorithms (VQE) and nuclear physics with applications (BH and MHJ), part 2":"https://nuclearphysicsworkshops.github.io/FRIB-TASummerSchoolQuantumComputing/doc/web/course.html"
 * 330pm-4pm: Break, coffee, tea etc
-* 4pm-6pm: Hands-on sessions and problem solving (BH and JW+all)
+* 4pm-6pm: "Hands-on sessions and problem solving (BH and JW+all)":"https://nuclearphysicsworkshops.github.io/FRIB-TASummerSchoolQuantumComputing/doc/web/course.html"
 
 === Wednesday June 22 ===
-* 830am-930am: Noise, error correction and mitigation, part I (RL)
-* 930am-1030am: Noise, error correction and mitigation, part II (RL)
+* 830am-930am: "Noise, error correction and mitigation, part I (RL)":"https://nuclearphysicsworkshops.github.io/FRIB-TASummerSchoolQuantumComputing/doc/web/course.html"
+* 930am-1030am: "Noise, error correction and mitigation, part II (RL)":"https://nuclearphysicsworkshops.github.io/FRIB-TASummerSchoolQuantumComputing/doc/web/course.html"
 * 1030am-11am: Break, coffee, tea etc
-* 11am-12pm: Practicing error correction and mitigation, hands-on part (RL)
+* 11am-12pm: "Practicing error correction and mitigation, hands-on part (RL)":"https://nuclearphysicsworkshops.github.io/FRIB-TASummerSchoolQuantumComputing/doc/web/course.html"
 * 12pm-130pm: Lunch
-* 130pm-230pm: Wrapping up and defining nuclear many-body system to study for hands-on session (All)
-* 230pm-330pm: Start hands-on session (RL)
+* 130pm-230pm: "Wrapping up and defining nuclear many-body system to study for hands-on session (All)":"https://nuclearphysicsworkshops.github.io/FRIB-TASummerSchoolQuantumComputing/doc/web/course.html"
+* 230pm-330pm: "Start hands-on session (RL)":"https://nuclearphysicsworkshops.github.io/FRIB-TASummerSchoolQuantumComputing/doc/web/course.html"
 * 330pm-4pm: Break, coffee, tea etc
-* 4pm-6pm: Hands-on sessions and problem solving (all)
+* 4pm-6pm: "Hands-on sessions and problem solving (all)":"https://nuclearphysicsworkshops.github.io/FRIB-TASummerSchoolQuantumComputing/doc/web/course.html"
 
 
 
@@ -402,7 +402,7 @@ A = np.log(np.array([ [4.0, 7.0, 8.0], [3.0, 10.0, 11.0], [4.0, 5.0, 7.0] ]))
 # print the first column, row-major order and elements start with 0
 print(A[:,0]) 
 !ec
-We can continue this was by printing out other columns or rows. The example here prints out the second column
+We can continue this way by printing out other columns or rows. The example here prints out the second column
 !bc pycod
 import numpy as np
 A = np.log(np.array([ [4.0, 7.0, 8.0], [3.0, 10.0, 11.0], [4.0, 5.0, 7.0] ]))
@@ -425,7 +425,7 @@ n = 10
 A = np.ones( (n, n) )
 print(A) 
 !ec 
-or as unitarily distributed random numbers (see the material on random number generators in the statistics part)
+or as unitarily distributed random numbers
 !bc pycod
 import numpy as np
 n = 10
@@ -434,7 +434,7 @@ A = np.random.rand(n, n)
 print(A) 
 !ec 
 
-As we will see throughout these lectures, there are several extremely useful functionalities in Numpy.
+There are several other extremely useful functionalities in Numpy. Numpy contains many functions which are useful if we wish to perform a statistical analysis.
 As an example, consider the discussion of the covariance matrix. Suppose we have defined three vectors
 $\bm{x}, \bm{y}, \bm{z}$ with $n$ elements each. The covariance matrix is defined as 
 !bt
@@ -512,7 +512,7 @@ analysis tools for Python. _pandas_ stands for panel data, a term borrowed from 
 _pandas_ has two major classes, the _DataFrame_ class with two-dimensional data objects and tabular data organized in columns and the class _Series_ with a focus on one-dimensional data objects. Both classes allow you to index data easily as we will see in the examples below. 
 _pandas_ allows you also to perform mathematical operations on the data, spanning from simple reshapings of vectors and matrices to statistical operations. 
 
-The following simple example shows how we can, in an easy way make tables of our data. Here we define a data set which includes names, place of birth and date of birth, and displays the data in an easy to read way. We will see repeated use of _pandas_, in particular in connection with classification of data. 
+The following simple example shows how we can, in an easy way make tables of our data. Here we define a data set which includes names, place of birth and date of birth, and displays the data in an easy to read way. 
 
 !bc pycod 
 import pandas as pd
@@ -603,7 +603,7 @@ The _Series_ class is another important class included in
 _pandas_. You can view it as a specialization of _DataFrame_ but where
 we have just a single column of data. It shares many of the same features as _DataFrame. As with _DataFrame_,
 most operations are vectorized, achieving thereby a high performance when dealing with computations of arrays, in particular labeled arrays.
-As we will see below it leads also to a very concice code close to the mathematical operations we may be interested in.
+
 For multidimensional arrays, we recommend strongly "xarray":"http://xarray.pydata.org/en/stable/". _xarray_ has much of the same flexibility as _pandas_, but allows for the extension to higher dimensions than two. We will see examples later of the usage of both _pandas_ and _xarray_. 
 
 
