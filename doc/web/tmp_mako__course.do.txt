@@ -16,8 +16,6 @@ DATE: June 20-22
 The teaching material is provided as jupyter-notebooks and/or PDF files. Lunches are 12pm-130pm Tuesday and Wednesday and 12pm-1pm on Monday. Monday at 3-4pm for those interested there is the possibility to join a guided tour of FRIB. Coffee breaks are 1030am-11 all days  and 3-4pm on Monday and 330pm-4pm on Tuesday and Wednesday.
 
 
-======= Quantum Computing and Nuclear Few- and Many-Body Problems =======
-
 ===== Introduction to the summer school with teaching plans and learning outcomes =====
 
 
@@ -29,7 +27,7 @@ The teaching material is provided as jupyter-notebooks and/or PDF files. Lunches
    * "ipynb file":"https://nuclearphysicsworkshops.github.io/FRIB-TASummerSchoolQuantumComputing/doc/pub/intro/ipynb/intro.ipynb"
 
 
-===== Monday June 20, 830am-930am: Introduction to quantum computing, qubits, systems of qubits, gates and quantum circuits =====
+===== Monday June 20, 830am-930am: Introduction to quantum computing, qubits, systems of qubits, gates and quantum circuits (AB) =====
 
 
 
@@ -40,7 +38,7 @@ The teaching material is provided as jupyter-notebooks and/or PDF files. Lunches
    * "ipynb file":"https://nuclearphysicsworkshops.github.io/FRIB-TASummerSchoolQuantumComputing/doc/pub/lecture1/ipynb/lecture1.ipynb"
 
 
-===== Monday June 20, 930am-1030am: Measurements, Superposition and Entanglement =====
+===== Monday June 20, 930am-1030am: Measurements, Superposition and Entanglement (AB) =====
 
 
 
@@ -62,7 +60,7 @@ The teaching material is provided as jupyter-notebooks and/or PDF files. Lunches
    * "ipynb file":"https://nuclearphysicsworkshops.github.io/FRIB-TASummerSchoolQuantumComputing/doc/pub/lecture3/ipynb/lecture3.ipynb"
 
 
-===== Monday June 20, 1pm-3pm: Quantum algorithms (Time evolution and Phase Estimation) for solving quantum mechanical problems and simple problems =====
+===== Monday June 20, 1pm-2pm: Algorithms for quantum dynamics (DL), simple problems =====
 
 
 
@@ -84,7 +82,7 @@ The teaching material is provided as jupyter-notebooks and/or PDF files. Lunches
    * "ipynb file":"https://nuclearphysicsworkshops.github.io/FRIB-TASummerSchoolQuantumComputing/doc/pub/handson1/ipynb/handson1.ipynb"
 
 
-===== Tuesday June 21, 830am-930am: Time evolution, Suzuki-Trotter approximation and quantum simulations (advanced topic) =====
+===== Monday June 20, 2pm-3pm: Quantum phase estimation and adiabatic eovolution (JB and ZQ), simple problems =====
 
 
 
@@ -95,7 +93,7 @@ The teaching material is provided as jupyter-notebooks and/or PDF files. Lunches
    * "ipynb file":"https://nuclearphysicsworkshops.github.io/FRIB-TASummerSchoolQuantumComputing/doc/pub/lecture5/ipynb/lecture5.ipynb"
 
 
-===== Tuesday June 21, 930am-1030am: Introduction to VQE and simple model =====
+===== Tuesday June 21, 830am-930am: Hamiltonian Simulation: a general overview (JW) =====
 
 
 
@@ -106,7 +104,7 @@ The teaching material is provided as jupyter-notebooks and/or PDF files. Lunches
    * "ipynb file":"https://nuclearphysicsworkshops.github.io/FRIB-TASummerSchoolQuantumComputing/doc/pub/lecture6/ipynb/lecture6.ipynb"
 
 
-===== Tuesday June 21, 11am-12pm: Many-body theory and nuclear few- and many-body systems =====
+===== Tuesday June 21, 930am-1030am: Introduction to VQE and simple model (BH) =====
 
 
 
@@ -117,7 +115,7 @@ The teaching material is provided as jupyter-notebooks and/or PDF files. Lunches
    * "ipynb file":"https://nuclearphysicsworkshops.github.io/FRIB-TASummerSchoolQuantumComputing/doc/pub/lecture7/ipynb/lecture7.ipynb"
 
 
-===== Tuesday June 21, 130pm-330pm:  Quantum algorithms (VQE) and nuclear physics with applications, parts I and II =====
+===== Tuesday June 21, 11am-12pm: Many-body theory and nuclear few- and many-body systems (BH and MHJ) =====
 
 
 
@@ -139,7 +137,7 @@ The teaching material is provided as jupyter-notebooks and/or PDF files. Lunches
    * "ipynb file":"https://nuclearphysicsworkshops.github.io/FRIB-TASummerSchoolQuantumComputing/doc/pub/handson2/ipynb/handson2.ipynb"
 
 
-===== Wednesday June 22, 830am-930am: Noise, error correction and mitigation, part I =====
+===== Tuesday June 21, 130pm-330pm:  Quantum algorithms (VQE) and nuclear physics with applications, parts I and II (BH and MHJ) =====
 
 
 
@@ -150,7 +148,7 @@ The teaching material is provided as jupyter-notebooks and/or PDF files. Lunches
    * "ipynb file":"https://nuclearphysicsworkshops.github.io/FRIB-TASummerSchoolQuantumComputing/doc/pub/lecture9/ipynb/lecture9.ipynb"
 
 
-===== Wednesday June 22, 930am-1030am: Noise, error correction and mitigation, part II =====
+===== Wednesday June 22, 830am-930am: Noise, error correction and mitigation, part I (RL) =====
 
 
 
@@ -161,7 +159,7 @@ The teaching material is provided as jupyter-notebooks and/or PDF files. Lunches
    * "ipynb file":"https://nuclearphysicsworkshops.github.io/FRIB-TASummerSchoolQuantumComputing/doc/pub/lecture10/ipynb/lecture10.ipynb"
 
 
-===== Wednesday June 22, 11am-12pm: Practicing error correction and mitigation, hands-on part =====
+===== Wednesday June 22, 930am-1030am: Noise, error correction and mitigation, part II (RL) =====
 
 
 
@@ -172,7 +170,7 @@ The teaching material is provided as jupyter-notebooks and/or PDF files. Lunches
    * "ipynb file":"https://nuclearphysicsworkshops.github.io/FRIB-TASummerSchoolQuantumComputing/doc/pub/lecture11/ipynb/lecture11.ipynb"
 
 
-===== Wednesday June 22, 130pm-330pm: Wrapping up and defining nuclear many-body system to study for hands-on session and start hands-on session =====
+===== Wednesday June 22, 11am-12pm: Practicing error correction and mitigation, hands-on part (RL) =====
 
 
 
@@ -181,6 +179,17 @@ The teaching material is provided as jupyter-notebooks and/or PDF files. Lunches
      * "PDF format":"https://nuclearphysicsworkshops.github.io/FRIB-TASummerSchoolQuantumComputing/doc/pub/lecture12/pdf/lecture12.pdf"
  * iPython notebook:
    * "ipynb file":"https://nuclearphysicsworkshops.github.io/FRIB-TASummerSchoolQuantumComputing/doc/pub/lecture12/ipynb/lecture12.ipynb"
+
+
+===== Wednesday June 22, 130pm-330pm: Wrapping up and defining nuclear many-body system to study for hands-on session and start hands-on session =====
+
+
+
+ * PDF version:
+   * For printing:
+     * "PDF format":"https://nuclearphysicsworkshops.github.io/FRIB-TASummerSchoolQuantumComputing/doc/pub/lecture13/pdf/lecture13.pdf"
+ * iPython notebook:
+   * "ipynb file":"https://nuclearphysicsworkshops.github.io/FRIB-TASummerSchoolQuantumComputing/doc/pub/lecture13/ipynb/lecture13.ipynb"
 
 
 ===== Wednesday June 22, 4pm-6pm Hands-on session and problem solving =====
