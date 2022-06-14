@@ -75,6 +75,9 @@ With the hands-on programming component we strongly recommend that you install Q
 - See also Ryan Larose's (from 2019) Quantum computing bootcamp with Qiskit - https://github.com/rmlarose/qcbq.
 - See also https://www.ryanlarose.com/external-resources.html
 
+## Scientific articles of interest
+- Adam Smith, M. S. Kim, Frank Pollmann, and Johannes Knolle, Simulating quantum many-body dynamics on a current digital quantum computer, NPJ Quantum Information _5_, Article number: 106 (2019), see https://www.nature.com/articles/s41534-019-0217-0
+
 ## Detailed lecture plan 
 
 The duration of each lecture is approximately 45-50 minutes and there is a small break of 10-15 minutes
