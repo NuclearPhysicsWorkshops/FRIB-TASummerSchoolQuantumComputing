@@ -79,6 +79,11 @@ o We strongly recommend using the Jupyter notebook environment at URL:"https://q
 o See also Ryan Larose's (from 2019) Quantum computing bootcamp with Qiskit - URL:"https://github.com/rmlarose/qcbq."
 o See also URL:"https://www.ryanlarose.com/external-resources.html"
 
+
+=== Scientific articles of interest ===
+o Adam Smith, M. S. Kim, Frank Pollmann, and Johannes Knolle, Simulating quantum many-body dynamics on a current digital quantum computer, NPJ Quantum Information 5, Article number: 106 (2019), see URL:"https://www.nature.com/articles/s41534-019-0217-0"
+
+
 =====  Detailed lecture plan  =====
 
 The duration of each lecture is approximately 45-50 minutes and there
@@ -94,6 +99,7 @@ in person. The lectures will also be recorded.
 ===  Teachers ===
 * AB = Alexei Bazavov
 * BH = Benjamin Hall
+* DJ = Danny Jammoa (online discussions and hands-on sessions)
 * DL = Dean Lee
 * JW = Jacob Watkins
 * JB = Joey Bonitati
@@ -110,13 +116,13 @@ in person. The lectures will also be recorded.
 * 1030am-11am: Break, coffee, tea etc
 * 11am-12pm: Hands-on session with applications and introduction to software libraries (AB, JW, RL) 
 * 12pm-1pm: Lunch (shorter lunch, else 1h30m lunches)
-* 1pm-2pm: Quantum algorithms (Time evolution) for solving quantum mechanical problems (DL, JB, JW, and ZQ), simple problems
-* 2pm-3pm: Quantum algorithms (Phase estimation) for solving quantum mechanical problems (DL, JB, JW, and ZQ), simple problems
+* 1pm-2pm: Algorithms for quantum dynamics (DL), simple problems
+* 2pm-3pm: Quantum phase estimation and adiabatic evolution (ZQ and JB), simple problems
 * 3pm-4pm: Break, coffee, tea or tour for FRIB for those interested. Please let us know if you are interested in a tour of FRIB.
 * 4pm-6pm: Hands-on sessions and problem solving (AB+all)
 
 === Tuesday June 21 ===
-* 830-930am: Time evolution, Suzuki-Trotter approximation and quantum simulations (DL and JW) (advanced topic)
+* 830-930am: Hamiltonian simulation: a general overview (JW)
 * 930am-1030am: Introduction to VQE and simple model (BH) 
 * 1030am-11am: Break, coffee, tea etc
 * 11am-12pm: Many-body theory and nuclear few- and many-body systems (BH and MHJ)
