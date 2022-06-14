@@ -89,7 +89,7 @@ broadcasted via zoom for those who cannot attend in person. The zoom link will b
 ### Teachers
 - AB = Alexei Bazavov
 - BH = Benjamin Hall
-- DJ = Danny Jammoa
+- DJ = Danny Jammoa (online discussions and hands-on sessions)
 - DL = Dean Lee
 - JW = Jacob Watkins
 - JB = Joey Bonitati
