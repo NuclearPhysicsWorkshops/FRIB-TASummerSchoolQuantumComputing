@@ -1,0 +1,44 @@
+*** error: file has a mako construction ${}^{4}'
+    but seemingly no definition in <%...%>'
+    (it is not a command-line given mako variable either).
+    However, if this is a variable in a Makefile or Bash script
+    run with --no_mako - and you cannot use mako and Makefile or Bash variables
+    in the same document!
+
+Translating doconce text in lecture8.do.txt to html
+*** error: syntax error in table!
+    missing three horizontal rules and heading
+    in the right places
+
+    lines surrounding the table:
+<p>|       | \( 0p-0h \) | \( 1p-1h \)   | \( 2p-2h \) | \( 3p-3h \) | \( 4p-4h \) | \( 5p-5h \) | \( 6p-6h \) | </p>
+|---------------------------------------------------------------|
+| \( 0p-0h \)  |  x   |  x      |  x    |  0   |   0   |  0    |  0    |
+| \( 1p-1h \)  |  x   |  x      |  x    |  x   |   0   |  0    |  0    |
+| \( 2p-2h \)  |  x   |  x      |  x    |  x   |   x   |  0    |  0    |
+| \( 3p-3h \)  |  0   |  x      |  x    |  x   |   x   |  x    |  0    |
+| \( 4p-4h \)  |  0   |  0      |  x    |  x   |   x   |  x    |  x    |
+| \( 5p-5h \)  |  0   |  0      |  0    |  x   |   x   |  x    |  x    |
+| \( 6p-6h \)  |  0   |  0      |  0    |  0   |   x   |  x    |  x    |
+|---------------------------------------------------------------|
+
+<p></p>
+<p>with a two-body force. Why are there non-zero blocks of elements? </p>
+!eblock
+
+
+    here are the recorded table rows:
+|---------------------| (horizontal rule)
+|---------------------| (horizontal rule)
+| \( 0p-0h \) | x | x | x | 0 | 0 | 0 | 0 |
+| \( 1p-1h \) | x | x | x | x | 0 | 0 | 0 |
+| \( 2p-2h \) | x | x | x | x | x | 0 | 0 |
+| \( 3p-3h \) | 0 | x | x | x | x | x | 0 |
+| \( 4p-4h \) | 0 | 0 | x | x | x | x | x |
+| \( 5p-5h \) | 0 | 0 | 0 | x | x | x | x |
+| \( 6p-6h \) | 0 | 0 | 0 | 0 | x | x | x |
+|---------------------| (horizontal rule)
+
+possible trouble:
+1. Not a table, just an opening pipe symbol at the beginning of the line?
+2. Something wrong with the syntax in a preceding table?
