@@ -60,6 +60,7 @@ All of the above topics will be supported by examples, hands-on exercises and pr
 1. Lectures Monday through Wednesday, starting at 830am, see schedule below
 2. Hands-on sessions before lunch and in the afternoons till 6pm
 3. For all lecture days we provide relevant jupyter-notebooks you can work on
+4. Lectures are in auditorium 1200. Hands-on sessions will be in both the main lecture hall 1200 and in rooms 1221 A & B (12 noon - 6 pm) and room 1309 (8:30am-6pm).
 
 
 ## Possible textbooks
@@ -95,7 +96,7 @@ broadcasted via zoom for those who cannot attend in person. The zoom link will b
 - JB = Joey Bonitati
 - MHJ = Morten Hjorth-Jensen
 - RL = Ryan Larose
-- QZ - Zhenrong Qian
+- ZQ - Zhenrong Qian
 
 
 
