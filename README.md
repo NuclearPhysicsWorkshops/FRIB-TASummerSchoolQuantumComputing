@@ -95,7 +95,7 @@ broadcasted via zoom for those who cannot attend in person. The zoom link will b
 - JB = Joey Bonitati
 - MHJ = Morten Hjorth-Jensen
 - RL = Ryan Larose
-- QZ - Zhenrong Qian
+- ZQ - Zhenrong Qian
 
 
 
