@@ -99,7 +99,7 @@ determinants.
 !eblock
 
 !split
-===== Quick repetition of the occupation representation =====
+===== Reminder  on the occupation representation (second quantization) =====
 !bblock
 We start with a set of orthonormal single-particle states $\{ \phi_i(x) \}$. 
 (Note: this requirement, and others, can be relaxed, but leads to a 
