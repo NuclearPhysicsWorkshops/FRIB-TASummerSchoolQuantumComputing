@@ -615,6 +615,12 @@ All these methods start normally with a Hartree-Fock basis as the calculational 
 !eblock
 
 !split
+=====  Coupled Cluster theory =====
+
+Add material here
+
+
+!split
 ===== Example case: pairing Hamiltonian =====
 !bblock
 
