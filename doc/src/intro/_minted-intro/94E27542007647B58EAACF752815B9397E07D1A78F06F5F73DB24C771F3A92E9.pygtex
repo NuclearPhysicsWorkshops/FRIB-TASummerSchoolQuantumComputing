@@ -1,0 +1,3 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{n}{Here}\PYG{l+s+s1}{\PYGZsq{}s a sample code for simulating the quantum circuit above, `circ1p3\PYGZus{}bind`, with the `aer\PYGZus{}simulator`. We generate the simulation result using the built\PYGZhy{}in visualization tool `plot\PYGZus{}histogram`, which converts counts (a dictionary of results) into a histogram, where the probabilities of measuring each state is shown on the vertical axis.}
+\end{Verbatim}

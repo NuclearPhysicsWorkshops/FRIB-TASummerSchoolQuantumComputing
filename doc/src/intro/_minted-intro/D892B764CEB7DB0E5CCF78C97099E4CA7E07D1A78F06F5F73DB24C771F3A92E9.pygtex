@@ -1,0 +1,9 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{n}{new\PYGZus{}hobbit} \PYG{o}{=} \PYG{p}{\PYGZob{}}\PYG{l+s+s1}{\PYGZsq{}First Name\PYGZsq{}}\PYG{p}{:} \PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}Peregrin\PYGZdq{}}\PYG{p}{],}
+              \PYG{l+s+s1}{\PYGZsq{}Last Name\PYGZsq{}}\PYG{p}{:} \PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}Took\PYGZdq{}}\PYG{p}{],}
+              \PYG{l+s+s1}{\PYGZsq{}Place of birth\PYGZsq{}}\PYG{p}{:} \PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}Shire\PYGZdq{}}\PYG{p}{],}
+              \PYG{l+s+s1}{\PYGZsq{}Date of Birth T.A.\PYGZsq{}}\PYG{p}{:} \PYG{p}{[}\PYG{l+m+mi}{2990}\PYG{p}{]}
+              \PYG{p}{\PYGZcb{}}
+\PYG{n}{data\PYGZus{}pandas}\PYG{o}{=}\PYG{n}{data\PYGZus{}pandas}\PYG{o}{.}\PYG{n}{append}\PYG{p}{(}\PYG{n}{pd}\PYG{o}{.}\PYG{n}{DataFrame}\PYG{p}{(}\PYG{n}{new\PYGZus{}hobbit}\PYG{p}{,} \PYG{n}{index}\PYG{o}{=}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}Pippin\PYGZsq{}}\PYG{p}{]))}
+\PYG{n}{display}\PYG{p}{(}\PYG{n}{data\PYGZus{}pandas}\PYG{p}{)}
+\end{Verbatim}

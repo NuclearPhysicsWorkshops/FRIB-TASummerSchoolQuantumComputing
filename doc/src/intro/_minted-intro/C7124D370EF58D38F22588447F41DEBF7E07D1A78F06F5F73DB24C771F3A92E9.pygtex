@@ -1,0 +1,3 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{k+kn}{from} \PYG{n+nn}{qiskit} \PYG{k+kn}{import} \PYG{n}{QuantumCircuit}  \PYG{c+c1}{\PYGZsh{} You can ignore this if \PYGZsq{}from qiskit import *\PYGZsq{} has been executed.}
+\end{Verbatim}

@@ -1,0 +1,5 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{c+c1}{\PYGZsh{} Method 1:}
+\PYG{n}{qc\PYGZus{}1p1a} \PYG{o}{=} \PYG{n}{QuantumCircuit}\PYG{p}{(}\PYG{l+m+mi}{3}\PYG{p}{,}\PYG{l+m+mi}{3}\PYG{p}{)}
+\PYG{n}{qc\PYGZus{}1p1a}\PYG{o}{.}\PYG{n}{draw}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}mpl\PYGZsq{}}\PYG{p}{)}
+\end{Verbatim}

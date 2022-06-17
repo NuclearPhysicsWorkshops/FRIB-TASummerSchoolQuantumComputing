@@ -1,0 +1,181 @@
+Translating doconce text in intro.do.txt to html
+*** replacing \bm{...} by \boldsymbol{...} (\bm is not supported by MathJax)
+*** warning: inline math in HTML must have space around <:
+    A=A^{<em>}  ->  A=A^{ < em>}
+*** warning: inline math in HTML must have space around <:
+    a_{ij}=a_{ij}^{</em>}  ->  a_{ij}=a_{ij}^{ < /em>}
+*** warning: inline math in HTML must have space around <:
+    a_{ij}=a_{ji}^{<em>}  ->  a_{ij}=a_{ji}^{ < em>}
+*** warning: inline math in HTML must have space around <:
+    \sum_k a_{ik}a_{jk}^{</em>}=\sum_k a_{ki}^{*}a_{kj}=\delta_{ij}  ->  \sum_k a_{ik}a_{jk}^{ < /em>}=\sum_k a_{ki}^{*}a_{kj}=\delta_{ij}
+*** warning: inline math in HTML must have space around <:
+    i<j  ->  i < j
+*** warning: inline math in HTML must have space around <:
+    i<j+1  ->  i < j+1
+*** warning: inline math in HTML must have space around <:
+    i<j+p  ->  i < j+p
+*** warning: --html_output is obsolete. Use the --output option
+
+output in intro-reveal.html
+Translating doconce text in intro.do.txt to html
+*** replacing \bm{...} by \boldsymbol{...} (\bm is not supported by MathJax)
+*** warning: inline math in HTML must have space around <:
+    A=A^{<em>}  ->  A=A^{ < em>}
+*** warning: inline math in HTML must have space around <:
+    a_{ij}=a_{ij}^{</em>}  ->  a_{ij}=a_{ij}^{ < /em>}
+*** warning: inline math in HTML must have space around <:
+    a_{ij}=a_{ji}^{<em>}  ->  a_{ij}=a_{ji}^{ < em>}
+*** warning: inline math in HTML must have space around <:
+    \sum_k a_{ik}a_{jk}^{</em>}=\sum_k a_{ki}^{*}a_{kj}=\delta_{ij}  ->  \sum_k a_{ik}a_{jk}^{ < /em>}=\sum_k a_{ki}^{*}a_{kj}=\delta_{ij}
+*** warning: inline math in HTML must have space around <:
+    i<j  ->  i < j
+*** warning: inline math in HTML must have space around <:
+    i<j+1  ->  i < j+1
+*** warning: inline math in HTML must have space around <:
+    i<j+p  ->  i < j+p
+*** warning: --html_output is obsolete. Use the --output option
+
+output in intro-solarized.html
+Translating doconce text in intro.do.txt to html
+*** replacing \bm{...} by \boldsymbol{...} (\bm is not supported by MathJax)
+*** warning: inline math in HTML must have space around <:
+    A=A^{<em>}  ->  A=A^{ < em>}
+*** warning: inline math in HTML must have space around <:
+    a_{ij}=a_{ij}^{</em>}  ->  a_{ij}=a_{ij}^{ < /em>}
+*** warning: inline math in HTML must have space around <:
+    a_{ij}=a_{ji}^{<em>}  ->  a_{ij}=a_{ji}^{ < em>}
+*** warning: inline math in HTML must have space around <:
+    \sum_k a_{ik}a_{jk}^{</em>}=\sum_k a_{ki}^{*}a_{kj}=\delta_{ij}  ->  \sum_k a_{ik}a_{jk}^{ < /em>}=\sum_k a_{ki}^{*}a_{kj}=\delta_{ij}
+*** warning: inline math in HTML must have space around <:
+    i<j  ->  i < j
+*** warning: inline math in HTML must have space around <:
+    i<j+1  ->  i < j+1
+*** warning: inline math in HTML must have space around <:
+    i<j+p  ->  i < j+p
+*** warning: --html_output is obsolete. Use the --output option
+
+output in intro.html
+Translating doconce text in intro.do.txt to html
+*** replacing \bm{...} by \boldsymbol{...} (\bm is not supported by MathJax)
+*** warning: inline math in HTML must have space around <:
+    A=A^{<em>}  ->  A=A^{ < em>}
+*** warning: inline math in HTML must have space around <:
+    a_{ij}=a_{ij}^{</em>}  ->  a_{ij}=a_{ij}^{ < /em>}
+*** warning: inline math in HTML must have space around <:
+    a_{ij}=a_{ji}^{<em>}  ->  a_{ij}=a_{ji}^{ < em>}
+*** warning: inline math in HTML must have space around <:
+    \sum_k a_{ik}a_{jk}^{</em>}=\sum_k a_{ki}^{*}a_{kj}=\delta_{ij}  ->  \sum_k a_{ik}a_{jk}^{ < /em>}=\sum_k a_{ki}^{*}a_{kj}=\delta_{ij}
+*** warning: inline math in HTML must have space around <:
+    i<j  ->  i < j
+*** warning: inline math in HTML must have space around <:
+    i<j+1  ->  i < j+1
+*** warning: inline math in HTML must have space around <:
+    i<j+p  ->  i < j+p
+*** warning: --html_output is obsolete. Use the --output option
+
+output in intro-bs.html
+Translating doconce text in intro.do.txt to ipynb
+*** replacing \bm{...} by \boldsymbol{...} (\bm is not supported by MathJax)
+
+*** warning: latex envir \begin{bmatrix} does not work well in Markdown.    Stick to \[ ... \], equation, equation*, align, or align*    environments in math environments.
+
+*** warning: latex envir \begin{bmatrix} does not work well in Markdown.    Stick to \[ ... \], equation, equation*, align, or align*    environments in math environments.
+
+*** warning: latex envir \begin{bmatrix} does not work well in Markdown.    Stick to \[ ... \], equation, equation*, align, or align*    environments in math environments.
+output in intro.ipynb
+Translating doconce text in intro.do.txt to pdflatex
+*** warning: latex format will have problem with words
+    containing underscores (this warning is very uncertain, might be wrong too):
+
+circ1p3_bind
+
+    typeset these words with `inline verbatim` or escape with backslash
+    First word appears here:
+ueue times. For example, if we
+want to the cirucit circ1p3_bind and circb together on a simulator, we
+can do:
+
+
+43output in intro.p.tex
+Translating doconce text in intro.do.txt to html
+*** replacing \bm{...} by \boldsymbol{...} (\bm is not supported by MathJax)
+*** warning: --html_output is obsolete. Use the --output option
+
+output in intro-reveal.html
+Translating doconce text in intro.do.txt to html
+*** replacing \bm{...} by \boldsymbol{...} (\bm is not supported by MathJax)
+*** warning: --html_output is obsolete. Use the --output option
+
+output in intro-solarized.html
+Translating doconce text in intro.do.txt to html
+*** replacing \bm{...} by \boldsymbol{...} (\bm is not supported by MathJax)
+*** warning: --html_output is obsolete. Use the --output option
+
+output in intro.html
+Translating doconce text in intro.do.txt to html
+*** replacing \bm{...} by \boldsymbol{...} (\bm is not supported by MathJax)
+*** warning: --html_output is obsolete. Use the --output option
+
+output in intro-bs.html
+Translating doconce text in intro.do.txt to ipynb
+*** replacing \bm{...} by \boldsymbol{...} (\bm is not supported by MathJax)
+
+*** warning: latex envir \begin{bmatrix} does not work well in Markdown.    Stick to \[ ... \], equation, equation*, align, or align*    environments in math environments.
+
+*** warning: latex envir \begin{bmatrix} does not work well in Markdown.    Stick to \[ ... \], equation, equation*, align, or align*    environments in math environments.
+output in intro.ipynb
+Translating doconce text in intro.do.txt to pdflatex
+*** warning: latex format will have problem with words
+    containing underscores (this warning is very uncertain, might be wrong too):
+
+circ1p3_bind
+
+    typeset these words with `inline verbatim` or escape with backslash
+    First word appears here:
+ueue times. For example, if we
+want to the cirucit circ1p3_bind and circb together on a simulator, we
+can do:
+
+
+43output in intro.p.tex
+Translating doconce text in intro.do.txt to html
+*** replacing \bm{...} by \boldsymbol{...} (\bm is not supported by MathJax)
+*** warning: --html_output is obsolete. Use the --output option
+
+output in intro-reveal.html
+Translating doconce text in intro.do.txt to html
+*** replacing \bm{...} by \boldsymbol{...} (\bm is not supported by MathJax)
+*** warning: --html_output is obsolete. Use the --output option
+
+output in intro-solarized.html
+Translating doconce text in intro.do.txt to html
+*** replacing \bm{...} by \boldsymbol{...} (\bm is not supported by MathJax)
+*** warning: --html_output is obsolete. Use the --output option
+
+output in intro.html
+Translating doconce text in intro.do.txt to html
+*** replacing \bm{...} by \boldsymbol{...} (\bm is not supported by MathJax)
+*** warning: --html_output is obsolete. Use the --output option
+
+output in intro-bs.html
+Translating doconce text in intro.do.txt to ipynb
+*** replacing \bm{...} by \boldsymbol{...} (\bm is not supported by MathJax)
+
+*** warning: latex envir \begin{bmatrix} does not work well in Markdown.    Stick to \[ ... \], equation, equation*, align, or align*    environments in math environments.
+
+*** warning: latex envir \begin{bmatrix} does not work well in Markdown.    Stick to \[ ... \], equation, equation*, align, or align*    environments in math environments.
+output in intro.ipynb
+Translating doconce text in intro.do.txt to pdflatex
+*** warning: latex format will have problem with words
+    containing underscores (this warning is very uncertain, might be wrong too):
+
+circ1p3_bind
+
+    typeset these words with `inline verbatim` or escape with backslash
+    First word appears here:
+ueue times. For example, if we
+want to the cirucit circ1p3_bind and circb together on a simulator, we
+can do:
+
+
+43output in intro.p.tex

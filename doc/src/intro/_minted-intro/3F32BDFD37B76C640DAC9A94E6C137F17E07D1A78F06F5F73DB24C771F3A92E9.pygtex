@@ -1,0 +1,13 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{c+c1}{\PYGZsh{} Submit your job to a quantum computer \PYGZsq{}ibmq\PYGZus{}belem\PYGZsq{}.}
+\PYG{c+c1}{\PYGZsh{} Select provider and backend.}
+\PYG{n}{provider} \PYG{o}{=} \PYG{n}{IBMQ}\PYG{o}{.}\PYG{n}{get\PYGZus{}provider}\PYG{p}{(}\PYG{n}{hub}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}ibm\PYGZhy{}q\PYGZsq{}}\PYG{p}{)}
+\PYG{n}{backend} \PYG{o}{=} \PYG{n}{provider}\PYG{o}{.}\PYG{n}{get\PYGZus{}backend}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}ibmq\PYGZus{}belem\PYGZsq{}}\PYG{p}{)}
+\PYG{c+c1}{\PYGZsh{} Run the circuit \PYGZsq{}circ1p3\PYGZus{}bind\PYGZsq{} and execute the job.}
+\PYG{n}{job} \PYG{o}{=} \PYG{n}{execute}\PYG{p}{(}\PYG{n}{circ1p3\PYGZus{}bind}\PYG{p}{,} \PYG{n}{backend}\PYG{p}{)}
+\PYG{c+c1}{\PYGZsh{} Monitor the job.}
+\PYG{n}{job\PYGZus{}monitor}\PYG{p}{(}\PYG{n}{job}\PYG{p}{)}
+\PYG{n}{result} \PYG{o}{=} \PYG{n}{job}\PYG{o}{.}\PYG{n}{result}\PYG{p}{()}
+\PYG{n}{counts} \PYG{o}{=} \PYG{n}{result}\PYG{o}{.}\PYG{n}{get\PYGZus{}counts}\PYG{p}{()}
+\PYG{n}{plot\PYGZus{}histogram}\PYG{p}{(}\PYG{n}{counts}\PYG{p}{)}
+\end{Verbatim}

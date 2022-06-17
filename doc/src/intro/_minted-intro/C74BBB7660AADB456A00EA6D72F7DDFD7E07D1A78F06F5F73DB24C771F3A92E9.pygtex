@@ -1,0 +1,6 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{n}{simulator} \PYG{o}{=} \PYG{n}{Aer}\PYG{o}{.}\PYG{n}{get\PYGZus{}backend}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}qasm\PYGZus{}simulator\PYGZsq{}}\PYG{p}{)}
+\PYG{n}{qc\PYGZus{}list} \PYG{o}{=} \PYG{p}{[}\PYG{n}{circ1p3\PYGZus{}bind}\PYG{p}{,} \PYG{n}{circb}\PYG{p}{]}       \PYG{c+c1}{\PYGZsh{} Include all the circuits in a single list.}
+\PYG{n}{job} \PYG{o}{=} \PYG{n}{execute}\PYG{p}{(}\PYG{n}{qc\PYGZus{}list}\PYG{p}{,} \PYG{n}{simulator}\PYG{p}{)}
+\PYG{n}{job}\PYG{o}{.}\PYG{n}{result}\PYG{p}{()}\PYG{o}{.}\PYG{n}{get\PYGZus{}counts}\PYG{p}{()}
+\end{Verbatim}

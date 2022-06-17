@@ -1,0 +1,1339 @@
+%%
+%% Automatically generated file from DocOnce source
+%% (https://github.com/doconce/doconce/)
+%% doconce format latex intro.do.txt --minted_latex_style=trac --latex_admon=paragraph --no_mako
+%%
+
+
+%-------------------- begin preamble ----------------------
+
+\documentclass[%
+oneside,                 % oneside: electronic viewing, twoside: printing
+final,                   % draft: marks overfull hboxes, figures with paths
+10pt]{article}
+
+\listfiles               %  print all files needed to compile this document
+
+\usepackage{relsize,makeidx,color,setspace,amsmath,amsfonts,amssymb}
+\usepackage[table]{xcolor}
+\usepackage{bm,ltablex,microtype}
+
+\usepackage[pdftex]{graphicx}
+
+\usepackage{fancyvrb} % packages needed for verbatim environments
+\usepackage{minted}
+\usemintedstyle{default}
+\usepackage{fancyvrb}
+
+\usepackage[T1]{fontenc}
+%\usepackage[latin1]{inputenc}
+\usepackage{ucs}
+\usepackage[utf8x]{inputenc}
+
+\usepackage{lmodern}         % Latin Modern fonts derived from Computer Modern
+
+% Hyperlinks in PDF:
+\definecolor{linkcolor}{rgb}{0,0,0.4}
+\usepackage{hyperref}
+\hypersetup{
+    breaklinks=true,
+    colorlinks=true,
+    linkcolor=linkcolor,
+    urlcolor=linkcolor,
+    citecolor=black,
+    filecolor=black,
+    %filecolor=blue,
+    pdfmenubar=true,
+    pdftoolbar=true,
+    bookmarksdepth=3   % Uncomment (and tweak) for PDF bookmarks with more levels than the TOC
+    }
+%\hyperbaseurl{}   % hyperlinks are relative to this root
+
+\setcounter{tocdepth}{2}  % levels in table of contents
+
+% prevent orhpans and widows
+\clubpenalty = 10000
+\widowpenalty = 10000
+
+% --- end of standard preamble for documents ---
+
+
+% insert custom LaTeX commands...
+
+\raggedbottom
+\makeindex
+\usepackage[totoc]{idxlayout}   % for index in the toc
+\usepackage[nottoc]{tocbibind}  % for references/bibliography in the toc
+
+%-------------------- end preamble ----------------------
+
+\begin{document}
+
+% matching end for #ifdef PREAMBLE
+
+\newcommand{\exercisesection}[1]{\subsection*{#1}}
+
+
+% ------------------- main content ----------------------
+
+
+
+% ----------------- title -------------------------
+
+\thispagestyle{empty}
+
+\begin{center}
+{\LARGE\bf
+\begin{spacing}{1.25}
+Introduction to the FRIB-TA Summer School: Quantum Computing and Nuclear Few- and Many-Body Problems with teaching plan and learning outcomes
+\end{spacing}
+}
+\end{center}
+
+% ----------------- author(s) -------------------------
+
+\begin{center}
+{\bf Facility for Rare Isotope Beams, Michigan State University, USA${}^{}$} \\ [0mm]
+\end{center}
+
+\begin{center}
+% List of all institutions:
+\end{center}
+    
+% ----------------- end author(s) -------------------------
+
+% --- begin date ---
+\begin{center}
+June 20
+\end{center}
+% --- end date ---
+
+\vspace{1cm}
+
+
+\subsection{Introduction}
+
+Recent developments in quantum information systems and technologies
+offer the possibility to address some of the most challenging
+large-scale problems in science, whether they are represented by
+complicated interacting quantum mechanical systems or classical
+systems. The last years have seen a rapid and exciting development in
+algorithms and quantum hardware.  The emphasis of this summer school
+is to highlight, through a series of lectures and hands-on exercises
+and practice sessions, how quantum computing algorithms can be used to
+study nuclear few- and many-body problems of relevance for low-energy
+nuclear physics.  And how quantum computing algorithms can aid in
+studying systems with increasingly many more degrees of freedom
+compared with more classical few- and many-body methods.  Several
+quantum algorithms for solving quantum-mechanical few- and
+many-particle problems with be discussed.  The lectures will start
+with the basic ideas of quantum computing. Thereafter, through
+examples from nuclear physics, we will elucidate how different quantum
+algorithms can be used to study these systems. The results from
+various quantum computing algorithms will be compared to standard
+nuclear few- and many-body methods 
+
+\paragraph{Organizers:}
+Alexei Bazavov (MSU), Scott Bogner (MSU), Heiko Hergert (MSU), Matthew Hirn (MSU), Morten Hjorth-Jensen (MSU), Dean Lee (MSU), Huey-Wen Lin (MSU), and Andrea Shindler (MSU)
+
+Contact person: Morten Hjorth-Jensen, hjensen@msu.edu
+
+\paragraph{Additional material in these slides.}
+In addition to containing information about the school, we provide a reminder on \textbf{numpy} and a brief introduction to Qiskit. Please take a look at these notes before coming to the school. This material is provided at the end of the these introductory notes.
+
+\subsection{Aims and Learning Outcomes}
+
+\paragraph{The following topics will be covered.}
+\begin{enumerate}
+\item Basic elements of quantum computing (first day) with introduction to relevant software, including
+\begin{enumerate}
+
+  \item Introduction to quantum computing, qubits and systems of qubits
+
+  \item Measurements, Superposition and Entanglement
+
+  \item Gates, unitary transformations and quantum circuits
+
+  \item Quantum algorithms and implementation on a real quantum computer
+
+\end{enumerate}
+
+\noindent
+\item Simulating quantum-mechanical few- and many-body systems
+\begin{enumerate}
+
+  \item Quantum algorithms for quantum mechanical systems
+
+  \item Quantum simulation of the Schroedinger equation
+
+  \item Quantum computing and nuclear few- and many-body systems
+
+  \item Quantum state preparation and Quantum simulations
+
+  \item Quantum simulations on a real quantum computer
+
+\end{enumerate}
+
+\noindent
+\item Quantum field theory and quantum computing
+
+\item Noise, error correction and mitigation
+\end{enumerate}
+
+\noindent
+All of the above topics will be supported by examples, hands-on exercises and project work.
+
+\subsection{Practicalities}
+
+\begin{enumerate}
+\item Lectures Monday through Wednesday, starting at 830am, see schedule below
+
+\item Hands-on sessions before lunch and in the afternoons till 6pm
+
+\item For all lecture days we provide relevant jupyter-notebooks you can work on
+
+\item Lectures are in auditorium 1200. Hands-on sessions will be in both the main lecture hall 1200 and in rooms 1221 A{\&}B (12 noon - 6 pm) and room 1309 (8:30am-6pm).
+\end{enumerate}
+
+\noindent
+\subsection{Learning material and resources}
+\begin{enumerate}
+\item Qiskit textbook, free online, see \href{{https://qiskit.org/textbook/preface.html}}{\nolinkurl{https://qiskit.org/textbook/preface.html}}
+
+\item Scherer, The Mathematics of Quantum Computing, see \href{{https://link.springer.com/book/10.1007/978-3-030-12358-1}}{\nolinkurl{https://link.springer.com/book/10.1007/978-3-030-12358-1}}
+
+\item Chuang and Nielsen, Quantum Computation and Quantum Information, \href{{https://www.cambridge.org/highereducation/books/quantum-computation-and-quantum-information/01E10196D0A682A6AEFFEA52D53BE9AE#overview}}{\nolinkurl{https://www.cambridge.org/highereducation/books/quantum-computation-and-quantum-information/01E10196D0A682A6AEFFEA52D53BE9AE\#overview}}
+
+\item Hundt, Quantum Computing for programmers, \href{{https://www.cambridge.org/core/books/quantum-computing-for-programmers/BA1C887BE4AC0D0D5653E71FFBEF61C6}}{\nolinkurl{https://www.cambridge.org/core/books/quantum-computing-for-programmers/BA1C887BE4AC0D0D5653E71FFBEF61C6}}
+\end{enumerate}
+
+\noindent
+\paragraph{Good resources.}
+With the hands-on programming component we strongly recommend that you install Qiskit on your computer before the school starts. 
+\begin{enumerate}
+\item For Qiskit, follow the  instructions at \href{{https://qiskit.org/documentation/getting_started.html}}{\nolinkurl{https://qiskit.org/documentation/getting_started.html}}
+
+\item We strongly recommend using the Jupyter notebook environment at \href{{https://quantum-computing.ibm.com/}}{\nolinkurl{https://quantum-computing.ibm.com/}}. This environment has Qiskit already set up and is free,  just requires an email to register. It has built in support for Jupyter notebooks and should be sufficient for everything needed.
+
+\item See also Ryan Larose's (from 2019) Quantum computing bootcamp with Qiskit - \href{{https://github.com/rmlarose/qcbq.}}{\nolinkurl{https://github.com/rmlarose/qcbq.}}
+
+\item See also \href{{https://www.ryanlarose.com/external-resources.html}}{\nolinkurl{https://www.ryanlarose.com/external-resources.html}}
+\end{enumerate}
+
+\noindent
+\paragraph{Scientific articles of interest.}
+\begin{enumerate}
+\item Adam Smith, M. S. Kim, Frank Pollmann, and Johannes Knolle, Simulating quantum many-body dynamics on a current digital quantum computer, NPJ Quantum Information 5, Article number: 106 (2019), see \href{{https://www.nature.com/articles/s41534-019-0217-0}}{\nolinkurl{https://www.nature.com/articles/s41534-019-0217-0}}
+\end{enumerate}
+
+\noindent
+\subsection{Detailed lecture plan}
+
+The duration of each lecture is approximately 45-50 minutes and there
+is a small break of 10-15 minutes between each lecture. Longer breaks
+at 1030am-11am and 3pm-330pm, except for Monday where there is also
+the possibility fora guided FRIB tour.  In-person attendance is the
+main teaching modus, but lectures and hands-on sessions will be
+broadcasted via zoom for those who cannot attend in person. The zoom
+link will be sent to those who have expressed that they cannot attend
+in person. The lectures will also be recorded.
+
+\paragraph{Teachers.}
+\begin{itemize}
+\item AB = Alexei Bazavov
+
+\item BH = Benjamin Hall
+
+\item DJ = Danny Jammoa (online discussions and hands-on sessions)
+
+\item DL = Dean Lee
+
+\item JW = Jacob Watkins
+
+\item JB = Joey Bonitati
+
+\item MHJ = Morten Hjorth-Jensen
+
+\item RL = Ryan Larose
+
+\item QZ - Zhenrong Qian
+\end{itemize}
+
+\noindent
+\paragraph{Monday June 20.}
+\begin{itemize}
+\item 8am-830am: Welcome and registration
+
+\item 830am-930am: \href{{https://nuclearphysicsworkshops.github.io/FRIB-TASummerSchoolQuantumComputing/doc/web/course.html}}{Introduction to quantum computing, qubits, systems of qubits, gates and quantum circuits (AB)}
+
+\item 930am-1030am: \href{{https://nuclearphysicsworkshops.github.io/FRIB-TASummerSchoolQuantumComputing/doc/web/course.html}}{Measurements, Superposition, Entanglement (AB)}
+
+\item 1030am-11am: Break, coffee, tea etc
+
+\item 11am-12pm: \href{{https://nuclearphysicsworkshops.github.io/FRIB-TASummerSchoolQuantumComputing/doc/web/course.html}}{Hands-on session with applications and introduction to software libraries (AB, JW, RL)}
+
+\item 12pm-1pm: Lunch (shorter lunch, else 1h30m lunches)
+
+\item 1pm-2pm: \href{{https://nuclearphysicsworkshops.github.io/FRIB-TASummerSchoolQuantumComputing/doc/web/course.html}}{Algorithms for quantum dynamics (DL), simple problems}
+
+\item 2pm-3pm: \href{{https://nuclearphysicsworkshops.github.io/FRIB-TASummerSchoolQuantumComputing/doc/web/course.html}}{Quantum phase estimation and adiabatic evolution (ZQ and JB), simple problems}
+
+\item 3pm-4pm: Break, coffee, tea or tour for FRIB for those interested. Please let us know if you are interested in a tour of FRIB.
+
+\item 4pm-6pm: \href{{https://nuclearphysicsworkshops.github.io/FRIB-TASummerSchoolQuantumComputing/doc/web/course.html}}{Hands-on sessions and problem solving (AB+all)}
+\end{itemize}
+
+\noindent
+\paragraph{Tuesday June 21.}
+\begin{itemize}
+\item 830-930am: \href{{https://nuclearphysicsworkshops.github.io/FRIB-TASummerSchoolQuantumComputing/doc/web/course.html}}{Hamiltonian simulation: a general overview (JW)}
+
+\item 930am-1030am: \href{{https://nuclearphysicsworkshops.github.io/FRIB-TASummerSchoolQuantumComputing/doc/web/course.html}}{Introduction to VQE and simple model (BH)} 
+
+\item 1030am-11am: Break, coffee, tea etc
+
+\item 11am-12pm: \href{{https://nuclearphysicsworkshops.github.io/FRIB-TASummerSchoolQuantumComputing/doc/web/course.html}}{Many-body theory and nuclear few- and many-body systems (BH and MHJ)}
+
+\item 12pm-130pm: Lunch
+
+\item 130pm-230pm:  \href{{https://nuclearphysicsworkshops.github.io/FRIB-TASummerSchoolQuantumComputing/doc/web/course.html}}{Quantum algorithms (VQE) and nuclear physics with applications (BH and MHJ), part 1}
+
+\item 230pm-330pm:  \href{{https://nuclearphysicsworkshops.github.io/FRIB-TASummerSchoolQuantumComputing/doc/web/course.html}}{Quantum algorithms (VQE) and nuclear physics with applications (BH and MHJ), part 2}
+
+\item 330pm-4pm: Break, coffee, tea etc
+
+\item 4pm-6pm: \href{{https://nuclearphysicsworkshops.github.io/FRIB-TASummerSchoolQuantumComputing/doc/web/course.html}}{Hands-on sessions and problem solving (BH and JW+all)}
+\end{itemize}
+
+\noindent
+\paragraph{Wednesday June 22.}
+\begin{itemize}
+\item 830am-930am: \href{{https://nuclearphysicsworkshops.github.io/FRIB-TASummerSchoolQuantumComputing/doc/web/course.html}}{Noise, error correction and mitigation, part I (RL)}
+
+\item 930am-1030am: \href{{https://nuclearphysicsworkshops.github.io/FRIB-TASummerSchoolQuantumComputing/doc/web/course.html}}{Noise, error correction and mitigation, part II (RL)}
+
+\item 1030am-11am: Break, coffee, tea etc
+
+\item 11am-12pm: \href{{https://nuclearphysicsworkshops.github.io/FRIB-TASummerSchoolQuantumComputing/doc/web/course.html}}{Practicing error correction and mitigation, hands-on part (RL)}
+
+\item 12pm-130pm: Lunch
+
+\item 130pm-230pm: \href{{https://nuclearphysicsworkshops.github.io/FRIB-TASummerSchoolQuantumComputing/doc/web/course.html}}{Wrapping up and defining nuclear many-body system to study for hands-on session (All)}
+
+\item 230pm-330pm: \href{{https://nuclearphysicsworkshops.github.io/FRIB-TASummerSchoolQuantumComputing/doc/web/course.html}}{Start hands-on session (RL)}
+
+\item 330pm-4pm: Break, coffee, tea etc
+
+\item 4pm-6pm: \href{{https://nuclearphysicsworkshops.github.io/FRIB-TASummerSchoolQuantumComputing/doc/web/course.html}}{Hands-on sessions and problem solving (all)}
+\end{itemize}
+
+\noindent
+\subsection{Prerequisites}
+
+You are expected to have operating programming skills in programming
+languages like Python (preferred) and/or Fortran, C++, Julia or
+similar and knowledge of quantum mechanics at an intermediate level
+(senior undergraduate and/or beginning graduate). Knowledge of linear
+algebra is essential.  Additional modules for self-teaching on Python
+and quantum mechanics are also provided. 
+
+\subsection{Software and needed installations}
+
+We will make extensive use of Python as programming language and its
+myriad of available libraries.  You will find
+Jupyter notebooks invaluable in your work.
+
+If you have Python installed (we strongly recommend Python3) and you feel
+pretty familiar with installing different packages, we recommend that
+you install the following Python packages via \textbf{pip} as 
+
+\begin{enumerate}
+\item pip install numpy scipy matplotlib ipython scikit-learn mglearn sympy pandas pillow 
+\end{enumerate}
+
+\noindent
+For Python3, replace \textbf{pip} with \textbf{pip3}.
+
+For OSX users we recommend, after having installed Xcode, to
+install \textbf{brew}. Brew allows for a seamless installation of additional
+software via for example 
+
+\begin{enumerate}
+\item brew install python3
+\end{enumerate}
+
+\noindent
+For Linux users, with its variety of distributions like for example the widely popular Ubuntu distribution,
+you can use \textbf{pip} as well and simply install Python as 
+
+\begin{enumerate}
+\item sudo apt-get install python3  (or python for pyhton2.7)
+\end{enumerate}
+
+\noindent
+etc etc. 
+
+\subsection{Python installers}
+
+If you don't want to perform these operations separately and venture
+into the hassle of exploring how to set up dependencies and paths, we
+recommend two widely used distrubutions which set up all relevant
+dependencies for Python, namely 
+
+\begin{itemize}
+\item \href{{https://docs.anaconda.com/}}{Anaconda}, 
+\end{itemize}
+
+\noindent
+which is an open source
+distribution of the Python and R programming languages for large-scale
+data processing, predictive analytics, and scientific computing, that
+aims to simplify package management and deployment. Package versions
+are managed by the package management system \textbf{conda}. 
+
+\begin{itemize}
+\item \href{{https://www.enthought.com/product/canopy/}}{Enthought canopy} 
+\end{itemize}
+
+\noindent
+is a Python
+distribution for scientific and analytic computing distribution and
+analysis environment, available for free and under a commercial
+license.
+
+Furthermore, \href{{https://colab.research.google.com/notebooks/welcome.ipynb}}{Google's Colab} is a free Jupyter notebook environment that requires 
+no setup and runs entirely in the cloud. Try it out!
+
+\subsection{Useful Python libraries}
+Here we list several useful Python libraries we strongly recommend (if you use anaconda many of these are already there)
+
+\begin{itemize}
+\item \href{{https://www.numpy.org/}}{NumPy} is a highly popular library for large, multi-dimensional arrays and matrices, along with a large collection of high-level mathematical functions to operate on these arrays
+
+\item \href{{https://pandas.pydata.org/}}{The pandas} library provides high-performance, easy-to-use data structures and data analysis tools 
+
+\item \href{{http://xarray.pydata.org/en/stable/}}{Xarray} is a Python package that makes working with labelled multi-dimensional arrays simple, efficient, and fun!
+
+\item \href{{https://www.scipy.org/}}{Scipy} (pronounced “Sigh Pie”) is a Python-based ecosystem of open-source software for mathematics, science, and engineering. 
+
+\item \href{{https://matplotlib.org/}}{Matplotlib} is a Python 2D plotting library which produces publication quality figures in a variety of hardcopy formats and interactive environments across platforms.
+
+\item \href{{https://github.com/HIPS/autograd}}{Autograd} can automatically differentiate native Python and Numpy code. It can handle a large subset of Python's features, including loops, ifs, recursion and closures, and it can even take derivatives of derivatives of derivatives
+
+\item \href{{https://www.sympy.org/en/index.html}}{SymPy} is a Python library for symbolic mathematics. 
+
+\item \href{{https://scikit-learn.org/stable/}}{scikit-learn} has simple and efficient tools for machine learning, data mining and data analysis
+
+\item \href{{https://www.tensorflow.org/}}{TensorFlow} is a Python library for fast numerical computing created and released by Google
+
+\item \href{{https://keras.io/}}{Keras} is a high-level neural networks API, written in Python and capable of running on top of TensorFlow, CNTK, or Theano
+
+\item And many more such as \href{{https://pytorch.org/}}{pytorch},  \href{{https://pypi.org/project/Theano/}}{Theano} etc 
+\end{itemize}
+
+\noindent
+All learning material and teaching schedule pertinent to the course is
+avaliable at this GitHub address. A simple \textbf{git clone} of the material
+gives you access to all lecture notes and program examples. Similarly,
+running a \textbf{git pull} gives you immediately the latest updates.
+
+% !split
+\subsection{Numpy examples and Important Matrix and vector handling packages}
+
+There are several central software libraries for linear algebra and eigenvalue problems. Several of the more
+popular ones have been wrapped into ofter software packages like those from the widely used text \textbf{Numerical Recipes}. The original source codes in many of the available packages are often taken from the widely used
+software package LAPACK, which follows two other popular packages
+developed in the 1970s, namely EISPACK and LINPACK.  We describe them shortly here.
+
+\begin{itemize}
+  \item LINPACK: package for linear equations and least square problems.
+
+  \item LAPACK:package for solving symmetric, unsymmetric and generalized eigenvalue problems. From LAPACK's website \href{{http://www.netlib.org}}{\nolinkurl{http://www.netlib.org}} it is possible to download for free all source codes from this library. Both C/C++ and Fortran versions are available.
+
+  \item BLAS (I, II and III): (Basic Linear Algebra Subprograms) are routines that provide standard building blocks for performing basic vector and matrix operations. Blas I is vector operations, II vector-matrix operations and III matrix-matrix operations. Highly parallelized and efficient codes, all available for download from \href{{http://www.netlib.org}}{\nolinkurl{http://www.netlib.org}}.
+\end{itemize}
+
+\noindent
+% !split
+\subsection{Numpy and arrays}
+\href{{http://www.numpy.org/}}{Numpy} provides an easy way to handle arrays in Python. The standard way to import this library is as
+
+
+
+\begin{minted}[fontsize=\fontsize{9pt}{9pt},linenos=false,mathescape,baselinestretch=1.0,fontfamily=tt,xleftmargin=7mm]{python}
+import numpy as np
+
+\end{minted}
+
+Here follows a simple example where we set up an array of ten elements, all determined by random numbers drawn according to the normal distribution,
+
+
+
+
+\begin{minted}[fontsize=\fontsize{9pt}{9pt},linenos=false,mathescape,baselinestretch=1.0,fontfamily=tt,xleftmargin=7mm]{python}
+n = 10
+x = np.random.normal(size=n)
+print(x)
+
+\end{minted}
+
+We defined a vector $x$ with $n=10$ elements with its values given by the Normal distribution $N(0,1)$.
+Another alternative is to declare a vector as follows
+
+
+
+
+\begin{minted}[fontsize=\fontsize{9pt}{9pt},linenos=false,mathescape,baselinestretch=1.0,fontfamily=tt,xleftmargin=7mm]{python}
+import numpy as np
+x = np.array([1, 2, 3])
+print(x)
+
+\end{minted}
+
+Here we have defined a vector with three elements, with $x_0=1$, $x_1=2$ and $x_2=3$. Note that both Python and C++
+start numbering array elements from $0$ and on. This means that a vector with $n$ elements has a sequence of entities $x_0, x_1, x_2, \dots, x_{n-1}$. We could also let (recommended) Numpy to compute the logarithms of a specific array as
+
+
+
+
+\begin{minted}[fontsize=\fontsize{9pt}{9pt},linenos=false,mathescape,baselinestretch=1.0,fontfamily=tt,xleftmargin=7mm]{python}
+import numpy as np
+x = np.log(np.array([4, 7, 8]))
+print(x)
+
+\end{minted}
+
+
+In the last example we used Numpy's unary function $np.log$. This function is
+highly tuned to compute array elements since the code is vectorized
+and does not require looping. We normaly recommend that you use the
+Numpy intrinsic functions instead of the corresponding \textbf{log} function
+from Python's \textbf{math} module. The looping is done explicitely by the
+\textbf{np.log} function. The alternative, and slower way to compute the
+logarithms of a vector would be to write
+
+
+
+
+
+
+
+
+\begin{minted}[fontsize=\fontsize{9pt}{9pt},linenos=false,mathescape,baselinestretch=1.0,fontfamily=tt,xleftmargin=7mm]{python}
+import numpy as np
+from math import log
+x = np.array([4, 7, 8])
+for i in range(0, len(x)):
+    x[i] = log(x[i])
+print(x)
+
+\end{minted}
+
+We note that our code is much longer already and we need to import the \textbf{log} function from the \textbf{math} module. 
+The attentive reader will also notice that the output is $[1, 1, 2]$. Python interprets automagically our numbers as integers (like the \textbf{automatic} keyword in C++). To change this we could define our array elements to be double precision numbers as
+
+
+
+
+\begin{minted}[fontsize=\fontsize{9pt}{9pt},linenos=false,mathescape,baselinestretch=1.0,fontfamily=tt,xleftmargin=7mm]{python}
+import numpy as np
+x = np.log(np.array([4, 7, 8], dtype = np.float64))
+print(x)
+
+\end{minted}
+
+or simply write them as double precision numbers (Python uses 64 bits as default for floating point type variables), that is
+
+
+
+
+\begin{minted}[fontsize=\fontsize{9pt}{9pt},linenos=false,mathescape,baselinestretch=1.0,fontfamily=tt,xleftmargin=7mm]{python}
+import numpy as np
+x = np.log(np.array([4.0, 7.0, 8.0]))
+print(x)
+
+\end{minted}
+
+To check the number of bytes (remember that one byte contains eight bits for double precision variables), you can use simple use the \textbf{itemsize} functionality (the array $x$ is actually an object which inherits the functionalities defined in Numpy) as 
+
+
+
+
+\begin{minted}[fontsize=\fontsize{9pt}{9pt},linenos=false,mathescape,baselinestretch=1.0,fontfamily=tt,xleftmargin=7mm]{python}
+import numpy as np
+x = np.log(np.array([4.0, 7.0, 8.0]))
+print(x.itemsize)
+
+\end{minted}
+
+
+% !split
+\subsection{Matrices in Python}
+
+Having defined vectors, we are now ready to try out matrices. We can
+define a $3 \times 3 $ real matrix $\bm{A}$ as (recall that we user
+lowercase letters for vectors and uppercase letters for matrices)
+
+
+
+
+
+\begin{minted}[fontsize=\fontsize{9pt}{9pt},linenos=false,mathescape,baselinestretch=1.0,fontfamily=tt,xleftmargin=7mm]{python}
+import numpy as np
+A = np.log(np.array([ [4.0, 7.0, 8.0], [3.0, 10.0, 11.0], [4.0, 5.0, 7.0] ]))
+print(A)
+
+\end{minted}
+
+If we use the \textbf{shape} function we would get $(3, 3)$ as output, that is verifying that our matrix is a $3\times 3$ matrix. We can slice the matrix and print for example the first column (Python organized matrix elements in a row-major order, see below) as
+
+
+
+
+
+\begin{minted}[fontsize=\fontsize{9pt}{9pt},linenos=false,mathescape,baselinestretch=1.0,fontfamily=tt,xleftmargin=7mm]{python}
+import numpy as np
+A = np.log(np.array([ [4.0, 7.0, 8.0], [3.0, 10.0, 11.0], [4.0, 5.0, 7.0] ]))
+# print the first column, row-major order and elements start with 0
+print(A[:,0]) 
+
+\end{minted}
+
+We can continue this way by printing out other columns or rows. The example here prints out the second column
+
+
+
+
+
+\begin{minted}[fontsize=\fontsize{9pt}{9pt},linenos=false,mathescape,baselinestretch=1.0,fontfamily=tt,xleftmargin=7mm]{python}
+import numpy as np
+A = np.log(np.array([ [4.0, 7.0, 8.0], [3.0, 10.0, 11.0], [4.0, 5.0, 7.0] ]))
+# print the first column, row-major order and elements start with 0
+print(A[1,:]) 
+
+\end{minted}
+
+Numpy contains many other functionalities that allow us to slice, subdivide etc etc arrays. We strongly recommend that you look up the \href{{http://www.numpy.org/}}{Numpy website for more details}. Useful functions when defining a matrix are the \textbf{np.zeros} function which declares a matrix of a given dimension and sets all elements to zero
+
+
+
+
+
+
+\begin{minted}[fontsize=\fontsize{9pt}{9pt},linenos=false,mathescape,baselinestretch=1.0,fontfamily=tt,xleftmargin=7mm]{python}
+import numpy as np
+n = 10
+# define a matrix of dimension 10 x 10 and set all elements to zero
+A = np.zeros( (n, n) )
+print(A) 
+
+\end{minted}
+
+or initializing all elements to 
+
+
+
+
+
+
+\begin{minted}[fontsize=\fontsize{9pt}{9pt},linenos=false,mathescape,baselinestretch=1.0,fontfamily=tt,xleftmargin=7mm]{python}
+import numpy as np
+n = 10
+# define a matrix of dimension 10 x 10 and set all elements to one
+A = np.ones( (n, n) )
+print(A) 
+
+\end{minted}
+
+or as unitarily distributed random numbers
+
+
+
+
+
+
+\begin{minted}[fontsize=\fontsize{9pt}{9pt},linenos=false,mathescape,baselinestretch=1.0,fontfamily=tt,xleftmargin=7mm]{python}
+import numpy as np
+n = 10
+# define a matrix of dimension 10 x 10 and set all elements to random numbers with x \in [0, 1]
+A = np.random.rand(n, n)
+print(A) 
+
+\end{minted}
+
+
+There are several other extremely useful functionalities in Numpy. Numpy contains many functions which are useful if we wish to perform a statistical analysis.
+As an example, consider the discussion of the covariance matrix. Suppose we have defined three vectors
+$\bm{x}, \bm{y}, \bm{z}$ with $n$ elements each. The covariance matrix is defined as 
+\[
+\bm{\Sigma} = \begin{bmatrix} \sigma_{xx} & \sigma_{xy} & \sigma_{xz} \\
+                              \sigma_{yx} & \sigma_{yy} & \sigma_{yz} \\
+                              \sigma_{zx} & \sigma_{zy} & \sigma_{zz} 
+             \end{bmatrix},
+\]
+where for example
+\[
+\sigma_{xy} =\frac{1}{n} \sum_{i=0}^{n-1}(x_i- \overline{x})(y_i- \overline{y}).
+\]
+The Numpy function \textbf{np.cov} calculates the covariance elements using the factor $1/(n-1)$ instead of $1/n$ since it assumes we do not have the exact mean values. 
+The following simple function uses the \textbf{np.vstack} function which takes each vector of dimension $1\times n$ and produces a $3\times n$ matrix $\bm{W}$
+\[
+\bm{W} = \begin{bmatrix} x_0 & x_1 & x_2 & \dots & x_{n-2} & x_{n-1} \\
+                         y_0 & y_1 & y_2 & \dots & y_{n-2} & y_{n-1} \\
+			 z_0 & z_1 & z_2 & \dots & z_{n-2} & z_{n-1} \\
+             \end{bmatrix},
+\]
+
+which in turn is converted into into the $3\times 3$ covariance matrix
+$\bm{\Sigma}$ via the Numpy function \textbf{np.cov()}. We note that we can also calculate
+the mean value of each set of samples $\bm{x}$ etc using the Numpy
+function \textbf{np.mean(x)}. We can also extract the eigenvalues of the
+covariance matrix through the \textbf{np.linalg.eig()} function.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{minted}[fontsize=\fontsize{9pt}{9pt},linenos=false,mathescape,baselinestretch=1.0,fontfamily=tt,xleftmargin=7mm]{python}
+# Importing various packages
+import numpy as np
+
+n = 100
+x = np.random.normal(size=n)
+print(np.mean(x))
+y = 4+3*x+np.random.normal(size=n)
+print(np.mean(y))
+z = x**3+np.random.normal(size=n)
+print(np.mean(z))
+W = np.vstack((x, y, z))
+Sigma = np.cov(W)
+print(Sigma)
+Eigvals, Eigvecs = np.linalg.eig(Sigma)
+print(Eigvals)
+
+\end{minted}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{minted}[fontsize=\fontsize{9pt}{9pt},linenos=false,mathescape,baselinestretch=1.0,fontfamily=tt,xleftmargin=7mm]{python}
+import numpy as np
+import matplotlib.pyplot as plt
+from scipy import sparse
+eye = np.eye(4)
+print(eye)
+sparse_mtx = sparse.csr_matrix(eye)
+print(sparse_mtx)
+x = np.linspace(-10,10,100)
+y = np.sin(x)
+plt.plot(x,y,marker='x')
+plt.show()
+
+\end{minted}
+
+
+% !split
+\subsection{Meet the Pandas}
+
+Another useful Python package is
+\href{{https://pandas.pydata.org/}}{pandas}, which is an open source library
+providing high-performance, easy-to-use data structures and data
+analysis tools for Python. \textbf{pandas} stands for panel data, a term borrowed from econometrics and is an efficient library for data analysis with an emphasis on tabular data.
+\textbf{pandas} has two major classes, the \textbf{DataFrame} class with two-dimensional data objects and tabular data organized in columns and the class \textbf{Series} with a focus on one-dimensional data objects. Both classes allow you to index data easily as we will see in the examples below. 
+\textbf{pandas} allows you also to perform mathematical operations on the data, spanning from simple reshapings of vectors and matrices to statistical operations. 
+
+The following simple example shows how we can, in an easy way make tables of our data. Here we define a data set which includes names, place of birth and date of birth, and displays the data in an easy to read way. 
+
+
+
+
+
+
+
+
+
+
+
+\begin{minted}[fontsize=\fontsize{9pt}{9pt},linenos=false,mathescape,baselinestretch=1.0,fontfamily=tt,xleftmargin=7mm]{python}
+import pandas as pd
+from IPython.display import display
+data = {'First Name': ["Frodo", "Bilbo", "Aragorn II", "Samwise"],
+        'Last Name': ["Baggins", "Baggins","Elessar","Gamgee"],
+        'Place of birth': ["Shire", "Shire", "Eriador", "Shire"],
+        'Date of Birth T.A.': [2968, 2890, 2931, 2980]
+        }
+data_pandas = pd.DataFrame(data)
+display(data_pandas)
+
+\end{minted}
+
+
+In the above we have imported \textbf{pandas} with the shorthand \textbf{pd}, the latter has become the standard way we import \textbf{pandas}. We make then a list of various variables
+and reorganize the aboves lists into a \textbf{DataFrame} and then print out  a neat table with specific column labels as \emph{Name}, \emph{place of birth} and \emph{date of birth}.
+Displaying these results, we see that the indices are given by the default numbers from zero to three.
+\textbf{pandas} is extremely flexible and we can easily change the above indices by defining a new type of indexing as
+
+
+
+\begin{minted}[fontsize=\fontsize{9pt}{9pt},linenos=false,mathescape,baselinestretch=1.0,fontfamily=tt,xleftmargin=7mm]{python}
+data_pandas = pd.DataFrame(data,index=['Frodo','Bilbo','Aragorn','Sam'])
+display(data_pandas)
+
+\end{minted}
+
+Thereafter we display the content of the row which begins with the index \textbf{Aragorn}
+
+
+\begin{minted}[fontsize=\fontsize{9pt}{9pt},linenos=false,mathescape,baselinestretch=1.0,fontfamily=tt,xleftmargin=7mm]{python}
+display(data_pandas.loc['Aragorn'])
+
+\end{minted}
+
+
+We can easily append data to this, for example
+
+
+
+
+
+
+
+
+\begin{minted}[fontsize=\fontsize{9pt}{9pt},linenos=false,mathescape,baselinestretch=1.0,fontfamily=tt,xleftmargin=7mm]{python}
+new_hobbit = {'First Name': ["Peregrin"],
+              'Last Name': ["Took"],
+              'Place of birth': ["Shire"],
+              'Date of Birth T.A.': [2990]
+              }
+data_pandas=data_pandas.append(pd.DataFrame(new_hobbit, index=['Pippin']))
+display(data_pandas)
+
+\end{minted}
+
+
+Here are other examples where we use the \textbf{DataFrame} functionality to handle arrays, now with more interesting features for us, namely numbers. We set up a matrix 
+of dimensionality $10\times 5$ and compute the mean value and standard deviation of each column. Similarly, we can perform mathematial operations like squaring the matrix elements and many other operations. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{minted}[fontsize=\fontsize{9pt}{9pt},linenos=false,mathescape,baselinestretch=1.0,fontfamily=tt,xleftmargin=7mm]{python}
+import numpy as np
+import pandas as pd
+from IPython.display import display
+np.random.seed(100)
+# setting up a 10 x 5 matrix
+rows = 10
+cols = 5
+a = np.random.randn(rows,cols)
+df = pd.DataFrame(a)
+display(df)
+print(df.mean())
+print(df.std())
+display(df**2)
+
+\end{minted}
+
+
+Thereafter we can select specific columns only and plot final results
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{minted}[fontsize=\fontsize{9pt}{9pt},linenos=false,mathescape,baselinestretch=1.0,fontfamily=tt,xleftmargin=7mm]{python}
+df.columns = ['First', 'Second', 'Third', 'Fourth', 'Fifth']
+df.index = np.arange(10)
+
+display(df)
+print(df['Second'].mean() )
+print(df.info())
+print(df.describe())
+
+from pylab import plt, mpl
+plt.style.use('seaborn')
+mpl.rcParams['font.family'] = 'serif'
+
+df.cumsum().plot(lw=2.0, figsize=(10,6))
+plt.show()
+
+
+df.plot.bar(figsize=(10,6), rot=15)
+plt.show()
+
+\end{minted}
+
+We can produce a $4\times 4$ matrix
+
+
+
+
+
+\begin{minted}[fontsize=\fontsize{9pt}{9pt},linenos=false,mathescape,baselinestretch=1.0,fontfamily=tt,xleftmargin=7mm]{python}
+b = np.arange(16).reshape((4,4))
+print(b)
+df1 = pd.DataFrame(b)
+print(df1)
+
+\end{minted}
+
+and many other operations. 
+
+The \textbf{Series} class is another important class included in
+\textbf{pandas}. You can view it as a specialization of \textbf{DataFrame} but where
+we have just a single column of data. It shares many of the same features as \textbf{DataFrame}. As with \textbf{DataFrame},
+most operations are vectorized, achieving thereby a high performance when dealing with computations of arrays, in particular labeled arrays.
+
+For multidimensional arrays, we recommend strongly \href{{http://xarray.pydata.org/en/stable/}}{xarray}. \textbf{xarray} has much of the same flexibility as \textbf{pandas}, but allows for the extension to higher dimensions than two. We will see examples later of the usage of both \textbf{pandas} and \textbf{xarray}. 
+
+\subsection{Basic features of Qiskit}
+
+\paragraph{Introduction.}
+This notebook constitutes some introductory information with relavant
+examples on getting started with \href{{https://qiskit.org/}}{Qiskit}, an
+open-source software for quantum computation. A more complete overview
+of the available features can be found from the \href{{https://qiskit.org/documentation/tutorials.html}}{Qiskit documentation} as
+well as the \href{{https://qiskit.org/textbook/preface.html}}{Qiskit textbook}.
+
+\paragraph{Step 0: Download the software and import packages.}
+\href{{https://www.youtube.com/watch?v=1kRfHNUbkrg&t=163s}}{Here is a hands-on tutorial} to install Qiskit.
+The first step is to create an IBM ID account. Then you will be able
+to use Qiskit on the cloud through the IBM Quantum Lab on your
+dashboard. To get started locally with Qiskit, we will use the
+Anaconda distribution of Python. The tutorial explains how to download
+Qiskit and store the account information locally.
+
+
+
+
+
+
+
+\begin{minted}[fontsize=\fontsize{9pt}{9pt},linenos=false,mathescape,baselinestretch=1.0,fontfamily=tt,xleftmargin=7mm]{python}
+# Import the relevant packages.
+from qiskit import * 
+%matplotlib inline             
+import matplotlib.pyplot as plt
+import matplotlib.patches as mpatches
+
+\end{minted}
+
+
+\paragraph{Step 1: Construct your quantum circuit.}
+A \href{{https://wiki2.org/en/Quantum_circuit}}{quantum circuit} is a
+computational routine which incorporates classical computations into
+coherent quantum operations on quantum data. The \href{{https://qiskit.org/documentation/apidoc/circuit_library.html}}{Qiskit circuit library}
+shows us the syntax to program a quantum circuit and add quantum
+operations to the qubits of interest. To get started, we will
+introduce the class
+\href{{https://qiskit.org/documentation/stubs/qiskit.circuit.QuantumCircuit.html}}{QuantumCircuit},
+in which we will define the circuit and explore the available built-in
+methods.
+
+\paragraph{Define the quantum circuit.}
+
+
+\begin{minted}[fontsize=\fontsize{9pt}{9pt},linenos=false,mathescape,baselinestretch=1.0,fontfamily=tt,xleftmargin=7mm]{python}
+from qiskit import QuantumCircuit  # You can ignore this if 'from qiskit import *' has been executed.
+
+\end{minted}
+
+
+Here there are  two ways we can define a quantum circuit, with three qubits and three classical bits:
+
+
+
+
+
+\begin{minted}[fontsize=\fontsize{9pt}{9pt},linenos=false,mathescape,baselinestretch=1.0,fontfamily=tt,xleftmargin=7mm]{python}
+# Method 1: 
+qc_1p1a = QuantumCircuit(3,3)  
+qc_1p1a.draw('mpl')
+
+\end{minted}
+
+
+
+
+
+
+
+
+
+\begin{minted}[fontsize=\fontsize{9pt}{9pt},linenos=false,mathescape,baselinestretch=1.0,fontfamily=tt,xleftmargin=7mm]{python}
+# Method 2: 
+qr = QuantumRegister(3)
+cr = ClassicalRegister(3)
+ar = AncillaRegister(1)  # You can add ancilla qubit if it's needed, otherwise no need to include 'ar' in the line below.
+qc_1p1b = QuantumCircuit(qr, ar, cr)
+qc_1p1b.draw('mpl')
+
+\end{minted}
+
+
+\paragraph{Combine two (or multiple) quantum circuits.}
+\begin{itemize}
+\item \textbf{Method 1:} If two circuits $circ_1$ and $circ_2$ have the same number of qubits and classical bits,
+\end{itemize}
+
+\noindent
+then their combination could just be implemented like adding two numbers $circ = circ_1 + circ_2$. A more flexible method
+\href{{https://qiskit.org/documentation/stubs/qiskit.circuit.QuantumCircuit.compose.html#qiskit.circuit.QuantumCircuit.compose}}{QuantumCircuit.compose}
+is developed, which we can combine any two circuits and specify the qubits to compose onto. \href{{https://www.youtube.com/watch?v=3ja8uCqUS0s}}{This video} shows an example to implement these features. Here's another example:
+
+
+
+
+
+\begin{minted}[fontsize=\fontsize{9pt}{9pt},linenos=false,mathescape,baselinestretch=1.0,fontfamily=tt,xleftmargin=7mm]{python}
+circ_1p2a = QuantumCircuit(3)
+circ_1p2a.x([0,1,2])
+circ_1p2a.draw('mpl')
+
+\end{minted}
+
+
+
+
+
+
+
+\begin{minted}[fontsize=\fontsize{9pt}{9pt},linenos=false,mathescape,baselinestretch=1.0,fontfamily=tt,xleftmargin=7mm]{python}
+circ_1p2b = QuantumCircuit(2)
+circ_1p2b.h(0)
+circ_1p2b.cx(0,1)
+circ_1p2b.draw('mpl')
+
+\end{minted}
+
+
+
+
+
+\begin{minted}[fontsize=\fontsize{9pt}{9pt},linenos=false,mathescape,baselinestretch=1.0,fontfamily=tt,xleftmargin=7mm]{python}
+circa = circ_1p2a.compose(circ_1p2b, qubits=[2,1])
+circa.draw('mpl')
+
+\end{minted}
+
+
+\begin{itemize}
+\item \textbf{Method 2:} First convert a circuit into a quantum gate using \href{{https://qiskit.org/documentation/stubs/qiskit.circuit.QuantumCircuit.to_gate.html}}{$to_gate$} method, then 
+\end{itemize}
+
+\noindent
+\href{{https://qiskit.org/documentation/stubs/qiskit.circuit.QuantumCircuit.append.html#qiskit.circuit.QuantumCircuit.append}}{append} the gate to another circuit.
+An example is provided \href{{https://www.youtube.com/watch?v=krhPpzkT_z4}}{here}.
+Note that the circuits with classical bits cannot be converted to gate. We can alternatively generate the $circa$ as:
+
+
+
+
+
+
+
+
+
+\begin{minted}[fontsize=\fontsize{9pt}{9pt},linenos=false,mathescape,baselinestretch=1.0,fontfamily=tt,xleftmargin=7mm]{python}
+gate_x3 = circ_1p2a.to_gate()
+gate_hcx = circ_1p2b.to_gate()
+circb = QuantumCircuit(3)
+circb.append(gate_x3, [0,1,2])
+circb.append(gate_hcx, [2,1])
+circb.measure_all()  
+circb.draw('mpl')
+
+\end{minted}
+
+
+
+
+
+\begin{minted}[fontsize=\fontsize{9pt}{9pt},linenos=false,mathescape,baselinestretch=1.0,fontfamily=tt,xleftmargin=7mm]{python}
+# Check circb and circa have the same construction.
+circb.decompose().draw('mpl')
+
+\end{minted}
+
+
+\paragraph{Generating parametrized circuits.}
+Parametrized quantum circuits is useful in solving variational problems. To construct parameterized circuits and assign values to circuit parameters in Qiskit, we will use Qiskit's \href{{https://qiskit.org/documentation/stubs/qiskit.circuit.Parameter.html}}{Parameter} and \href{{https://qiskit.org/documentation/stubs/qiskit.circuit.ParameterVector.html}}{ParameterVector} (construct multiple parameters at once) class.
+
+
+
+
+\begin{minted}[fontsize=\fontsize{9pt}{9pt},linenos=false,mathescape,baselinestretch=1.0,fontfamily=tt,xleftmargin=7mm]{python}
+from qiskit.circuit import Parameter, ParameterVector
+import numpy as np
+
+\end{minted}
+
+
+\begin{itemize}
+\item \textbf{Method 1:} use the \textbf{Parameter} class. 
+\end{itemize}
+
+\noindent
+
+
+
+
+
+
+
+
+
+
+\begin{minted}[fontsize=\fontsize{9pt}{9pt},linenos=false,mathescape,baselinestretch=1.0,fontfamily=tt,xleftmargin=7mm]{python}
+# Define your parameters.
+a, b, c = Parameter('a'), Parameter('b'), Parameter('c')
+# Define the quantum circuit.
+circ_1p3 = QuantumCircuit(3)
+circ_1p3.rx(a, 0)         # RX(a) on qubit 0.
+circ_1p3.ry(b, 1)         # RY(b) on qubit 1.
+circ_1p3.h(2)             # A regular gate no need for parametrization.
+circ_1p3.crz(c, 0, 2)     # CRZ(c) controlled on qubit 0, acting on qubit 2.
+circ_1p3.draw('mpl')
+
+\end{minted}
+
+
+
+
+
+
+\begin{minted}[fontsize=\fontsize{9pt}{9pt},linenos=false,mathescape,baselinestretch=1.0,fontfamily=tt,xleftmargin=7mm]{python}
+# Assign (bind) the values
+circ1p3_bind = circ_1p3.bind_parameters({a: np.pi, b: np.pi/2, c: np.pi/2})
+circ1p3_bind.draw('mpl')
+
+\end{minted}
+
+
+\begin{itemize}
+\item \textbf{Method 2:} use the \textbf{ParameterVector} class, where you assign all the parameters within a single vector. Therefore, we can generate the same circuit above by:
+\end{itemize}
+
+\noindent
+
+
+
+
+
+
+
+
+
+
+
+\begin{minted}[fontsize=\fontsize{9pt}{9pt},linenos=false,mathescape,baselinestretch=1.0,fontfamily=tt,xleftmargin=7mm]{python}
+# Define your parameters.
+p = ParameterVector('p', 3)  
+# Define the quantum circuit.
+circ_1p3 = QuantumCircuit(3)
+circ_1p3.rx(p[0], 0)         # RX(a) on qubit 0.
+circ_1p3.ry(p[1], 1)         # RY(b) on qubit 1.
+circ_1p3.h(2)                # A regular gate no need for parametrization.
+circ_1p3.crz(p[2], 0, 2)     # CRZ(c) controlled on qubit 0, acting on qubit 2.
+circ_1p3.measure_all()       # A side note: measurement will add classical registers in your circuit, if they are not originally in QuantumCircuit. 
+circ_1p3.draw('mpl')
+
+\end{minted}
+
+
+
+
+
+\begin{minted}[fontsize=\fontsize{9pt}{9pt},linenos=false,mathescape,baselinestretch=1.0,fontfamily=tt,xleftmargin=7mm]{python}
+circ1p3_bind = circ_1p3.bind_parameters({p: [np.pi, np.pi/2, np.pi/2]})
+circ1p3_bind.draw('mpl')
+
+\end{minted}
+
+
+\paragraph{Step 2: Run your quantum simulation {\&} Data collection.}
+Having the quantum circuit(s) ready, we will run our quantum
+simulation by creating and submitting jobs to the available
+device. While the jobs are running, we can monitor their status. We
+are also able to view the jobs we have submitted and are on the
+waitlist through the dashboard of IBM Quantum account.
+
+\paragraph{Choosing the backend to run your circuit.}
+A useful package for simulating quantum circuits is called \href{{https://qiskit.org/documentation/tutorials/simulators/1_aer_provider.html}}{Qiskit Aer},
+which provides multiple backends for running a quantum simulation. The main simulator backend of the Aer provider is the \textbf{AerSimulator} backend, who mimics the execution of an actual quantum computer by default.
+
+
+
+
+\begin{minted}[fontsize=\fontsize{9pt}{9pt},linenos=false,mathescape,baselinestretch=1.0,fontfamily=tt,xleftmargin=7mm]{python}
+from qiskit import Aer, transpile  # You can ignore this if 'from qiskit import *' has been executed.
+from qiskit.tools.visualization import plot_histogram, plot_state_city
+
+\end{minted}
+
+
+
+
+
+\begin{minted}[fontsize=\fontsize{9pt}{9pt},linenos=false,mathescape,baselinestretch=1.0,fontfamily=tt,xleftmargin=7mm]{python}
+# List the available backends.
+Aer.backends()
+
+\end{minted}
+
+
+
+
+\begin{minted}[fontsize=\fontsize{9pt}{9pt},linenos=false,mathescape,baselinestretch=1.0,fontfamily=tt,xleftmargin=7mm]{python}
+Here's a sample code for simulating the quantum circuit above, `circ1p3_bind`, with the `aer_simulator`. We generate the simulation result using the built-in visualization tool `plot_histogram`, which converts counts (a dictionary of results) into a histogram, where the probabilities of measuring each state is shown on the vertical axis.
+
+\end{minted}
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{minted}[fontsize=\fontsize{9pt}{9pt},linenos=false,mathescape,baselinestretch=1.0,fontfamily=tt,xleftmargin=7mm]{python}
+# Let's see the results! 
+# Transpile for simulator
+simulator = Aer.get_backend('aer_simulator')
+circ = transpile(circ1p3_bind, simulator)
+
+# Run and get counts
+result = simulator.run(circ).result()
+counts = result.get_counts(circ)
+print(counts)    
+plot_histogram(counts, title='Result for circ1p3_bind')
+
+\end{minted}
+
+
+\paragraph{Monitor the status of your experiment and check your submitted jobs.}
+Using Qiskit, we can also send jobs to IBM Quantum computers, and monitor their status.
+An overview of how to use your IBM Quantum account to access the systems and simulators available in IBM Quantum is available \href{{https://quantum-computing.ibm.com/lab/docs/iql/manage/account/ibmq}}{here}.
+
+
+
+\begin{minted}[fontsize=\fontsize{9pt}{9pt},linenos=false,mathescape,baselinestretch=1.0,fontfamily=tt,xleftmargin=7mm]{python}
+from qiskit.tools import job_monitor
+
+\end{minted}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{minted}[fontsize=\fontsize{9pt}{9pt},linenos=false,mathescape,baselinestretch=1.0,fontfamily=tt,xleftmargin=7mm]{python}
+# Submit your job to a quantum computer 'ibmq_belem'.
+# Select provider and backend.
+provider = IBMQ.get_provider(hub='ibm-q') 
+backend = provider.get_backend('ibmq_belem') 
+# Run the circuit 'circ1p3_bind' and execute the job.
+job = execute(circ1p3_bind, backend)
+# Monitor the job.
+job_monitor(job)
+result = job.result()
+counts = result.get_counts()
+plot_histogram(counts)
+
+\end{minted}
+
+
+Once the job have been submitted to a quantum computer, you will be able to check and see the it appears on the pending list on your IBM Quantum dashboard.
+
+\paragraph{Submit multiple quantum circuits to a backend.}
+If there are multiple circuits to be submitted, you can bundle the
+circuits in a single job to reduce the queue times. For example, if we
+want to the cirucit circ1p3_bind and circb together on a simulator, we
+can do:
+
+
+
+
+
+
+\begin{minted}[fontsize=\fontsize{9pt}{9pt},linenos=false,mathescape,baselinestretch=1.0,fontfamily=tt,xleftmargin=7mm]{python}
+simulator = Aer.get_backend('qasm_simulator')
+qc_list = [circ1p3_bind, circb]       # Include all the circuits in a single list.
+job = execute(qc_list, simulator)
+job.result().get_counts()
+
+\end{minted}
+
+
+\paragraph{Some visualization tools.}
+\begin{itemize}
+\item If you want to visualize a quantum circuit in a LaTex document, Qiskit offers the \href{{https://www.youtube.com/watch?v=Q_pkenZ05eM}}{LaTex drawer} which geynerates the code you can copy and paste into a LaTex document. Another useful package for graphing quantum circuit in Latex is called \href{{http://mirrors.ibiblio.org/CTAN/graphics/pgf/contrib/quantikz/quantikz.pdf}}{Quantikz}.
+
+\item \href{{https://nonhermitian.org/kaleido/tutorials/interactive/bloch_sphere.html}}{Kaleidoscope} provides an option to visualize the quantum states on on Bloch sphere. You can generate the plot in a Jupyter notebook.
+\end{itemize}
+
+\noindent
+
+% ------------------- end of main content ---------------
+
+\end{document}
+

@@ -1,0 +1,5 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{n}{circ\PYGZus{}1p2a} \PYG{o}{=} \PYG{n}{QuantumCircuit}\PYG{p}{(}\PYG{l+m+mi}{3}\PYG{p}{)}
+\PYG{n}{circ\PYGZus{}1p2a}\PYG{o}{.}\PYG{n}{x}\PYG{p}{([}\PYG{l+m+mi}{0}\PYG{p}{,}\PYG{l+m+mi}{1}\PYG{p}{,}\PYG{l+m+mi}{2}\PYG{p}{])}
+\PYG{n}{circ\PYGZus{}1p2a}\PYG{o}{.}\PYG{n}{draw}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}mpl\PYGZsq{}}\PYG{p}{)}
+\end{Verbatim}

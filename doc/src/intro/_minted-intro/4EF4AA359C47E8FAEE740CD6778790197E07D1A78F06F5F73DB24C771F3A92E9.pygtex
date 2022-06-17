@@ -1,0 +1,3 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{n}{display}\PYG{p}{(}\PYG{n}{data\PYGZus{}pandas}\PYG{o}{.}\PYG{n}{loc}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}Aragorn\PYGZsq{}}\PYG{p}{])}
+\end{Verbatim}

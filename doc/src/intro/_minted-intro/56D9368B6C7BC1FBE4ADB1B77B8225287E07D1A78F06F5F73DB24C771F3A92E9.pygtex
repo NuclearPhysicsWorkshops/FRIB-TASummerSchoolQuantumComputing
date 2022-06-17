@@ -1,0 +1,4 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{c+c1}{\PYGZsh{} List the available backends.}
+\PYG{n}{Aer}\PYG{o}{.}\PYG{n}{backends}\PYG{p}{()}
+\end{Verbatim}

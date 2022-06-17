@@ -1,0 +1,4 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{k+kn}{from} \PYG{n+nn}{qiskit} \PYG{k+kn}{import} \PYG{n}{Aer}\PYG{p}{,} \PYG{n}{transpile}  \PYG{c+c1}{\PYGZsh{} You can ignore this if \PYGZsq{}from qiskit import *\PYGZsq{} has been executed.}
+\PYG{k+kn}{from} \PYG{n+nn}{qiskit.tools.visualization} \PYG{k+kn}{import} \PYG{n}{plot\PYGZus{}histogram}\PYG{p}{,} \PYG{n}{plot\PYGZus{}state\PYGZus{}city}
+\end{Verbatim}

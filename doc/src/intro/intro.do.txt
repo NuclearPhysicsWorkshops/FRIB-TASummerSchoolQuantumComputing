@@ -247,77 +247,6 @@ developed in the 1970s, namely EISPACK and LINPACK.  We describe them shortly he
   * LAPACK:package for solving symmetric, unsymmetric and generalized eigenvalue problems. From LAPACK's website URL: "http://www.netlib.org" it is possible to download for free all source codes from this library. Both C/C++ and Fortran versions are available.
   * BLAS (I, II and III): (Basic Linear Algebra Subprograms) are routines that provide standard building blocks for performing basic vector and matrix operations. Blas I is vector operations, II vector-matrix operations and III matrix-matrix operations. Highly parallelized and efficient codes, all available for download from URL: "http://www.netlib.org".
 
-!split
-===== Basic Matrix Features =====
-
-!bblock Matrix properties reminder
-!bt
-\[
- \mathbf{A} =
-      \begin{bmatrix} a_{11} & a_{12} & a_{13} & a_{14} \\
-                                 a_{21} & a_{22} & a_{23} & a_{24} \\
-                                   a_{31} & a_{32} & a_{33} & a_{34} \\
-                                  a_{41} & a_{42} & a_{43} & a_{44}
-             \end{bmatrix}\qquad
-\mathbf{I} =
-      \begin{bmatrix} 1 & 0 & 0 & 0 \\
-                                 0 & 1 & 0 & 0 \\
-                                 0 & 0 & 1 & 0 \\
-                                 0 & 0 & 0 & 1
-             \end{bmatrix}
-\]
-!et
-
-
-
-The inverse of a matrix is defined by
-
-!bt
-\[
-\mathbf{A}^{-1} \cdot \mathbf{A} = I
-\]
-!et
-
-
-|----------------------------------------------------------------------|
-|       Relations      |       Name      | matrix elements             |
-|----------------------------------------------------------------------|
-| $A=A^{T}$         | symmetric       | $a_{ij}=a_{ji}$            |
-| $A=\left (A^{T}\right )^{-1}$ | real orthogonal | $\sum_k a_{ik}a_{jk}=\sum_k a_{ki} a_{kj}=\delta_{ij}$ |
-| $A=A^{ * }$          | real matrix     | $a_{ij}=a_{ij}^{*}$       |
-| $A=A^{\dagger}$     |  hermitian      | $a_{ij}=a_{ji}^{*}$       |
-| $A=\left(A^{\dagger}\right )^{-1}$ | unitary | $\sum_k a_{ik}a_{jk}^{*}=\sum_k a_{ki}^{ * } a_{kj}=\delta_{ij}$ |
-|----------------------------------------------------------------------|
-
-!eblock
-
-!split
-=== Some famous Matrices ===
-
-  * Diagonal if $a_{ij}=0$ for $i\ne j$
-  * Upper triangular if $a_{ij}=0$ for $i>j$
-  * Lower triangular if $a_{ij}=0$ for $i<j$
-  * Upper Hessenberg if $a_{ij}=0$ for $i>j+1$
-  * Lower Hessenberg if $a_{ij}=0$ for $i<j+1$
-  * Tridiagonal if $a_{ij}=0$ for $|i -j|>1$
-  * Lower banded with bandwidth $p$: $a_{ij}=0$ for $i>j+p$
-  * Upper banded with bandwidth $p$: $a_{ij}=0$ for $i<j+p$
-  * Banded, block upper triangular, block lower triangular....
-
-
-!split
-=== More Basic Matrix Features ===
-
-!bblock Some Equivalent Statements
-For an $N\times N$ matrix  $\mathbf{A}$ the following properties are all equivalent
-
-  * If the inverse of $\mathbf{A}$ exists, $\mathbf{A}$ is nonsingular.
-  * The equation $\mathbf{Ax}=0$ implies $\mathbf{x}=0$.
-  * The rows of $\mathbf{A}$ form a basis of $R^N$.
-  * The columns of $\mathbf{A}$ form a basis of $R^N$.
-  * $\mathbf{A}$ is a product of elementary matrices.
-  * $0$ is not eigenvalue of $\mathbf{A}$.
-!eblock
 
 !split
 ===== Numpy and arrays =====
@@ -601,9 +530,257 @@ and many other operations.
 
 The _Series_ class is another important class included in
 _pandas_. You can view it as a specialization of _DataFrame_ but where
-we have just a single column of data. It shares many of the same features as _DataFrame. As with _DataFrame_,
+we have just a single column of data. It shares many of the same features as _DataFrame_. As with _DataFrame_,
 most operations are vectorized, achieving thereby a high performance when dealing with computations of arrays, in particular labeled arrays.
 
 For multidimensional arrays, we recommend strongly "xarray":"http://xarray.pydata.org/en/stable/". _xarray_ has much of the same flexibility as _pandas_, but allows for the extension to higher dimensions than two. We will see examples later of the usage of both _pandas_ and _xarray_. 
 
 
+===== Basic features of Qiskit =====
+
+=== Introduction ===
+
+This notebook constitutes some introductory information with relavant
+examples on getting started with "Qiskit":"https://qiskit.org/", an
+open-source software for quantum computation. A more complete overview
+of the available features can be found from the "Qiskit documentation":"https://qiskit.org/documentation/tutorials.html" as
+well as the "Qiskit textbook":"https://qiskit.org/textbook/preface.html".
+
+=== Step 0: Download the software and import packages ===
+
+"Here is a hands-on tutorial":"https://www.youtube.com/watch?v=1kRfHNUbkrg&t=163s" to install Qiskit.
+The first step is to create an IBM ID account. Then you will be able
+to use Qiskit on the cloud through the IBM Quantum Lab on your
+dashboard. To get started locally with Qiskit, we will use the
+Anaconda distribution of Python. The tutorial explains how to download
+Qiskit and store the account information locally.
+
+!bc pycod
+# Import the relevant packages.
+from qiskit import * 
+%matplotlib inline             
+import matplotlib.pyplot as plt
+import matplotlib.patches as mpatches
+!ec
+
+
+=== Step 1: Construct your quantum circuit ===
+
+A "quantum circuit":"https://wiki2.org/en/Quantum_circuit" is a
+computational routine which incorporates classical computations into
+coherent quantum operations on quantum data. The "Qiskit circuit library":"https://qiskit.org/documentation/apidoc/circuit_library.html"
+shows us the syntax to program a quantum circuit and add quantum
+operations to the qubits of interest. To get started, we will
+introduce the class
+"QuantumCircuit":"https://qiskit.org/documentation/stubs/qiskit.circuit.QuantumCircuit.html",
+in which we will define the circuit and explore the available built-in
+methods.
+
+=== Define the quantum circuit ===
+
+
+!bc pycod
+from qiskit import QuantumCircuit  # You can ignore this if 'from qiskit import *' has been executed.
+!ec
+
+
+Here there are  two ways we can define a quantum circuit, with three qubits and three classical bits:
+
+!bc pycod
+# Method 1: 
+qc_1p1a = QuantumCircuit(3,3)  
+qc_1p1a.draw('mpl')
+!ec
+
+!bc pycod
+# Method 2: 
+qr = QuantumRegister(3)
+cr = ClassicalRegister(3)
+ar = AncillaRegister(1)  # You can add ancilla qubit if it's needed, otherwise no need to include 'ar' in the line below.
+qc_1p1b = QuantumCircuit(qr, ar, cr)
+qc_1p1b.draw('mpl')
+!ec
+
+=== Combine two (or multiple) quantum circuits ===
+
+* _Method 1:_ If two circuits $circ_1$ and $circ_2$ have the same number of qubits and classical bits,
+then their combination could just be implemented like adding two numbers $circ = circ_1 + circ_2$. A more flexible method
+"QuantumCircuit.compose":"https://qiskit.org/documentation/stubs/qiskit.circuit.QuantumCircuit.compose.html#qiskit.circuit.QuantumCircuit.compose"
+is developed, which we can combine any two circuits and specify the qubits to compose onto. "This video":"https://www.youtube.com/watch?v=3ja8uCqUS0s" shows an example to implement these features. Here's another example:
+
+!bc pycod
+circ_1p2a = QuantumCircuit(3)
+circ_1p2a.x([0,1,2])
+circ_1p2a.draw('mpl')
+!ec
+
+!bc pycod
+circ_1p2b = QuantumCircuit(2)
+circ_1p2b.h(0)
+circ_1p2b.cx(0,1)
+circ_1p2b.draw('mpl')
+!ec
+
+!bc pycod
+circa = circ_1p2a.compose(circ_1p2b, qubits=[2,1])
+circa.draw('mpl')
+!ec
+
+* _Method 2:_ First convert a circuit into a quantum gate using "$to_gate$":"https://qiskit.org/documentation/stubs/qiskit.circuit.QuantumCircuit.to_gate.html" method, then 
+"append":"https://qiskit.org/documentation/stubs/qiskit.circuit.QuantumCircuit.append.html#qiskit.circuit.QuantumCircuit.append" the gate to another circuit.
+An example is provided "here":"https://www.youtube.com/watch?v=krhPpzkT_z4".
+Note that the circuits with classical bits cannot be converted to gate. We can alternatively generate the $circa$ as:
+
+
+!bc pycod
+gate_x3 = circ_1p2a.to_gate()
+gate_hcx = circ_1p2b.to_gate()
+circb = QuantumCircuit(3)
+circb.append(gate_x3, [0,1,2])
+circb.append(gate_hcx, [2,1])
+circb.measure_all()  
+circb.draw('mpl')
+!ec
+
+!bc pycod
+# Check circb and circa have the same construction.
+circb.decompose().draw('mpl')
+!ec
+
+=== Generating parametrized circuits ===
+
+Parametrized quantum circuits is useful in solving variational problems. To construct parameterized circuits and assign values to circuit parameters in Qiskit, we will use Qiskit's "Parameter":"https://qiskit.org/documentation/stubs/qiskit.circuit.Parameter.html" and "ParameterVector":"https://qiskit.org/documentation/stubs/qiskit.circuit.ParameterVector.html" (construct multiple parameters at once) class.
+
+!bc pycod
+from qiskit.circuit import Parameter, ParameterVector
+import numpy as np
+!ec
+
+* _Method 1:_ use the _Parameter_ class. 
+
+
+!bc pycod
+# Define your parameters.
+a, b, c = Parameter('a'), Parameter('b'), Parameter('c')
+# Define the quantum circuit.
+circ_1p3 = QuantumCircuit(3)
+circ_1p3.rx(a, 0)         # RX(a) on qubit 0.
+circ_1p3.ry(b, 1)         # RY(b) on qubit 1.
+circ_1p3.h(2)             # A regular gate no need for parametrization.
+circ_1p3.crz(c, 0, 2)     # CRZ(c) controlled on qubit 0, acting on qubit 2.
+circ_1p3.draw('mpl')
+!ec
+
+!bc pycod
+# Assign (bind) the values
+circ1p3_bind = circ_1p3.bind_parameters({a: np.pi, b: np.pi/2, c: np.pi/2})
+circ1p3_bind.draw('mpl')
+!ec
+
+* _Method 2:_ use the _ParameterVector_ class, where you assign all the parameters within a single vector. Therefore, we can generate the same circuit above by:
+
+!bc pycod
+# Define your parameters.
+p = ParameterVector('p', 3)  
+# Define the quantum circuit.
+circ_1p3 = QuantumCircuit(3)
+circ_1p3.rx(p[0], 0)         # RX(a) on qubit 0.
+circ_1p3.ry(p[1], 1)         # RY(b) on qubit 1.
+circ_1p3.h(2)                # A regular gate no need for parametrization.
+circ_1p3.crz(p[2], 0, 2)     # CRZ(c) controlled on qubit 0, acting on qubit 2.
+circ_1p3.measure_all()       # A side note: measurement will add classical registers in your circuit, if they are not originally in QuantumCircuit. 
+circ_1p3.draw('mpl')
+!ec
+
+!bc pycod
+circ1p3_bind = circ_1p3.bind_parameters({p: [np.pi, np.pi/2, np.pi/2]})
+circ1p3_bind.draw('mpl')
+!ec
+
+=== Step 2: Run your quantum simulation & Data collection ===
+
+Having the quantum circuit(s) ready, we will run our quantum
+simulation by creating and submitting jobs to the available
+device. While the jobs are running, we can monitor their status. We
+are also able to view the jobs we have submitted and are on the
+waitlist through the dashboard of IBM Quantum account.
+
+=== Choosing the backend to run your circuit ===
+
+A useful package for simulating quantum circuits is called "Qiskit Aer":"https://qiskit.org/documentation/tutorials/simulators/1_aer_provider.html",
+which provides multiple backends for running a quantum simulation. The main simulator backend of the Aer provider is the _AerSimulator_ backend, who mimics the execution of an actual quantum computer by default.
+
+!bc pycod
+from qiskit import Aer, transpile  # You can ignore this if 'from qiskit import *' has been executed.
+from qiskit.tools.visualization import plot_histogram, plot_state_city
+!ec
+
+!bc pycod
+# List the available backends.
+Aer.backends()
+!ec
+
+!bc pycod
+Here's a sample code for simulating the quantum circuit above, `circ1p3_bind`, with the `aer_simulator`. We generate the simulation result using the built-in visualization tool `plot_histogram`, which converts counts (a dictionary of results) into a histogram, where the probabilities of measuring each state is shown on the vertical axis.
+!ec
+
+!bc pycod
+# Let's see the results! 
+# Transpile for simulator
+simulator = Aer.get_backend('aer_simulator')
+circ = transpile(circ1p3_bind, simulator)
+
+# Run and get counts
+result = simulator.run(circ).result()
+counts = result.get_counts(circ)
+print(counts)    
+plot_histogram(counts, title='Result for circ1p3_bind')
+!ec
+
+=== Monitor the status of your experiment and check your submitted jobs ===
+
+Using Qiskit, we can also send jobs to IBM Quantum computers, and monitor their status.
+An overview of how to use your IBM Quantum account to access the systems and simulators available in IBM Quantum is available "here":"https://quantum-computing.ibm.com/lab/docs/iql/manage/account/ibmq".
+
+
+
+!bc pycod
+from qiskit.tools import job_monitor
+!ec
+
+!bc pycod
+# Submit your job to a quantum computer 'ibmq_belem'.
+# Select provider and backend.
+provider = IBMQ.get_provider(hub='ibm-q') 
+backend = provider.get_backend('ibmq_belem') 
+# Run the circuit 'circ1p3_bind' and execute the job.
+job = execute(circ1p3_bind, backend)
+# Monitor the job.
+job_monitor(job)
+result = job.result()
+counts = result.get_counts()
+plot_histogram(counts)
+!ec
+
+Once the job have been submitted to a quantum computer, you will be able to check and see the it appears on the pending list on your IBM Quantum dashboard.
+
+=== Submit multiple quantum circuits to a backend ===
+
+If there are multiple circuits to be submitted, you can bundle the
+circuits in a single job to reduce the queue times. For example, if we
+want to the circuit $circ1p3_bind$ and $circb$ together on a simulator, we
+can do:
+
+
+!bc pycod
+simulator = Aer.get_backend('qasm_simulator')
+qc_list = [circ1p3_bind, circb]       # Include all the circuits in a single list.
+job = execute(qc_list, simulator)
+job.result().get_counts()
+!ec
+
+=== Some visualization tools ===
+
+* If you want to visualize a quantum circuit in a LaTex document, Qiskit offers the "LaTex drawer":"https://www.youtube.com/watch?v=Q_pkenZ05eM" which geynerates the code you can copy and paste into a LaTex document. Another useful package for graphing quantum circuit in Latex is called "Quantikz":"http://mirrors.ibiblio.org/CTAN/graphics/pgf/contrib/quantikz/quantikz.pdf".
+
+* "Kaleidoscope":"https://nonhermitian.org/kaleido/tutorials/interactive/bloch_sphere.html" provides an option to visualize the quantum states on on Bloch sphere. You can generate the plot in a Jupyter notebook.

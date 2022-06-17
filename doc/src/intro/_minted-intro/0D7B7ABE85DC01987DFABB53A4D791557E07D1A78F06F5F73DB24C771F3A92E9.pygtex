@@ -1,0 +1,15 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{k+kn}{import} \PYG{n+nn}{numpy} \PYG{k}{as} \PYG{n+nn}{np}
+\PYG{k+kn}{import} \PYG{n+nn}{pandas} \PYG{k}{as} \PYG{n+nn}{pd}
+\PYG{k+kn}{from} \PYG{n+nn}{IPython.display} \PYG{k+kn}{import} \PYG{n}{display}
+\PYG{n}{np}\PYG{o}{.}\PYG{n}{random}\PYG{o}{.}\PYG{n}{seed}\PYG{p}{(}\PYG{l+m+mi}{100}\PYG{p}{)}
+\PYG{c+c1}{\PYGZsh{} setting up a 10 x 5 matrix}
+\PYG{n}{rows} \PYG{o}{=} \PYG{l+m+mi}{10}
+\PYG{n}{cols} \PYG{o}{=} \PYG{l+m+mi}{5}
+\PYG{n}{a} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{random}\PYG{o}{.}\PYG{n}{randn}\PYG{p}{(}\PYG{n}{rows}\PYG{p}{,}\PYG{n}{cols}\PYG{p}{)}
+\PYG{n}{df} \PYG{o}{=} \PYG{n}{pd}\PYG{o}{.}\PYG{n}{DataFrame}\PYG{p}{(}\PYG{n}{a}\PYG{p}{)}
+\PYG{n}{display}\PYG{p}{(}\PYG{n}{df}\PYG{p}{)}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{df}\PYG{o}{.}\PYG{n}{mean}\PYG{p}{())}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{df}\PYG{o}{.}\PYG{n}{std}\PYG{p}{())}
+\PYG{n}{display}\PYG{p}{(}\PYG{n}{df}\PYG{o}{**}\PYG{l+m+mi}{2}\PYG{p}{)}
+\end{Verbatim}
