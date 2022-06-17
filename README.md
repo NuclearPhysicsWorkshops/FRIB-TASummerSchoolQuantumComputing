@@ -105,12 +105,12 @@ broadcasted via zoom for those who cannot attend in person. The zoom link will b
 - 830am-930am: Introduction to quantum computing, qubits, systems of qubits, gates and quantum circuits (AB)
 - 930am-1030am: Measurements, Superposition, Entanglement (AB)
 - 1030am-11am: Break, coffee, tea etc
-- 11am-12pm: Hands-on session with applications and introduction to software libraries (AB, JW, RL) 
+- 11am-12pm: Hands-on session with applications and introduction to software libraries (RL, JW) 
 - 12pm-1pm: Lunch (shorter lunch, else 1h30m lunches)
 - 1pm-2pm: Algorithms for quantum dynamics (DL), simple problems
 - 2pm-3pm: Quantum phase estimation and adiabatic evolution (ZQ and JB), simple problems
 - 3pm-4pm: Break, coffee, tea or tour for FRIB for those interested. Please let us know if you are interested in a tour of FRIB.
-- 4pm-6pm: Hands-on sessions and problem solving (AB+all)
+- 4pm-6pm: Hands-on sessions, quantum dynamics (JW, JB, ZQ, DL & all)
 
 ### Tuesday June 21
 - 830-930am: Hamiltonian simulation: a general overview (JW)
@@ -118,10 +118,10 @@ broadcasted via zoom for those who cannot attend in person. The zoom link will b
 - 1030am-11am: Break, coffee, tea etc
 - 11am-12pm: Many-body theory and nuclear few- and many-body systems (BH and MHJ)
 - 12pm-130pm: Lunch
-- 130pm-230pm:  Quantum algorithms (VQE) and nuclear physics with applications (BH and MHJ), part 1
-- 230pm-330pm:  Quantum algorithms (VQE) and nuclear physics with applications (BH and MHJ), part 2
+- 130pm-230pm: Quantum algorithms (VQE) and nuclear physics with applications (BH and MHJ), part 1
+- 230pm-330pm: Quantum algorithms (VQE) and nuclear physics with applications (BH and MHJ), part 2
 - 330pm-4pm: Break, coffee, tea etc
-- 4pm-6pm: Hands-on sessions and problem solving (BH and JW+all)
+- 4pm-6pm: Hands-on sessions and problem solving (BH, JW & all)
 
 ### Wednesday June 22
 - 830am-930am: Noise, error correction and mitigation, part I (RL)
@@ -129,7 +129,7 @@ broadcasted via zoom for those who cannot attend in person. The zoom link will b
 - 1030am-11am: Break, coffee, tea etc
 - 11am-12pm: Practicing error correction and mitigation, hands-on part (RL)
 - 12pm-130pm: Lunch
-- 130pm-230pm: Wrapping up and defining nuclear many-body system to study for hands-on session and possible advanced topics (JB, BH and MHJ+All)
+- 130pm-230pm: Wrapping up and defining nuclear many-body system to study for hands-on session and possible advanced topics (JB, BH, MHJ & all)
 - 230pm-330pm: Start hands-on session
 - 330pm-4pm: Break, coffee, tea etc
 - 4pm-6pm: Hands-on sessions and problem solving (all)
