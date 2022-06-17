@@ -1,9 +1,0 @@
-\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
-\PYG{n}{gate\PYGZus{}x3} \PYG{o}{=} \PYG{n}{circ\PYGZus{}1p2a}\PYG{o}{.}\PYG{n}{to\PYGZus{}gate}\PYG{p}{()}
-\PYG{n}{gate\PYGZus{}hcx} \PYG{o}{=} \PYG{n}{circ\PYGZus{}1p2b}\PYG{o}{.}\PYG{n}{to\PYGZus{}gate}\PYG{p}{()}
-\PYG{n}{circb} \PYG{o}{=} \PYG{n}{QuantumCircuit}\PYG{p}{(}\PYG{l+m+mi}{3}\PYG{p}{)}
-\PYG{n}{circb}\PYG{o}{.}\PYG{n}{append}\PYG{p}{(}\PYG{n}{gate\PYGZus{}x3}\PYG{p}{,} \PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{,}\PYG{l+m+mi}{1}\PYG{p}{,}\PYG{l+m+mi}{2}\PYG{p}{])}
-\PYG{n}{circb}\PYG{o}{.}\PYG{n}{append}\PYG{p}{(}\PYG{n}{gate\PYGZus{}hcx}\PYG{p}{,} \PYG{p}{[}\PYG{l+m+mi}{2}\PYG{p}{,}\PYG{l+m+mi}{1}\PYG{p}{])}
-\PYG{n}{circb}\PYG{o}{.}\PYG{n}{measure\PYGZus{}all}\PYG{p}{()}
-\PYG{n}{circb}\PYG{o}{.}\PYG{n}{draw}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}mpl\PYGZsq{}}\PYG{p}{)}
-\end{Verbatim}

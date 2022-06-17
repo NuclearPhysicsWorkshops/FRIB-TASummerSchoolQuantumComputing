@@ -1,7 +1,0 @@
-\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
-\PYG{c+c1}{\PYGZsh{} Import the relevant packages.}
-\PYG{k+kn}{from} \PYG{n+nn}{qiskit} \PYG{k+kn}{import} \PYG{o}{*}
-\PYG{o}{\PYGZpc{}}\PYG{n}{matplotlib} \PYG{n}{inline}
-\PYG{k+kn}{import} \PYG{n+nn}{matplotlib.pyplot} \PYG{k}{as} \PYG{n+nn}{plt}
-\PYG{k+kn}{import} \PYG{n+nn}{matplotlib.patches} \PYG{k}{as} \PYG{n+nn}{mpatches}
-\end{Verbatim}
