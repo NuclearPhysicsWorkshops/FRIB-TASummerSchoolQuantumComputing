@@ -57,7 +57,8 @@ o Quantum field theory and quantum computing
 o Noise, error correction and mitigation
 
 All of the above topics will be supported by examples, hands-on exercises and project work.
-
+In these introductory notes, after a presentation of the program and useful links, you will find a short overview of _Numpy_ and _Qiskit_.
+Feel free to study these notes before the school starts.
 
 =====  Practicalities =====
 
@@ -720,9 +721,9 @@ from qiskit.tools.visualization import plot_histogram, plot_state_city
 Aer.backends()
 !ec
 
-!bc pycod
-Here's a sample code for simulating the quantum circuit above, `circ1p3_bind`, with the `aer_simulator`. We generate the simulation result using the built-in visualization tool `plot_histogram`, which converts counts (a dictionary of results) into a histogram, where the probabilities of measuring each state is shown on the vertical axis.
-!ec
+
+Here's a sample code for simulating the quantum circuit above, $circ1p3_bind$, with the $aer_simulator$. We generate the simulation result using the built-in visualization tool $plot_histogram$, which converts counts (a dictionary of results) into a histogram, where the probabilities of measuring each state is shown on the vertical axis.
+
 
 !bc pycod
 # Let's see the results! 
