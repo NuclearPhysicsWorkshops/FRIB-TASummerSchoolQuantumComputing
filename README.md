@@ -100,10 +100,12 @@ broadcasted via zoom for those who cannot attend in person. The zoom link will b
 
 
 
+
+
 ### Monday June 20 
 - 8am-830am: Welcome and registration
-- 830am-930am: Introduction to quantum computing, qubits, systems of qubits, gates and quantum circuits (AB)
-- 930am-1030am: Measurements, Superposition, Entanglement (AB)
+- 830am-930am: Introduction to quantum computing, qubits, gates and superposition (AB)
+- 930am-1030am: Quantum circuits, entanglement and measurements (AB)
 - 1030am-11am: Break, coffee, tea etc
 - 11am-12pm: Hands-on session with applications and introduction to software libraries (RL, JW) 
 - 12pm-1pm: Lunch (shorter lunch, else 1h30m lunches)
