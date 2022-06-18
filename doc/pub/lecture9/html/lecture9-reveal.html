@@ -201,16 +201,16 @@ need to present the so-called Jordan-Wigner transformation first. We
 will apply this to the pairing Hamiltonian discusse previously. This
 Hamiltonian is writen in second quantization and we will use the Pauli
 matrices discussed earlier in order to rewrite the second-quantization
-creation and annihilation operators in terms of Pauli matrices.
-</p>
-
-<p>Thereafter we discuss how to implement the VQE algorithm. The results
-obtained with the VQE algorithm will compared to those obtained by
-using FCI and the unitary coupled cluster method (as well as the
-standard coupled cluster method with doubles excitations only).
+creation and annihilation operators in terms of Pauli matrices. 
 </p>
 
 <p>The unitary coupled cluster approach is discussed below here.</p>
+
+<p>Thereafter, in the second lecture,  we discuss how to implement the VQE algorithm. The results
+obtained with the VQE algorithm will be compared to those obtained by
+using FCI and the unitary coupled cluster method (as well as the
+standard coupled cluster method with doubles excitations only).
+</p>
 </section>
 
 <section>
@@ -515,7 +515,11 @@ $$
 <section>
 <h2 id="variational-quantum-eigensolvers">Variational Quantum Eigensolvers </h2>
 
-<p>The variational principle states that the expectation value of the Hamiltonian has to be larger than or equal to the ground state energy of the system. Mathematically this can be expressed as</p>
+<p>As discussed in the lecture on the VQE algorithm, the variational principle states that the expectation value of the
+Hamiltonian has to be larger than or equal to the ground state energy
+of the system. Mathematically this can be expressed as
+</p>
+
 <p>&nbsp;<br>
 $$
 \begin{equation}
@@ -525,15 +529,23 @@ $$
 $$
 <p>&nbsp;<br>
 
-<p>We can understand this principle intuitively by considering that no single measurement of the energy can be lower than the ground state energy. Hence, the expectation value of the energy can neither. Variational methods make use of this principle by calculating the expectation value in the baove equation for what we call a trial wavefunction \( \ket{\psi_T(\boldsymbol{\theta)}} \):
+<p>We can understand this principle intuitively by considering that no
+single measurement of the energy can be lower than the ground state
+energy. Hence, the expectation value of the energy can
+neither. Variational methods make use of this principle by calculating
+the expectation value in the baove equation for what we call a trial
+wavefunction \( \vert \psi_T(\boldsymbol{\theta)\rangle} \): <p>&nbsp;<br>
+$$\langle
+\psi_T(\boldsymbol{\theta})\vert H
+\vert\psi_T(\boldsymbol{\theta})\rangle = E(\boldsymbol{\theta}).$$
 <p>&nbsp;<br>
-$$\bra{\psi_T(\boldsymbol{\theta})} H \ket{\psi_T(\boldsymbol{\theta})} = E(\boldsymbol{\theta}).$$
+</p>
+
+<p>The variational parameters \( \boldsymbol{\theta} = [\theta_1, \theta_2, \cdots, \theta_p] \) are then varied to minimize \( E(\boldsymbol{\theta}) \), which hopefully makes a good approximation for \( E_0 \). For variational quantum eigensolvers (VQE), the trial wave function is given by a parametrized n-qubit state
 <p>&nbsp;<br>
-The variational parameters \( \boldsymbol{\theta} = [\theta_1, \theta_2, \cdots, \theta_p] \) are then varied to minimize \( E(\boldsymbol{\theta}) \), which hopefully makes a good approximation for \( E_0 \). For variational quantum eigensolvers (VQE), the trial wave function is given by a parametrized n-qubit state
+$$ U(\boldsymbol{\theta}) \vert\psi_0\rangle = \vert\psi_T(\boldsymbol{\theta})\rangle, $$
 <p>&nbsp;<br>
-$$ U(\boldsymbol{\theta}) \ket{\psi_0} = \ket{\psi_T(\boldsymbol{\theta})}, $$
-<p>&nbsp;<br>
-where \( U(\boldsymbol{\theta}) \) is some parametrized multi-qubit gate and \( \ket{\psi_0} \) is the initial state of the qubits.
+where \( U(\boldsymbol{\theta}) \) is some parametrized multi-qubit gate and \( \vert\psi_0\rangle \) is the initial state of the qubits.
 As long as the Hamiltonian can be rewritten as a sum of quantum gates \( O_i \)
 <p>&nbsp;<br>
 $$ H = \sum_{i=1}^m h_i O_i, $$
@@ -544,17 +556,17 @@ we can find its expectation value by considering the expectation of each term
 <p>&nbsp;<br>
 $$
 \begin{equation}
-    \bra{\psi_T(\boldsymbol{\theta})} H \ket{\psi_T(\boldsymbol{\theta})} = \sum_{i=1}^m h_i \bra{\psi_T(\boldsymbol{\theta})} O_i \ket{\psi_T(\boldsymbol{\theta})}.
+    \langle \psi_T(\boldsymbol{\theta})\vert  H \vert \psi_T(\boldsymbol{\theta})\rangle = \sum_{i=1}^m h_i \langle \psi_T(\boldsymbol{\theta})\vert  O_i \vert \psi_T(\boldsymbol{\theta})\rangle.
 \tag{18}
 \end{equation}
 $$
 <p>&nbsp;<br>
+
+<p>The implementation details will be discussed in the next lecture.</p>
 </section>
 
 <section>
-<h2 id="more-details-about-vqe-ben">More details about VQE, Ben </h2>
-
-<p>\subsection{Unitary Coupled Cluster ansatz}</p>
+<h2 id="unitary-coupled-cluster-ansatz">Unitary Coupled Cluster ansatz </h2>
 
 <p>The coupled cluster ansatz is given by 
 <p>&nbsp;<br>
@@ -566,12 +578,12 @@ with the cluster operator \( \hat{T} \) and \( \vert c \rangle \) being our refe
 $$
 \begin{equation}
 \tag{19}
-    \ket{\psi_{UCC}} = e^{\hat{T} - \hat{T}^\dagger}\ket{\psi_0},
+    \vert\psi_{UCC}\rangle = e^{\hat{T} - \hat{T}^\dagger}\vert \psi_0\rangle ,
 \end{equation}
 $$
 <p>&nbsp;<br>
 
-<p>where \( \hat{T} \) is the usual coupled cluster operator and the state \( \ket{\psi_0} \) is the reference state.
+<p>where \( \hat{T} \) is the usual coupled cluster operator and the state \( \vert \psi_0\rangle  \) is the reference state.
 One can show that \( e^{\hat{T} - \hat{T}^\dagger} \) is unitary \<a href="#UCCDArticle">[1]</a>.
 </p>
 
@@ -620,7 +632,7 @@ the Suzuki-Trotter approximation gives
 $$
 \begin{align}
 \tag{27}
-    \ket{\psi(\boldsymbol{t})} &\approx  \bigg( \prod_{ijab} e^{\hat{Z}_{ij}^{ab}\sigma_x^i \sigma_x^j \sigma_y^a \sigma_x^b }
+    \vert \psi(\boldsymbol{t})\rangle &\approx  \bigg( \prod_{ijab} e^{\hat{Z}_{ij}^{ab}\sigma_x^i \sigma_x^j \sigma_y^a \sigma_x^b }
     e^{\hat{Z}_{ij}^{ab}\sigma_y^i \sigma_x^j \sigma_y^a \sigma_y^b }
     e^{\hat{Z}_{ij}^{ab}\sigma_x^i\sigma_y^j \sigma_y^a \sigma_y^b }
     e^{\hat{Z}_{ij}^{ab}\sigma_x^i \sigma_x^j \sigma_x^a \sigma_y^b } \notag \\
