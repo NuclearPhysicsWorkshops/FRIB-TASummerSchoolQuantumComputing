@@ -31,13 +31,13 @@ annihilation operators. The creation and annihilation operators from
 the second quantization formalism (can then be represented on quantum
 computers, and we will be able to rewrite our second quantization
 Hamiltonian in terms of
-quantum gates. Suppose that we represent a qubit in state $\ket{0}$ as
-a state occupied with a fermion and $\ket{1}$ as a state with no
+quantum gates. Suppose that we represent a qubit in state $\vert 0\rangle$ as
+a state occupied with a fermion and $\vert 1 \rangle$ as a state with no
 fermion. We then see that the operators
 
 !bt
 \begin{align}
-    \label{eq:sigmaplussigmaminus}
+    label{eq:sigmaplussigmaminus}
     \sigma_+ &= \frac{1}{2}(\sigma_x + i\sigma_y) = \begin{bmatrix}
     0 & 1  \\
     0 & 0
@@ -49,15 +49,15 @@ fermion. We then see that the operators
 \end{align}
 !et
 have the following effect on the qubit basis states
-$$\sigma_+ \ket{1} = \ket{0} \qquad \sigma_- \ket{0} = \ket{1},$$
+$$\sigma_+ \vert 1 \rangle = \vert 0\rangle \qquad \sigma_- \vert 0\rangle = \vert 1 \rangle,$$
 and
-$$\sigma_+ \ket{0} = 0 \qquad \sigma_-\ket{1} = 0.$$
+$$\sigma_+ \vert 0\rangle = 0 \qquad \sigma_-\vert 1 \rangle = 0.$$
 
-Hence, $\sigma_+$ acts as a creation operator and $\sigma_-$ acts as an annihilation operator. However, since fermionic states are anti-symmetric, $a^\dagger_a a^\dagger_b \ket{c} = - a^\dagger_b a^\dagger_a \ket{c}$, we need our quantum gate representation of the creation/annihilation operators to preserve this property. This can be achieved by multiplying the $\sigma_z$ matrix (eq. (\ref{eq:PauliMatrices})) on all the occupied states leading up to the one we operate on. The complete creation and annihilation operators can then be represented as
+Hence, $\sigma_+$ acts as a creation operator and $\sigma_-$ acts as an annihilation operator. However, since fermionic states are anti-symmetric, $a^\dagger_a a^\dagger_b \vert c \rangle = - a^\dagger_b a^\dagger_a \vert c \rangle$, we need our quantum gate representation of the creation/annihilation operators to preserve this property. This can be achieved by multiplying the $\sigma_z$ matrix on all the occupied states leading up to the one we operate on. The complete creation and annihilation operators can then be represented as
 
 !bt
 \begin{equation}
-    \label{eq:LadderOpsPauli}
+    label{eq:LadderOpsPauli}
     a^\dagger_n \equiv \left(\prod_{k=1}^{n-1}\sigma_z^k \right)\sigma_+^n \qquad a_n \equiv \left(\prod_{k=1}^{n-1}\sigma_z^k \right) \sigma_-^n
 \end{equation}
 !et
@@ -69,19 +69,18 @@ state
 
 !bt
 \begin{align*}
-    \textit{Qubit state:} & \ket{0 \: \; \ 0 \: \; \ 1 \: \; \ 1 } \\
+    \textit{Qubit state:} & \vert 0 \: \; \ 0 \: \; \ 1 \: \; \ 1 \rangle \\
     \textit{Spin state:} & + \; - \; + \; - \; \\
     \textit{Spacial state:} & \ 1 \; \: \ 1 \ \; \: 2 \ \; \: 2 \; ,
 \end{align*}
 !et
 
 the first spacial basis state is occupied with a fermion pair with opposite spin, while the second spacial state is not occupied with any fermions.
-The equivalent of the reference state in eq. (\ref{eq:ReferenceState}) for our qubit-state is then
+The equivalent of the reference state for our qubit-state is then
 
 !bt
 \begin{equation}
-    \label{eq:qubitReferenceState}
-    \ket{\Psi_0} = \ket{0}^{\otimes^n}\ket{1}^{\otimes^k},
+    \vert \Psi_0\rangle = \vert 0\rangle^{\otimes^n}\vert 1 \rangle^{\otimes^k},
 \end{equation}
 !et
 where $n$ is the number of particles and $n+k$ is the number of spin-orbitals.
@@ -99,7 +98,7 @@ We can write the pairing Hamiltonian in  second quantized representation in term
 where we sum over each qubit $p$ and $\%$ is the modulo operator. We have that $I[f(x) = y] = 1$ if $f(x) = y$ and zero otherwise. For the interaction term we have two possibilities. First for $p = q$ we have:
 !bt
 \begin{align}
-    \label{eq:twobodypaulipisq}
+    label{eq:twobodypaulipisq}
     \hat{V}_{p} = -\frac{1}{8}g\Big[ &I^{\otimes^{2p-2}} \otimes I  \otimes I \otimes I^{\otimes^{n - 2p}} \nonumber \\
     +& I^{\otimes^{2p-2}} \otimes I  \otimes \sigma_z \otimes I^{\otimes^{n - 2p}} \\
     +& I^{\otimes^{2p-2}} \otimes \sigma_z  \otimes I \otimes I^{\otimes^{n - 2p}} \nonumber \\
@@ -109,7 +108,7 @@ where we sum over each qubit $p$ and $\%$ is the modulo operator. We have that $
 and for $q - p \geq 1$ we get:
 !bt
 \begin{align}
-    \label{eq:twobodypauliqgeqp}
+    label{eq:twobodypauliqgeqp}
        \hat{V}_{pq} = -\frac{1}{16}g [& I^{\otimes^{2p -2}} \otimes \sigma_x \otimes \sigma_x \otimes I^{\otimes^{2(q - p - 1)}} \otimes \sigma_x \otimes \sigma_x \otimes I^{\otimes^{n-2q}} \nonumber \\
         & -I^{\otimes^{2p -2}} \otimes \sigma_x \otimes \sigma_x \otimes I^{\otimes^{2(q - p - 1)}} \otimes \sigma_y \otimes \sigma_y \otimes I^{\otimes^{n-2q}} \nonumber \\
         & + I^{\otimes^{2p -2}} \otimes \sigma_x \otimes \sigma_y \otimes I^{\otimes^{2(q - p - 1)}} \otimes \sigma_x \otimes \sigma_y \otimes I^{\otimes^{n-2q}} \nonumber \\
@@ -125,7 +124,7 @@ We have included a factor of two so the sum over $p$ and $q$ here can be restric
 The complete Jordan-Wigner transformed pairing Hamiltonian can then be written as
 !bt
 \begin{equation}
-    \label{eq:JordanWignerHamiltonian}
+    label{eq:JordanWignerHamiltonian}
     \hat{H} = \sum_p \hat{H}_{0p} + \sum_{p} \hat{V}_p + \sum_{q > p} \hat{V}_{pq},
 \end{equation}
 !et
@@ -152,7 +151,7 @@ where $p$ now runs over each qubit and $\%$ is the modulo operator. For the inte
 
 !bt
 \begin{align}
-    \label{eq:Twobodyintermsofpauli}
+    label{eq:Twobodyintermsofpauli}
     &\hat{V} = \notag \\
     &-\frac{1}{2}g \sum_{pq}\left( \prod_{k=1}^{2p-2} \sigma_z^k \right)\sigma_{+}^{2p-1} \left( \prod_{k=1}^{2p-1} \sigma_z^k \right)\sigma_{+}^{2p}
     \left( \prod_{k=1}^{2q-1} \sigma_z^k \right)\sigma_{-}^{2q} \left( \prod_{k=1}^{2q-2} \sigma_z^k \right)\sigma_{-}^{2q-1}. 
@@ -167,7 +166,7 @@ We can see that
     I^{\otimes^{2p-2}} \otimes \sigma_+ \sigma_z \otimes \sigma_+ \otimes I^{\otimes^{n - 2p}},
 \end{align*}
 !et
-so we can rewrite eq. (\ref{eq:Twobodyintermsofpauli}) as 
+so we can rewrite eq. (ref{eq:Twobodyintermsofpauli}) as 
 
 !bt
 \begin{align*}
@@ -180,7 +179,7 @@ We have two possibilities here. First for $p=q$:
 
 !bt
 \begin{equation}
-    \label{eq:PisQ}
+    label{eq:PisQ}
     -\frac{1}{2}g \left[ I^{\otimes^{2p-2}} \otimes \sigma_+ \sigma_-  \otimes \sigma_+ \sigma_- \otimes I^{\otimes^{n - 2p}} \right],
 \end{equation}
 !et
@@ -189,13 +188,13 @@ and for $q - p \geq 1$ we have
 
 !bt
 \begin{equation}
-    \label{eq:PgeqQ}
+    label{eq:PgeqQ}
     -\frac{1}{2}g \left[ I^{\otimes^{2p-2}} \otimes \sigma_+ \otimes \sigma_+ \otimes I^{\otimes^{2(q - p - 1)}} \otimes \sigma_- \otimes \sigma_- \otimes I^{\otimes^{n-2q}} \right].
 \end{equation}
 !et
 
 For $p - q \geq 1$ we simply exchange $p$ with $q$ and $\sigma_+$ with $\sigma_-$.
-To continue, we insert the expressions for $\sigma_{\pm}$ (eq. (\ref{eq:sigmaplussigmaminus})) into these equations. For $p = q$ (eq. (\ref{eq:PisQ})) we then have:
+To continue, we insert the expressions for $\sigma_{\pm}$ into these equations. For $p = q$ we then have:
 
 !bt
 \begin{align*}
@@ -207,7 +206,7 @@ To continue, we insert the expressions for $\sigma_{\pm}$ (eq. (\ref{eq:sigmaplu
 \end{align*}
 !et
 
-and for $q - p \geq 1$ (eq. (\ref{eq:PgeqQ})) we get
+and for $q - p \geq 1$ we get
 
 !bt
 \begin{equation*}
@@ -261,7 +260,7 @@ limit the sum to $p < q$. Therefore:
 The variational principle states that the expectation value of the Hamiltonian has to be larger than or equal to the ground state energy of the system. Mathematically this can be expressed as
 !bt
 \begin{equation}
-    \bra{\psi} H \ket{\psi} \geq E_0.
+    \langle\psi\vert  H \vert \psi \rangle  \geq E_0.
 \end{equation}
 !et
 
@@ -281,33 +280,38 @@ we can find its expectation value by considering the expectation of each term
 !et
 
 
+
+!split
+===== More details about VQE, Ben =====
+
+
 \subsection{Unitary Coupled Cluster ansatz}
 
 
-As we learned in section \ref{sec:CCD} the coupled cluster ansatz is given by 
-$$\ket{\psi_{CC}}  = e^{\hat{T}} \ket{c} ,$$
-with the cluster operator $\hat{T}$ given by eq. (\ref{eq:ClusterOperator}) and $\ket{c}$ being our reference state (see eq. (\ref{eq:ReferenceState})). This type of ansatz is not implementable on a quantum computer since $e^{\hat{T}}$ is not a unitary operator. Unitary coupled cluster instead suggest that we write our ansatz as
+As we learned in section ref{sec:CCD} the coupled cluster ansatz is given by 
+$$\ket{\psi_{CC}}  = e^{\hat{T}} \vert c \rangle ,$$
+with the cluster operator $\hat{T}$ given by eq. (ref{eq:ClusterOperator}) and $\vert c \rangle$ being our reference state (see eq. (ref{eq:ReferenceState})). This type of ansatz is not implementable on a quantum computer since $e^{\hat{T}}$ is not a unitary operator. Unitary coupled cluster instead suggest that we write our ansatz as
 !bt
 \begin{equation}
-    \label{eq:UnitaryCoupledClusterAnsatz}
+    label{eq:UnitaryCoupledClusterAnsatz}
     \ket{\psi_{UCC}} = e^{\hat{T} - \hat{T}^\dagger}\ket{\psi_0},
 \end{equation}
 !et
-where $\hat{T}$ is the usual coupled cluster operator in eq. (\ref{eq:ClusterOperator}) and the state $\ket{\psi_0}$ is the reference state in eq. (\ref{eq:qubitReferenceState}).
+where $\hat{T}$ is the usual coupled cluster operator in eq. (ref{eq:ClusterOperator}) and the state $\ket{\psi_0}$ is the reference state in eq. (ref{eq:qubitReferenceState}).
 One can show that $e^{\hat{T} - \hat{T}^\dagger}$ is unitary \cite{UCCDArticle}.
 For this thesis, we will restrict ourselves to the unitary coupled cluster doubles (UCCD) method and hence we will deal with the cluster operator
 !bt
 \begin{align}
-    \label{eq:UnitaryOp}
+    label{eq:UnitaryOp}
     \hat{T}_{UCCD} = \hat{T} - \hat{T}^\dagger &=  \notag \\
      &\sum_{ijab} t_{ij}^{ab}(a^\dagger_a a^\dagger_b a_j a_i - a^\dagger_i a^\dagger_j a_b a_a),
 \end{align}
 !et
 where we vary the trial wavefunction over the real cluster amplitudes $t_{ij}^{ab}$. Note that our ansatz is dependent on the number of particles in our system as we sum over $i$ and $j$. Hence, we can specify the specific configuration we wish to solve for, unlike the previously discussed ansatzes. 
-Rewriting eq. (\ref{eq:UnitaryOp}) in terms of Pauli gates by utilizing the Jordan-Wigner transformation (see section \ref{subsec:JordanWignerTransformation}) gives \cite{UCCDArticle}
+Rewriting eq. (ref{eq:UnitaryOp}) in terms of Pauli gates by utilizing the Jordan-Wigner transformation (see section ref{subsec:JordanWignerTransformation}) gives \cite{UCCDArticle}
 !bt
 \begin{align}
-    \label{eq:UCCDoublesGates}
+    label{eq:UCCDoublesGates}
     t_{ij}^{ab}(a^\dagger_a a^\dagger_b a_j a_i - a^\dagger_i a^\dagger_j a_b a_a) &= \frac{it_{ij}^{ab}}{8} \bigotimes_{k=i+1}^{j-1}\sigma_z^k \bigotimes_{l=a+1}^{b-1}\sigma_z^l \notag \\
     &(\sigma_x^i \sigma_x^j \sigma_y^a \sigma_x^b + \sigma_y^i \sigma_x^j \sigma_y^a \sigma_y^b \notag \\
     +&\sigma_x^i\sigma_y^j \sigma_y^a \sigma_y^b + \sigma_x^i \sigma_x^j \sigma_x^a \sigma_y^b \notag \\
@@ -316,12 +320,12 @@ Rewriting eq. (\ref{eq:UnitaryOp}) in terms of Pauli gates by utilizing the Jord
 \end{align}
 !et
 where we can assume that $i < j < a < b$. The subscript denotes which qubit we act upon with the Pauli gates.
-The preparation of this trial wavefunction is done on a quantum computing by first utilizing the Suzuki-Trotter approximation (see section \ref{subsec:SuzukiTrotter}) on the operator in eq. (\ref{eq:UCCDoublesGates}). Denoting 
+The preparation of this trial wavefunction is done on a quantum computing by first utilizing the Suzuki-Trotter approximation (see section ref{subsec:SuzukiTrotter}) on the operator in eq. (ref{eq:UCCDoublesGates}). Denoting 
 $$\hat{Z}_{ij}^{ab} =i\frac{t_{ij}^{ab}}{8p}(\bigotimes_{k=i+1}^{j-1}\sigma_z^k)(\bigotimes_{l=a+1}^{b-1}\sigma_l^z),$$ 
 the Suzuki-Trotter approximation gives
 !bt
 \begin{align}
-    \label{eq:UCCTrotterApprox}
+    label{eq:UCCTrotterApprox}
     \ket{\psi(\boldsymbol{t})} &\approx  \bigg( \prod_{ijab} e^{\hat{Z}_{ij}^{ab}\sigma_x^i \sigma_x^j \sigma_y^a \sigma_x^b }
     e^{\hat{Z}_{ij}^{ab}\sigma_y^i \sigma_x^j \sigma_y^a \sigma_y^b }
     e^{\hat{Z}_{ij}^{ab}\sigma_x^i\sigma_y^j \sigma_y^a \sigma_y^b }
@@ -330,12 +334,12 @@ the Suzuki-Trotter approximation gives
     e^{-\hat{Z}_{ij}^{ab}\sigma_x^i \sigma_y^j \sigma_x^a \sigma_x^b }
     e^{-\hat{Z}_{ij}^{ab}\sigma_y^i \sigma_y^j \sigma_y^a \sigma_x^b }
     e^{-\hat{Z}_{ij}^{ab}\sigma_y^i \sigma_y^j \sigma_x^a \sigma_y^b }
-    \bigg)^p \ket{c},
+    \bigg)^p \vert c \rangle,
 \end{align}
 !et
 
-where $p$ decides the step size in the Suzuki-Trotter approximation and will be restricted to $p=1$ in this thesis. The operator in eq. (\ref{eq:UCCTrotterApprox}) can be implemented with Hamiltonian simulation (see section \ref{subsec:HamiltonianSimulation}) by utilizing circuit (\ref{circuit:TimeEvolutionArbitraryPauli}).
-Since we are dealing with the pairing Hamiltonian (eq. (\ref{eq:SimplifiedPairingHamiltonian})) in this thesis, we can reduce the number of terms in our ansatz by not allowing to break particle pairs. The Taylor expansion of the UCCD operator gives us
+where $p$ decides the step size in the Suzuki-Trotter approximation and will be restricted to $p=1$ in this thesis. The operator in eq. (ref{eq:UCCTrotterApprox}) can be implemented with Hamiltonian simulation (see section ref{subsec:HamiltonianSimulation}) by utilizing circuit (ref{circuit:TimeEvolutionArbitraryPauli}).
+Since we are dealing with the pairing Hamiltonian (eq. (ref{eq:SimplifiedPairingHamiltonian})) in this thesis, we can reduce the number of terms in our ansatz by not allowing to break particle pairs. The Taylor expansion of the UCCD operator gives us
 
 !bt
 \begin{align}
@@ -346,8 +350,11 @@ Since we are dealing with the pairing Hamiltonian (eq. (\ref{eq:SimplifiedPairin
 !et
 We can immediately see that the first sum over $i,j,a,b$ will break pairs if we do not introduce a restriction on the sum. This can be explained by the fact that any non zero $t_{ij}^{ab}$ will include the following term
 $$
-t_{ij}^{ab}(a^\dagger_a a^\dagger_b a_j a_i - a^\dagger_i a^\dagger_j a_b a_a)\ket{c},
+t_{ij}^{ab}(a^\dagger_a a^\dagger_b a_j a_i - a^\dagger_i a^\dagger_j a_b a_a)\vert c \rangle,
 $$
 which will break pairs if $j \neq i+1$ and $b \neq a+1$. 
 Hence we make the restriction $j = i+1$ and $b = a+1$.
 
+
+!split
+===== More stuff, implementations and examples, Ben  =====
