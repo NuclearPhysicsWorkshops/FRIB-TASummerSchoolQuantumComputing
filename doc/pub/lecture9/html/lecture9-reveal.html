@@ -1,0 +1,814 @@
+<!--
+HTML file automatically generated from DocOnce source
+(https://github.com/doconce/doconce/)
+doconce format html lecture9-reveal.html lecture9-reveal reveal --html_slide_theme=beige
+-->
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="DocOnce: https://github.com/doconce/doconce/" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Quantum algorithms (VQE) and nuclear physics with applications, parts I and II">
+<title>Quantum algorithms (VQE) and nuclear physics with applications, parts I and II</title>
+
+<!-- reveal.js: https://lab.hakim.se/reveal-js/ -->
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+<link rel="stylesheet" href="reveal.js/css/reveal.css">
+<link rel="stylesheet" href="reveal.js/css/theme/beige.css" id="theme">
+<!--
+<link rel="stylesheet" href="reveal.js/css/reveal.css">
+<link rel="stylesheet" href="reveal.js/css/theme/beige.css" id="theme">
+<link rel="stylesheet" href="reveal.js/css/theme/beigesmall.css" id="theme">
+<link rel="stylesheet" href="reveal.js/css/theme/solarized.css" id="theme">
+<link rel="stylesheet" href="reveal.js/css/theme/serif.css" id="theme">
+<link rel="stylesheet" href="reveal.js/css/theme/night.css" id="theme">
+<link rel="stylesheet" href="reveal.js/css/theme/moon.css" id="theme">
+<link rel="stylesheet" href="reveal.js/css/theme/simple.css" id="theme">
+<link rel="stylesheet" href="reveal.js/css/theme/sky.css" id="theme">
+<link rel="stylesheet" href="reveal.js/css/theme/darkgray.css" id="theme">
+<link rel="stylesheet" href="reveal.js/css/theme/default.css" id="theme">
+<link rel="stylesheet" href="reveal.js/css/theme/cbc.css" id="theme">
+<link rel="stylesheet" href="reveal.js/css/theme/simula.css" id="theme">
+<link rel="stylesheet" href="reveal.js/css/theme/black.css" id="theme">
+<link rel="stylesheet" href="reveal.js/css/theme/white.css" id="theme">
+<link rel="stylesheet" href="reveal.js/css/theme/league.css" id="theme">
+-->
+
+<!-- For syntax highlighting -->
+<link rel="stylesheet" href="reveal.js/lib/css/zenburn.css">
+
+<!-- Printing and PDF exports -->
+<script>
+var link = document.createElement( 'link' );
+link.rel = 'stylesheet';
+link.type = 'text/css';
+link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+document.getElementsByTagName( 'head' )[0].appendChild( link );
+</script>
+
+<style type="text/css">
+hr { border: 0; width: 80%; border-bottom: 1px solid #aaa}
+p.caption { width: 80%; font-size: 60%; font-style: italic; text-align: left; }
+hr.figure { border: 0; width: 80%; border-bottom: 1px solid #aaa}
+.reveal .alert-text-small   { font-size: 80%;  }
+.reveal .alert-text-large   { font-size: 130%; }
+.reveal .alert-text-normal  { font-size: 90%;  }
+.reveal .alert {
+  padding:8px 35px 8px 14px; margin-bottom:18px;
+  text-shadow:0 1px 0 rgba(255,255,255,0.5);
+  border:5px solid #bababa;
+  -webkit-border-radius: 14px; -moz-border-radius: 14px;
+  border-radius:14px;
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  background-size: 38px;
+  padding-left: 30px; /* 55px; if icon */
+}
+.reveal .alert-block {padding-top:14px; padding-bottom:14px}
+.reveal .alert-block > p, .alert-block > ul {margin-bottom:1em}
+/*.reveal .alert li {margin-top: 1em}*/
+.reveal .alert-block p+p {margin-top:5px}
+/*.reveal .alert-notice { background-image: url(https://hplgit.github.io/doconce/bundled/html_images/small_gray_notice.png); }
+.reveal .alert-summary  { background-image:url(https://hplgit.github.io/doconce/bundled/html_images/small_gray_summary.png); }
+.reveal .alert-warning { background-image: url(https://hplgit.github.io/doconce/bundled/html_images/small_gray_warning.png); }
+.reveal .alert-question {background-image:url(https://hplgit.github.io/doconce/bundled/html_images/small_gray_question.png); } */
+/* Override reveal.js table border */
+.reveal table td {
+  border: 0;
+}
+
+<style type="text/css">
+/* Override h1, h2, ... styles */
+h1 { font-size: 2.8em; }
+h2 { font-size: 1.5em; }
+h3 { font-size: 1.4em; }
+h4 { font-size: 1.3em; }
+h1, h2, h3, h4 { font-weight: bold; line-height: 1.2; }
+body { overflow: auto; } /* vertical scrolling */
+hr { border: 0; width: 80%; border-bottom: 1px solid #aaa}
+p.caption { width: 80%; font-size: 60%; font-style: italic; text-align: left; }
+hr.figure { border: 0; width: 80%; border-bottom: 1px solid #aaa}
+.slide .alert-text-small   { font-size: 80%;  }
+.slide .alert-text-large   { font-size: 130%; }
+.slide .alert-text-normal  { font-size: 90%;  }
+.slide .alert {
+  padding:8px 35px 8px 14px; margin-bottom:18px;
+  text-shadow:0 1px 0 rgba(255,255,255,0.5);
+  border:5px solid #bababa;
+    -webkit-border-radius:14px; -moz-border-radius:14px;
+  border-radius:14px
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  background-size: 38px;
+  padding-left: 30px; /* 55px; if icon */
+}
+.slide .alert-block {padding-top:14px; padding-bottom:14px}
+.slide .alert-block > p, .alert-block > ul {margin-bottom:0}
+/*.slide .alert li {margin-top: 1em}*/
+.deck .alert-block p+p {margin-top:5px}
+/*.slide .alert-notice { background-image: url(https://hplgit.github.io/doconce/
+bundled/html_images//small_gray_notice.png); }
+.slide .alert-summary  { background-image:url(https://hplgit.github.io/doconce/
+bundled/html_images//small_gray_summary.png); }
+.slide .alert-warning { background-image: url(https://hplgit.github.io/doconce/
+bundled/html_images//small_gray_warning.png); }
+.slide .alert-question {background-image:url(https://hplgit.github.io/doconce/
+bundled/html_images/small_gray_question.png); } */
+.dotable table, .dotable th, .dotable tr, .dotable tr td {
+  border: 2px solid black;
+  border-collapse: collapse;
+  padding: 2px;
+}
+</style>
+
+
+<!-- Styles for table layout of slides -->
+<style type="text/css">
+td.padding {
+  padding-top:20px;
+  padding-bottom:20px;
+  padding-right:50px;
+  padding-left:50px;
+}
+</style>
+
+</head>
+
+
+<body>
+<div class="reveal">
+<div class="slides">
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  TeX: {
+     equationNumbers: {  autoNumber: "none"  },
+     extensions: ["AMSmath.js", "AMSsymbols.js", "autobold.js", "color.js"]
+  }
+});
+</script>
+<script type="text/javascript" async
+ src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+
+
+<section>
+<!-- ------------------- main content ---------------------- -->
+<center>
+<h1 style="text-align: center;">Quantum algorithms (VQE) and nuclear physics with applications, parts I and II   </h1>
+</center>  <!-- document title -->
+
+<!-- author(s): Benjamin Hall and Morten Hjorth-Jensen -->
+<center>
+<b>Benjamin Hall and Morten Hjorth-Jensen</b> 
+</center>
+<!-- institution -->
+<center>
+<b><a href="http://www.frib.msu.edu/" target="_blank">Facility for Rare Isotope Beams and National Superconducting Cyclotron Laboratory</a> and <a href="https://www.pa.msu.edu/" target="_blank">Department of Physics and Astronomy</a>, <a href="http://www.msu.edu/" target="_blank">Michigan State University</a>, East Lansing, MI 48824, USA</b>
+</center>
+<br>
+<center>
+<h4>Jun 18, 2022</h4>
+</center> <!-- date -->
+<br>
+
+
+<center style="font-size:80%">
+<!-- copyright --> &copy; 2013-2022, Benjamin Hall and Morten Hjorth-Jensen. Released under CC Attribution-NonCommercial 4.0 license
+</center>
+</section>
+
+<section>
+<h2 id="overview">Overview </h2>
+
+<p>In these two lectures we will derive the essential elements for using
+the VQE algorithm applied to a selected nuclear physics model, in our
+case the so-called pairing Hamiltonian.  In order to do so, we will
+need to present the so-called Jordan-Wigner transformation first. We
+will apply this to the pairing Hamiltonian discusse previously. This
+Hamiltonian is writen in second quantization and we will use the Pauli
+matrices discussed earlier in order to rewrite the second-quantization
+creation and annihilation operators in terms of Pauli matrices.
+</p>
+
+<p>Thereafter we discuss how to implement the VQE algorithm. The results
+obtained with the VQE algorithm will compared to those obtained by
+using FCI and the unitary coupled cluster method (as well as the
+standard coupled cluster method with doubles excitations only).
+</p>
+
+<p>The unitary coupled cluster approach is discussed below here.</p>
+</section>
+
+<section>
+<h2 id="the-jordan-wigner-transformation">The Jordan-Wigner transformation </h2>
+
+<p>The Jordan-Wigner transformation is a transformation that maps the
+Pauli gates discussed earlier onto fermionic creation and
+annihilation operators. The creation and annihilation operators from
+the second quantization formalism (can then be represented on quantum
+computers, and we will be able to rewrite our second quantization
+Hamiltonian in terms of
+quantum gates. Suppose that we represent a qubit in state \( \vert 0\rangle \) as
+a state occupied with a fermion and \( \vert 1 \rangle \) as a state with no
+fermion. We then see that the operators
+</p>
+
+<p>&nbsp;<br>
+$$
+\begin{align}
+\tag{1}
+    \sigma_+ &= \frac{1}{2}(\sigma_x + i\sigma_y) = \begin{bmatrix}
+    0 & 1  \\
+    0 & 0
+\end{bmatrix} \notag 
+\tag{2}\\
+    \sigma_- &= \frac{1}{2}(\sigma_x - i\sigma_y) = \begin{bmatrix}
+    0 & 0  
+\tag{3}\\
+    1 & 0
+\end{bmatrix},
+\tag{4}
+\end{align}
+$$
+<p>&nbsp;<br>
+
+<p>have the following effect on the qubit basis states
+<p>&nbsp;<br>
+$$\sigma_+ \vert 1 \rangle = \vert 0\rangle \qquad \sigma_- \vert 0\rangle = \vert 1 \rangle,$$
+<p>&nbsp;<br>
+and
+<p>&nbsp;<br>
+$$\sigma_+ \vert 0\rangle = 0 \qquad \sigma_-\vert 1 \rangle = 0.$$
+<p>&nbsp;<br>
+</p>
+
+<p>Hence, \( \sigma_+ \) acts as a creation operator and \( \sigma_- \) acts as an annihilation operator. However, since fermionic states are anti-symmetric, \( a^\dagger_a a^\dagger_b \vert c \rangle = - a^\dagger_b a^\dagger_a \vert c \rangle \), we need our quantum gate representation of the creation/annihilation operators to preserve this property. This can be achieved by multiplying the \( \sigma_z \) matrix on all the occupied states leading up to the one we operate on. The complete creation and annihilation operators can then be represented as</p>
+
+<p>&nbsp;<br>
+$$
+\begin{equation}
+\tag{5}
+    a^\dagger_n \equiv \left(\prod_{k=1}^{n-1}\sigma_z^k \right)\sigma_+^n \qquad a_n \equiv \left(\prod_{k=1}^{n-1}\sigma_z^k \right) \sigma_-^n
+\end{equation}
+$$
+<p>&nbsp;<br>
+
+<p>where the superscript tells us which qubit the operator acts on. For
+convenience, we chose that odd qubits are in a spin up state, while
+even qubits are in spin down state. For example for the following
+state
+</p>
+
+<p>&nbsp;<br>
+$$
+\begin{align*}
+    \textit{Qubit state:} & \vert 0 \: \; \ 0 \: \; \ 1 \: \; \ 1 \rangle \\
+    \textit{Spin state:} & + \; - \; + \; - \; \\
+    \textit{Spacial state:} & \ 1 \; \: \ 1 \ \; \: 2 \ \; \: 2 \; ,
+\end{align*}
+$$
+<p>&nbsp;<br>
+
+<p>the first spacial basis state is occupied with a fermion pair with opposite spin, while the second spacial state is not occupied with any fermions.
+The equivalent of the reference state for our qubit-state is then
+</p>
+
+<p>&nbsp;<br>
+$$
+\begin{equation}
+    \vert \Psi_0\rangle = \vert 0\rangle^{\otimes^n}\vert 1 \rangle^{\otimes^k},
+\tag{6}
+\end{equation}
+$$
+<p>&nbsp;<br>
+
+<p>where \( n \) is the number of particles and \( n+k \) is the number of spin-orbitals.</p>
+</section>
+
+<section>
+<h2 id="jordan-wigner-transformation-of-pairing-hamiltonian">Jordan-Wigner transformation of Pairing Hamiltonian </h2>
+
+<p>We can write the pairing Hamiltonian in  second quantized representation in terms of the Pauli matrices. A detailed derivation is provided in appendix B. Here we simply state the result: For the one body part of the Hamiltonian we have the terms</p>
+<p>&nbsp;<br>
+$$
+\begin{equation}
+\tag{7}
+    \hat{H}_{0p} = \frac{1}{2}\delta(p - 1 - I[p\%2=0])(I^p + \sigma_z^p),
+\end{equation}
+$$
+<p>&nbsp;<br>
+
+<p>where we sum over each qubit \( p \) and \( \% \) is the modulo operator. We have that \( I[f(x) = y] = 1 \) if \( f(x) = y \) and zero otherwise. For the interaction term we have two possibilities. First for \( p = q \) we have:</p>
+<p>&nbsp;<br>
+$$
+\begin{align}
+\tag{8}
+    \hat{V}_{p} = -\frac{1}{8}g\Big[ &I^{\otimes^{2p-2}} \otimes I  \otimes I \otimes I^{\otimes^{n - 2p}} \nonumber \\
+    +& I^{\otimes^{2p-2}} \otimes I  \otimes \sigma_z \otimes I^{\otimes^{n - 2p}} 
+\tag{9}\\
+    +& I^{\otimes^{2p-2}} \otimes \sigma_z  \otimes I \otimes I^{\otimes^{n - 2p}} \nonumber \\
+    +& I^{\otimes^{2p-2}} \otimes \sigma_z  \otimes \sigma_z \otimes I^{\otimes^{n - 2p}}\Big],\nonumber 
+\end{align}
+$$
+<p>&nbsp;<br>
+
+<p>and for \( q - p \geq 1 \) we get:</p>
+<p>&nbsp;<br>
+$$
+\begin{align}
+\tag{10}
+       \hat{V}_{pq} = -\frac{1}{16}g [& I^{\otimes^{2p -2}} \otimes \sigma_x \otimes \sigma_x \otimes I^{\otimes^{2(q - p - 1)}} \otimes \sigma_x \otimes \sigma_x \otimes I^{\otimes^{n-2q}} \nonumber \\
+        & -I^{\otimes^{2p -2}} \otimes \sigma_x \otimes \sigma_x \otimes I^{\otimes^{2(q - p - 1)}} \otimes \sigma_y \otimes \sigma_y \otimes I^{\otimes^{n-2q}} \nonumber \\
+        & + I^{\otimes^{2p -2}} \otimes \sigma_x \otimes \sigma_y \otimes I^{\otimes^{2(q - p - 1)}} \otimes \sigma_x \otimes \sigma_y \otimes I^{\otimes^{n-2q}} \nonumber \\
+        & + I^{\otimes^{2p -2}} \otimes \sigma_x \otimes \sigma_y \otimes I^{\otimes^{2(q - p - 1)}} \otimes \sigma_y \otimes \sigma_x \otimes I^{\otimes^{n-2q}}  
+\tag{11}\\
+        &+ I^{\otimes^{2p -2}} \otimes \sigma_y \otimes \sigma_x \otimes I^{\otimes^{2(q - p - 1)}} \otimes \sigma_x \otimes \sigma_y \otimes I^{\otimes^{n-2q}} \nonumber \\
+        & + I^{\otimes^{2p -2}} \otimes \sigma_y \otimes \sigma_x \otimes I^{\otimes^{2(q - p - 1)}} \otimes \sigma_y \otimes \sigma_x \otimes I^{\otimes^{n-2q}} \nonumber \\
+        & - I^{\otimes^{2p -2}} \otimes \sigma_y \otimes \sigma_y \otimes I^{\otimes^{2(q - p - 1)}} \otimes \sigma_x \otimes \sigma_x \otimes I^{\otimes^{n-2q}} \nonumber \\
+        &+ I^{\otimes^{2p -2}} \otimes \sigma_y \otimes \sigma_y \otimes I^{\otimes^{2(q - p - 1)}} \otimes \sigma_y \otimes \sigma_y \otimes I^{\otimes^{n-2q}}].\nonumber 
+\end{align}
+$$
+<p>&nbsp;<br>
+
+<p>We have included a factor of two so the sum over \( p \) and \( q \) here can be restricted to \( q > p \).
+The complete Jordan-Wigner transformed pairing Hamiltonian can then be written as
+</p>
+<p>&nbsp;<br>
+$$
+\begin{equation}
+\tag{12}
+    \hat{H} = \sum_p \hat{H}_{0p} + \sum_{p} \hat{V}_p + \sum_{q > p} \hat{V}_{pq},
+\end{equation}
+$$
+<p>&nbsp;<br>
+
+<p>where \( \hat{H}_{0p} \), \( \hat{V}_p \) and \( \hat{V}_{pq} \) is given by the one-body part and two-body part, respectively, of the Hamiltonian.</p>
+</section>
+
+<section>
+<h2 id="details-behind-the-derivation-of-the-jordan-wigner-transformed-pairing-hamiltonian">Details behind the derivation of the Jordan-Wigner transformed Pairing Hamiltonian </h2>
+
+<p>Here we show how we write our pairing Hamiltonian in terms of the Pauli matrices. First, we observe that
+<p>&nbsp;<br>
+$$a^\dagger_i a_i = \left(\prod_{k=1}^{i-1}\sigma_z^k \right)\sigma_+^i \left(\prod_{k=1}^{i-1}\sigma_z^k \right) \sigma_-^i $$
+<p>&nbsp;<br>
+<p>&nbsp;<br>
+$$ =\sigma_+^i \sigma_-^i = \frac{1}{2}(I^i + \sigma_z^i) ,$$
+<p>&nbsp;<br>
+and see that the one-body part of the Hamiltonian can be written as
+</p>
+
+<p>&nbsp;<br>
+$$
+\begin{equation*}
+    \hat{H}_0 = \frac{1}{2}\xi \sum_{p} ([(p-1) - (p-1)\%2]/2)(I^p + \sigma_z^p).
+\end{equation*}
+$$
+<p>&nbsp;<br>
+
+<p>where \( p \) now runs over each qubit and \( \% \) is the modulo operator. For the interaction term, we get</p>
+
+<p>&nbsp;<br>
+$$
+\begin{align}
+\tag{13}
+    &\hat{V} = \notag \\
+    &-\frac{1}{2}g \sum_{pq}\left( \prod_{k=1}^{2p-2} \sigma_z^k \right)\sigma_{+}^{2p-1} \left( \prod_{k=1}^{2p-1} \sigma_z^k \right)\sigma_{+}^{2p}
+    \left( \prod_{k=1}^{2q-1} \sigma_z^k \right)\sigma_{-}^{2q} \left( \prod_{k=1}^{2q-2} \sigma_z^k \right)\sigma_{-}^{2q-1}. 
+\tag{14}
+\end{align}
+$$
+<p>&nbsp;<br>
+
+<p>We can see that</p>
+<p>&nbsp;<br>
+$$
+\begin{align*}
+    \left( \prod_{k=1}^{2p-2} \sigma_z^k \right)\sigma_{+}^{2p-1} \left( \prod_{k=1}^{2p-1} \sigma_z^k \right)\sigma_{+}^{2p} = \notag \\
+    \sigma_z^{\otimes^{2p-2}} \otimes \sigma_+ \otimes I^{\otimes^{n - 2p-1}} \times 
+    \sigma_z^{\otimes^{2p-1}} \otimes \sigma_+ \otimes I^{\otimes^{n - 2p}} = \notag \\
+    I^{\otimes^{2p-2}} \otimes \sigma_+ \sigma_z \otimes \sigma_+ \otimes I^{\otimes^{n - 2p}},
+\end{align*}
+$$
+<p>&nbsp;<br>
+
+<p>so we can rewrite this equation as </p>
+
+<p>&nbsp;<br>
+$$
+\begin{align*}
+    \hat{V} &= \notag \\
+    &-\frac{1}{2} g\sum_{pq}\left[I^{\otimes^{2p-2}} \otimes \sigma_+ \otimes \sigma_+ \otimes I^{\otimes^{n - 2p}} \right] \left[ I^{\otimes^{2q-2}} \otimes \sigma_- \otimes \sigma_- \otimes I^{\otimes^{n - 2q}} \right].
+\end{align*}
+$$
+<p>&nbsp;<br>
+
+<p>We have two possibilities here. First for \( p=q \):</p>
+
+<p>&nbsp;<br>
+$$
+\begin{equation}
+\tag{15}
+    -\frac{1}{2}g \left[ I^{\otimes^{2p-2}} \otimes \sigma_+ \sigma_-  \otimes \sigma_+ \sigma_- \otimes I^{\otimes^{n - 2p}} \right],
+\end{equation}
+$$
+<p>&nbsp;<br>
+
+<p>and for \( q - p \geq 1 \) we have</p>
+
+<p>&nbsp;<br>
+$$
+\begin{equation}
+\tag{16}
+    -\frac{1}{2}g \left[ I^{\otimes^{2p-2}} \otimes \sigma_+ \otimes \sigma_+ \otimes I^{\otimes^{2(q - p - 1)}} \otimes \sigma_- \otimes \sigma_- \otimes I^{\otimes^{n-2q}} \right].
+\end{equation}
+$$
+<p>&nbsp;<br>
+
+<p>For \( p - q \geq 1 \) we simply exchange \( p \) with \( q \) and \( \sigma_+ \) with \( \sigma_- \).
+To continue, we insert the expressions for \( \sigma_{\pm} \) into these equations. For \( p = q \) we then have:
+</p>
+
+<p>&nbsp;<br>
+$$
+\begin{align*}
+   V_{p=q} = -\frac{1}{8}g\Big[ I^{\otimes^{2p-2}} \otimes & (I + \sigma_z)  \otimes (I + \sigma_z) \otimes I^{\otimes^{n - 2p}} \Big] \\
+    = -\frac{1}{8}g\Big[& I^{\otimes^{2p-2}} \otimes I  \otimes I \otimes I^{\otimes^{n - 2p}} \nonumber \\
+    +& I^{\otimes^{2p-2}} \otimes I  \otimes \sigma_z \otimes I^{\otimes^{n - 2p}} \nonumber \\
+    +& I^{\otimes^{2p-2}} \otimes \sigma_z  \otimes I \otimes I^{\otimes^{n - 2p}} \nonumber \\
+    +& I^{\otimes^{2p-2}} \otimes \sigma_z  \otimes \sigma_z \otimes I^{\otimes^{n - 2p}}\Big],\nonumber 
+\end{align*}
+$$
+<p>&nbsp;<br>
+
+<p>and for \( q - p \geq 1 \) we get</p>
+
+<p>&nbsp;<br>
+$$
+\begin{equation*}
+    -\frac{1}{32}g \left[ I^{\otimes^{2p-2}} \otimes (\sigma_x + i\sigma_y) \otimes (\sigma_x + i\sigma_y) \otimes I^{\otimes^{2(q - p - 1)}} \otimes (\sigma_x - i\sigma_y) \otimes (\sigma_x - i\sigma_y) \otimes I^{\otimes^{n-2q}} \right].
+\end{equation*}
+$$
+<p>&nbsp;<br>
+
+<p>This can be rewritten as sixteen four-qubit operations</p>
+
+<p>&nbsp;<br>
+$$
+\begin{align*}
+        -\frac{1}{32}g & [ I^{\otimes^{2p_q -2}} \otimes \sigma_x \otimes \sigma_x \otimes I^{\otimes^{2(q_p - p_q - 1)}} \otimes \sigma_x \otimes \sigma_x \otimes I^{\otimes^{n-2q_p}} \nonumber \\
+        & \mp i I^{\otimes^{2p_q - 2}} \otimes \sigma_x \otimes \sigma_x \otimes I^{\otimes^{2(q_p - p_q - 1)}} \otimes \sigma_x \otimes \sigma_y \otimes I^{\otimes^{n-2q_p}} \nonumber \\
+        & \mp iI^{\otimes^{2p_q - 2}} \otimes \sigma_x \otimes \sigma_x \otimes I^{\otimes^{2(q_p - p_q - 1)}} \otimes \sigma_y \otimes \sigma_x \otimes I^{\otimes^{n-2q_p}} \nonumber \\
+        & -I^{\otimes^{2p_q -2}} \otimes \sigma_x \otimes \sigma_x \otimes I^{\otimes^{2(q_p - p_q - 1)}} \otimes \sigma_y \otimes \sigma_y \otimes I^{\otimes^{n-2q_p}} \nonumber \\
+        & \pm i I^{\otimes^{2p_q -2}} \otimes \sigma_x \otimes \sigma_y \otimes I^{\otimes^{2(q_p - p_q - 1)}} \sigma_x \otimes \sigma_x \otimes I^{\otimes^{n-2q_p}} \nonumber \\
+        & + I^{\otimes^{2p_q -2}} \otimes \sigma_x \otimes \sigma_y \otimes I^{\otimes^{2(q_p - p_q - 1)}} \otimes \sigma_x \otimes \sigma_y \otimes I^{\otimes^{n-2q_p}} \nonumber \\
+        & + I^{\otimes^{2p_q -2}} \otimes \sigma_x \otimes \sigma_y \otimes I^{\otimes^{2(q_p - p_q - 1)}} \otimes \sigma_y \otimes \sigma_x \otimes I^{\otimes^{n-2q_p}} \nonumber \\
+        & \mp i I^{\otimes^{2p_q -2}} \otimes \sigma_x \otimes \sigma_y \otimes I^{\otimes^{2(q_p - p_q - 1)}} \otimes \sigma_y \otimes \sigma_y \otimes I^{\otimes^{n-2q_p}} \\
+        & \pm i I^{\otimes^{2p_q -2}} \otimes \sigma_y \otimes \sigma_x \otimes I^{\otimes^{2(q_p - p_q - 1)}} \otimes \sigma_x \otimes \sigma_x \otimes I^{\otimes^{n-2q_p}} \nonumber \\
+        &+ I^{\otimes^{2p_q -2}} \otimes \sigma_y \otimes \sigma_x \otimes I^{\otimes^{2(q_p - p_q - 1)}} \otimes \sigma_x \otimes \sigma_y \otimes I^{\otimes^{n-2q_p}} \nonumber \\
+        & + I^{\otimes^{2p_q -2}} \otimes \sigma_y \otimes \sigma_x \otimes I^{\otimes^{2(q_p - p_q - 1)}} \otimes \sigma_y \otimes \sigma_x \otimes I^{\otimes^{n-2q_p}} \nonumber \\
+        & \mp i I^{\otimes^{2p_q -2}} \otimes \sigma_y \otimes \sigma_x \otimes I^{\otimes^{2(q_p - p_q - 1)}} \otimes \sigma_y \otimes \sigma_y \otimes I^{\otimes^{n-2q_p}} \nonumber \\
+        & - I^{\otimes^{2p_q -2}} \otimes \sigma_y \otimes \sigma_y \otimes I^{\otimes^{2(q_p - p_q - 1)}} \otimes \sigma_x \otimes \sigma_x \otimes I^{\otimes^{n-2q_p}} \nonumber \\
+        &\pm i I^{\otimes^{2p_q -2}} \otimes \sigma_y \otimes \sigma_y \otimes I^{\otimes^{2(q_p - p_q - 1)}} \otimes \sigma_x \otimes \sigma_y \otimes I^{\otimes^{n-2q_p}} \nonumber \\
+        &\pm i I^{\otimes^{2p_q -2}} \otimes \sigma_y \otimes \sigma_y \otimes I^{\otimes^{2(q_p - p_q - 1)}} \otimes \sigma_y \otimes \sigma_x \otimes I^{\otimes^{n-2q_p}} \nonumber \\
+        &+ I^{\otimes^{2p_q -2}} \otimes \sigma_y \otimes \sigma_y \otimes I^{\otimes^{2(q_p - p_q - 1)}} \otimes \sigma_y \otimes \sigma_y \otimes I^{\otimes^{n-2q_p}}],\nonumber 
+\end{align*}
+$$
+<p>&nbsp;<br>
+
+<p>where the subscript is used if \( p > q \).  We can easily see that when
+running over the sum over \( p \) and \( q \), the terms with \( \pm \) and \( \mp \)
+sign in front will cancel out. Also, we can include a factor 2 and
+limit the sum to \( p < q \). Therefore:
+</p>
+
+<p>&nbsp;<br>
+$$
+\begin{align*}
+      V_{p\neq q} =  -\frac{1}{16}g [& I^{\otimes^{2p -2}} \otimes \sigma_x \otimes \sigma_x \otimes I^{\otimes^{2(q - p - 1)}} \otimes \sigma_x \otimes \sigma_x \otimes I^{\otimes^{n-2q}} \nonumber \\
+        & -I^{\otimes^{2p -2}} \otimes \sigma_x \otimes \sigma_x \otimes I^{\otimes^{2(q - p - 1)}} \otimes \sigma_y \otimes \sigma_y \otimes I^{\otimes^{n-2q}} \nonumber \\
+        & + I^{\otimes^{2p -2}} \otimes \sigma_x \otimes \sigma_y \otimes I^{\otimes^{2(q - p - 1)}} \otimes \sigma_x \otimes \sigma_y \otimes I^{\otimes^{n-2q}} \nonumber \\
+        & + I^{\otimes^{2p -2}} \otimes \sigma_x \otimes \sigma_y \otimes I^{\otimes^{2(q - p - 1)}} \otimes \sigma_y \otimes \sigma_x \otimes I^{\otimes^{n-2q}}  \\
+        &+ I^{\otimes^{2p -2}} \otimes \sigma_y \otimes \sigma_x \otimes I^{\otimes^{2(q - p - 1)}} \otimes \sigma_x \otimes \sigma_y \otimes I^{\otimes^{n-2q}} \nonumber \\
+        & + I^{\otimes^{2p -2}} \otimes \sigma_y \otimes \sigma_x \otimes I^{\otimes^{2(q - p - 1)}} \otimes \sigma_y \otimes \sigma_x \otimes I^{\otimes^{n-2q}} \nonumber \\
+        & - I^{\otimes^{2p -2}} \otimes \sigma_y \otimes \sigma_y \otimes I^{\otimes^{2(q - p - 1)}} \otimes \sigma_x \otimes \sigma_x \otimes I^{\otimes^{n-2q}} \nonumber \\
+        &+ I^{\otimes^{2p -2}} \otimes \sigma_y \otimes \sigma_y \otimes I^{\otimes^{2(q - p - 1)}} \otimes \sigma_y \otimes \sigma_y \otimes I^{\otimes^{n-2q}}].\nonumber 
+\end{align*}
+$$
+<p>&nbsp;<br>
+</section>
+
+<section>
+<h2 id="variational-quantum-eigensolvers">Variational Quantum Eigensolvers </h2>
+
+<p>The variational principle states that the expectation value of the Hamiltonian has to be larger than or equal to the ground state energy of the system. Mathematically this can be expressed as</p>
+<p>&nbsp;<br>
+$$
+\begin{equation}
+    \langle\psi\vert  H \vert \psi \rangle  \geq E_0.
+\tag{17}
+\end{equation}
+$$
+<p>&nbsp;<br>
+
+<p>We can understand this principle intuitively by considering that no single measurement of the energy can be lower than the ground state energy. Hence, the expectation value of the energy can neither. Variational methods make use of this principle by calculating the expectation value in the baove equation for what we call a trial wavefunction \( \ket{\psi_T(\boldsymbol{\theta)}} \):
+<p>&nbsp;<br>
+$$\bra{\psi_T(\boldsymbol{\theta})} H \ket{\psi_T(\boldsymbol{\theta})} = E(\boldsymbol{\theta}).$$
+<p>&nbsp;<br>
+The variational parameters \( \boldsymbol{\theta} = [\theta_1, \theta_2, \cdots, \theta_p] \) are then varied to minimize \( E(\boldsymbol{\theta}) \), which hopefully makes a good approximation for \( E_0 \). For variational quantum eigensolvers (VQE), the trial wave function is given by a parametrized n-qubit state
+<p>&nbsp;<br>
+$$ U(\boldsymbol{\theta}) \ket{\psi_0} = \ket{\psi_T(\boldsymbol{\theta})}, $$
+<p>&nbsp;<br>
+where \( U(\boldsymbol{\theta}) \) is some parametrized multi-qubit gate and \( \ket{\psi_0} \) is the initial state of the qubits.
+As long as the Hamiltonian can be rewritten as a sum of quantum gates \( O_i \)
+<p>&nbsp;<br>
+$$ H = \sum_{i=1}^m h_i O_i, $$
+<p>&nbsp;<br>
+we can find its expectation value by considering the expectation of each term
+</p>
+
+<p>&nbsp;<br>
+$$
+\begin{equation}
+    \bra{\psi_T(\boldsymbol{\theta})} H \ket{\psi_T(\boldsymbol{\theta})} = \sum_{i=1}^m h_i \bra{\psi_T(\boldsymbol{\theta})} O_i \ket{\psi_T(\boldsymbol{\theta})}.
+\tag{18}
+\end{equation}
+$$
+<p>&nbsp;<br>
+</section>
+
+<section>
+<h2 id="more-details-about-vqe-ben">More details about VQE, Ben </h2>
+
+<p>\subsection{Unitary Coupled Cluster ansatz}</p>
+
+<p>The coupled cluster ansatz is given by 
+<p>&nbsp;<br>
+$$\vert \psi_{CC}\rangle  = e^{\hat{T}} \vert c \rangle ,$$
+<p>&nbsp;<br>
+with the cluster operator \( \hat{T} \) and \( \vert c \rangle \) being our reference state. This type of ansatz is not implementable on a quantum computer since \( e^{\hat{T}} \) is not a unitary operator. Unitary coupled cluster instead suggest that we write our ansatz as
+</p>
+<p>&nbsp;<br>
+$$
+\begin{equation}
+\tag{19}
+    \ket{\psi_{UCC}} = e^{\hat{T} - \hat{T}^\dagger}\ket{\psi_0},
+\end{equation}
+$$
+<p>&nbsp;<br>
+
+<p>where \( \hat{T} \) is the usual coupled cluster operator and the state \( \ket{\psi_0} \) is the reference state.
+One can show that \( e^{\hat{T} - \hat{T}^\dagger} \) is unitary \<a href="#UCCDArticle">[1]</a>.
+</p>
+
+<p>The unitary coupled cluster doubles (UCCD) method introduces the cluster operator</p>
+<p>&nbsp;<br>
+$$
+\begin{align}
+\tag{20}
+    \hat{T}_{UCCD} = \hat{T} - \hat{T}^\dagger &=  \notag \\
+     &\sum_{ijab} t_{ij}^{ab}(a^\dagger_a a^\dagger_b a_j a_i - a^\dagger_i a^\dagger_j a_b a_a),
+\tag{21}
+\end{align}
+$$
+<p>&nbsp;<br>
+
+<p>where we vary the trial wavefunction over the real cluster amplitudes \( t_{ij}^{ab} \). Note that this ansatz
+depends on the number of particles in our system as we sum over \( i \) and \( j \). Hence, we can specify the specific configuration we wish to solve for, unlike the previously discussed ansatzes. 
+Rewriting eq. <a href="#mjx-eqn-20">(20)</a> in terms of Pauli gates by utilizing the Jordan-Wigner transformation results in
+</p>
+<p>&nbsp;<br>
+$$
+\begin{align}
+\tag{22}
+    t_{ij}^{ab}(a^\dagger_a a^\dagger_b a_j a_i - a^\dagger_i a^\dagger_j a_b a_a) &= \frac{it_{ij}^{ab}}{8} \bigotimes_{k=i+1}^{j-1}\sigma_z^k \bigotimes_{l=a+1}^{b-1}\sigma_z^l \notag \\
+    &(\sigma_x^i \sigma_x^j \sigma_y^a \sigma_x^b + \sigma_y^i \sigma_x^j \sigma_y^a \sigma_y^b \notag 
+\tag{23}\\
+    +&\sigma_x^i\sigma_y^j \sigma_y^a \sigma_y^b + \sigma_x^i \sigma_x^j \sigma_x^a \sigma_y^b \notag 
+\tag{24}\\
+    -& \sigma_y^i \sigma_x^j \sigma_x^a \sigma_x^b - \sigma_x^i \sigma_y^j \sigma_x^a \sigma_x^b \notag 
+\tag{25}\\
+    -&\sigma_y^i \sigma_y^j \sigma_y^a \sigma_x^b - \sigma_y^i \sigma_y^j \sigma_x^a \sigma_y^b ),
+\tag{26}
+\end{align}
+$$
+<p>&nbsp;<br>
+
+<p>where we can assume that \( i < j < a < b \). The subscript denotes which qubit we act upon with the Pauli gates.
+The preparation of this trial wavefunction is done on a quantum computing by first utilizing the Suzuki-Trotter approximation
+on the operator. Denoting 
+<p>&nbsp;<br>
+$$\hat{Z}_{ij}^{ab} =i\frac{t_{ij}^{ab}}{8p}(\bigotimes_{k=i+1}^{j-1}\sigma_z^k)(\bigotimes_{l=a+1}^{b-1}\sigma_l^z),$$
+<p>&nbsp;<br> 
+the Suzuki-Trotter approximation gives
+</p>
+<p>&nbsp;<br>
+$$
+\begin{align}
+\tag{27}
+    \ket{\psi(\boldsymbol{t})} &\approx  \bigg( \prod_{ijab} e^{\hat{Z}_{ij}^{ab}\sigma_x^i \sigma_x^j \sigma_y^a \sigma_x^b }
+    e^{\hat{Z}_{ij}^{ab}\sigma_y^i \sigma_x^j \sigma_y^a \sigma_y^b }
+    e^{\hat{Z}_{ij}^{ab}\sigma_x^i\sigma_y^j \sigma_y^a \sigma_y^b }
+    e^{\hat{Z}_{ij}^{ab}\sigma_x^i \sigma_x^j \sigma_x^a \sigma_y^b } \notag \\
+    &e^{-\hat{Z}_{ij}^{ab}\sigma_y^i \sigma_x^j \sigma_x^a \sigma_x^b }
+    e^{-\hat{Z}_{ij}^{ab}\sigma_x^i \sigma_y^j \sigma_x^a \sigma_x^b }
+    e^{-\hat{Z}_{ij}^{ab}\sigma_y^i \sigma_y^j \sigma_y^a \sigma_x^b }
+    e^{-\hat{Z}_{ij}^{ab}\sigma_y^i \sigma_y^j \sigma_x^a \sigma_y^b }
+    \bigg)^p \vert c \rangle,
+\tag{28}
+\end{align}
+$$
+<p>&nbsp;<br>
+
+<p>where \( p \) decides the step size in the Suzuki-Trotter approximation
+and will be restricted to \( p=1 \) in our discussions.
+Since
+we are dealing with the pairing Hamiltonian in this thesis, we can
+reduce the number of terms in our ansatz by not allowing to break
+particle pairs. The Taylor expansion of the UCCD operator gives us
+</p>
+
+<p>&nbsp;<br>
+$$
+\begin{align}
+    e^{\sum_{ijab} t_{ij}^{ab}(a^\dagger_a a^\dagger_b a_j a_i - a^\dagger_i a^\dagger_j a_b a_a)} &= I + \sum_{ijab} t_{ij}^{ab}(a^\dagger_a a^\dagger_b a_j a_i - a^\dagger_i a^\dagger_j a_b a_a) \notag 
+\tag{29}\\
+    & + [\sum_{ijab} t_{ij}^{ab}(a^\dagger_a a^\dagger_b a_j a_i - a^\dagger_i a^\dagger_j a_b a_a)]^2/2! \notag 
+\tag{30}\\
+    &+ \cdots.
+\tag{31}
+\end{align}
+$$
+<p>&nbsp;<br>
+
+<p>We can immediately see that the first sum over \( i,j,a,b \) will break pairs if we do not introduce a restriction on the sum. This can be explained by the fact that any non zero \( t_{ij}^{ab} \) will include the following term
+<p>&nbsp;<br>
+$$
+t_{ij}^{ab}(a^\dagger_a a^\dagger_b a_j a_i - a^\dagger_i a^\dagger_j a_b a_a)\vert c \rangle,
+$$
+<p>&nbsp;<br>
+which will break pairs if \( j \neq i+1 \) and \( b \neq a+1 \). 
+Hence we make the restriction \( j = i+1 \) and \( b = a+1 \).
+</p>
+</section>
+
+
+
+</div> <!-- class="slides" -->
+</div> <!-- class="reveal" -->
+
+<script src="reveal.js/lib/js/head.min.js"></script>
+<script src="reveal.js/js/reveal.js"></script>
+
+<script>
+// Full list of configuration options available here:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+
+  // Display navigation controls in the bottom right corner
+  controls: true,
+
+  // Display progress bar (below the horiz. slider)
+  progress: true,
+
+  // Display the page number of the current slide
+  slideNumber: true,
+
+  // Push each slide change to the browser history
+  history: false,
+
+  // Enable keyboard shortcuts for navigation
+  keyboard: true,
+
+  // Enable the slide overview mode
+  overview: true,
+
+  // Vertical centering of slides
+  //center: true,
+  center: false,
+
+  // Enables touch navigation on devices with touch input
+  touch: true,
+
+  // Loop the presentation
+  loop: false,
+
+  // Change the presentation direction to be RTL
+  rtl: false,
+
+  // Turns fragments on and off globally
+  fragments: true,
+
+  // Flags if the presentation is running in an embedded mode,
+  // i.e. contained within a limited portion of the screen
+  embedded: false,
+
+  // Number of milliseconds between automatically proceeding to the
+  // next slide, disabled when set to 0, this value can be overwritten
+  // by using a data-autoslide attribute on your slides
+  autoSlide: 0,
+
+  // Stop auto-sliding after user input
+  autoSlideStoppable: true,
+
+  // Enable slide navigation via mouse wheel
+  mouseWheel: false,
+
+  // Hides the address bar on mobile devices
+  hideAddressBar: true,
+
+  // Opens links in an iframe preview overlay
+  previewLinks: false,
+
+  // Transition style
+  transition: 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+  // Transition speed
+  transitionSpeed: 'default', // default/fast/slow
+
+  // Transition style for full page slide backgrounds
+  backgroundTransition: 'default', // default/none/slide/concave/convex/zoom
+
+  // Number of slides away from the current that are visible
+  viewDistance: 3,
+
+  // Parallax background image
+    //parallaxBackgroundImage: '', // e.g. "'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg'"
+
+  // Parallax background size
+  //parallaxBackgroundSize: '' // CSS syntax, e.g. "2100px 900px"
+
+  theme: Reveal.getQueryHash().theme, // available themes are in reveal.js/css/theme
+    transition: Reveal.getQueryHash().transition || 'none', // default/cube/page/concave/zoom/linear/none
+
+});
+
+Reveal.initialize({
+  dependencies: [
+      // Cross-browser shim that fully implements classList - https://github.com/eligrey/classList.js/
+      { src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+
+      // Interpret Markdown in <section> elements
+      { src: 'reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+      { src: 'reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+
+      // Syntax highlight for <code> elements
+      { src: 'reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+
+      // Zoom in and out with Alt+click
+      { src: 'reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+
+      // Speaker notes
+      { src: 'reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
+
+      // Remote control your reveal.js presentation using a touch device
+      //{ src: 'reveal.js/plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } },
+
+      // MathJax
+      //{ src: 'reveal.js/plugin/math/math.js', async: true }
+  ]
+});
+
+Reveal.initialize({
+
+  // The "normal" size of the presentation, aspect ratio will be preserved
+  // when the presentation is scaled to fit different resolutions. Can be
+  // specified using percentage units.
+  width: 1170,  // original: 960,
+  height: 700,
+
+  // Factor of the display size that should remain empty around the content
+  margin: 0.1,
+
+  // Bounds for smallest/largest possible scale to apply to content
+  minScale: 0.2,
+  maxScale: 1.0
+
+});
+</script>
+
+<!-- begin footer logo
+<div style="position: absolute; bottom: 0px; left: 0; margin-left: 0px">
+<img src="somelogo.png">
+</div>
+   end footer logo -->
+
+
+
+
+</body>
+</html>
