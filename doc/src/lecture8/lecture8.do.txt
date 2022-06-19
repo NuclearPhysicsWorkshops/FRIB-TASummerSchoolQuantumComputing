@@ -24,8 +24,10 @@ string will always produce the same output.
 
 !split
 =====  Quantum computing =====
+
 How quantum computing differs from classical computing can partly be
 illustrated by looking at the surface of the unit Bloch sphere discussed in earlier lectures.
+
 A classical bit must either be in the $\vert 0\rangle$ state
 at the surface on the north pole, or in the $\vert 1\rangle$ state at the
 surface on the south pole; the quantum bit, namely a qubit, can be in
@@ -47,6 +49,7 @@ are normalized, that is $|c_0|^2 + |c_1|^2 = 1$.
 
 !split
 ===== Slater determinants as basis states, Fermionic problems =====
+
 !bblock
 The simplest possible choice for many-body wavefunctions are _product_ wavefunctions.
 That is
@@ -679,7 +682,10 @@ and
 \hat{P}^\dagger = \sum_{n} \hat{a}^\dagger_{n, m=+1/2} \hat{a}^\dagger_{n, m=-1/2} 
 \]
 !et
-We can write down the $ 6 \times 6$  Hamiltonian in the basis from the prior slide:
+
+In case we opt for a system with 4 doubly degenerate levels and no broken pairs, one can show that the Hamiltonian matrix problem to diagonalize is given
+by the following $6\times 6$ matrix
+
 !bt
 \[
 H = \left ( 
@@ -780,9 +786,8 @@ with respect to that vaccum. Normal ordering implies that $\langle
 \Phi_0\vert H_N\vert \Phi_0\rangle = 0$.
 
 
-!bblock
+!Pslit
 ===== Exercise: Practice in normal ordering =====
-label{ex-1}
 
 Normal order the expression $\sum\limits_{pq}\varepsilon_q^p a^\dagger_p a_q$.
 
@@ -819,10 +824,10 @@ We have to move all operators that annihilate the reference state to the right o
 \end{align}
 !et
 !eans
-===== =====
-!eblock
 
 
+!split
+===== Reordering =====
 We note that $H = E_{HF} + H_N$, where
 
 !bt
@@ -840,8 +845,7 @@ reference state results from a Hartree-Fock calculation.
 
 
 
-
-!bblock
+!split
 ===== Exercise: What does ``good'' mean? =====
 label{ex-2}
 
@@ -857,16 +861,15 @@ single-particle spectrum at the Fermi surface, i.e. after $A$ orbitals
 are filled.
 
 !eans
-===== =====
-!eblock
+
 
 If symmetry-restricted Hartree-Fock is used, one is limited to compute
 nuclei with closed subshells for neutrons and for protons. On a first
 view, this might seem as a severe limitation. But is it? 
 
 
-!bblock
 
+!split
 ===== Exercise: How many nuclei are accessible with the coupled cluster method based on spherical mean fields? =====
 label{ex-3}
 If one limits oneself to nuclei with mass number up to
@@ -893,15 +896,13 @@ was available. In addition, the method can be used to compute
 neighbors of nuclei with closed subshells.
 
 !eans
-===== =====
-!eblock
 
-
+!split
 ======= The similarity transformed Hamiltonian =======
 
 
 There are several ways to view and understand the coupled-cluster
-method. A first simple view of coupled-cluster theory is that the
+method. A first simple view of coupled cluster theory is that the
 method induces correlations into the reference state by expressing a
 correlated state as
 
@@ -941,7 +942,7 @@ method seeks a similarity transformation such that the uncorrelated
 reference state (ref{HFref}) becomes an exact eigenstate of the
 similarity-transformed Hamiltonian (ref{Hsim}).
 
-!bblock
+!split
 ===== Exercise: What $T$ leads to Hermitian $\overline{H_N}$ ? =====
 label{ex-4}
 What are the conditions on $T$ such that $\overline{H_N}$ is Hermitian?
@@ -952,12 +953,11 @@ For a Hermitian $\overline{H_N}$, we need a unitary $e^T$, i.e. an
 anti-Hermitian $T$ with $T = -T^\dagger$
 
 !eans
-===== =====
-!eblock
 
 As we will see below, coupled cluster theory employs a non-Hermitian Hamiltonian.
+Replacing ordinary coupled cluster theory with the unitary coupled cluster approach, gives a many-body which is hermitian and obeys the variational principle.
 
-!bblock
+!split
 ===== Exercise: Understanding (non-unitary) similarity transformations =====
 label{ex-5}
 Show that $\overline{H_N}$ has the same eigenvalues as $H_N$ for
@@ -992,10 +992,9 @@ corresponding to left $\langle L_\alpha\vert $ and right $\vert R_\alpha
 with bi-orthonormal $\langle L_\alpha\vert R_\beta\rangle = \delta_\alpha^\beta$. 
 
 !eans
-===== =====
-!eblock
 
-
+!split
+=====  Cluster operators =====
 To make progress, we have to specify the cluster operator $T$. In
 coupled cluster theory, this operator is
 
@@ -1015,7 +1014,7 @@ excitations with respect to the reference. In general, $T$ generates
 up to $Ap-Ah$ excitations, and the unknown parameters are the cluster amplitides
 $t_i^a$, $t_{ij}^{ab}$, ..., $t_{i_1,\ldots,i_A}^{a_1,\ldots,a_A}$.
 
-!bblock
+!split
 ===== Exercise: How many unknowns? =====
 label{ex-6}
 Show that the number of unknowns is as large as the FCI dimension of
@@ -1035,10 +1034,9 @@ each $n$. Thus, we have for the total number
 
 The right hand side are obviously all ways to distribute $A$ fermions over $n_0+A$ orbitals.
 !eans
-===== =====
-!eblock
 
-
+!split
+===== Approximations =====
 Thus, the coupled-cluster method with the full cluster operator
 (ref{Top}) is exponentially expensive, just as FCI. To make progress,
 we need to make an approximation by truncating the operator. Here, we
@@ -1074,6 +1072,10 @@ elements of the Schroedinger Equation (ref{Schroedinger}) yields
 \end{align}
 !et
 
+
+!split
+===== Structure of equations =====
+
 The first equation states that the coupled-cluster correlation energy
 is an expectation value of the similarity-transformed Hamiltonian. The
 second and third equations state that the similarity-transformed
@@ -1104,7 +1106,7 @@ light, the coupled-cluster method ``transforms'' an $A$-body problem
 vacuum.
 
 
-!bblock
+!split
 ===== Exercise: Why is CCD not exact? =====
 label{ex-6b}
 Above we argued that a similarity transformation preserves all eigenvalues. Nevertheless, the CCD correlation energy is not the exact correlation energy. Explain!
@@ -1122,9 +1124,8 @@ transformation plus a truncation, which decouples the ground state only
 from 2p-2h states.
 
 !eans
-===== =====
-!eblock
 
+!split
 ======= Computing the similarity-transformed Hamiltonian =======
 
 The solution of the CCSD equations, i.e. the second and third line of
@@ -1151,7 +1152,7 @@ Baker-Campbell-Hausdorff expansion (ref{BCH}) can only be non-zero
 because each $T$ must connect to $H_N$ (but no $T$ with another
 $T$). Thus, the expansion is finite.
 
-!bblock
+!splitk
 ===== Exercise: When does CCSD truncate? =====
 label{ex-7}
 In CCSD and for two-body Hamiltonians, how many nested
@@ -1165,9 +1166,9 @@ because each of the four annihilation and creation operators in
 $\overline{H_N}$ can be knocked out with one term of $T$.
 
 !eans
-===== =====
-!eblock
 
+!split
+===== Non-hermiticity =====
 
 We see that the (disadvantage of having a) non-Hermitian Hamiltonian
 $\overline{H_N}$ leads to the advantage that the
@@ -1195,7 +1196,7 @@ with
 Thus, the CCSD Eqs.~(ref{ccsd}) for the amplitudes can be written as
 $\overline{H}_i^a = 0$ and $\overline{H}_{ij}^{ab}=0$.
 
-!bblock
+!split
 ===== Exercise: Compute the matrix element $\overline{H}_{ab}^{ij}\equiv \langle ij\vert \overline{H_N}\vert ab\rangle$ =====
 label{ex-8}
 
@@ -1210,8 +1211,6 @@ annihilates holes and creates particles) can happen, and we simply
 have $\overline{H}_{ab}^{ij} = \langle ij\vert V\vert ab\rangle$.
 
 !eans
-===== =====
-!eblock
 
 
 We need to work out the similarity-transformed Hamiltonian of
@@ -1219,7 +1218,7 @@ Eq. (ref{BCH}). To do this, we write $T=T_1 +T_2$ and $H_N= F +V$,
 where $T_1$ and $F$ are one-body operators, and $T_2$ and $V$ are
 two-body operators.
 
-!bblock
+!split
 ===== Example: The contribution of $[F, T_2]$ to $\overline{H_N}$ =====
 label{ex-9}
 
@@ -1268,126 +1267,10 @@ but somewhat tedious. As no one likes to commute too much (neither in
 this example nor when going to and from work), and so we need a better
 approach. This is where diagramms come in handy.
 
-===== =====
-!eblock
 
 
-=== Diagrams  ===
-The pictures in this Subsection are taken from Crawford and Schaefer.
-
-By convention, hole lines (labels $i, j, k,\ldots$) are pointing down. 
-FIGURE: [figslides/Diagram-i.png, height=120 frac=0.8] This is a hole line. label{fig-i}
-
-By convention, particle lines (labels $a, b, c,\ldots$) are pointing up. 
-FIGURE: [figslides/Diagram-a.png, height=120 frac=0.8] This is a particle line. label{fig-a}
-
-Let us look at the one-body operator of the normal-ordered Hamiltonian, i.e. Fock matrix. Its diagrams are as follows.
-
-FIGURE: [figslides/Diagram-fab.png, height=120 frac=0.8] The diagrams corresponding to $f_a^b$. The dashed line with the 'X' denotes the interaction $F$ between the incoming and outgoing lines. The labels $a$ and $b$ are not denoted, but you should label the outgoing and incoming lines accordingly. label{fig-fab}
-
-FIGURE: [figslides/Diagram-fij.png, height=120 frac=0.8] The diagrams corresponding to $f_i^j$. The dashed line with the 'X' denotes the interaction $F$ between the incoming and outgoing lines. label{fig-fij}
-
-FIGURE: [figslides/Diagram-fia.png, height=120 frac=0.8] The diagrams corresponding to $f_a^i$. The dashed line with the 'X' denotes the interaction $F$ between the incoming and outgoing lines. label{fig-fia}
-
-FIGURE: [figslides/Diagram-fai.png, height=120 frac=0.8] The diagrams corresponding to $f_i^a$. The dashed line with the 'X' denotes the interaction $F$ between the incoming and outgoing lines. label{fig-fai}
-
-We now turn to the two-body interaction. It is denoted as a horizontal
-dashed line with incoming and outgoing lines attached to it. We start
-by noting that the following diagrams of the interaction are all
-related by permutation symmetry.
-
-FIGURE: [figslides/Diagrams-symmetry.png, width=400 frac=0.8] The diagrams corresponding to $\langle ai\vert V\vert jb \rangle = - \langle ai\vert V\vert bj \rangle = -\langle ia\vert V\vert jb \rangle = \langle ia\vert V\vert bj\rangle$. label{fig-symmetry}
-
-!bblock
-===== Exercise: Assign the correct matrix element $\langle pq\vert V\vert rs\rangle$ to each of the following diagrams of the interaction =====
-label{ex-10}
-
-Remember: $\langle\rm{left-out, right-out}\vert V\vert \rm{left-in, right-in}\rangle$.
-
-!bsubex
-FIGURE: [figslides/Diagrams-V1.png, width=400 frac=0.8] 
-label{fig-V1}
-
-!bans
-$\langle ab\vert V\vert cd\rangle + \langle ij\vert V\vert kl\rangle + \langle ia\vert V\vert bj\rangle$
-!eans
-!esubex
-
-!bsubex
-FIGURE: [figslides/Diagrams-V2.png, width=400 frac=0.8] 
-label{fig-V2}
-
-!bans
-$\langle ai\vert V\vert bc\rangle + \langle ij\vert V\vert ka\rangle + \langle ab\vert V\vert ci\rangle$
-!eans
-!esubex
-
-!bsubex
-FIGURE: [figslides/Diagrams-V3.png, width=400 frac=0.8] 
-label{fig-V3}
-
-!bans
-$\langle ia\vert V\vert jk\rangle + \langle ab\vert V\vert ij\rangle + \langle ij\vert V\vert ab\rangle$
-!eans
-!esubex
-
-===== =====
-!eblock
-
-
-Finally, we have the following diagrams for the $T_1$ and $T_2$ amplitudes.
-FIGURE: [figslides/Diagrams-T.png, width=400 frac=0.8] The horizontal full line is the cluster amplitude with incoming hole lines and outgoing particle lines as indicated. label{fig-T}
-
-We are now in the position to construct the diagrams of the
-similarity-transformed Hamiltonian, keeping in mind that these
-diagrams correspond to matrix elements of $\overline{H_N}$. The rules
-are as follows.
-
-o Write down all *topologically different* diagrams corresponding to the desired matrix element. Topologically different diagrams differ in the number and type of lines (particle or hole) that connect the Fock matrix $F$ or the interaction $V$ to the cluster amplitudes $T$, but not whether these connections are left or right (as those are related by antisymmetry). As an example, all diagrams in Fig. ref{fig-symmetry} are topologically identical, because they consist of incoming particle and hole lines and of outgoing particle and hole lines. 
-
-o Write down the matrix elements that enter the diagram, and sum over all internal lines. 
-
-o The overall sign is $(-1)$ to the power of [(number of hole lines) -- (number of loops)].
-
-o Symmetry factor: For each pair of equivalent lines (i.e. lines that connect the same two operators) multiply with a factor $1/2$. For $n$ identical vertices, multiply the algebraic expression by the symmery factor $1/n!$ to account properly for the number of ways the diagram can be constructed.   
-
-o Antisymmetrize the outgoing and incoming lines as necessary.
-
-Please note that this really works. You could derive these rules for
-yourself from the commutations and factors that enter the
-Baker-Campbell-Hausdorff expansion. The sign comes obviously from the
-arrangement of creation and annilhilation operators, while the
-symmetry factor stems from all the different ways, one can contract
-the cluster operator with the normal-ordered Hamiltonian.
-
-
-!bblock
-===== Example: CCSD correlation energy =====
-label{ex-11}
-The CCSD correlation energy, $E_c= \langle
-\Phi_0\vert \overline{H_N}\vert \Phi_0\rangle$, is the first of the CCSD
-equations (ref{ccsd}). It is a vacuum expectation value and thus
-consists of all diagrams with no external legs. There are three such diagrams:
-
-FIGURE: [figslides/Diagrams-E0.png, width=400 frac=0.8] Three diagrams enter for the CCSD correlation energy, i.e. all diagrams that leave no external legs. label{fig-E0}
-
-The correponding algebraic expression is $E_c=\sum_{ia}f^i_a t_i^a +{1\over 4}\sum_{ijab} \langle ij\vert V\vert ab\rangle t_{ij}^{ab} + {1\over 2} \sum_{ijab} \langle ij\vert V\vert ab\rangle t_i^a t_j^b$.
-
-The first algebraic expression is clear. We have one hole line and one
-loop, giving it a positive sign. There are no equivalent lines or
-vertices, giving it no symmetry factor. The second diagram has two
-loops and two hole lines, again leading to a positive sign. We have a
-pair of equivalent hole lines and a pair of equivalent particle lines,
-each giving a symmetry factor of $1/2$. The third diagram has two
-loops and two hole lines, again leading to a positive sign. We have
-two indentical vertices (each connecting to a $T_1$ in the same way)
-and thus a symmetry factor $1/2$.
-
-===== =====
-!eblock
-
-
-======= CCD Approximation =======
+!split
+===== CCD Approximation =====
 
 In what follows, we will consider the coupled cluster doubles (CCD)
 approximation. This approximation is valid in cases where the system
@@ -1400,23 +1283,20 @@ the Hartree-Fock basis (as the Hartree-Fock Hamiltonian exhibits no
 particle-hole excitations).
 
 
-!bblock
+!split
 ===== Exercise: Derive the CCD equations! =====
 label{ex-12}
 Let us consider the matrix element $\overline{H}_{ij}^{ab}$. Clearly,
 it consists of all diagrams (i.e. all combinations of $T_2$, and a
 single $F$ or $V$ that have two incoming hole lines and two outgoing
-particle lines. Write down all these diagrams.
+particle lines. Write down the algebraic expressions.
 
 !bhint
-Start systematically! Consider all combinations of $F$ and $V$ diagrams with 0, 1, and 2 cluster amplitudes $T_2$.
+Start systematically! Consider all combinations of $F$ and $V$ contributions with 0, 1, and 2 cluster amplitudes $T_2$.
 !ehint
 
 !bans
-
-FIGURE: [figslides/Diagrams-CCD.png, width=400 frac=0.8] The diagrams for the $T_2$ equation, i.e. the matrix elements of $\overline{H}_{ij}^{ab}$. Taken from Baardsen et al (2013). label{fig-ccd}
-
-The corresponding algebraic expression is
+The algebraic expression is
 !bt
 \begin{align*}
 \overline{H}_{ij}^{ab} &= \langle ab\vert V\vert ij\rangle + P(ab)\sum_c f_c^bt_{ij}^{ac} - P(ij)\sum_k f_j^k t_{ik}^{ab} \\
@@ -1430,13 +1310,10 @@ The corresponding algebraic expression is
 
 !eans
 
-===== =====
-!eblock
-
 
 Let us now turn to the computational cost of a CCD computation.
 
-!bblock
+!split
 ===== Exercise: Computational scaling of CCD =====
 label{ex-13}
 For each of the diagrams in Fig. ref{fig-ccd} write down the
@@ -1450,9 +1327,9 @@ $A^4 n_u^4$, $A^4 n_u^4$,
 $A^4 n_u^4$, and $A^4 n_u^4$ for the respective diagrams.
 !eans
 
-===== =====
-!eblock
 
+!split
+===== Computational costs =====
 Note that $n_u\gg A$ in general. In textbooks, one reads that CCD (and
 CCSD) cost only $A^2n_u^4$. Our most expensive diagrams, however are
 $A^4n_u^4$. What is going on?
@@ -1477,95 +1354,7 @@ memory for computational cycles. This trick is known as
 ``factorization.'' 
 
 
-!bblock
-===== Exercise: Factorize the remaining diagrams of the CCD equation =====
-label{ex-14}
-Diagrams 7, 8, and 9 of Fig. ref{fig-ccd} also need to be factorized. 
-
-
-!bans
-For diagram number 7, we compute
-!bt
-\begin{align}
-\chi_{id}^{al}\equiv\sum_{kc} \langle kl\vert V\vert cd\rangle t_{ik}^{ac}
-\end{align}
-!et
-at a cost of $A^3 n_u^3$ and then compute
-!bt
-\begin{align}
-{1\over 2} P(ij)P(ab) \sum_{ld} \chi_{id}^{al} t_{lj}^{db} 
-\end{align}
-!et
-at the cost of $A^3 n_u^3$.
-
-For diagram number 8, we compute
-!bt
-\begin{align}
-\chi_{i}^{l}\equiv -{1\over 2} \sum_{kcd} \langle kl\vert V\vert cd\rangle t_{ik}^{cd}
-\end{align}
-!et
-at a cost of $A^3 n_u^2$, and then compute
-!bt
-\begin{align}
--P(ij) \sum_l \chi_i^l t_{lj}^{ab}
-\end{align}
-!et
-at the cost of $A^3 n_u^2$.
-
-For diagram number 9, we compute
-!bt
-\begin{align}
-\chi_d^a\equiv{1\over 2} \sum_{kcl} \langle kl\vert V\vert cd\rangle t_{kl}^{ac}
-\end{align}
-!et
-at a cost of $A^2 n_u^3$ and then compute
-!bt
-\begin{align}
-P(ab)\sum_d \chi_d^a t_{ij}^{db}
-\end{align}
-!et
-at the cost of $A^3 n_u^3$.
-!eans
-
-===== =====
-!eblock
-
-
-We are now ready, to derive the full CCSD equations, i.e. the matrix
-elements of $\overline{H}_i^a$ and $\overline{H}_{ij}^{ab}$. 
-
-
-!bblock
-===== Project: (Optional) Derive the CCSD equations! =====
-label{ex-15}
-
-!bsubex
-Let us consider the matrix element $\overline{H}_i^a$ first. Clearly, it consists of all diagrams (i.e. all combinations of $T_1$, $T_2$, and a single $F$ or $V$ that have an incoming hole line and an outgoing particle line. Write down all these diagrams. 
-
-!bans
-
-FIGURE: [figslides/Diagrams-CCSD1.png, width=800 frac=0.8] The diagrams for the $T_1$ equation, i.e. the matrix elements of $\overline{H}_i^a$. Taken from Crawford and Schaefer. Here $\langle pq\vert \vert rs\rangle \equiv \langle pq\vert V\vert rs\rangle$ and $f_{pq}\equiv f^p_q$. label{fig-CCSD1}
-
-!eans
-!esubex
-
-!bsubex
-Let us now consider the matrix element $\overline{H}_{ij}^{ab}$. Clearly, it consists of all diagrams (i.e. all combinations of $T_1$, $T_2$, and a single $F$ or $V$ that have two incoming hole lines and two outgoing particle lines. Write down all these diagrams and corresponding algebraic expressions. 
-
-!bans
-
-FIGURE: [figslides/Diagrams-CCSD2.png, width=800 frac=0.8] The diagrams for the $T_2$ equation, i.e. the matrix elements of $\overline{H}_{ij}^{ab}$. Taken from Crawford and Schaefer. Here $\langle pq\vert \vert rs\rangle \equiv \langle pq\vert V\vert rs\rangle$, $f_{pq}\equiv f^p_q$, and $P(ab) = 1 - (a\leftrightarrow b)$ antisymmetrizes. label{fig-CCSD2}
-
-!eans
-!esubex
-
-===== =====
-!eblock
-
-We can now turn to the solution of the coupled-cluster equations.
-
-
-
+!split
 ===== Solving the CCD equations =====
 
 The CCD equations, depicted in Fig. ref{fig-ccd}, are nonlinear in the
@@ -1603,8 +1392,8 @@ $t_{ij}^{ab}$ from the right-hand side of Eq. (ref{iter}). We repeat
 this process until the amplitudes (or the CCD energy) converge.
 
 
-
-======= CCD for the pairing Hamiltonian =======
+!split
+===== CCD for the pairing Hamiltonian =====
 
 
 You learned about the pairing Hamiltonian earlier in this
@@ -1623,6 +1412,368 @@ common indices in products of tensors) is very user friendly and
 elegant in python when `numpy.einsum` is used.
 
 
+!split
+===== Shell-model project  =====
+!bblock
+For our project, we will only consider the pairing model.
+A simple space is the $(1/2)^2$ space with four single-particle states
 
+|-----------------------------------|
+|Index | $n$   | $l$     | $s$ |  $m_s$  |
+|-----------------------------------|
+|1 |    0  |     0 |     1/2 |    -1/2  |
+|2 |    0  |   0   |   1/2   |   1/2    |
+|3 |    1  |   0   |   1/2   |  -1/2    |
+|4 |    1  |   0   |   1/2   |   1/2    |
+|-----------------------------------|
+
+For $N=2$ there are 4 states with $M=0$; show this by hand and confirm your code reproduces it. 
+
+!eblock
+
+!split
+===== Shell-model project  =====
+!bblock
+Another, slightly more challenging space is the $(1/2)^4$ space, that is, 
+with eight  single-particle states we have
+
+|----------------------------------------|
+|Index | $n$   | $l$     | $s$ |  $m_s$  |
+|----------------------------------------|
+|1  |   0  |   0   |   1/2   |  -1/2   |
+|2  |   0  |   0   |   1/2   |   1/2    |
+|3  |   1  |   0   |   1/2   |  -1/2    |
+|4  |   1  |   0   |   1/2   |   1/2    |
+|5  |   2  |   0   |   1/2   |  -1/2    |
+|6  |   2  |   0   |   1/2   |   1/2    |
+|7  |   3  |   0   |   1/2   |  -1/2    |
+|8  |   3  |   0   |   1/2   |   1/2    |
+|----------------------------------------|
+
+For $N=2$ there are 16 states with $M=0$; for $N=3$ there are 24 states with $M=1/2$, and for 
+$N=4$ there are 36 states with $M=0$. 
+!eblock
+
+!split
+===== Shell-model project  =====
+!bblock
+In the shell-model context we can interpret this as 4 $s_{1/2}$ levels, with $m = \pm 1/2$, we can also think of these are simple four pairs,  $\pm k, k = 1,2,3,4$. Later on we will 
+assign single-particle energies,  depending on the radial quantum number $n$, that is, 
+$\epsilon_k = |k| \delta$ so that they are equally spaced.
+!eblock
+
+!split
+===== Shell-model project  =====
+!bblock
+ 
+For application in the pairing model we can go further and consider only states with 
+no ``broken pairs,'' that is, if $+k$ is filled (or $m = +1/2$, so is $-k$ ($m=-1/2$). 
+If you want, you can write your code to accept only these, and obtain the following 
+six states:
+
+* $|           1,           2 ,          3         ,       4  \rangle , $
+
+* $|            1      ,     2        ,        5         ,       6 \rangle , $
+
+* $|            1         ,       2     ,           7         ,       8  \rangle , $
+
+* $|            3        ,        4      ,          5          ,      6  \rangle , $
+
+* $|            3        ,        4      ,          7         ,       8  \rangle , $
+
+* $|            5        ,        6     ,           7     ,           8  \rangle $
+!eblock
+
+
+
+!split
+===== Example case: pairing Hamiltonian =====
+!bblock
+
+We consider a space with $2\Omega$ single-particle states, with each 
+state labeled by 
+$k = 1, 2, 3, \Omega$ and $m = \pm 1/2$. The convention is that 
+the state with $k>0$ has $m = + 1/2$ while $-k$ has $m = -1/2$.
+
+
+The Hamiltonian we consider is 
+!bt
+\[
+\hat{H} = -G \hat{P}_+ \hat{P}_-,
+\]
+!et
+where
+!bt
+\[
+\hat{P}_+ = \sum_{k > 0} \hat{a}^\dagger_k \hat{a}^\dagger_{-{k}}.
+\]
+!et
+and $\hat{P}_- = ( \hat{P}_+)^\dagger$.
+
+This problem can be solved using what is called the quasi-spin formalism to obtain the 
+exact results. Thereafter we will try again using the explicit Slater determinant formalism.
+!eblock
+
+
+
+!split
+===== Example case: pairing Hamiltonian =====
+!bblock
+
+One can show that
+!bt
+\[
+\left [ \hat{P}_+, \hat{P}_- \right ] = \sum_{k> 0} \left( \hat{a}^\dagger_k \hat{a}_k 
++ \hat{a}^\dagger_{-{k}} \hat{a}_{-{k}} - 1 \right) = \hat{N} - \Omega.
+\]
+!et
+Now define 
+!bt
+\[
+\hat{P}_z = \frac{1}{2} ( \hat{N} -\Omega).
+\]
+!et
+Finally you can show
+!bt
+\[
+\left [ \hat{P}_z , \hat{P}_\pm \right ] = \pm \hat{P}_\pm.
+\]
+!et
+This means the operators $\hat{P}_\pm, \hat{P}_z$ form a so-called  $SU(2)$ algebra, and we can 
+use all our insights about angular momentum, even though there is no actual 
+angular momentum involved.
+
+So we rewrite the Hamiltonian to make this explicit:
+!bt
+\[
+\hat{H} = -G \hat{P}_+ \hat{P}_- 
+= -G \left( \hat{P}^2 - \hat{P}_z^2 + \hat{P}_z\right)
+\]
+!et
+
+!eblock
+
+!split
+===== Example case: pairing Hamiltonian =====
+!bblock
+
+Because of the SU(2) algebra, we know that the eigenvalues of 
+$\hat{P}^2$ must be of the form $p(p+1)$, with $p$ either integer or half-integer, and the eigenvalues of $\hat{P}_z$ 
+are $m_p$ with $p \geq | m_p|$, with $m_p$ also integer or half-integer. 
+
+
+But because $\hat{P}_z = (1/2)(\hat{N}-\Omega)$, we know that for $N$ particles 
+the value $m_p = (N-\Omega)/2$. Furthermore, the values of $m_p$ range from 
+$-\Omega/2$ (for $N=0$) to $+\Omega/2$ (for $N=2\Omega$, with all states filled). 
+
+We deduce the maximal $p = \Omega/2$ and for a given $n$ the 
+values range of $p$ range from $|N-\Omega|/2$ to $\Omega/2$ in steps of 1 
+(for an even number of particles) 
+
+
+Following Racah we introduce the notation
+$p = (\Omega - v)/2$
+where $v = 0, 2, 4,..., \Omega - |N-\Omega|$ 
+With this it is easy to deduce that the eigenvalues of the pairing Hamiltonian are
+!bt
+\[
+-G(N-v)(2\Omega +2-N-v)/4
+\]
+!et
+This also works for $N$ odd, with $v= 1,3,5, \dots$.
+!eblock
+
+
+!split
+===== Example case: pairing Hamiltonian =====
+!bblock
+
+Let's take a specific example: $\Omega = 3$ so there are 6 single-particle states, 
+and $N = 3$, with $v= 1,3$. Therefore there are two distinct eigenvalues, 
+!bt
+\[
+E = -2G, 0
+\]
+!et
+Now let's work this out explicitly. The single particle degrees of freedom are defined as
+
+|----------------------------------------|
+|Index | $k$   | $m$                     | 
+|----------------------------------------|
+| 1 | 1 | -1/2   | 
+| 2 | -1 | 1/2 |
+| 3 | 2 | -1/2  |
+| 4 | -2 | 1/2 |
+| 5 | 3 | -1/2 |
+| 6 | -3 | 1/2 |
+|----------------------------------------|
+
+ There are  $\left( \begin{array}{c}6 \\ 3 \end{array} \right) = 20$ three-particle states, but there 
+are 9 states with $M = +1/2$, namely
+$| 1,2,3 \rangle, |1,2,5\rangle, | 1,4,6 \rangle, | 2,3,4 \rangle, |2,3,6 \rangle, | 2,4,5 \rangle, | 2, 5, 6 \rangle, |3,4,6 \rangle, | 4,5,6 \rangle$.
+
+!eblock
+
+
+
+
+
+!split
+===== Example case: pairing Hamiltonian =====
+!bblock
+
+In this basis, the operator 
+!bt
+\[
+\hat{P}_+
+= \hat{a}^\dagger_1 \hat{a}^\dagger_2 + \hat{a}^\dagger_3 \hat{a}^\dagger_4 +
+\hat{a}^\dagger_5 \hat{a}^\dagger_6 
+\]
+!et
+From this we can determine that 
+!bt
+\[
+\hat{P}_- | 1, 4, 6 \rangle = \hat{P}_- | 2, 3, 6 \rangle
+= \hat{P}_- | 2, 4, 5 \rangle = 0
+\]
+!et
+so those states all have eigenvalue 0.
+!eblock
+
+
+!split
+===== Example case: pairing Hamiltonian =====
+!bblock
+Now for further example, 
+!bt
+\[
+\hat{P}_- | 1,2,3 \rangle = | 3 \rangle
+\]
+!et
+so
+!bt
+\[
+\hat{P}_+ \hat{P}_- | 1,2,3\rangle = | 1,2,3\rangle+ | 3,4,3\rangle + | 5,6,3\rangle
+\]
+!et
+The second term vanishes because state 3 is occupied twice, and reordering the last 
+term we
+get
+!bt
+\[
+\hat{P}_+ \hat{P}_- | 1,2,3\rangle = | 1,2,3\rangle+ |3, 5,6\rangle
+\]
+!et
+without picking up a phase.
+!eblock
+
+!split
+===== Example case: pairing Hamiltonian =====
+!bblock
+
+Continuing in this fashion, with the previous ordering of the many-body states
+(  $| 1,2,3 \rangle, |1,2,5\rangle, | 1,4,6 \rangle, | 2,3,4 \rangle, |2,3,6 \rangle, | 2,4,5 \rangle, | 2, 5, 6 \rangle, |3,4,6 \rangle, | 4,5,6 \rangle$) the 
+Hamiltonian matrix of this system is 
+!bt
+\[
+H = -G\left( 
+\begin{array}{ccccccccc}
+1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1  \\
+0 & 1 & 0 & 0 & 0 & 0 & 0 & 1 & 0  \\
+0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0  \\
+0 & 0 & 0 & 1 & 0 & 0 & 1 & 0 & 0  \\
+0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0  \\
+0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0  \\
+0 & 0 & 0 & 1 & 0 & 0 & 1 & 0 & 0  \\
+0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0  \\
+0 & 1 & 0 & 0 & 0 & 0 & 0 & 1 & 0  \\
+1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1  
+\end{array} \right )
+\] 
+!et
+This is useful for our project.  One can by hand confirm 
+that there are 3 eigenvalues $-2G$ and 6 with value zero.
+
+!eblock
+
+!split
+===== Example case: pairing Hamiltonian =====
+!bblock
+
+Another example
+Using the $(1/2)^4$ single-particle space, resulting in eight single-particle states
+
+|----------------------------------------|
+|Index | $n$   | $l$     | $s$ |  $m_s$  |
+|----------------------------------------|
+|1  |   0  |   0   |   1/2   |  -1/2   |
+|2  |   0  |   0   |   1/2   |   1/2    |
+|3  |   1  |   0   |   1/2   |  -1/2    |
+|4  |   1  |   0   |   1/2   |   1/2    |
+|5  |   2  |   0   |   1/2   |  -1/2    |
+|6  |   2  |   0   |   1/2   |   1/2    |
+|7  |   3  |   0   |   1/2   |  -1/2    |
+|8  |   3  |   0   |   1/2   |   1/2    |
+|----------------------------------------|
+
+and then taking only 4-particle, $M=0$ states that have no `broken pairs', there are six basis Slater 
+determinants:
+
+* $|           1,           2 ,          3         ,       4  \rangle , $
+
+* $|            1      ,     2        ,        5         ,       6 \rangle , $
+
+* $|            1         ,       2     ,           7         ,       8  \rangle , $
+
+* $|            3        ,        4      ,          5          ,      6  \rangle , $
+
+* $|            3        ,        4      ,          7         ,       8  \rangle , $
+
+* $|            5        ,        6     ,           7     ,           8  \rangle $
+
+!eblock
+
+!split
+===== Example case: pairing Hamiltonian =====
+!bblock
+
+Now we take the following Hamiltonian
+!bt
+\[
+\hat{H} = \sum_n n \delta \hat{N}_n  - G \hat{P}^\dagger \hat{P}
+\]
+!et
+where 
+!bt
+\[
+\hat{N}_n = \hat{a}^\dagger_{n, m=+1/2} \hat{a}_{n, m=+1/2} +
+\hat{a}^\dagger_{n, m=-1/2} \hat{a}_{n, m=-1/2}
+\]
+!et
+and
+!bt 
+\[
+\hat{P}^\dagger = \sum_{n} \hat{a}^\dagger_{n, m=+1/2} \hat{a}^\dagger_{n, m=-1/2} 
+\]
+!et
+We can write down the $ 6 \times 6$  Hamiltonian in the basis from the prior slide:
+!bt
+\[
+H = \left ( 
+\begin{array}{cccccc}
+2\delta -2G & -G & -G & -G & -G & 0 \\
+ -G & 4\delta -2G & -G & -G & -0 & -G \\
+-G & -G & 6\delta -2G & 0 & -G & -G \\
+ -G & -G & 0 & 6\delta-2G & -G & -G \\
+ -G & 0 & -G & -G & 8\delta-2G & -G \\
+0 & -G & -G & -G & -G & 10\delta -2G 
+\end{array} \right )
+\]
+!et
+(You should check by hand that this is correct.) 
+
+For $\delta = 0$ we have the closed form solution of  the g.s. energy given by $-6G$.
+
+!eblock
 
 
