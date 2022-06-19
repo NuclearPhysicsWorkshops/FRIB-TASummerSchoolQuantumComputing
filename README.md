@@ -129,7 +129,7 @@ broadcasted via zoom for those who cannot attend in person. The zoom link will b
 - 830am-930am: Noise, error correction and mitigation, part I (RL)
 - 930am-1030am: Noise, error correction and mitigation, part II (RL)
 - 1030am-11am: Break, coffee, tea etc
-- 11am-12pm: Practicing error correction and mitigation, hands-on part (RL)
+- 11am-12pm: Implementing error mitigation, hands-on part (RL)
 - 12pm-130pm: Lunch
 - 130pm-230pm: Wrapping up and defining nuclear many-body system to study for hands-on session and possible advanced topics (JB, BH, MHJ & all)
 - 230pm-330pm: Start hands-on session
