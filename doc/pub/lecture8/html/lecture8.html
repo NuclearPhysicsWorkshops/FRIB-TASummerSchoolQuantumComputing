@@ -342,7 +342,21 @@ div.toc p,a {
               ('CCD for the pairing Hamiltonian',
                2,
                None,
-               'ccd-for-the-pairing-hamiltonian')]}
+               'ccd-for-the-pairing-hamiltonian'),
+              ('The Jordan-Wigner transformation',
+               2,
+               None,
+               'the-jordan-wigner-transformation'),
+              ('Explicit expressions', 2, None, 'explicit-expressions'),
+              ('Replacing creation and annihilation operators with Pauli '
+               'matrices',
+               2,
+               None,
+               'replacing-creation-and-annihilation-operators-with-pauli-matrices'),
+              ('Representations of spin states',
+               2,
+               None,
+               'representations-of-spin-states')]}
 end of tocinfo -->
 
 <body>
@@ -2111,6 +2125,101 @@ problem. This consists of the following steps
 common indices in products of tensors) is very user friendly and
 elegant in python when <code>numpy.einsum</code> is used.
 </p>
+
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+<h2 id="the-jordan-wigner-transformation">The Jordan-Wigner transformation </h2>
+
+<p>The Jordan-Wigner transformation is a transformation that maps the
+Pauli gates discussed earlier onto fermionic creation and
+annihilation operators. The creation and annihilation operators from
+second quantization can then be represented on quantum
+computers, and we will be able to rewrite our 
+Hamiltonians in  a second quantization representation  in terms of
+quantum gates.
+</p>
+
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+<h2 id="explicit-expressions">Explicit expressions </h2>
+
+<p>Suppose that we represent a qubit in state \( \vert 0\rangle \) as
+a state occupied with a single fermion and \( \vert 1 \rangle \) as a state with no
+fermion. We then see that the operators
+</p>
+
+$$
+\begin{align}
+\label{eq:sigmaplussigmaminus}
+    \sigma_+ &= \frac{1}{2}(\sigma_x + i\sigma_y) = \begin{bmatrix}
+    0 & 1  \\
+    0 & 0
+\end{bmatrix} \notag 
+\label{_auto19}\\
+    \sigma_- &= \frac{1}{2}(\sigma_x - i\sigma_y) = \begin{bmatrix}
+    0 & 0  
+\label{_auto20}\\
+    1 & 0
+\end{bmatrix},
+\label{_auto21}
+\end{align}
+$$
+
+<p>have the following effect on the qubit basis states
+$$\sigma_+ \vert 1 \rangle = \vert 0\rangle \qquad \sigma_- \vert 0\rangle = \vert 1 \rangle,$$
+and
+$$\sigma_+ \vert 0\rangle = 0 \qquad \sigma_-\vert 1 \rangle = 0.$$
+</p>
+
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+<h2 id="replacing-creation-and-annihilation-operators-with-pauli-matrices">Replacing creation and annihilation operators with Pauli matrices </h2>
+
+<p>The term$\sigma_+$ acts as a creation operator and \( \sigma_- \) acts as
+an annihilation operator. However, since fermionic states are
+anti-symmetric, \( a^\dagger_a a^\dagger_b \vert c \rangle = -
+a^\dagger_b a^\dagger_a \vert c \rangle \), we need our quantum gate
+representation of the creation/annihilation operators to preserve this
+property. This can be achieved by multiplying the \( \sigma_z \) matrix on
+all the occupied states except for the one we operate on. The
+complete creation and annihilation operators can then be represented
+as
+</p>
+
+$$
+\begin{equation}
+\label{eq:LadderOpsPauli}
+    a^\dagger_n \equiv \left(\prod_{k=1}^{n-1}\sigma_z^k \right)\sigma_+^n \qquad a_n \equiv \left(\prod_{k=1}^{n-1}\sigma_z^k \right) \sigma_-^n
+\end{equation}
+$$
+
+<p>where the superscript tells us which qubit the operator acts on.</p>
+
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+<h2 id="representations-of-spin-states">Representations of spin states </h2>
+<p>For
+convenience, we let odd qubits to be in a spin up state, while
+even qubits are in spin down state. The following
+state
+</p>
+
+$$
+\begin{align*}
+    \textit{Qubit state:} & \vert 0 \: \; \ 0 \: \; \ 1 \: \; \ 1 \rangle \\
+    \textit{Spin state:} & + \; - \; + \; - \; \\
+    \textit{Spacial state:} & \ 1 \; \: \ 1 \ \; \: 2 \ \; \: 2 \; ,
+\end{align*}
+$$
+
+<p>the first spacial state is occupied with a fermion pair with opposite spin, while the second state is not occupied with any fermions.
+The equivalent of the reference state for our qubit-state is then
+</p>
+
+$$
+\begin{equation}
+    \vert \Psi_0\rangle = \vert 0\rangle^{\otimes^n}\vert 1 \rangle^{\otimes^k},
+\label{_auto22}
+\end{equation}
+$$
+
+<p>where \( n \) is the number of particles and \( n+k \) is the number of spin-orbitals.</p>
 <!-- ------------------- end of main content --------------- -->
 <center style="font-size:80%">
 <!-- copyright --> &copy; 2013-2022, Benjamin Hall and Morten Hjorth-Jensen. Released under CC Attribution-NonCommercial 4.0 license
