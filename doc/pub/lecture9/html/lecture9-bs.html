@@ -55,10 +55,11 @@ doconce format html lecture9.do.txt --html_style=bootstrap --pygments_html_style
                2,
                None,
                'jordan-wigner-transformation-of-pairing-hamiltonian'),
-              ('And the remaining contribution',
+              ('Interaction part', 2, None, 'interaction-part'),
+              ('And the remaining contribution to the two-body interaction',
                2,
                None,
-               'and-the-remaining-contribution'),
+               'and-the-remaining-contribution-to-the-two-body-interaction'),
               ('Details behind the derivation of the Jordan-Wigner transformed '
                'Pairing Hamiltonian',
                2,
@@ -130,7 +131,8 @@ MathJax.Hub.Config({
      <!-- navigation toc: --> <li><a href="#replacing-creation-and-annihilation-operators-with-pauli-matrices" style="font-size: 80%;">Replacing creation and annihilation operators with Pauli matrices</a></li>
      <!-- navigation toc: --> <li><a href="#representations-of-spin-states" style="font-size: 80%;">Representations of spin states</a></li>
      <!-- navigation toc: --> <li><a href="#jordan-wigner-transformation-of-pairing-hamiltonian" style="font-size: 80%;">Jordan-Wigner transformation of Pairing Hamiltonian</a></li>
-     <!-- navigation toc: --> <li><a href="#and-the-remaining-contribution" style="font-size: 80%;">And the remaining contribution</a></li>
+     <!-- navigation toc: --> <li><a href="#interaction-part" style="font-size: 80%;">Interaction part</a></li>
+     <!-- navigation toc: --> <li><a href="#and-the-remaining-contribution-to-the-two-body-interaction" style="font-size: 80%;">And the remaining contribution to the two-body interaction</a></li>
      <!-- navigation toc: --> <li><a href="#details-behind-the-derivation-of-the-jordan-wigner-transformed-pairing-hamiltonian" style="font-size: 80%;">Details behind the derivation of the Jordan-Wigner transformed Pairing Hamiltonian</a></li>
      <!-- navigation toc: --> <li><a href="#rewriting-the-pairing-hamiltonian" style="font-size: 80%;">Rewriting the Pairing Hamiltonian</a></li>
      <!-- navigation toc: --> <li><a href="#two-possibilities" style="font-size: 80%;">Two possibilities</a></li>
@@ -202,9 +204,9 @@ standard coupled cluster method with doubles excitations only).
 <p>The Jordan-Wigner transformation is a transformation that maps the
 Pauli gates discussed earlier onto fermionic creation and
 annihilation operators. The creation and annihilation operators from
-the second quantization formalism (can then be represented on quantum
-computers, and we will be able to rewrite our second quantization
-Hamiltonian in terms of
+second quantization can then be represented on quantum
+computers, and we will be able to rewrite our 
+Hamiltonians in  a second quantization representation  in terms of
 quantum gates.
 </p>
 
@@ -212,7 +214,7 @@ quantum gates.
 <h2 id="explicit-expressions" class="anchor">Explicit expressions </h2>
 
 <p>Suppose that we represent a qubit in state \( \vert 0\rangle \) as
-a state occupied with a fermion and \( \vert 1 \rangle \) as a state with no
+a state occupied with a single fermion and \( \vert 1 \rangle \) as a state with no
 fermion. We then see that the operators
 </p>
 
@@ -248,7 +250,7 @@ anti-symmetric, \( a^\dagger_a a^\dagger_b \vert c \rangle = -
 a^\dagger_b a^\dagger_a \vert c \rangle \), we need our quantum gate
 representation of the creation/annihilation operators to preserve this
 property. This can be achieved by multiplying the \( \sigma_z \) matrix on
-all the occupied states leading up to the one we operate on. The
+all the occupied states except for the one we operate on. The
 complete creation and annihilation operators can then be represented
 as
 </p>
@@ -265,8 +267,8 @@ $$
 <!-- !split -->
 <h2 id="representations-of-spin-states" class="anchor">Representations of spin states </h2>
 <p>For
-convenience, we have opted for having that odd qubits are in a spin up state, while
-even qubits are in spin down state. For example for the following
+convenience, we let odd qubits to be in a spin up state, while
+even qubits are in spin down state. The following
 state
 </p>
 
@@ -278,7 +280,7 @@ $$
 \end{align*}
 $$
 
-<p>the first spacial basis state is occupied with a fermion pair with opposite spin, while the second spacial state is not occupied with any fermions.
+<p>the first spacial state is occupied with a fermion pair with opposite spin, while the second state is not occupied with any fermions.
 The equivalent of the reference state for our qubit-state is then
 </p>
 
@@ -294,7 +296,9 @@ $$
 <!-- !split -->
 <h2 id="jordan-wigner-transformation-of-pairing-hamiltonian" class="anchor">Jordan-Wigner transformation of Pairing Hamiltonian </h2>
 
-<p>We can write the pairing Hamiltonian in  second quantized representation in terms of the Pauli matrices. A detailed derivation is provided in appendix B. Here we simply state the result: For the one body part of the Hamiltonian we have the terms</p>
+<p>We can write the pairing Hamiltonian in  second quantized representation in terms of the Pauli matrices. A detailed derivation is provided below.
+Here we simply state the result: For the one body part of the Hamiltonian we have the terms
+</p>
 $$
 \begin{equation}
 \label{eq:Onebodyintermsofpauli}
@@ -302,7 +306,12 @@ $$
 \end{equation}
 $$
 
-<p>where we sum over each qubit \( p \) and \( \% \) is the modulo operator. We have that \( I[f(x) = y] = 1 \) if \( f(x) = y \) and zero otherwise. For the interaction term we have two possibilities. First for \( p = q \) we have:</p>
+<p>where we sum over each qubit \( p \) and \( \% \) is the modulo operator. We have that \( I[f(x) = y] = 1 \) if \( f(x) = y \) and zero otherwise.</p>
+
+<!-- !split -->
+<h2 id="interaction-part" class="anchor">Interaction part </h2>
+
+<p>For the interaction term we have two possibilities. First for \( p = q \) we have:</p>
 $$
 \begin{align}
 \label{eq:twobodypaulipisq}
@@ -316,7 +325,7 @@ $$
 
 
 <!-- !split -->
-<h2 id="and-the-remaining-contribution" class="anchor">And the remaining contribution </h2>
+<h2 id="and-the-remaining-contribution-to-the-two-body-interaction" class="anchor">And the remaining contribution to the two-body interaction </h2>
 
 <p>For \( q - p \geq 1 \) we get:</p>
 $$
@@ -344,7 +353,7 @@ $$
 \end{equation}
 $$
 
-<p>where \( \hat{H}_{0p} \), \( \hat{V}_p \) and \( \hat{V}_{pq} \) is given by the one-body part and two-body part, respectively, of the Hamiltonian.</p>
+<p>where \( \hat{H}_{0p} \), \( \hat{V}_p \) and \( \hat{V}_{pq} \) is given by the one-body part and two-body part, respectively.</p>
 
 <!-- !split -->
 <h2 id="details-behind-the-derivation-of-the-jordan-wigner-transformed-pairing-hamiltonian" class="anchor">Details behind the derivation of the Jordan-Wigner transformed Pairing Hamiltonian </h2>
@@ -473,10 +482,10 @@ $$
 
 <!-- !split -->
 <h2 id="final-expression" class="anchor">Final expression </h2>
-<p>We can easily see that when
-running over the sum over \( p \) and \( q \), the terms with \( \pm \) and \( \mp \)
-sign in front will cancel out. Also, we can include a factor 2 and
-limit the sum to \( p < q \). Therefore:
+
+<p>Computing the sum over \( p \) and \( q \), the terms with \( \pm \) and \( \mp \)
+sign in front will cancel. Also, we can include a factor 2 and
+limit the sum to \( p < q \). Our final expression is then
 </p>
 
 $$

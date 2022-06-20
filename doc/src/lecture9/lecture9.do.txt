@@ -30,16 +30,16 @@ standard coupled cluster method with doubles excitations only).
 The Jordan-Wigner transformation is a transformation that maps the
 Pauli gates discussed earlier onto fermionic creation and
 annihilation operators. The creation and annihilation operators from
-the second quantization formalism (can then be represented on quantum
-computers, and we will be able to rewrite our second quantization
-Hamiltonian in terms of
+second quantization can then be represented on quantum
+computers, and we will be able to rewrite our 
+Hamiltonians in  a second quantization representation  in terms of
 quantum gates.
 
 !split
 =====  Explicit expressions =====
 
 Suppose that we represent a qubit in state $\vert 0\rangle$ as
-a state occupied with a fermion and $\vert 1 \rangle$ as a state with no
+a state occupied with a single fermion and $\vert 1 \rangle$ as a state with no
 fermion. We then see that the operators
 
 !bt
@@ -69,7 +69,7 @@ anti-symmetric, $a^\dagger_a a^\dagger_b \vert c \rangle = -
 a^\dagger_b a^\dagger_a \vert c \rangle$, we need our quantum gate
 representation of the creation/annihilation operators to preserve this
 property. This can be achieved by multiplying the $\sigma_z$ matrix on
-all the occupied states leading up to the one we operate on. The
+all the occupied states except for the one we operate on. The
 complete creation and annihilation operators can then be represented
 as
 
@@ -84,8 +84,8 @@ where the superscript tells us which qubit the operator acts on.
 !split
 ===== Representations of spin states =====
 For
-convenience, we have opted for having that odd qubits are in a spin up state, while
-even qubits are in spin down state. For example for the following
+convenience, we let odd qubits to be in a spin up state, while
+even qubits are in spin down state. The following
 state
 
 !bt
@@ -96,7 +96,7 @@ state
 \end{align*}
 !et
 
-the first spacial basis state is occupied with a fermion pair with opposite spin, while the second spacial state is not occupied with any fermions.
+the first spacial state is occupied with a fermion pair with opposite spin, while the second state is not occupied with any fermions.
 The equivalent of the reference state for our qubit-state is then
 
 !bt
@@ -109,14 +109,20 @@ where $n$ is the number of particles and $n+k$ is the number of spin-orbitals.
 !split
 ===== Jordan-Wigner transformation of Pairing Hamiltonian =====
 
-We can write the pairing Hamiltonian in  second quantized representation in terms of the Pauli matrices. A detailed derivation is provided in appendix B. Here we simply state the result: For the one body part of the Hamiltonian we have the terms
+We can write the pairing Hamiltonian in  second quantized representation in terms of the Pauli matrices. A detailed derivation is provided below.
+Here we simply state the result: For the one body part of the Hamiltonian we have the terms
 !bt
 \begin{equation}
     label{eq:Onebodyintermsofpauli}
     \hat{H}_{0p} = \frac{1}{2}\delta(p - 1 - I[p\%2=0])(I^p + \sigma_z^p),
 \end{equation}
 !et
-where we sum over each qubit $p$ and $\%$ is the modulo operator. We have that $I[f(x) = y] = 1$ if $f(x) = y$ and zero otherwise. For the interaction term we have two possibilities. First for $p = q$ we have:
+where we sum over each qubit $p$ and $\%$ is the modulo operator. We have that $I[f(x) = y] = 1$ if $f(x) = y$ and zero otherwise.
+
+!split
+===== Interaction part =====
+
+For the interaction term we have two possibilities. First for $p = q$ we have:
 !bt
 \begin{align}
     label{eq:twobodypaulipisq}
@@ -129,7 +135,7 @@ where we sum over each qubit $p$ and $\%$ is the modulo operator. We have that $
 
 
 !split
-===== And the remaining contribution =====
+===== And the remaining contribution to the two-body interaction =====
 
 For $q - p \geq 1$ we get:
 !bt
@@ -155,7 +161,7 @@ The complete Jordan-Wigner transformed pairing Hamiltonian can then be written a
 \end{equation}
 !et
 
-where $\hat{H}_{0p}$, $\hat{V}_p$ and $\hat{V}_{pq}$ is given by the one-body part and two-body part, respectively, of the Hamiltonian.
+where $\hat{H}_{0p}$, $\hat{V}_p$ and $\hat{V}_{pq}$ is given by the one-body part and two-body part, respectively.
 
 
 !split
@@ -283,10 +289,10 @@ where the subscript is used if $p > q$.
 
 !split
 ===== Final expression =====
-We can easily see that when
-running over the sum over $p$ and $q$, the terms with $\pm$ and $\mp$
-sign in front will cancel out. Also, we can include a factor 2 and
-limit the sum to $p < q$. Therefore:
+
+Computing the sum over $p$ and $q$, the terms with $\pm$ and $\mp$
+sign in front will cancel. Also, we can include a factor 2 and
+limit the sum to $p < q$. Our final expression is then
 
 !bt
 \begin{align*}
