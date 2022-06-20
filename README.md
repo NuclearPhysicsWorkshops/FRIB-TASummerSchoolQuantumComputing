@@ -105,12 +105,12 @@ broadcasted via zoom for those who cannot attend in person. The zoom link will b
 ### Monday June 20 
 - 8am-830am: Welcome and registration
 - 830am-930am: Introduction to quantum computing, qubits, gates and superposition (AB), link to video https://youtu.be/D28hCiG6PN0
-- 930am-1030am: Quantum circuits, entanglement and measurements (AB)
+- 930am-1030am: Quantum circuits, entanglement and measurements (AB), link to video at https://mediaspace.msu.edu/media/t/1_szys9mg5
 - 1030am-11am: Break, coffee, tea etc
 - 11am-12pm: Hands-on session with applications and introduction to software libraries (RL, JW), no video for hands-on sessions.
 - 12pm-1pm: Lunch (shorter lunch, else 1h30m lunches)
-- 1pm-2pm: Algorithms for quantum dynamics (DL), simple problems
-- 2pm-3pm: Quantum phase estimation and adiabatic evolution (ZQ and JB), simple problems
+- 1pm-2pm: Algorithms for quantum dynamics (DL), simple problems. Link to video at https://mediaspace.msu.edu/media/t/1_zduw1azy
+- 2pm-3pm: Quantum phase estimation and adiabatic evolution (ZQ and JB), simple problems. Link to video at https://mediaspace.msu.edu/media/t/1_8egtqndg
 - 3pm-4pm: Break, coffee, tea or tour for FRIB for those interested. Please let us know if you are interested in a tour of FRIB.
 - 4pm-6pm: Hands-on sessions, quantum dynamics (JW, JB, ZQ, DL & all)
 
