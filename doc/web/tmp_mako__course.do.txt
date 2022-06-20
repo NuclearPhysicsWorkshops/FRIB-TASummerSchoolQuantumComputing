@@ -149,7 +149,7 @@ The teaching material is provided as jupyter-notebooks and/or PDF files. Lunches
    * "ipynb file":"https://nuclearphysicsworkshops.github.io/FRIB-TASummerSchoolQuantumComputing/doc/pub/handson2/ipynb/handson2.ipynb"
 
 
-===== Wednesday June 22, 830am-930am: Noise, error correction and mitigation, part I (RL) =====
+===== Wednesday June 22, 830am-1030am: Noise, error correction and mitigation, parts I and II (RL) =====
 
 
 
@@ -160,7 +160,7 @@ The teaching material is provided as jupyter-notebooks and/or PDF files. Lunches
    * "ipynb file":"https://nuclearphysicsworkshops.github.io/FRIB-TASummerSchoolQuantumComputing/doc/pub/lecture10/ipynb/lecture10.ipynb"
 
 
-===== Wednesday June 22, 930am-1030am: Noise, error correction and mitigation, part II (RL) =====
+===== Wednesday June 22, 11am-12pm: Practicing error correction and mitigation, hands-on part (RL) =====
 
 
 
@@ -171,7 +171,7 @@ The teaching material is provided as jupyter-notebooks and/or PDF files. Lunches
    * "ipynb file":"https://nuclearphysicsworkshops.github.io/FRIB-TASummerSchoolQuantumComputing/doc/pub/lecture11/ipynb/lecture11.ipynb"
 
 
-===== Wednesday June 22, 11am-12pm: Practicing error correction and mitigation, hands-on part (RL) =====
+===== Wednesday June 22, 130pm-330pm: Wrapping up and defining nuclear many-body system to study for hands-on session and start hands-on session =====
 
 
 
@@ -180,17 +180,6 @@ The teaching material is provided as jupyter-notebooks and/or PDF files. Lunches
      * "PDF format":"https://nuclearphysicsworkshops.github.io/FRIB-TASummerSchoolQuantumComputing/doc/pub/lecture12/pdf/lecture12.pdf"
  * iPython notebook:
    * "ipynb file":"https://nuclearphysicsworkshops.github.io/FRIB-TASummerSchoolQuantumComputing/doc/pub/lecture12/ipynb/lecture12.ipynb"
-
-
-===== Wednesday June 22, 130pm-330pm: Wrapping up and defining nuclear many-body system to study for hands-on session and start hands-on session =====
-
-
-
- * PDF version:
-   * For printing:
-     * "PDF format":"https://nuclearphysicsworkshops.github.io/FRIB-TASummerSchoolQuantumComputing/doc/pub/lecture13/pdf/lecture13.pdf"
- * iPython notebook:
-   * "ipynb file":"https://nuclearphysicsworkshops.github.io/FRIB-TASummerSchoolQuantumComputing/doc/pub/lecture13/ipynb/lecture13.ipynb"
 
 
 ===== Wednesday June 22, 4pm-6pm Hands-on session and problem solving =====
