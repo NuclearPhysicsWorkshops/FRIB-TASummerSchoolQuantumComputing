@@ -119,23 +119,55 @@ div.toc p,a {
                2,
                None,
                'the-jordan-wigner-transformation'),
+              ('Explicit expressions', 2, None, 'explicit-expressions'),
+              ('Replacing creation and annihilation operators with Pauli '
+               'matrices',
+               2,
+               None,
+               'replacing-creation-and-annihilation-operators-with-pauli-matrices'),
+              ('Representations of spin states',
+               2,
+               None,
+               'representations-of-spin-states'),
               ('Jordan-Wigner transformation of Pairing Hamiltonian',
                2,
                None,
                'jordan-wigner-transformation-of-pairing-hamiltonian'),
+              ('And the remaining contribution',
+               2,
+               None,
+               'and-the-remaining-contribution'),
               ('Details behind the derivation of the Jordan-Wigner transformed '
                'Pairing Hamiltonian',
                2,
                None,
                'details-behind-the-derivation-of-the-jordan-wigner-transformed-pairing-hamiltonian'),
+              ('Rewriting the Pairing Hamiltonian',
+               2,
+               None,
+               'rewriting-the-pairing-hamiltonian'),
+              ('Two possibilities', 2, None, 'two-possibilities'),
+              ('More details', 2, None, 'more-details'),
+              ('Rewriting as four-qubit operations',
+               2,
+               None,
+               'rewriting-as-four-qubit-operations'),
+              ('Final expression', 2, None, 'final-expression'),
               ('Variational Quantum Eigensolvers',
                2,
                None,
                'variational-quantum-eigensolvers'),
+              ('Variational parameters', 2, None, 'variational-parameters'),
               ('Unitary Coupled Cluster ansatz',
                2,
                None,
-               'unitary-coupled-cluster-ansatz')]}
+               'unitary-coupled-cluster-ansatz'),
+              ('New cluster operator', 2, None, 'new-cluster-operator'),
+              ('Preparing for quantum computing, Suzuki-Trotter approximation',
+               2,
+               None,
+               'preparing-for-quantum-computing-suzuki-trotter-approximation'),
+              ('More details', 2, None, 'more-details')]}
 end of tocinfo -->
 
 <body>
@@ -170,7 +202,7 @@ MathJax.Hub.Config({
 </center>
 <br>
 <center>
-<h4>Jun 18, 2022</h4>
+<h4>Jun 20, 2022</h4>
 </center> <!-- date -->
 <br>
 
@@ -181,7 +213,7 @@ MathJax.Hub.Config({
 the VQE algorithm applied to a selected nuclear physics model, in our
 case the so-called pairing Hamiltonian.  In order to do so, we will
 need to present the so-called Jordan-Wigner transformation first. We
-will apply this to the pairing Hamiltonian discusse previously. This
+will apply this to the pairing Hamiltonian discussed previously. This
 Hamiltonian is writen in second quantization and we will use the Pauli
 matrices discussed earlier in order to rewrite the second-quantization
 creation and annihilation operators in terms of Pauli matrices. 
@@ -204,7 +236,13 @@ annihilation operators. The creation and annihilation operators from
 the second quantization formalism (can then be represented on quantum
 computers, and we will be able to rewrite our second quantization
 Hamiltonian in terms of
-quantum gates. Suppose that we represent a qubit in state \( \vert 0\rangle \) as
+quantum gates.
+</p>
+
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+<h2 id="explicit-expressions">Explicit expressions </h2>
+
+<p>Suppose that we represent a qubit in state \( \vert 0\rangle \) as
 a state occupied with a fermion and \( \vert 1 \rangle \) as a state with no
 fermion. We then see that the operators
 </p>
@@ -232,7 +270,19 @@ and
 $$\sigma_+ \vert 0\rangle = 0 \qquad \sigma_-\vert 1 \rangle = 0.$$
 </p>
 
-<p>Hence, \( \sigma_+ \) acts as a creation operator and \( \sigma_- \) acts as an annihilation operator. However, since fermionic states are anti-symmetric, \( a^\dagger_a a^\dagger_b \vert c \rangle = - a^\dagger_b a^\dagger_a \vert c \rangle \), we need our quantum gate representation of the creation/annihilation operators to preserve this property. This can be achieved by multiplying the \( \sigma_z \) matrix on all the occupied states leading up to the one we operate on. The complete creation and annihilation operators can then be represented as</p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+<h2 id="replacing-creation-and-annihilation-operators-with-pauli-matrices">Replacing creation and annihilation operators with Pauli matrices </h2>
+
+<p>The term$\sigma_+$ acts as a creation operator and \( \sigma_- \) acts as
+an annihilation operator. However, since fermionic states are
+anti-symmetric, \( a^\dagger_a a^\dagger_b \vert c \rangle = -
+a^\dagger_b a^\dagger_a \vert c \rangle \), we need our quantum gate
+representation of the creation/annihilation operators to preserve this
+property. This can be achieved by multiplying the \( \sigma_z \) matrix on
+all the occupied states leading up to the one we operate on. The
+complete creation and annihilation operators can then be represented
+as
+</p>
 
 $$
 \begin{equation}
@@ -241,8 +291,12 @@ $$
 \end{equation}
 $$
 
-<p>where the superscript tells us which qubit the operator acts on. For
-convenience, we chose that odd qubits are in a spin up state, while
+<p>where the superscript tells us which qubit the operator acts on.</p>
+
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+<h2 id="representations-of-spin-states">Representations of spin states </h2>
+<p>For
+convenience, we have opted for having that odd qubits are in a spin up state, while
 even qubits are in spin down state. For example for the following
 state
 </p>
@@ -287,11 +341,15 @@ $$
     +& I^{\otimes^{2p-2}} \otimes I  \otimes \sigma_z \otimes I^{\otimes^{n - 2p}} 
 \label{_auto5}\\
     +& I^{\otimes^{2p-2}} \otimes \sigma_z  \otimes I \otimes I^{\otimes^{n - 2p}} \nonumber \\
-    +& I^{\otimes^{2p-2}} \otimes \sigma_z  \otimes \sigma_z \otimes I^{\otimes^{n - 2p}}\Big],\nonumber 
+    +& I^{\otimes^{2p-2}} \otimes \sigma_z  \otimes \sigma_z \otimes I^{\otimes^{n - 2p}}\Big].\nonumber 
 \end{align}
 $$
 
-<p>and for \( q - p \geq 1 \) we get:</p>
+
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+<h2 id="and-the-remaining-contribution">And the remaining contribution </h2>
+
+<p>For \( q - p \geq 1 \) we get:</p>
 $$
 \begin{align}
 \label{eq:twobodypauliqgeqp}
@@ -322,7 +380,7 @@ $$
 <!-- !split --><br><br><br><br><br><br><br><br><br><br>
 <h2 id="details-behind-the-derivation-of-the-jordan-wigner-transformed-pairing-hamiltonian">Details behind the derivation of the Jordan-Wigner transformed Pairing Hamiltonian </h2>
 
-<p>Here we show how we write our pairing Hamiltonian in terms of the Pauli matrices. First, we observe that
+<p>Here we show how we can rewrite our pairing Hamiltonian in terms of the Pauli matrices. First, we observe that
 $$a^\dagger_i a_i = \left(\prod_{k=1}^{i-1}\sigma_z^k \right)\sigma_+^i \left(\prod_{k=1}^{i-1}\sigma_z^k \right) \sigma_-^i $$
 $$ =\sigma_+^i \sigma_-^i = \frac{1}{2}(I^i + \sigma_z^i) ,$$
 and see that the one-body part of the Hamiltonian can be written as
@@ -346,7 +404,11 @@ $$
 \end{align}
 $$
 
-<p>We can see that</p>
+
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+<h2 id="rewriting-the-pairing-hamiltonian">Rewriting the Pairing Hamiltonian </h2>
+
+<p>We have that</p>
 $$
 \begin{align*}
     \left( \prod_{k=1}^{2p-2} \sigma_z^k \right)\sigma_{+}^{2p-1} \left( \prod_{k=1}^{2p-1} \sigma_z^k \right)\sigma_{+}^{2p} = \notag \\
@@ -356,7 +418,7 @@ $$
 \end{align*}
 $$
 
-<p>so we can rewrite this equation as </p>
+<p>which can be rewritten as</p>
 
 $$
 \begin{align*}
@@ -364,6 +426,10 @@ $$
     &-\frac{1}{2} g\sum_{pq}\left[I^{\otimes^{2p-2}} \otimes \sigma_+ \otimes \sigma_+ \otimes I^{\otimes^{n - 2p}} \right] \left[ I^{\otimes^{2q-2}} \otimes \sigma_- \otimes \sigma_- \otimes I^{\otimes^{n - 2q}} \right].
 \end{align*}
 $$
+
+
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+<h2 id="two-possibilities">Two possibilities </h2>
 
 <p>We have two possibilities here. First for \( p=q \):</p>
 
@@ -383,9 +449,12 @@ $$
 \end{equation}
 $$
 
-<p>For \( p - q \geq 1 \) we simply exchange \( p \) with \( q \) and \( \sigma_+ \) with \( \sigma_- \).
-To continue, we insert the expressions for \( \sigma_{\pm} \) into these equations. For \( p = q \) we then have:
-</p>
+<p>For \( p - q \geq 1 \) we simply exchange \( p \) with \( q \) and \( \sigma_+ \) with \( \sigma_- \).</p>
+
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+<h2 id="more-details">More details </h2>
+
+<p>To continue, we insert the expressions for \( \sigma_{\pm} \) into these equations. For \( p = q \) we then have:</p>
 
 $$
 \begin{align*}
@@ -404,6 +473,9 @@ $$
     -\frac{1}{32}g \left[ I^{\otimes^{2p-2}} \otimes (\sigma_x + i\sigma_y) \otimes (\sigma_x + i\sigma_y) \otimes I^{\otimes^{2(q - p - 1)}} \otimes (\sigma_x - i\sigma_y) \otimes (\sigma_x - i\sigma_y) \otimes I^{\otimes^{n-2q}} \right].
 \end{equation*}
 $$
+
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+<h2 id="rewriting-as-four-qubit-operations">Rewriting as four-qubit operations </h2>
 
 <p>This can be rewritten as sixteen four-qubit operations</p>
 
@@ -428,7 +500,11 @@ $$
 \end{align*}
 $$
 
-<p>where the subscript is used if \( p > q \).  We can easily see that when
+<p>where the subscript is used if \( p > q \).</p>
+
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+<h2 id="final-expression">Final expression </h2>
+<p>We can easily see that when
 running over the sum over \( p \) and \( q \), the terms with \( \pm \) and \( \mp \)
 sign in front will cancel out. Also, we can include a factor 2 and
 limit the sum to \( p < q \). Therefore:
@@ -468,17 +544,28 @@ single measurement of the energy can be lower than the ground state
 energy. Hence, the expectation value of the energy can
 neither. Variational methods make use of this principle by calculating
 the expectation value in the baove equation for what we call a trial
-wavefunction \( \vert \psi_T(\boldsymbol{\theta)\rangle} \): $$\langle
-\psi_T(\boldsymbol{\theta})\vert H
-\vert\psi_T(\boldsymbol{\theta})\rangle = E(\boldsymbol{\theta}).$$
+wavefunction \( \vert \psi_T(\boldsymbol{\theta)\rangle} \) given by
 </p>
+$$
+\langle \psi_T(\boldsymbol{\theta})\vert H \vert\psi_T(\boldsymbol{\theta})\rangle = E(\boldsymbol{\theta}).
+$$
 
-<p>The variational parameters \( \boldsymbol{\theta} = [\theta_1, \theta_2, \cdots, \theta_p] \) are then varied to minimize \( E(\boldsymbol{\theta}) \), which hopefully makes a good approximation for \( E_0 \). For variational quantum eigensolvers (VQE), the trial wave function is given by a parametrized n-qubit state
-$$ U(\boldsymbol{\theta}) \vert\psi_0\rangle = \vert\psi_T(\boldsymbol{\theta})\rangle, $$
-where \( U(\boldsymbol{\theta}) \) is some parametrized multi-qubit gate and \( \vert\psi_0\rangle \) is the initial state of the qubits.
-As long as the Hamiltonian can be rewritten as a sum of quantum gates \( O_i \)
-$$ H = \sum_{i=1}^m h_i O_i, $$
-we can find its expectation value by considering the expectation of each term
+
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+<h2 id="variational-parameters">Variational parameters </h2>
+
+<p>The variational parameters \( \boldsymbol{\theta} = [\theta_1, \theta_2,
+\cdots, \theta_p] \) are then varied to minimize
+\( E(\boldsymbol{\theta}) \), which hopefully makes a good approximation
+for \( E_0 \). For variational quantum eigensolvers (VQE), the trial wave
+function is given by a parametrized n-qubit state $$
+U(\boldsymbol{\theta}) \vert\psi_0\rangle =
+\vert\psi_T(\boldsymbol{\theta})\rangle, $$ where
+\( U(\boldsymbol{\theta}) \) is some parametrized multi-qubit gate and
+\( \vert\psi_0\rangle \) is the initial state of the qubits.  As long as
+the Hamiltonian can be rewritten as a sum of quantum gates \( O_i \) $$ H
+= \sum_{i=1}^m h_i O_i, $$ we can find its expectation value by
+considering the expectation of each term
 </p>
 
 $$
@@ -507,6 +594,9 @@ $$
 <p>where \( \hat{T} \) is the usual coupled cluster operator and the state \( \vert \psi_0\rangle  \) is the reference state.
 One can show that \( e^{\hat{T} - \hat{T}^\dagger} \) is unitary \<a href="#UCCDArticle">[1]</a>.
 </p>
+
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+<h2 id="new-cluster-operator">New cluster operator </h2>
 
 <p>The unitary coupled cluster doubles (UCCD) method introduces the cluster operator</p>
 $$
@@ -537,8 +627,12 @@ $$
 \end{align}
 $$
 
-<p>where we can assume that \( i < j < a < b \). The subscript denotes which qubit we act upon with the Pauli gates.
-The preparation of this trial wavefunction is done on a quantum computing by first utilizing the Suzuki-Trotter approximation
+<p>where we can assume that \( i < j < a < b \). The subscript denotes which qubit we act upon with the Pauli gates.</p>
+
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+<h2 id="preparing-for-quantum-computing-suzuki-trotter-approximation">Preparing for quantum computing, Suzuki-Trotter approximation </h2>
+
+<p>The preparation of this trial wavefunction is by first utilizing the Suzuki-Trotter approximation
 on the operator. Denoting 
 $$\hat{Z}_{ij}^{ab} =i\frac{t_{ij}^{ab}}{8p}(\bigotimes_{k=i+1}^{j-1}\sigma_z^k)(\bigotimes_{l=a+1}^{b-1}\sigma_l^z),$$ 
 the Suzuki-Trotter approximation gives
@@ -561,7 +655,12 @@ $$
 
 <p>where \( p \) decides the step size in the Suzuki-Trotter approximation
 and will be restricted to \( p=1 \) in our discussions.
-Since
+</p>
+
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+<h2 id="more-details">More details </h2>
+
+<p>Since
 we are dealing with the pairing Hamiltonian as an example system in this school, we can
 reduce the number of terms in our ansatz by not allowing to break
 particle pairs. The Taylor expansion of the UCCD operator gives us
@@ -578,12 +677,13 @@ $$
 \end{align}
 $$
 
-<p>We can immediately see that the first sum over \( i,j,a,b \) will break pairs if we do not introduce a restriction on the sum. This can be explained by the fact that any non zero \( t_{ij}^{ab} \) will include the following term
-$$
-t_{ij}^{ab}(a^\dagger_a a^\dagger_b a_j a_i - a^\dagger_i a^\dagger_j a_b a_a)\vert c \rangle,
-$$
-which will break pairs if \( j \neq i+1 \) and \( b \neq a+1 \). 
-Hence we make the restriction \( j = i+1 \) and \( b = a+1 \).
+<p>We can immediately see that the first sum over \( i,j,a,b \) will break
+pairs if we do not introduce a restriction on the sum. This can be
+explained by the fact that any non zero \( t_{ij}^{ab} \) will include the
+following term $$ t_{ij}^{ab}(a^\dagger_a a^\dagger_b a_j a_i -
+a^\dagger_i a^\dagger_j a_b a_a)\vert c \rangle, $$ which will break
+pairs if \( j \neq i+1 \) and \( b \neq a+1 \).  Hence we make the restriction
+\( j = i+1 \) and \( b = a+1 \).
 </p>
 <!-- ------------------- end of main content --------------- -->
 <center style="font-size:80%">
