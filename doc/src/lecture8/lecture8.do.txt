@@ -658,12 +658,179 @@ All these methods start normally with a Hartree-Fock basis as the calculational 
 !eblock
 
 
+!split
+===== Pairing model single-particle basis states  =====
+!bblock
+We will as a model for studies of quantum computing algorithms use the nuclear pairing model.
+In order to define the problem, we need first to define a single-particle space.
+A simple space is the $(1/2)^2$ space with four single-particle states, using the quantum numbers
+$(n,l,s,m_s)$:
+ 
+* Single-particle state 1:   $n=0$ ,      $l=0$ ,     $s=1/2$ ,    $m_s=-1/2$
+* Single-particle state 2:   $n=0$ ,      $l=0$ ,     $s=1/2$ ,    $m_s=1/2$
+* Single-particle state 3:   $n=1$ ,      $l=0$ ,     $s=1/2$ ,    $m_s=-1/2$
+* Single-particle state 4:   $n=1$ ,      $l=0$ ,     $s=1/2$ ,    $m_s=1/2$
+
+
+For $N=2$ there are 4 two-particle states with total spin project $M=0$. Two of these correspond to no broken pairs.
+
+!eblock
+
+!split
+===== More single-particle basis states  =====
+!bblock
+Another, slightly more challenging space is the $(1/2)^4$ space, that is, 
+with eight  single-particle states we have
+
+* Single-particle state 1:   $n=0$ ,      $l=0$ ,     $s=1/2$ ,    $m_s=-1/2$
+* Single-particle state 2:   $n=0$ ,      $l=0$ ,     $s=1/2$ ,    $m_s=1/2$
+* Single-particle state 3:   $n=1$ ,      $l=0$ ,     $s=1/2$ ,    $m_s=-1/2$
+* Single-particle state 4:   $n=1$ ,      $l=0$ ,     $s=1/2$ ,    $m_s=1/2$
+* Single-particle state 5:   $n=2$ ,      $l=0$ ,     $s=1/2$ ,    $m_s=-1/2$
+* Single-particle state 6:   $n=2$ ,      $l=0$ ,     $s=1/2$ ,    $m_s=1/2$
+* Single-particle state 7:   $n=3$ ,      $l=0$ ,     $s=1/2$ ,    $m_s=-1/2$
+* Single-particle state 8:   $n=3$ ,      $l=0$ ,     $s=1/2$ ,    $m_s=1/2$
+
+
+
+!eblock
+
+!split
+===== Pairing model  =====
+!bblock
+In a nuclear  shell-model context we can interpret this as 4 $s_{1/2}$ levels, with $m = \pm 1/2$, we can also think of these as four pairs if don't break any pairs,  $\pm k, k = 1,2,3,4$. For a more realistic nuclear physics shell-model case, we 
+assign single-particle energies,  depending on the radial quantum number $n$, that is, 
+$\epsilon_k = |k| \delta$ so that they are equally spaced.
+!eblock
+
+!split
+===== Shell-model project  =====
+!bblock
+ 
+For application in the pairing model we can go further and consider only states with 
+no ``broken pairs,'' that is, if $+k$ is filled (or $m = +1/2$, so is $-k$ ($m=-1/2$). 
+If you want, you can write your code to accept only these, and obtain the following 
+six states:
+
+* $|           1,           2 ,          3         ,       4  \rangle , $
+
+* $|            1      ,     2        ,        5         ,       6 \rangle , $
+
+* $|            1         ,       2     ,           7         ,       8  \rangle , $
+
+* $|            3        ,        4      ,          5          ,      6  \rangle , $
+
+* $|            3        ,        4      ,          7         ,       8  \rangle , $
+
+* $|            5        ,        6     ,           7     ,           8  \rangle $
+!eblock
+
+
 
 !split
 ===== Example case: pairing Hamiltonian =====
 !bblock
 
-Now we take the following Hamiltonian
+We consider a space with $2\Omega$ single-particle states, with each 
+state labeled by 
+$k = 1, 2, 3, \Omega$ and $m = \pm 1/2$. The convention is that 
+the state with $k>0$ has $m = + 1/2$ while $-k$ has $m = -1/2$.
+
+
+The Hamiltonian we consider is 
+!bt
+\[
+\hat{H} = -G \hat{P}_+ \hat{P}_-,
+\]
+!et
+where
+!bt
+\[
+\hat{P}_+ = \sum_{k > 0} \hat{a}^\dagger_k \hat{a}^\dagger_{-{k}}.
+\]
+!et
+and $\hat{P}_- = ( \hat{P}_+)^\dagger$.
+
+This problem can be solved using what is called the quasi-spin formalism to obtain the 
+exact results. Thereafter we will try again using the explicit Slater determinant formalism.
+!eblock
+
+
+
+!split
+===== Example case: pairing Hamiltonian =====
+!bblock
+
+One can show that
+!bt
+\[
+\left [ \hat{P}_+, \hat{P}_- \right ] = \sum_{k> 0} \left( \hat{a}^\dagger_k \hat{a}_k 
++ \hat{a}^\dagger_{-{k}} \hat{a}_{-{k}} - 1 \right) = \hat{N} - \Omega.
+\]
+!et
+Now define 
+!bt
+\[
+\hat{P}_z = \frac{1}{2} ( \hat{N} -\Omega).
+\]
+!et
+Finally you can show
+!bt
+\[
+\left [ \hat{P}_z , \hat{P}_\pm \right ] = \pm \hat{P}_\pm.
+\]
+!et
+This means the operators $\hat{P}_\pm, \hat{P}_z$ form a so-called  $SU(2)$ algebra, and we can 
+use all our insights about angular momentum, even though there is no actual 
+angular momentum involved.
+
+So we rewrite the Hamiltonian to make this explicit:
+!bt
+\[
+\hat{H} = -G \hat{P}_+ \hat{P}_- 
+= -G \left( \hat{P}^2 - \hat{P}_z^2 + \hat{P}_z\right)
+\]
+!et
+
+!eblock
+
+!split
+===== Example case: pairing Hamiltonian =====
+!bblock
+
+Because of the SU(2) algebra, we know that the eigenvalues of 
+$\hat{P}^2$ must be of the form $p(p+1)$, with $p$ either integer or half-integer, and the eigenvalues of $\hat{P}_z$ 
+are $m_p$ with $p \geq | m_p|$, with $m_p$ also integer or half-integer. 
+
+
+But because $\hat{P}_z = (1/2)(\hat{N}-\Omega)$, we know that for $N$ particles 
+the value $m_p = (N-\Omega)/2$. Furthermore, the values of $m_p$ range from 
+$-\Omega/2$ (for $N=0$) to $+\Omega/2$ (for $N=2\Omega$, with all states filled). 
+
+We deduce the maximal $p = \Omega/2$ and for a given $n$ the 
+values range of $p$ range from $|N-\Omega|/2$ to $\Omega/2$ in steps of 1 
+(for an even number of particles) 
+
+
+Following Racah we introduce the notation
+$p = (\Omega - v)/2$
+where $v = 0, 2, 4,..., \Omega - |N-\Omega|$ 
+With this it is easy to deduce that the eigenvalues of the pairing Hamiltonian are
+!bt
+\[
+-G(N-v)(2\Omega +2-N-v)/4
+\]
+!et
+This also works for $N$ odd, with $v= 1,3,5, \dots$.
+!eblock
+
+
+
+!split
+===== Example case: pairing Hamiltonian =====
+!bblock
+
+The Hamiltonian is defined as
 !bt
 \[
 \hat{H} = \sum_n n \delta \hat{N}_n  - G \hat{P}^\dagger \hat{P}
@@ -682,10 +849,7 @@ and
 \hat{P}^\dagger = \sum_{n} \hat{a}^\dagger_{n, m=+1/2} \hat{a}^\dagger_{n, m=-1/2} 
 \]
 !et
-
-In case we opt for a system with 4 doubly degenerate levels and no broken pairs, one can show that the Hamiltonian matrix problem to diagonalize is given
-by the following $6\times 6$ matrix
-
+We can write down the $ 6 \times 6$  Hamiltonian in the basis from the prior slide:
 !bt
 \[
 H = \left ( 
@@ -704,9 +868,6 @@ H = \left (
 For $\delta = 0$ we have the closed form solution of  the g.s. energy given by $-6G$.
 
 !eblock
-
-
-
 
 
 
@@ -1316,7 +1477,7 @@ Let us now turn to the computational cost of a CCD computation.
 !split
 ===== Exercise: Computational scaling of CCD =====
 label{ex-13}
-For each of the diagrams in Fig. ref{fig-ccd} write down the
+For each of the contributions of the CCD ansatz write down the
 computational cost in terms of the number of occupied $A$ and the
 number of unoccupied $n_u$ orbitals.
 
@@ -1334,8 +1495,7 @@ Note that $n_u\gg A$ in general. In textbooks, one reads that CCD (and
 CCSD) cost only $A^2n_u^4$. Our most expensive diagrams, however are
 $A^4n_u^4$. What is going on?
 
-To understand this puzzle, let us consider the last diagram of
-Fig. ref{fig-ccd}. We break up the computation into two steps,
+To understand this puzzle, let us consider the most expensive 2p-2h contribution. We break up the computation into two steps,
 computing first the intermediate
 !bt
 \begin{align}
@@ -1357,7 +1517,7 @@ memory for computational cycles. This trick is known as
 !split
 ===== Solving the CCD equations =====
 
-The CCD equations, depicted in Fig. ref{fig-ccd}, are nonlinear in the
+The CCD equations are nonlinear in the
 cluster amplitudes. How do we solve $\overline{H}_{ij}^{ab}=0$? We
 subtract $(f_a^a +f_b^b -f_i^i -f_j^j)t_{ij}^{ab}$ from both sides of
 $\overline{H}_{ij}^{ab}=0$ (because this term is contained in
@@ -1410,370 +1570,5 @@ o Initialize the cluster amplitudes according to Eq. (ref{pert}), and solve Eq. 
 Please note that the contraction of tensors (i.e. the summation over
 common indices in products of tensors) is very user friendly and
 elegant in python when `numpy.einsum` is used.
-
-
-!split
-===== Shell-model project  =====
-!bblock
-For our project, we will only consider the pairing model.
-A simple space is the $(1/2)^2$ space with four single-particle states
-
-|-----------------------------------|
-|Index | $n$   | $l$     | $s$ |  $m_s$  |
-|-----------------------------------|
-|1 |    0  |     0 |     1/2 |    -1/2  |
-|2 |    0  |   0   |   1/2   |   1/2    |
-|3 |    1  |   0   |   1/2   |  -1/2    |
-|4 |    1  |   0   |   1/2   |   1/2    |
-|-----------------------------------|
-
-For $N=2$ there are 4 states with $M=0$; show this by hand and confirm your code reproduces it. 
-
-!eblock
-
-!split
-===== Shell-model project  =====
-!bblock
-Another, slightly more challenging space is the $(1/2)^4$ space, that is, 
-with eight  single-particle states we have
-
-|----------------------------------------|
-|Index | $n$   | $l$     | $s$ |  $m_s$  |
-|----------------------------------------|
-|1  |   0  |   0   |   1/2   |  -1/2   |
-|2  |   0  |   0   |   1/2   |   1/2    |
-|3  |   1  |   0   |   1/2   |  -1/2    |
-|4  |   1  |   0   |   1/2   |   1/2    |
-|5  |   2  |   0   |   1/2   |  -1/2    |
-|6  |   2  |   0   |   1/2   |   1/2    |
-|7  |   3  |   0   |   1/2   |  -1/2    |
-|8  |   3  |   0   |   1/2   |   1/2    |
-|----------------------------------------|
-
-For $N=2$ there are 16 states with $M=0$; for $N=3$ there are 24 states with $M=1/2$, and for 
-$N=4$ there are 36 states with $M=0$. 
-!eblock
-
-!split
-===== Shell-model project  =====
-!bblock
-In the shell-model context we can interpret this as 4 $s_{1/2}$ levels, with $m = \pm 1/2$, we can also think of these are simple four pairs,  $\pm k, k = 1,2,3,4$. Later on we will 
-assign single-particle energies,  depending on the radial quantum number $n$, that is, 
-$\epsilon_k = |k| \delta$ so that they are equally spaced.
-!eblock
-
-!split
-===== Shell-model project  =====
-!bblock
- 
-For application in the pairing model we can go further and consider only states with 
-no ``broken pairs,'' that is, if $+k$ is filled (or $m = +1/2$, so is $-k$ ($m=-1/2$). 
-If you want, you can write your code to accept only these, and obtain the following 
-six states:
-
-* $|           1,           2 ,          3         ,       4  \rangle , $
-
-* $|            1      ,     2        ,        5         ,       6 \rangle , $
-
-* $|            1         ,       2     ,           7         ,       8  \rangle , $
-
-* $|            3        ,        4      ,          5          ,      6  \rangle , $
-
-* $|            3        ,        4      ,          7         ,       8  \rangle , $
-
-* $|            5        ,        6     ,           7     ,           8  \rangle $
-!eblock
-
-
-
-!split
-===== Example case: pairing Hamiltonian =====
-!bblock
-
-We consider a space with $2\Omega$ single-particle states, with each 
-state labeled by 
-$k = 1, 2, 3, \Omega$ and $m = \pm 1/2$. The convention is that 
-the state with $k>0$ has $m = + 1/2$ while $-k$ has $m = -1/2$.
-
-
-The Hamiltonian we consider is 
-!bt
-\[
-\hat{H} = -G \hat{P}_+ \hat{P}_-,
-\]
-!et
-where
-!bt
-\[
-\hat{P}_+ = \sum_{k > 0} \hat{a}^\dagger_k \hat{a}^\dagger_{-{k}}.
-\]
-!et
-and $\hat{P}_- = ( \hat{P}_+)^\dagger$.
-
-This problem can be solved using what is called the quasi-spin formalism to obtain the 
-exact results. Thereafter we will try again using the explicit Slater determinant formalism.
-!eblock
-
-
-
-!split
-===== Example case: pairing Hamiltonian =====
-!bblock
-
-One can show that
-!bt
-\[
-\left [ \hat{P}_+, \hat{P}_- \right ] = \sum_{k> 0} \left( \hat{a}^\dagger_k \hat{a}_k 
-+ \hat{a}^\dagger_{-{k}} \hat{a}_{-{k}} - 1 \right) = \hat{N} - \Omega.
-\]
-!et
-Now define 
-!bt
-\[
-\hat{P}_z = \frac{1}{2} ( \hat{N} -\Omega).
-\]
-!et
-Finally you can show
-!bt
-\[
-\left [ \hat{P}_z , \hat{P}_\pm \right ] = \pm \hat{P}_\pm.
-\]
-!et
-This means the operators $\hat{P}_\pm, \hat{P}_z$ form a so-called  $SU(2)$ algebra, and we can 
-use all our insights about angular momentum, even though there is no actual 
-angular momentum involved.
-
-So we rewrite the Hamiltonian to make this explicit:
-!bt
-\[
-\hat{H} = -G \hat{P}_+ \hat{P}_- 
-= -G \left( \hat{P}^2 - \hat{P}_z^2 + \hat{P}_z\right)
-\]
-!et
-
-!eblock
-
-!split
-===== Example case: pairing Hamiltonian =====
-!bblock
-
-Because of the SU(2) algebra, we know that the eigenvalues of 
-$\hat{P}^2$ must be of the form $p(p+1)$, with $p$ either integer or half-integer, and the eigenvalues of $\hat{P}_z$ 
-are $m_p$ with $p \geq | m_p|$, with $m_p$ also integer or half-integer. 
-
-
-But because $\hat{P}_z = (1/2)(\hat{N}-\Omega)$, we know that for $N$ particles 
-the value $m_p = (N-\Omega)/2$. Furthermore, the values of $m_p$ range from 
-$-\Omega/2$ (for $N=0$) to $+\Omega/2$ (for $N=2\Omega$, with all states filled). 
-
-We deduce the maximal $p = \Omega/2$ and for a given $n$ the 
-values range of $p$ range from $|N-\Omega|/2$ to $\Omega/2$ in steps of 1 
-(for an even number of particles) 
-
-
-Following Racah we introduce the notation
-$p = (\Omega - v)/2$
-where $v = 0, 2, 4,..., \Omega - |N-\Omega|$ 
-With this it is easy to deduce that the eigenvalues of the pairing Hamiltonian are
-!bt
-\[
--G(N-v)(2\Omega +2-N-v)/4
-\]
-!et
-This also works for $N$ odd, with $v= 1,3,5, \dots$.
-!eblock
-
-
-!split
-===== Example case: pairing Hamiltonian =====
-!bblock
-
-Let's take a specific example: $\Omega = 3$ so there are 6 single-particle states, 
-and $N = 3$, with $v= 1,3$. Therefore there are two distinct eigenvalues, 
-!bt
-\[
-E = -2G, 0
-\]
-!et
-Now let's work this out explicitly. The single particle degrees of freedom are defined as
-
-|----------------------------------------|
-|Index | $k$   | $m$                     | 
-|----------------------------------------|
-| 1 | 1 | -1/2   | 
-| 2 | -1 | 1/2 |
-| 3 | 2 | -1/2  |
-| 4 | -2 | 1/2 |
-| 5 | 3 | -1/2 |
-| 6 | -3 | 1/2 |
-|----------------------------------------|
-
- There are  $\left( \begin{array}{c}6 \\ 3 \end{array} \right) = 20$ three-particle states, but there 
-are 9 states with $M = +1/2$, namely
-$| 1,2,3 \rangle, |1,2,5\rangle, | 1,4,6 \rangle, | 2,3,4 \rangle, |2,3,6 \rangle, | 2,4,5 \rangle, | 2, 5, 6 \rangle, |3,4,6 \rangle, | 4,5,6 \rangle$.
-
-!eblock
-
-
-
-
-
-!split
-===== Example case: pairing Hamiltonian =====
-!bblock
-
-In this basis, the operator 
-!bt
-\[
-\hat{P}_+
-= \hat{a}^\dagger_1 \hat{a}^\dagger_2 + \hat{a}^\dagger_3 \hat{a}^\dagger_4 +
-\hat{a}^\dagger_5 \hat{a}^\dagger_6 
-\]
-!et
-From this we can determine that 
-!bt
-\[
-\hat{P}_- | 1, 4, 6 \rangle = \hat{P}_- | 2, 3, 6 \rangle
-= \hat{P}_- | 2, 4, 5 \rangle = 0
-\]
-!et
-so those states all have eigenvalue 0.
-!eblock
-
-
-!split
-===== Example case: pairing Hamiltonian =====
-!bblock
-Now for further example, 
-!bt
-\[
-\hat{P}_- | 1,2,3 \rangle = | 3 \rangle
-\]
-!et
-so
-!bt
-\[
-\hat{P}_+ \hat{P}_- | 1,2,3\rangle = | 1,2,3\rangle+ | 3,4,3\rangle + | 5,6,3\rangle
-\]
-!et
-The second term vanishes because state 3 is occupied twice, and reordering the last 
-term we
-get
-!bt
-\[
-\hat{P}_+ \hat{P}_- | 1,2,3\rangle = | 1,2,3\rangle+ |3, 5,6\rangle
-\]
-!et
-without picking up a phase.
-!eblock
-
-!split
-===== Example case: pairing Hamiltonian =====
-!bblock
-
-Continuing in this fashion, with the previous ordering of the many-body states
-(  $| 1,2,3 \rangle, |1,2,5\rangle, | 1,4,6 \rangle, | 2,3,4 \rangle, |2,3,6 \rangle, | 2,4,5 \rangle, | 2, 5, 6 \rangle, |3,4,6 \rangle, | 4,5,6 \rangle$) the 
-Hamiltonian matrix of this system is 
-!bt
-\[
-H = -G\left( 
-\begin{array}{ccccccccc}
-1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1  \\
-0 & 1 & 0 & 0 & 0 & 0 & 0 & 1 & 0  \\
-0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0  \\
-0 & 0 & 0 & 1 & 0 & 0 & 1 & 0 & 0  \\
-0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0  \\
-0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0  \\
-0 & 0 & 0 & 1 & 0 & 0 & 1 & 0 & 0  \\
-0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0  \\
-0 & 1 & 0 & 0 & 0 & 0 & 0 & 1 & 0  \\
-1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1  
-\end{array} \right )
-\] 
-!et
-This is useful for our project.  One can by hand confirm 
-that there are 3 eigenvalues $-2G$ and 6 with value zero.
-
-!eblock
-
-!split
-===== Example case: pairing Hamiltonian =====
-!bblock
-
-Another example
-Using the $(1/2)^4$ single-particle space, resulting in eight single-particle states
-
-|----------------------------------------|
-|Index | $n$   | $l$     | $s$ |  $m_s$  |
-|----------------------------------------|
-|1  |   0  |   0   |   1/2   |  -1/2   |
-|2  |   0  |   0   |   1/2   |   1/2    |
-|3  |   1  |   0   |   1/2   |  -1/2    |
-|4  |   1  |   0   |   1/2   |   1/2    |
-|5  |   2  |   0   |   1/2   |  -1/2    |
-|6  |   2  |   0   |   1/2   |   1/2    |
-|7  |   3  |   0   |   1/2   |  -1/2    |
-|8  |   3  |   0   |   1/2   |   1/2    |
-|----------------------------------------|
-
-and then taking only 4-particle, $M=0$ states that have no `broken pairs', there are six basis Slater 
-determinants:
-
-* $|           1,           2 ,          3         ,       4  \rangle , $
-
-* $|            1      ,     2        ,        5         ,       6 \rangle , $
-
-* $|            1         ,       2     ,           7         ,       8  \rangle , $
-
-* $|            3        ,        4      ,          5          ,      6  \rangle , $
-
-* $|            3        ,        4      ,          7         ,       8  \rangle , $
-
-* $|            5        ,        6     ,           7     ,           8  \rangle $
-
-!eblock
-
-!split
-===== Example case: pairing Hamiltonian =====
-!bblock
-
-Now we take the following Hamiltonian
-!bt
-\[
-\hat{H} = \sum_n n \delta \hat{N}_n  - G \hat{P}^\dagger \hat{P}
-\]
-!et
-where 
-!bt
-\[
-\hat{N}_n = \hat{a}^\dagger_{n, m=+1/2} \hat{a}_{n, m=+1/2} +
-\hat{a}^\dagger_{n, m=-1/2} \hat{a}_{n, m=-1/2}
-\]
-!et
-and
-!bt 
-\[
-\hat{P}^\dagger = \sum_{n} \hat{a}^\dagger_{n, m=+1/2} \hat{a}^\dagger_{n, m=-1/2} 
-\]
-!et
-We can write down the $ 6 \times 6$  Hamiltonian in the basis from the prior slide:
-!bt
-\[
-H = \left ( 
-\begin{array}{cccccc}
-2\delta -2G & -G & -G & -G & -G & 0 \\
- -G & 4\delta -2G & -G & -G & -0 & -G \\
--G & -G & 6\delta -2G & 0 & -G & -G \\
- -G & -G & 0 & 6\delta-2G & -G & -G \\
- -G & 0 & -G & -G & 8\delta-2G & -G \\
-0 & -G & -G & -G & -G & 10\delta -2G 
-\end{array} \right )
-\]
-!et
-(You should check by hand that this is correct.) 
-
-For $\delta = 0$ we have the closed form solution of  the g.s. energy given by $-6G$.
-
-!eblock
 
 

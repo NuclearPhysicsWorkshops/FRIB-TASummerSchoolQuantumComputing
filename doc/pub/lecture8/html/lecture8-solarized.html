@@ -175,6 +175,28 @@ div.toc p,a {
                2,
                None,
                'fci-equation-and-the-coefficients'),
+              ('Pairing model single-particle basis states',
+               2,
+               None,
+               'pairing-model-single-particle-basis-states'),
+              ('More single-particle basis states',
+               2,
+               None,
+               'more-single-particle-basis-states'),
+              ('Pairing model', 2, None, 'pairing-model'),
+              ('Shell-model project', 2, None, 'shell-model-project'),
+              ('Example case: pairing Hamiltonian',
+               2,
+               None,
+               'example-case-pairing-hamiltonian'),
+              ('Example case: pairing Hamiltonian',
+               2,
+               None,
+               'example-case-pairing-hamiltonian'),
+              ('Example case: pairing Hamiltonian',
+               2,
+               None,
+               'example-case-pairing-hamiltonian'),
               ('Example case: pairing Hamiltonian',
                2,
                None,
@@ -184,16 +206,17 @@ div.toc p,a {
                1,
                None,
                'the-normal-ordered-hamiltonian'),
-              ('Exercise 1: Practice in normal ordering', 2, 'ex-1', 'ex-1'),
-              ('', 2, None, ''),
+              ('Exercise 1: Practice in normal ordering',
+               2,
+               None,
+               'exercise-1-practice-in-normal-ordering'),
+              ('Reordering', 2, None, 'reordering'),
               ("Exercise 2: What does ``good'' mean?", 2, 'ex-2', 'ex-2'),
-              ('', 2, None, ''),
               ('Exercise 3: How many nuclei are accessible with the coupled '
                'cluster method based on spherical mean fields?',
                2,
                'ex-3',
                'ex-3'),
-              ('', 2, None, ''),
               ('The similarity transformed Hamiltonian',
                1,
                None,
@@ -202,70 +225,45 @@ div.toc p,a {
                2,
                'ex-4',
                'ex-4'),
-              ('', 2, None, ''),
               ('Exercise 5: Understanding (non-unitary) similarity '
                'transformations',
                2,
                'ex-5',
                'ex-5'),
-              ('', 2, None, ''),
+              ('Cluster operators', 2, None, 'cluster-operators'),
               ('Exercise 6: How many unknowns?', 2, 'ex-6', 'ex-6'),
-              ('', 2, None, ''),
+              ('Approximations', 2, None, 'approximations'),
+              ('Structure of equations', 2, None, 'structure-of-equations'),
               ('Exercise 7: Why is CCD not exact?', 2, 'ex-6b', 'ex-6b'),
-              ('', 2, None, ''),
               ('Computing the similarity-transformed Hamiltonian',
                1,
                None,
                'computing-the-similarity-transformed-hamiltonian'),
               ('Exercise 8: When does CCSD truncate?', 2, 'ex-7', 'ex-7'),
-              ('', 2, None, ''),
+              ('Non-hermiticity', 2, None, 'non-hermiticity'),
               ('Exercise 9: Compute the matrix element '
                '$\\overline{H}_{ab}^{ij}\\equiv \\langle ij\\vert '
                '\\overline{H_N}\\vert ab\\rangle$',
                2,
                'ex-8',
                'ex-8'),
-              ('', 2, None, ''),
               ('Example: The contribution of $[F, T_2]$ to $\\overline{H_N}$',
                2,
                'ex-9',
                'ex-9'),
-              ('', 2, None, ''),
-              ('Diagrams', 3, None, 'diagrams'),
-              ('Exercise 10: Assign the correct matrix element $\\langle '
-               'pq\\vert V\\vert rs\\rangle$ to each of the following diagrams '
-               'of the interaction',
-               2,
-               'ex-10',
-               'ex-10'),
-              ('', 2, None, ''),
-              ('Example: CCSD correlation energy', 2, 'ex-11', 'ex-11'),
-              ('', 2, None, ''),
-              ('CCD Approximation', 1, None, 'ccd-approximation'),
-              ('Exercise 11: Derive the CCD equations!', 2, 'ex-12', 'ex-12'),
-              ('', 2, None, ''),
-              ('Exercise 12: Computational scaling of CCD',
+              ('CCD Approximation', 2, None, 'ccd-approximation'),
+              ('Exercise 10: Derive the CCD equations!', 2, 'ex-12', 'ex-12'),
+              ('Exercise 11: Computational scaling of CCD',
                2,
                'ex-13',
                'ex-13'),
-              ('', 2, None, ''),
-              ('Exercise 13: Factorize the remaining diagrams of the CCD '
-               'equation',
-               2,
-               'ex-14',
-               'ex-14'),
-              ('', 2, None, ''),
-              ('Project 14: (Optional) Derive the CCSD equations!',
-               2,
-               'ex-15',
-               'ex-15'),
-              ('', 2, None, ''),
+              ('Computational costs', 2, None, 'computational-costs'),
               ('Solving the CCD equations',
                2,
                None,
                'solving-the-ccd-equations'),
               ('CCD for the pairing Hamiltonian',
-               1,
+               2,
                None,
                'ccd-for-the-pairing-hamiltonian')]}
 end of tocinfo -->
@@ -302,7 +300,7 @@ MathJax.Hub.Config({
 </center>
 <br>
 <center>
-<h4>Jun 18, 2022</h4>
+<h4>Jun 20, 2022</h4>
 </center> <!-- date -->
 <br>
 
@@ -328,9 +326,12 @@ string will always produce the same output.
 
 <!-- !split --><br><br><br><br><br><br><br><br><br><br>
 <h2 id="quantum-computing">Quantum computing </h2>
+
 <p>How quantum computing differs from classical computing can partly be
 illustrated by looking at the surface of the unit Bloch sphere discussed in earlier lectures.
-A classical bit must either be in the \( \vert 0\rangle \) state
+</p>
+
+<p>A classical bit must either be in the \( \vert 0\rangle \) state
 at the surface on the north pole, or in the \( \vert 1\rangle \) state at the
 surface on the south pole; the quantum bit, namely a qubit, can be in
 a state located anywhere on the surface of the Block sphere. The qubit
@@ -351,6 +352,7 @@ are normalized, that is \( |c_0|^2 + |c_1|^2 = 1 \).
 
 <!-- !split --><br><br><br><br><br><br><br><br><br><br>
 <h2 id="slater-determinants-as-basis-states-fermionic-problems">Slater determinants as basis states, Fermionic problems </h2>
+
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
@@ -996,12 +998,189 @@ $$
 
 
 <!-- !split --><br><br><br><br><br><br><br><br><br><br>
+<h2 id="pairing-model-single-particle-basis-states">Pairing model single-particle basis states  </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+<p>We will as a model for studies of quantum computing algorithms use the nuclear pairing model.
+In order to define the problem, we need first to define a single-particle space.
+A simple space is the \( (1/2)^2 \) space with four single-particle states, using the quantum numbers
+\( (n,l,s,m_s) \):
+</p>
+
+<ul>
+<li> Single-particle state 1:   \( n=0 \) ,      \( l=0 \) ,     \( s=1/2 \) ,    \( m_s=-1/2 \)</li>
+<li> Single-particle state 2:   \( n=0 \) ,      \( l=0 \) ,     \( s=1/2 \) ,    \( m_s=1/2 \)</li>
+<li> Single-particle state 3:   \( n=1 \) ,      \( l=0 \) ,     \( s=1/2 \) ,    \( m_s=-1/2 \)</li>
+<li> Single-particle state 4:   \( n=1 \) ,      \( l=0 \) ,     \( s=1/2 \) ,    \( m_s=1/2 \)</li>
+</ul>
+<p>For \( N=2 \) there are 4 two-particle states with total spin project \( M=0 \). Two of these correspond to no broken pairs.</p>
+</div>
+
+
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+<h2 id="more-single-particle-basis-states">More single-particle basis states  </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+<p>Another, slightly more challenging space is the \( (1/2)^4 \) space, that is, 
+with eight  single-particle states we have
+</p>
+
+<ul>
+<li> Single-particle state 1:   \( n=0 \) ,      \( l=0 \) ,     \( s=1/2 \) ,    \( m_s=-1/2 \)</li>
+<li> Single-particle state 2:   \( n=0 \) ,      \( l=0 \) ,     \( s=1/2 \) ,    \( m_s=1/2 \)</li>
+<li> Single-particle state 3:   \( n=1 \) ,      \( l=0 \) ,     \( s=1/2 \) ,    \( m_s=-1/2 \)</li>
+<li> Single-particle state 4:   \( n=1 \) ,      \( l=0 \) ,     \( s=1/2 \) ,    \( m_s=1/2 \)</li>
+<li> Single-particle state 5:   \( n=2 \) ,      \( l=0 \) ,     \( s=1/2 \) ,    \( m_s=-1/2 \)</li>
+<li> Single-particle state 6:   \( n=2 \) ,      \( l=0 \) ,     \( s=1/2 \) ,    \( m_s=1/2 \)</li>
+<li> Single-particle state 7:   \( n=3 \) ,      \( l=0 \) ,     \( s=1/2 \) ,    \( m_s=-1/2 \)</li>
+<li> Single-particle state 8:   \( n=3 \) ,      \( l=0 \) ,     \( s=1/2 \) ,    \( m_s=1/2 \)</li>
+</ul>
+</div>
+
+
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+<h2 id="pairing-model">Pairing model  </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+<p>In a nuclear  shell-model context we can interpret this as 4 \( s_{1/2} \) levels, with \( m = \pm 1/2 \), we can also think of these as four pairs if don't break any pairs,  \( \pm k, k = 1,2,3,4 \). For a more realistic nuclear physics shell-model case, we 
+assign single-particle energies,  depending on the radial quantum number \( n \), that is, 
+\( \epsilon_k = |k| \delta \) so that they are equally spaced.
+</p>
+</div>
+
+
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+<h2 id="shell-model-project">Shell-model project  </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+
+<p>For application in the pairing model we can go further and consider only states with 
+no &quot;broken pairs,&quot; that is, if \( +k \) is filled (or \( m = +1/2 \), so is \( -k \) (\( m=-1/2 \)). 
+If you want, you can write your code to accept only these, and obtain the following 
+six states:
+</p>
+
+<ul>
+<li> \( |           1,           2 ,          3         ,       4  \rangle ,  \)</li>
+<li> \( |            1      ,     2        ,        5         ,       6 \rangle ,  \)</li>
+<li> \( |            1         ,       2     ,           7         ,       8  \rangle ,  \)</li>
+<li> \( |            3        ,        4      ,          5          ,      6  \rangle ,  \)</li>
+<li> \( |            3        ,        4      ,          7         ,       8  \rangle ,  \)</li>
+<li> \( |            5        ,        6     ,           7     ,           8  \rangle  \)</li>
+</ul>
+</div>
+
+
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 <h2 id="example-case-pairing-hamiltonian">Example case: pairing Hamiltonian </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b></b>
 <p>
 
-<p>Now we take the following Hamiltonian</p>
+<p>We consider a space with \( 2\Omega \) single-particle states, with each 
+state labeled by 
+\( k = 1, 2, 3, \Omega \) and \( m = \pm 1/2 \). The convention is that 
+the state with \( k>0 \) has \( m = + 1/2 \) while \( -k \) has \( m = -1/2 \).
+</p>
+
+<p>The Hamiltonian we consider is </p>
+$$
+\hat{H} = -G \hat{P}_+ \hat{P}_-,
+$$
+
+<p>where</p>
+$$
+\hat{P}_+ = \sum_{k > 0} \hat{a}^\dagger_k \hat{a}^\dagger_{-{k}}.
+$$
+
+<p>and \( \hat{P}_- = ( \hat{P}_+)^\dagger \).</p>
+
+<p>This problem can be solved using what is called the quasi-spin formalism to obtain the 
+exact results. Thereafter we will try again using the explicit Slater determinant formalism.
+</p>
+</div>
+
+
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+<h2 id="example-case-pairing-hamiltonian">Example case: pairing Hamiltonian </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+
+<p>One can show that</p>
+$$
+\left [ \hat{P}_+, \hat{P}_- \right ] = \sum_{k> 0} \left( \hat{a}^\dagger_k \hat{a}_k 
++ \hat{a}^\dagger_{-{k}} \hat{a}_{-{k}} - 1 \right) = \hat{N} - \Omega.
+$$
+
+<p>Now define </p>
+$$
+\hat{P}_z = \frac{1}{2} ( \hat{N} -\Omega).
+$$
+
+<p>Finally you can show</p>
+$$
+\left [ \hat{P}_z , \hat{P}_\pm \right ] = \pm \hat{P}_\pm.
+$$
+
+<p>This means the operators \( \hat{P}_\pm, \hat{P}_z \) form a so-called  \( SU(2) \) algebra, and we can 
+use all our insights about angular momentum, even though there is no actual 
+angular momentum involved.
+</p>
+
+<p>So we rewrite the Hamiltonian to make this explicit:</p>
+$$
+\hat{H} = -G \hat{P}_+ \hat{P}_- 
+= -G \left( \hat{P}^2 - \hat{P}_z^2 + \hat{P}_z\right)
+$$
+</div>
+
+
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+<h2 id="example-case-pairing-hamiltonian">Example case: pairing Hamiltonian </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+
+<p>Because of the SU(2) algebra, we know that the eigenvalues of 
+\( \hat{P}^2 \) must be of the form \( p(p+1) \), with \( p \) either integer or half-integer, and the eigenvalues of \( \hat{P}_z \) 
+are \( m_p \) with \( p \geq | m_p| \), with \( m_p \) also integer or half-integer. 
+</p>
+
+<p>But because \( \hat{P}_z = (1/2)(\hat{N}-\Omega) \), we know that for \( N \) particles 
+the value \( m_p = (N-\Omega)/2 \). Furthermore, the values of \( m_p \) range from 
+\( -\Omega/2 \) (for \( N=0 \)) to \( +\Omega/2 \) (for \( N=2\Omega \), with all states filled). 
+</p>
+
+<p>We deduce the maximal \( p = \Omega/2 \) and for a given \( n \) the 
+values range of \( p \) range from \( |N-\Omega|/2 \) to \( \Omega/2 \) in steps of 1 
+(for an even number of particles) 
+</p>
+
+<p>Following Racah we introduce the notation
+\( p = (\Omega - v)/2 \)
+where \( v = 0, 2, 4,..., \Omega - |N-\Omega| \) 
+With this it is easy to deduce that the eigenvalues of the pairing Hamiltonian are
+</p>
+$$
+-G(N-v)(2\Omega +2-N-v)/4
+$$
+
+<p>This also works for \( N \) odd, with \( v= 1,3,5, \dots \).</p>
+</div>
+
+
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+<h2 id="example-case-pairing-hamiltonian">Example case: pairing Hamiltonian </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b></b>
+<p>
+
+<p>The Hamiltonian is defined as</p>
 $$
 \hat{H} = \sum_n n \delta \hat{N}_n  - G \hat{P}^\dagger \hat{P}
 $$
@@ -1108,12 +1287,10 @@ with respect to that vaccum. Normal ordering implies that \( \langle
 \Phi_0\vert H_N\vert \Phi_0\rangle = 0 \).
 </p>
 
-<div class="alert alert-block alert-block alert-text-normal">
-<b></b>
-<p>
+<p>!Pslit</p>
 
 <!-- --- begin exercise --- -->
-<h2 id="ex-1">Exercise 1: Practice in normal ordering</h2>
+<h2 id="exercise-1-practice-in-normal-ordering">Exercise 1: Practice in normal ordering </h2>
 
 <p>Normal order the expression \( \sum\limits_{pq}\varepsilon_q^p a^\dagger_p a_q \).</p>
 
@@ -1168,10 +1345,9 @@ $$
 <!-- --- end answer of exercise --- -->
 
 <!-- --- end exercise --- -->
-<h2><a name=""></a></h2>
-</div>
 
-
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+<h2 id="reordering">Reordering </h2>
 <p>We note that \( H = E_{HF} + H_N \), where</p>
 
 $$
@@ -1187,15 +1363,18 @@ when a &quot;good&quot; reference state is available. Let us assume that the
 reference state results from a Hartree-Fock calculation.
 </p>
 
-<div class="alert alert-block alert-block alert-text-normal">
-<b></b>
-<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <!-- --- begin exercise --- -->
 <h2 id="ex-2">Exercise 2: What does &quot;good&quot; mean?</h2>
 
 <p>How do you know whether a Hartree-Fock state is a &quot;good&quot; reference?
 Which results of the Hartree-Fock computation will inform you?
+</p>
+
+<p>If symmetry-restricted Hartree-Fock is used, one is limited to compute
+nuclei with closed subshells for neutrons and for protons. On a first
+view, this might seem as a severe limitation. But is it?
 </p>
 
 <!-- --- begin answer of exercise --- -->
@@ -1211,18 +1390,8 @@ are filled.
 <!-- --- end answer of exercise --- -->
 
 <!-- --- end exercise --- -->
-<h2><a name=""></a></h2>
-</div>
 
-
-<p>If symmetry-restricted Hartree-Fock is used, one is limited to compute
-nuclei with closed subshells for neutrons and for protons. On a first
-view, this might seem as a severe limitation. But is it? 
-</p>
-
-<div class="alert alert-block alert-block alert-text-normal">
-<b></b>
-<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <!-- --- begin exercise --- -->
 <h2 id="ex-3">Exercise 3: How many nuclei are accessible with the coupled cluster method based on spherical mean fields?</h2>
@@ -1258,13 +1427,12 @@ neighbors of nuclei with closed subshells.
 <!-- --- end answer of exercise --- -->
 
 <!-- --- end exercise --- -->
-<h2><a name=""></a></h2>
-</div>
 
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 <h1 id="the-similarity-transformed-hamiltonian">The similarity transformed Hamiltonian </h1>
 
 <p>There are several ways to view and understand the coupled-cluster
-method. A first simple view of coupled-cluster theory is that the
+method. A first simple view of coupled cluster theory is that the
 method induces correlations into the reference state by expressing a
 correlated state as
 </p>
@@ -1307,14 +1475,16 @@ reference state \eqref{HFref} becomes an exact eigenstate of the
 similarity-transformed Hamiltonian \eqref{Hsim}.
 </p>
 
-<div class="alert alert-block alert-block alert-text-normal">
-<b></b>
-<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <!-- --- begin exercise --- -->
 <h2 id="ex-4">Exercise 4: What \( T \) leads to Hermitian \( \overline{H_N} \) ?</h2>
 
 <p>What are the conditions on \( T \) such that \( \overline{H_N} \) is Hermitian?</p>
+
+<p>As we will see below, coupled cluster theory employs a non-Hermitian Hamiltonian.
+Replacing ordinary coupled cluster theory with the unitary coupled cluster approach, gives a many-body which is hermitian and obeys the variational principle.
+</p>
 
 <!-- --- begin answer of exercise --- -->
 <p>
@@ -1326,15 +1496,8 @@ anti-Hermitian \( T \) with \( T = -T^\dagger \)
 <!-- --- end answer of exercise --- -->
 
 <!-- --- end exercise --- -->
-<h2><a name=""></a></h2>
-</div>
 
-
-<p>As we will see below, coupled cluster theory employs a non-Hermitian Hamiltonian.</p>
-
-<div class="alert alert-block alert-block alert-text-normal">
-<b></b>
-<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <!-- --- begin exercise --- -->
 <h2 id="ex-5">Exercise 5: Understanding (non-unitary) similarity transformations</h2>
@@ -1380,10 +1543,9 @@ $$
 <!-- --- end answer of exercise --- -->
 
 <!-- --- end exercise --- -->
-<h2><a name=""></a></h2>
-</div>
 
-
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+<h2 id="cluster-operators">Cluster operators </h2>
 <p>To make progress, we have to specify the cluster operator \( T \). In
 coupled cluster theory, this operator is
 </p>
@@ -1404,9 +1566,7 @@ up to \( Ap-Ah \) excitations, and the unknown parameters are the cluster amplit
 \( t_i^a \), \( t_{ij}^{ab} \), ..., \( t_{i_1,\ldots,i_A}^{a_1,\ldots,a_A} \).
 </p>
 
-<div class="alert alert-block alert-block alert-text-normal">
-<b></b>
-<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <!-- --- begin exercise --- -->
 <h2 id="ex-6">Exercise 6: How many unknowns?</h2>
@@ -1435,10 +1595,9 @@ $$
 <!-- --- end answer of exercise --- -->
 
 <!-- --- end exercise --- -->
-<h2><a name=""></a></h2>
-</div>
 
-
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+<h2 id="approximations">Approximations </h2>
 <p>Thus, the coupled-cluster method with the full cluster operator
 \eqref{Top} is exponentially expensive, just as FCI. To make progress,
 we need to make an approximation by truncating the operator. Here, we
@@ -1480,6 +1639,10 @@ $$
 \end{align}
 $$
 
+
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+<h2 id="structure-of-equations">Structure of equations </h2>
+
 <p>The first equation states that the coupled-cluster correlation energy
 is an expectation value of the similarity-transformed Hamiltonian. The
 second and third equations state that the similarity-transformed
@@ -1513,9 +1676,7 @@ light, the coupled-cluster method &quot;transforms&quot; an \( A \)-body problem
 vacuum.
 </p>
 
-<div class="alert alert-block alert-block alert-text-normal">
-<b></b>
-<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <!-- --- begin exercise --- -->
 <h2 id="ex-6b">Exercise 7: Why is CCD not exact?</h2>
@@ -1538,9 +1699,8 @@ from 2p-2h states.
 <!-- --- end answer of exercise --- -->
 
 <!-- --- end exercise --- -->
-<h2><a name=""></a></h2>
-</div>
 
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 <h1 id="computing-the-similarity-transformed-hamiltonian">Computing the similarity-transformed Hamiltonian </h1>
 
 <p>The solution of the CCSD equations, i.e. the second and third line of
@@ -1570,9 +1730,7 @@ because each \( T \) must connect to \( H_N \) (but no \( T \) with another
 \( T \)). Thus, the expansion is finite.
 </p>
 
-<div class="alert alert-block alert-block alert-text-normal">
-<b></b>
-<p>
+!splitk
 
 <!-- --- begin exercise --- -->
 <h2 id="ex-7">Exercise 8: When does CCSD truncate?</h2>
@@ -1593,9 +1751,9 @@ because each of the four annihilation and creation operators in
 <!-- --- end answer of exercise --- -->
 
 <!-- --- end exercise --- -->
-<h2><a name=""></a></h2>
-</div>
 
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+<h2 id="non-hermiticity">Non-hermiticity </h2>
 
 <p>We see that the (disadvantage of having a) non-Hermitian Hamiltonian
 \( \overline{H_N} \) leads to the advantage that the
@@ -1629,12 +1787,16 @@ $$
 \( \overline{H}_i^a = 0 \) and \( \overline{H}_{ij}^{ab}=0 \).
 </p>
 
-<div class="alert alert-block alert-block alert-text-normal">
-<b></b>
-<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <!-- --- begin exercise --- -->
 <h2 id="ex-8">Exercise 9: Compute the matrix element \( \overline{H}_{ab}^{ij}\equiv \langle ij\vert \overline{H_N}\vert ab\rangle \)</h2>
+
+<p>We need to work out the similarity-transformed Hamiltonian of
+Eq. \eqref{BCH}. To do this, we write \( T=T_1 +T_2 \) and \( H_N= F +V \),
+where \( T_1 \) and \( F \) are one-body operators, and \( T_2 \) and \( V \) are
+two-body operators.
+</p>
 
 <!-- --- begin answer of exercise --- -->
 <p>
@@ -1650,19 +1812,8 @@ have \( \overline{H}_{ab}^{ij} = \langle ij\vert V\vert ab\rangle \).
 <!-- --- end answer of exercise --- -->
 
 <!-- --- end exercise --- -->
-<h2><a name=""></a></h2>
-</div>
 
-
-<p>We need to work out the similarity-transformed Hamiltonian of
-Eq. \eqref{BCH}. To do this, we write \( T=T_1 +T_2 \) and \( H_N= F +V \),
-where \( T_1 \) and \( F \) are one-body operators, and \( T_2 \) and \( V \) are
-two-body operators.
-</p>
-
-<div class="alert alert-block alert-block alert-text-normal">
-<b></b>
-<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 <h2 id="ex-9">Example: The contribution of \( [F, T_2] \) to \( \overline{H_N} \)</h2>
 
 <p>The commutator \( [F, T_2] \) consists of two-body and one-body terms. Let
@@ -1713,216 +1864,9 @@ but somewhat tedious. As no one likes to commute too much (neither in
 this example nor when going to and from work), and so we need a better
 approach. This is where diagramms come in handy.
 </p>
-<h2><a name=""></a></h2>
-</div>
 
-<h3 id="diagrams">Diagrams  </h3>
-<p>The pictures in this Subsection are taken from Crawford and Schaefer.</p>
-
-<p>By convention, hole lines (labels \( i, j, k,\ldots \)) are pointing down. </p>
-
-<center> <!-- figure label: --> <div id="fig-i"></div> <!-- FIGURE -->
-<hr class="figure">
-<center>
-<p class="caption">Figure 1:  This is a hole line.  <!-- caption label: fig-i --> </p>
-</center>
-<p><img src="figslides/Diagram-i.png" height="120" align="bottom"></p>
-</center>
-
-<p>By convention, particle lines (labels \( a, b, c,\ldots \)) are pointing up. </p>
-
-<center> <!-- figure label: --> <div id="fig-a"></div> <!-- FIGURE -->
-<hr class="figure">
-<center>
-<p class="caption">Figure 2:  This is a particle line.  <!-- caption label: fig-a --> </p>
-</center>
-<p><img src="figslides/Diagram-a.png" height="120" align="bottom"></p>
-</center>
-
-<p>Let us look at the one-body operator of the normal-ordered Hamiltonian, i.e. Fock matrix. Its diagrams are as follows.</p>
-
-<center> <!-- figure label: --> <div id="fig-fab"></div> <!-- FIGURE -->
-<hr class="figure">
-<center>
-<p class="caption">Figure 3:  The diagrams corresponding to \( f_a^b \). The dashed line with the 'X' denotes the interaction \( F \) between the incoming and outgoing lines. The labels \( a \) and \( b \) are not denoted, but you should label the outgoing and incoming lines accordingly.  <!-- caption label: fig-fab --> </p>
-</center>
-<p><img src="figslides/Diagram-fab.png" height="120" align="bottom"></p>
-</center>
-
-<center> <!-- figure label: --> <div id="fig-fij"></div> <!-- FIGURE -->
-<hr class="figure">
-<center>
-<p class="caption">Figure 4:  The diagrams corresponding to \( f_i^j \). The dashed line with the 'X' denotes the interaction \( F \) between the incoming and outgoing lines.  <!-- caption label: fig-fij --> </p>
-</center>
-<p><img src="figslides/Diagram-fij.png" height="120" align="bottom"></p>
-</center>
-
-<center> <!-- figure label: --> <div id="fig-fia"></div> <!-- FIGURE -->
-<hr class="figure">
-<center>
-<p class="caption">Figure 5:  The diagrams corresponding to \( f_a^i \). The dashed line with the 'X' denotes the interaction \( F \) between the incoming and outgoing lines.  <!-- caption label: fig-fia --> </p>
-</center>
-<p><img src="figslides/Diagram-fia.png" height="120" align="bottom"></p>
-</center>
-
-<center> <!-- figure label: --> <div id="fig-fai"></div> <!-- FIGURE -->
-<hr class="figure">
-<center>
-<p class="caption">Figure 6:  The diagrams corresponding to \( f_i^a \). The dashed line with the 'X' denotes the interaction \( F \) between the incoming and outgoing lines.  <!-- caption label: fig-fai --> </p>
-</center>
-<p><img src="figslides/Diagram-fai.png" height="120" align="bottom"></p>
-</center>
-
-<p>We now turn to the two-body interaction. It is denoted as a horizontal
-dashed line with incoming and outgoing lines attached to it. We start
-by noting that the following diagrams of the interaction are all
-related by permutation symmetry.
-</p>
-
-<center> <!-- figure label: --> <div id="fig-symmetry"></div> <!-- FIGURE -->
-<hr class="figure">
-<center>
-<p class="caption">Figure 7:  The diagrams corresponding to \( \langle ai\vert V\vert jb \rangle = - \langle ai\vert V\vert bj \rangle = -\langle ia\vert V\vert jb \rangle = \langle ia\vert V\vert bj\rangle \).  <!-- caption label: fig-symmetry --> </p>
-</center>
-<p><img src="figslides/Diagrams-symmetry.png" width="400" align="bottom"></p>
-</center>
-
-<div class="alert alert-block alert-block alert-text-normal">
-<b></b>
-<p>
-
-<!-- --- begin exercise --- -->
-<h2 id="ex-10">Exercise 10: Assign the correct matrix element \( \langle pq\vert V\vert rs\rangle \) to each of the following diagrams of the interaction</h2>
-
-<p>Remember: \( \langle\rm{left-out, right-out}\vert V\vert \rm{left-in, right-in}\rangle \).</p>
-
-<!-- --- begin subexercise --- -->
-<p>
-<b>a)</b>
-</p>
-<br/><br/>
-<center>
-<p><img src="figslides/Diagrams-V1.png" width="400" align="bottom"></p>
-</center>
-<br/><br/>
-
-<!-- --- begin answer of exercise --- -->
-<p>
-<b>Answer.</b>
-\( \langle ab\vert V\vert cd\rangle + \langle ij\vert V\vert kl\rangle + \langle ia\vert V\vert bj\rangle \)
-</p>
-<!-- --- end answer of exercise --- -->
-
-<!-- --- end subexercise --- -->
-
-<!-- --- begin subexercise --- -->
-<p>
-<b>b)</b>
-</p>
-<br/><br/>
-<center>
-<p><img src="figslides/Diagrams-V2.png" width="400" align="bottom"></p>
-</center>
-<br/><br/>
-
-<!-- --- begin answer of exercise --- -->
-<p>
-<b>Answer.</b>
-\( \langle ai\vert V\vert bc\rangle + \langle ij\vert V\vert ka\rangle + \langle ab\vert V\vert ci\rangle \)
-</p>
-<!-- --- end answer of exercise --- -->
-
-<!-- --- end subexercise --- -->
-
-<!-- --- begin subexercise --- -->
-<p>
-<b>c)</b>
-</p>
-<br/><br/>
-<center>
-<p><img src="figslides/Diagrams-V3.png" width="400" align="bottom"></p>
-</center>
-<br/><br/>
-
-<!-- --- begin answer of exercise --- -->
-<p>
-<b>Answer.</b>
-\( \langle ia\vert V\vert jk\rangle + \langle ab\vert V\vert ij\rangle + \langle ij\vert V\vert ab\rangle \)
-</p>
-<!-- --- end answer of exercise --- -->
-
-<!-- --- end subexercise --- -->
-
-<!-- --- end exercise --- -->
-<h2><a name=""></a></h2>
-</div>
-
-
-<p>Finally, we have the following diagrams for the \( T_1 \) and \( T_2 \) amplitudes.</p>
-
-<center> <!-- figure label: --> <div id="fig-T"></div> <!-- FIGURE -->
-<hr class="figure">
-<center>
-<p class="caption">Figure 8:  The horizontal full line is the cluster amplitude with incoming hole lines and outgoing particle lines as indicated.  <!-- caption label: fig-T --> </p>
-</center>
-<p><img src="figslides/Diagrams-T.png" width="400" align="bottom"></p>
-</center>
-
-<p>We are now in the position to construct the diagrams of the
-similarity-transformed Hamiltonian, keeping in mind that these
-diagrams correspond to matrix elements of \( \overline{H_N} \). The rules
-are as follows.
-</p>
-
-<ol>
-<li> Write down all <em>topologically different</em> diagrams corresponding to the desired matrix element. Topologically different diagrams differ in the number and type of lines (particle or hole) that connect the Fock matrix \( F \) or the interaction \( V \) to the cluster amplitudes \( T \), but not whether these connections are left or right (as those are related by antisymmetry). As an example, all diagrams in Fig. <a href="#fig-symmetry">7</a> are topologically identical, because they consist of incoming particle and hole lines and of outgoing particle and hole lines.</li> 
-<li> Write down the matrix elements that enter the diagram, and sum over all internal lines.</li> 
-<li> The overall sign is \( (-1) \) to the power of [(number of hole lines) &ndash; (number of loops)].</li>
-<li> Symmetry factor: For each pair of equivalent lines (i.e. lines that connect the same two operators) multiply with a factor \( 1/2 \). For \( n \) identical vertices, multiply the algebraic expression by the symmery factor \( 1/n! \) to account properly for the number of ways the diagram can be constructed.</li>   
-<li> Antisymmetrize the outgoing and incoming lines as necessary.</li>
-</ol>
-<p>Please note that this really works. You could derive these rules for
-yourself from the commutations and factors that enter the
-Baker-Campbell-Hausdorff expansion. The sign comes obviously from the
-arrangement of creation and annilhilation operators, while the
-symmetry factor stems from all the different ways, one can contract
-the cluster operator with the normal-ordered Hamiltonian.
-</p>
-
-<div class="alert alert-block alert-block alert-text-normal">
-<b></b>
-<p>
-<h2 id="ex-11">Example: CCSD correlation energy</h2>
-<p>The CCSD correlation energy, \( E_c= \langle
-\Phi_0\vert \overline{H_N}\vert \Phi_0\rangle \), is the first of the CCSD
-equations \eqref{ccsd}. It is a vacuum expectation value and thus
-consists of all diagrams with no external legs. There are three such diagrams:
-</p>
-
-<center> <!-- figure label: --> <div id="fig-E0"></div> <!-- FIGURE -->
-<hr class="figure">
-<center>
-<p class="caption">Figure 9:  Three diagrams enter for the CCSD correlation energy, i.e. all diagrams that leave no external legs.  <!-- caption label: fig-E0 --> </p>
-</center>
-<p><img src="figslides/Diagrams-E0.png" width="400" align="bottom"></p>
-</center>
-
-<p>The correponding algebraic expression is \( E_c=\sum_{ia}f^i_a t_i^a +{1\over 4}\sum_{ijab} \langle ij\vert V\vert ab\rangle t_{ij}^{ab} + {1\over 2} \sum_{ijab} \langle ij\vert V\vert ab\rangle t_i^a t_j^b \).</p>
-
-<p>The first algebraic expression is clear. We have one hole line and one
-loop, giving it a positive sign. There are no equivalent lines or
-vertices, giving it no symmetry factor. The second diagram has two
-loops and two hole lines, again leading to a positive sign. We have a
-pair of equivalent hole lines and a pair of equivalent particle lines,
-each giving a symmetry factor of \( 1/2 \). The third diagram has two
-loops and two hole lines, again leading to a positive sign. We have
-two indentical vertices (each connecting to a \( T_1 \) in the same way)
-and thus a symmetry factor \( 1/2 \).
-</p>
-<h2><a name=""></a></h2>
-</div>
-
-<h1 id="ccd-approximation">CCD Approximation </h1>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+<h2 id="ccd-approximation">CCD Approximation </h2>
 
 <p>In what follows, we will consider the coupled cluster doubles (CCD)
 approximation. This approximation is valid in cases where the system
@@ -1935,24 +1879,24 @@ the Hartree-Fock basis (as the Hartree-Fock Hamiltonian exhibits no
 particle-hole excitations).
 </p>
 
-<div class="alert alert-block alert-block alert-text-normal">
-<b></b>
-<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <!-- --- begin exercise --- -->
-<h2 id="ex-12">Exercise 11: Derive the CCD equations!</h2>
+<h2 id="ex-12">Exercise 10: Derive the CCD equations!</h2>
 
 <p>Let us consider the matrix element \( \overline{H}_{ij}^{ab} \). Clearly,
 it consists of all diagrams (i.e. all combinations of \( T_2 \), and a
 single \( F \) or \( V \) that have two incoming hole lines and two outgoing
-particle lines. Write down all these diagrams.
+particle lines. Write down the algebraic expressions.
 </p>
+
+<p>Let us now turn to the computational cost of a CCD computation.</p>
 
 <!-- --- begin hint in exercise --- -->
 
 <p>
 <b>Hint.</b>
-Start systematically! Consider all combinations of \( F \) and \( V \) diagrams with 0, 1, and 2 cluster amplitudes \( T_2 \).
+Start systematically! Consider all combinations of \( F \) and \( V \) contributions with 0, 1, and 2 cluster amplitudes \( T_2 \).
 </p>
 
 <!-- --- end hint in exercise --- -->
@@ -1960,17 +1904,8 @@ Start systematically! Consider all combinations of \( F \) and \( V \) diagrams 
 <!-- --- begin answer of exercise --- -->
 <p>
 <b>Answer.</b>
+The algebraic expression is
 </p>
-
-<center> <!-- figure label: --> <div id="fig-ccd"></div> <!-- FIGURE -->
-<hr class="figure">
-<center>
-<p class="caption">Figure 10:  The diagrams for the \( T_2 \) equation, i.e. the matrix elements of \( \overline{H}_{ij}^{ab} \). Taken from Baardsen et al (2013).  <!-- caption label: fig-ccd --> </p>
-</center>
-<p><img src="figslides/Diagrams-CCD.png" width="400" align="bottom"></p>
-</center>
-
-<p>The corresponding algebraic expression is</p>
 $$
 \begin{align*}
 \overline{H}_{ij}^{ab} &= \langle ab\vert V\vert ij\rangle + P(ab)\sum_c f_c^bt_{ij}^{ac} - P(ij)\sum_k f_j^k t_{ik}^{ab} \\
@@ -1986,20 +1921,13 @@ $$
 <!-- --- end answer of exercise --- -->
 
 <!-- --- end exercise --- -->
-<h2><a name=""></a></h2>
-</div>
 
-
-<p>Let us now turn to the computational cost of a CCD computation.</p>
-
-<div class="alert alert-block alert-block alert-text-normal">
-<b></b>
-<p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 
 <!-- --- begin exercise --- -->
-<h2 id="ex-13">Exercise 12: Computational scaling of CCD</h2>
+<h2 id="ex-13">Exercise 11: Computational scaling of CCD</h2>
 
-<p>For each of the diagrams in Fig. <a href="#fig-ccd">10</a> write down the
+<p>For each of the contributions of the CCD ansatz write down the
 computational cost in terms of the number of occupied \( A \) and the
 number of unoccupied \( n_u \) orbitals.
 </p>
@@ -2016,17 +1944,15 @@ The cost is \( A^2 n_u^2 \), \( A^2 n_u^3 \), \( A^3 n_u^2 \),
 <!-- --- end answer of exercise --- -->
 
 <!-- --- end exercise --- -->
-<h2><a name=""></a></h2>
-</div>
 
-
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+<h2 id="computational-costs">Computational costs </h2>
 <p>Note that \( n_u\gg A \) in general. In textbooks, one reads that CCD (and
 CCSD) cost only \( A^2n_u^4 \). Our most expensive diagrams, however are
 \( A^4n_u^4 \). What is going on?
 </p>
 
-<p>To understand this puzzle, let us consider the last diagram of
-Fig. <a href="#fig-ccd">10</a>. We break up the computation into two steps,
+<p>To understand this puzzle, let us consider the most expensive 2p-2h contribution. We break up the computation into two steps,
 computing first the intermediate
 </p>
 $$
@@ -2050,146 +1976,10 @@ memory for computational cycles. This trick is known as
 &quot;factorization.&quot; 
 </p>
 
-<div class="alert alert-block alert-block alert-text-normal">
-<b></b>
-<p>
-
-<!-- --- begin exercise --- -->
-<h2 id="ex-14">Exercise 13: Factorize the remaining diagrams of the CCD equation</h2>
-
-<p>Diagrams 7, 8, and 9 of Fig. <a href="#fig-ccd">10</a> also need to be factorized.</p>
-
-<!-- --- begin answer of exercise --- -->
-<p>
-<b>Answer.</b>
-For diagram number 7, we compute
-</p>
-$$
-\begin{align}
-\chi_{id}^{al}\equiv\sum_{kc} \langle kl\vert V\vert cd\rangle t_{ik}^{ac}
-\label{_auto19}
-\end{align}
-$$
-
-<p>at a cost of \( A^3 n_u^3 \) and then compute</p>
-$$
-\begin{align}
-{1\over 2} P(ij)P(ab) \sum_{ld} \chi_{id}^{al} t_{lj}^{db} 
-\label{_auto20}
-\end{align}
-$$
-
-<p>at the cost of \( A^3 n_u^3 \).</p>
-
-<p>For diagram number 8, we compute</p>
-$$
-\begin{align}
-\chi_{i}^{l}\equiv -{1\over 2} \sum_{kcd} \langle kl\vert V\vert cd\rangle t_{ik}^{cd}
-\label{_auto21}
-\end{align}
-$$
-
-<p>at a cost of \( A^3 n_u^2 \), and then compute</p>
-$$
-\begin{align}
--P(ij) \sum_l \chi_i^l t_{lj}^{ab}
-\label{_auto22}
-\end{align}
-$$
-
-<p>at the cost of \( A^3 n_u^2 \).</p>
-
-<p>For diagram number 9, we compute</p>
-$$
-\begin{align}
-\chi_d^a\equiv{1\over 2} \sum_{kcl} \langle kl\vert V\vert cd\rangle t_{kl}^{ac}
-\label{_auto23}
-\end{align}
-$$
-
-<p>at a cost of \( A^2 n_u^3 \) and then compute</p>
-$$
-\begin{align}
-P(ab)\sum_d \chi_d^a t_{ij}^{db}
-\label{_auto24}
-\end{align}
-$$
-
-<p>at the cost of \( A^3 n_u^3 \).</p>
-
-<!-- --- end answer of exercise --- -->
-
-<!-- --- end exercise --- -->
-<h2><a name=""></a></h2>
-</div>
-
-
-<p>We are now ready, to derive the full CCSD equations, i.e. the matrix
-elements of \( \overline{H}_i^a \) and \( \overline{H}_{ij}^{ab} \). 
-</p>
-
-<div class="alert alert-block alert-block alert-text-normal">
-<b></b>
-<p>
-
-<!-- --- begin exercise --- -->
-<h2 id="ex-15">Project 14: (Optional) Derive the CCSD equations!</h2>
-
-<!-- --- begin subexercise --- -->
-<p>
-<b>a)</b>
-Let us consider the matrix element \( \overline{H}_i^a \) first. Clearly, it consists of all diagrams (i.e. all combinations of \( T_1 \), \( T_2 \), and a single \( F \) or \( V \) that have an incoming hole line and an outgoing particle line. Write down all these diagrams.
-</p>
-
-<!-- --- begin answer of exercise --- -->
-<p>
-<b>Answer.</b>
-</p>
-
-<center> <!-- figure label: --> <div id="fig-CCSD1"></div> <!-- FIGURE -->
-<hr class="figure">
-<center>
-<p class="caption">Figure 11:  The diagrams for the \( T_1 \) equation, i.e. the matrix elements of \( \overline{H}_i^a \). Taken from Crawford and Schaefer. Here \( \langle pq\vert \vert rs\rangle \equiv \langle pq\vert V\vert rs\rangle \) and \( f_{pq}\equiv f^p_q \).  <!-- caption label: fig-CCSD1 --> </p>
-</center>
-<p><img src="figslides/Diagrams-CCSD1.png" width="800" align="bottom"></p>
-</center>
-
-<!-- --- end answer of exercise --- -->
-
-<!-- --- end subexercise --- -->
-
-<!-- --- begin subexercise --- -->
-<p>
-<b>b)</b>
-Let us now consider the matrix element \( \overline{H}_{ij}^{ab} \). Clearly, it consists of all diagrams (i.e. all combinations of \( T_1 \), \( T_2 \), and a single \( F \) or \( V \) that have two incoming hole lines and two outgoing particle lines. Write down all these diagrams and corresponding algebraic expressions.
-</p>
-
-<!-- --- begin answer of exercise --- -->
-<p>
-<b>Answer.</b>
-</p>
-
-<center> <!-- figure label: --> <div id="fig-CCSD2"></div> <!-- FIGURE -->
-<hr class="figure">
-<center>
-<p class="caption">Figure 12:  The diagrams for the \( T_2 \) equation, i.e. the matrix elements of \( \overline{H}_{ij}^{ab} \). Taken from Crawford and Schaefer. Here \( \langle pq\vert \vert rs\rangle \equiv \langle pq\vert V\vert rs\rangle \), \( f_{pq}\equiv f^p_q \), and \( P(ab) = 1 - (a\leftrightarrow b) \) antisymmetrizes.  <!-- caption label: fig-CCSD2 --> </p>
-</center>
-<p><img src="figslides/Diagrams-CCSD2.png" width="800" align="bottom"></p>
-</center>
-
-<!-- --- end answer of exercise --- -->
-
-<!-- --- end subexercise --- -->
-
-<!-- --- end exercise --- -->
-<h2><a name=""></a></h2>
-</div>
-
-
-<p>We can now turn to the solution of the coupled-cluster equations.</p>
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
 <h2 id="solving-the-ccd-equations">Solving the CCD equations </h2>
 
-<p>The CCD equations, depicted in Fig. <a href="#fig-ccd">10</a>, are nonlinear in the
+<p>The CCD equations are nonlinear in the
 cluster amplitudes. How do we solve \( \overline{H}_{ij}^{ab}=0 \)? We
 subtract \( (f_a^a +f_b^b -f_i^i -f_j^j)t_{ij}^{ab} \) from both sides of
 \( \overline{H}_{ij}^{ab}=0 \) (because this term is contained in
@@ -2225,7 +2015,9 @@ $$
 \( t_{ij}^{ab} \) from the right-hand side of Eq. \eqref{iter}. We repeat
 this process until the amplitudes (or the CCD energy) converge.
 </p>
-<h1 id="ccd-for-the-pairing-hamiltonian">CCD for the pairing Hamiltonian </h1>
+
+<!-- !split --><br><br><br><br><br><br><br><br><br><br>
+<h2 id="ccd-for-the-pairing-hamiltonian">CCD for the pairing Hamiltonian </h2>
 
 <p>You learned about the pairing Hamiltonian earlier in this
 school. Convince yourself that this Hamiltonian does not induce any
@@ -2242,7 +2034,6 @@ problem. This consists of the following steps
 common indices in products of tensors) is very user friendly and
 elegant in python when <code>numpy.einsum</code> is used.
 </p>
-
 <!-- ------------------- end of main content --------------- -->
 <center style="font-size:80%">
 <!-- copyright --> &copy; 2013-2022, Benjamin Hall and Morten Hjorth-Jensen. Released under CC Attribution-NonCommercial 4.0 license
