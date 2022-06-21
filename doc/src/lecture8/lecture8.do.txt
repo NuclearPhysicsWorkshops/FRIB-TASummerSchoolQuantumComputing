@@ -473,7 +473,7 @@ The single-particle basis functions  could be the results of a Hartree-Fock calc
 !split
 =====  Rewriting the FCI equation  =====
 !bblock
-In our notes on Hartree-Fock calculations, 
+If we employ a Hartree-Fock basis, 
 we have already computed the matrix $\langle \Phi_0 | \hat{H}|\Phi_{i}^{a}\rangle $ and $\langle \Phi_0 | \hat{H}|\Phi_{ij}^{ab}\rangle$.  If we are using a Hartree-Fock basis, then the matrix elements
 $\langle \Phi_0 | \hat{H}|\Phi_{i}^{a}\rangle=0$ and we are left with a *correlation energy* given by
 !bt
@@ -498,7 +498,7 @@ This equation determines the correlation energy but not the coefficients $C$.
 
 !split
 =====  Rewriting the FCI equation, does not stop here  =====
-!bblock
+
 We need more equations. Our next step is to set up
 !bt
 \[
@@ -515,11 +515,11 @@ as this equation will allow us to find an expression for the coefficents $C_i^a$
 \sum_{bcdjkl}\langle \Phi_i^a | \hat{H}|\Phi_{jkl}^{bcd} \rangle C_{jkl}^{bcd}=EC_i^a.
 \]
 !et
-!eblock
+
 
 !split
 =====  Rewriting the FCI equation, please stop here  =====
-!bblock
+
 We see that on the right-hand side we have the energy $E$. This leads to a non-linear equation in the unknown coefficients. 
 These equations are normally solved iteratively ( that is we can start with a guess for the coefficients $C_i^a$). A common choice is to use perturbation theory for the first guess, setting thereby
 !bt
@@ -527,11 +527,11 @@ These equations are normally solved iteratively ( that is we can start with a gu
  C_{i}^{a}=\frac{\langle i | \hat{f}| a\rangle}{\epsilon_i-\epsilon_a}.
 \]
 !et
-!eblock
+
 
 !split
 =====  Rewriting the FCI equation, more to add  =====
-!bblock
+
 The observant reader will however see that we need an equation for $C_{jk}^{bc}$ and $C_{jkl}^{bcd}$ as well.
 To find equations for these coefficients we need then to continue our multiplications from the left with the various
 $\Phi_{H}^P$ terms. 
@@ -549,13 +549,13 @@ For $C_{jk}^{bc}$ we need then
 \]
 !et
 and we can isolate the coefficients $C_{kl}^{cd}$ in a similar way as we did for the coefficients $C_{i}^{a}$. 
-!eblock
+
 
 
 
 !split
 =====  Rewriting the FCI equation, more to add  =====
-!bblock
+
 A standard choice for the first iteration is to set 
 !bt
 \[
@@ -567,7 +567,7 @@ This is a very cumbersome way of solving the equation. However, by using this it
 various terms in the wave operator or correlation operator $\hat{C}$. We will later identify the calculation of the various terms $C_H^P$
 as parts of different many-body approximations to full CI. In particular, we can  relate this non-linear scheme with Coupled Cluster theory and
 many-body perturbation theory.
-!eblock
+
 
 
 !split
@@ -595,13 +595,13 @@ The coefficients $C$ result from the solution of the eigenvalue problem.
 The energy of say the ground state is then
 !bt
 \[
-E=E_{ref}+\Delta E,
+E=E_{\mathrm{ref}}+\Delta E,
 \]
 !et
 where the so-called reference energy is the energy we obtain from a Hartree-Fock calculation, that is
 !bt
 \[
-E_{ref}=\langle \Phi_0 \vert \hat{H} \vert \Phi_0 \rangle.
+E_{\mathrm{ref}}=\langle \Phi_0 \vert \hat{H} \vert \Phi_0 \rangle.
 \]
 !et
 
@@ -663,7 +663,7 @@ with eight  single-particle states we have
 !split
 ===== Pairing model  =====
 !bblock
-In a nuclear  shell-model context we can interpret this as 4 $s_{1/2}$ levels, with $m = \pm 1/2$, we can also think of these as four pairs if don't break any pairs,  $\pm k, k = 1,2,3,4$. For a more realistic nuclear physics shell-model case, we 
+In a nuclear  shell-model context we can interpret this as 4 $s_{1/2}$ levels, with $m = \pm 1/2$, we can also think of these as four pairs if we do not break any pairs,  $\pm k, k = 1,2,3,4$. For a more realistic nuclear physics shell-model case, we 
 assign single-particle energies,  depending on the radial quantum number $n$, that is, 
 $\epsilon_k = |k| \delta$ so that they are equally spaced.
 !eblock
@@ -674,7 +674,7 @@ $\epsilon_k = |k| \delta$ so that they are equally spaced.
  
 For application in the pairing model we can go further and consider only states with 
 no ``broken pairs,'' that is, if $+k$ is filled (or $m = +1/2$, so is $-k$ ($m=-1/2$). 
-If you want, you can write your code to accept only these, and obtain the following 
+If we stay with this set of states, we can limit ourselves to  the following 
 six states:
 
 * $|           1,           2 ,          3         ,       4  \rangle , $
@@ -814,7 +814,7 @@ and
 \hat{P}^\dagger = \sum_{n} \hat{a}^\dagger_{n, m=+1/2} \hat{a}^\dagger_{n, m=-1/2} 
 \]
 !et
-We can write down the $ 6 \times 6$  Hamiltonian in the basis from the prior slide:
+We can write down the $6\times 6$  Hamiltonian as
 !bt
 \[
 H = \left ( 
@@ -830,7 +830,7 @@ H = \left (
 !et
 (You should check by hand that this is correct.) 
 
-For $\delta = 0$ we have the closed form solution of  the g.s. energy given by $-6G$.
+For $\delta = 0$ we have the closed form solution of  the ground state energy given by $-6G$.
 
 !eblock
 
@@ -849,8 +849,8 @@ full configuration interaction (FCI) such as the no-core shell model
 exhibits an exponential cost and is therefore limited to light nuclei.
 
 
-
-======= The normal-ordered Hamiltonian =======
+!split
+===== The normal-ordered Hamiltonian =====
 
 We start from the reference state
 
@@ -870,7 +870,11 @@ i.e. orbitals occupied in the reference state (ref{HFref}), while
 $a,b,c,\ldots$ run over particle states, i.e. unoccupied
 orbitals. Indices $p,q,r,s$ can identify any orbital.  Let $n_u$ be
 the number of unoccupied states, and $A$ is of course the number of
-occupied states. We consider the Hamiltonian
+occupied states.
+
+!split
+===== Hamiltonian =====
+We consider the Hamiltonian
 
 !bt
 \begin{equation}
@@ -882,6 +886,8 @@ a^\dagger_pa^\dagger_q a_sa_r
 !et
 
 
+!split
+===== Reference state =====
 
 The reference state (ref{HFref}) is a non-trivial vacuum of our theory. 
 We normal order this Hamiltonian with respect to the nontrivial vacuum
@@ -912,7 +918,7 @@ with respect to that vaccum. Normal ordering implies that $\langle
 \Phi_0\vert H_N\vert \Phi_0\rangle = 0$.
 
 
-!Pslit
+!split
 ===== Exercise: Practice in normal ordering =====
 
 Normal order the expression $\sum\limits_{pq}\varepsilon_q^p a^\dagger_p a_q$.
@@ -1024,7 +1030,7 @@ neighbors of nuclei with closed subshells.
 !eans
 
 !split
-======= The similarity transformed Hamiltonian =======
+===== The similarity transformed Hamiltonian =====
 
 
 There are several ways to view and understand the coupled-cluster
@@ -1252,7 +1258,7 @@ from 2p-2h states.
 !eans
 
 !split
-======= Computing the similarity-transformed Hamiltonian =======
+===== Computing the similarity-transformed Hamiltonian =====
 
 The solution of the CCSD equations, i.e. the second and third line of
 Eq. (ref{ccsd}), and the computation of the correlation energy
@@ -1560,17 +1566,21 @@ a state occupied with a single fermion and $\vert 1 \rangle$ as a state with no
 fermion. We then see that the operators
 
 !bt
-\begin{align}
-    label{eq:sigmaplussigmaminus}
-    \sigma_+ &= \frac{1}{2}(\sigma_x + i\sigma_y) = \begin{bmatrix}
+\[
+\sigma_+ = \frac{1}{2}(\sigma_x + i\sigma_y) = \begin{bmatrix}
     0 & 1  \\
     0 & 0
-\end{bmatrix} \notag \\
-    \sigma_- &= \frac{1}{2}(\sigma_x - i\sigma_y) = \begin{bmatrix}
+\end{bmatrix},
+\]
+!et
+and
+!bt
+\[
+\sigma_- = \frac{1}{2}(\sigma_x - i\sigma_y) = \begin{bmatrix}
     0 & 0  \\
     1 & 0
 \end{bmatrix},
-\end{align}
+\]
 !et
 have the following effect on the qubit basis states
 $$\sigma_+ \vert 1 \rangle = \vert 0\rangle \qquad \sigma_- \vert 0\rangle = \vert 1 \rangle,$$
@@ -1580,7 +1590,7 @@ $$\sigma_+ \vert 0\rangle = 0 \qquad \sigma_-\vert 1 \rangle = 0.$$
 !split
 =====  Replacing creation and annihilation operators with Pauli matrices =====
 
-The term$\sigma_+$ acts as a creation operator and $\sigma_-$ acts as
+The term $\sigma_{+}$ acts as a creation operator and $\sigma_-$ acts as
 an annihilation operator. However, since fermionic states are
 anti-symmetric, $a^\dagger_a a^\dagger_b \vert c \rangle = -
 a^\dagger_b a^\dagger_a \vert c \rangle$, we need our quantum gate
@@ -1592,35 +1602,8 @@ as
 
 !bt
 \begin{equation}
-    label{eq:LadderOpsPauli}
     a^\dagger_n \equiv \left(\prod_{k=1}^{n-1}\sigma_z^k \right)\sigma_+^n \qquad a_n \equiv \left(\prod_{k=1}^{n-1}\sigma_z^k \right) \sigma_-^n
 \end{equation}
 !et
 where the superscript tells us which qubit the operator acts on.
-
-!split
-===== Representations of spin states =====
-For
-convenience, we let odd qubits to be in a spin up state, while
-even qubits are in spin down state. The following
-state
-
-!bt
-\begin{align*}
-    \textit{Qubit state:} & \vert 0 \: \; \ 0 \: \; \ 1 \: \; \ 1 \rangle \\
-    \textit{Spin state:} & + \; - \; + \; - \; \\
-    \textit{Spacial state:} & \ 1 \; \: \ 1 \ \; \: 2 \ \; \: 2 \; ,
-\end{align*}
-!et
-
-the first spacial state is occupied with a fermion pair with opposite spin, while the second state is not occupied with any fermions.
-The equivalent of the reference state for our qubit-state is then
-
-!bt
-\begin{equation}
-    \vert \Psi_0\rangle = \vert 0\rangle^{\otimes^n}\vert 1 \rangle^{\otimes^k},
-\end{equation}
-!et
-where $n$ is the number of particles and $n+k$ is the number of spin-orbitals.
-
 
