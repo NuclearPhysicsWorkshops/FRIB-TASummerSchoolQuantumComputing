@@ -350,7 +350,7 @@ MathJax.Hub.Config({
      <!-- navigation toc: --> <li><a href="._lecture8-bs050.html#cluster-operators" style="font-size: 80%;">Cluster operators</a></li>
      <!-- navigation toc: --> <li><a href="._lecture8-bs051.html#ex-6" style="font-size: 80%;">Exercise 6: How many unknowns?</a></li>
      <!-- navigation toc: --> <li><a href="._lecture8-bs052.html#approximations" style="font-size: 80%;">Approximations</a></li>
-     <!-- navigation toc: --> <li><a href="._lecture8-bs053.html#structure-of-equations" style="font-size: 80%;">Structure of equations</a></li>
+     <!-- navigation toc: --> <li><a href="#structure-of-equations" style="font-size: 80%;">Structure of equations</a></li>
      <!-- navigation toc: --> <li><a href="._lecture8-bs054.html#ex-6b" style="font-size: 80%;">Exercise 7: Why is CCD not exact?</a></li>
      <!-- navigation toc: --> <li><a href="._lecture8-bs055.html#computing-the-similarity-transformed-hamiltonian" style="font-size: 80%;">Computing the similarity-transformed Hamiltonian</a></li>
      <!-- navigation toc: --> <li><a href="._lecture8-bs055.html#ex-7" style="font-size: 80%;">Exercise 8: When does CCSD truncate?</a></li>
@@ -382,50 +382,70 @@ MathJax.Hub.Config({
 </div> <!-- end of navigation bar -->
 <div class="container">
 <p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p> <!-- add vertical space -->
-<a name="part0000"></a>
-<!-- ------------------- main content ---------------------- -->
-<div class="jumbotron">
-<center>
-<h1>Many-body theory and nuclear few- and many-body systems</h1>
-</center>  <!-- document title -->
+<a name="part0053"></a>
+<!-- !split -->
+<h2 id="structure-of-equations" class="anchor">Structure of equations </h2>
 
-<!-- author(s): Benjamin Hall and Morten Hjorth-Jensen -->
-<center>
-<b>Benjamin Hall and Morten Hjorth-Jensen</b> 
-</center>
-<!-- institution -->
-<center>
-<b><a href="http://www.frib.msu.edu/" target="_self">Facility for Rare Isotope Beams and National Superconducting Cyclotron Laboratory</a> and <a href="https://www.pa.msu.edu/" target="_self">Department of Physics and Astronomy</a>, <a href="http://www.msu.edu/" target="_self">Michigan State University</a>, East Lansing, MI 48824, USA</b>
-</center>
-<br>
-<center>
-<h4>Jun 21, 2022</h4>
-</center> <!-- date -->
-<br>
+<p>The first equation states that the coupled-cluster correlation energy
+is an expectation value of the similarity-transformed Hamiltonian. The
+second and third equations state that the similarity-transformed
+Hamiltonian exhibits no 1p-1h and no 2p-2h excitations. These
+equations have to be solved to find the unknown amplitudes \( t_i^a \) and
+\( t_{ij}^{ab} \). Then one can use these amplitudes and compute the
+correlation energy from the first line of Eq. <a href="._lecture8-bs052.html#mjx-eqn-21">(21)</a>.
+</p>
 
+<p>We note that in the CCSD approximation the reference state is not an
+exact eigenstates. Rather, it is decoupled from simple states but
+\( \overline{H} \) still connects this state to 3p-3h, and 4p-4h states
+etc.
+</p>
 
+<p>At this point, it is important to recall that we assumed starting from
+a &quot;good&quot; reference state. In such a case, we might reasonably expect
+that the inclusion of 1p-1h and 2p-2h excitations could result in an
+accurate approximation. Indeed, empirically one finds that CCSD
+accounts for about 90% of the corelation energy, i.e. of the
+difference between the exact energy and the Hartree-Fock energy. The
+inclusion of triples (3p-3h excitations) typically yields 99% of the
+correlation energy.
+</p>
 
-<p><a href="._lecture8-bs001.html" class="btn btn-primary btn-lg">Read &raquo;</a></p>
-
-
-</div> <!-- end jumbotron -->
+<p>We see that the coupled-cluster method in its CCSD approximation
+yields a similarity-transformed Hamiltonian that is of a two-body
+structure with respect to a non-trivial vacuum. When viewed in this
+light, the coupled-cluster method &quot;transforms&quot; an \( A \)-body problem
+(in CCSD) into a two-body problem, albeit with respect to a nontrivial
+vacuum.
+</p>
 
 <p>
 <!-- navigation buttons at the bottom of the page -->
 <ul class="pagination">
-  <li class="active"><a href="._lecture8-bs000.html">1</a></li>
-  <li><a href="._lecture8-bs001.html">2</a></li>
-  <li><a href="._lecture8-bs002.html">3</a></li>
-  <li><a href="._lecture8-bs003.html">4</a></li>
-  <li><a href="._lecture8-bs004.html">5</a></li>
-  <li><a href="._lecture8-bs005.html">6</a></li>
-  <li><a href="._lecture8-bs006.html">7</a></li>
-  <li><a href="._lecture8-bs007.html">8</a></li>
-  <li><a href="._lecture8-bs008.html">9</a></li>
-  <li><a href="._lecture8-bs009.html">10</a></li>
+<li><a href="._lecture8-bs052.html">&laquo;</a></li>
+  <li><a href="._lecture8-bs000.html">1</a></li>
+  <li><a href="">...</a></li>
+  <li><a href="._lecture8-bs045.html">46</a></li>
+  <li><a href="._lecture8-bs046.html">47</a></li>
+  <li><a href="._lecture8-bs047.html">48</a></li>
+  <li><a href="._lecture8-bs048.html">49</a></li>
+  <li><a href="._lecture8-bs049.html">50</a></li>
+  <li><a href="._lecture8-bs050.html">51</a></li>
+  <li><a href="._lecture8-bs051.html">52</a></li>
+  <li><a href="._lecture8-bs052.html">53</a></li>
+  <li class="active"><a href="._lecture8-bs053.html">54</a></li>
+  <li><a href="._lecture8-bs054.html">55</a></li>
+  <li><a href="._lecture8-bs055.html">56</a></li>
+  <li><a href="._lecture8-bs056.html">57</a></li>
+  <li><a href="._lecture8-bs057.html">58</a></li>
+  <li><a href="._lecture8-bs058.html">59</a></li>
+  <li><a href="._lecture8-bs059.html">60</a></li>
+  <li><a href="._lecture8-bs060.html">61</a></li>
+  <li><a href="._lecture8-bs061.html">62</a></li>
+  <li><a href="._lecture8-bs062.html">63</a></li>
   <li><a href="">...</a></li>
   <li><a href="._lecture8-bs074.html">75</a></li>
-  <li><a href="._lecture8-bs001.html">&raquo;</a></li>
+  <li><a href="._lecture8-bs054.html">&raquo;</a></li>
 </ul>
 <!-- ------------------- end of main content --------------- -->
 </div>  <!-- end container -->
@@ -438,7 +458,7 @@ MathJax.Hub.Config({
 </footer>
 -->
 <center style="font-size:80%">
-<!-- copyright --> &copy; 2013-2022, Benjamin Hall and Morten Hjorth-Jensen. Released under CC Attribution-NonCommercial 4.0 license
+<!-- copyright only on the titlepage -->
 </center>
 </body>
 </html>

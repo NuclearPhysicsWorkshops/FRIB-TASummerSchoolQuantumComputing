@@ -382,50 +382,69 @@ MathJax.Hub.Config({
 </div> <!-- end of navigation bar -->
 <div class="container">
 <p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p> <!-- add vertical space -->
-<a name="part0000"></a>
-<!-- ------------------- main content ---------------------- -->
-<div class="jumbotron">
-<center>
-<h1>Many-body theory and nuclear few- and many-body systems</h1>
-</center>  <!-- document title -->
+<a name="part0037"></a>
+<!-- !split -->
+<h2 id="example-case-pairing-hamiltonian" class="anchor">Example case: pairing Hamiltonian </h2>
+<div class="panel panel-default">
+<div class="panel-body">
+<!-- subsequent paragraphs come in larger fonts, so start with a paragraph -->
 
-<!-- author(s): Benjamin Hall and Morten Hjorth-Jensen -->
-<center>
-<b>Benjamin Hall and Morten Hjorth-Jensen</b> 
-</center>
-<!-- institution -->
-<center>
-<b><a href="http://www.frib.msu.edu/" target="_self">Facility for Rare Isotope Beams and National Superconducting Cyclotron Laboratory</a> and <a href="https://www.pa.msu.edu/" target="_self">Department of Physics and Astronomy</a>, <a href="http://www.msu.edu/" target="_self">Michigan State University</a>, East Lansing, MI 48824, USA</b>
-</center>
-<br>
-<center>
-<h4>Jun 21, 2022</h4>
-</center> <!-- date -->
-<br>
+<p>Because of the SU(2) algebra, we know that the eigenvalues of 
+\( \hat{P}^2 \) must be of the form \( p(p+1) \), with \( p \) either integer or half-integer, and the eigenvalues of \( \hat{P}_z \) 
+are \( m_p \) with \( p \geq | m_p| \), with \( m_p \) also integer or half-integer. 
+</p>
 
+<p>But because \( \hat{P}_z = (1/2)(\hat{N}-\Omega) \), we know that for \( N \) particles 
+the value \( m_p = (N-\Omega)/2 \). Furthermore, the values of \( m_p \) range from 
+\( -\Omega/2 \) (for \( N=0 \)) to \( +\Omega/2 \) (for \( N=2\Omega \), with all states filled). 
+</p>
 
+<p>We deduce the maximal \( p = \Omega/2 \) and for a given \( n \) the 
+values range of \( p \) range from \( |N-\Omega|/2 \) to \( \Omega/2 \) in steps of 1 
+(for an even number of particles) 
+</p>
 
-<p><a href="._lecture8-bs001.html" class="btn btn-primary btn-lg">Read &raquo;</a></p>
+<p>Following Racah we introduce the notation
+\( p = (\Omega - v)/2 \)
+where \( v = 0, 2, 4,..., \Omega - |N-\Omega| \) 
+With this it is easy to deduce that the eigenvalues of the pairing Hamiltonian are
+</p>
+$$
+-G(N-v)(2\Omega +2-N-v)/4
+$$
 
+<p>This also works for \( N \) odd, with \( v= 1,3,5, \dots \).</p>
+</div>
+</div>
 
-</div> <!-- end jumbotron -->
 
 <p>
 <!-- navigation buttons at the bottom of the page -->
 <ul class="pagination">
-  <li class="active"><a href="._lecture8-bs000.html">1</a></li>
-  <li><a href="._lecture8-bs001.html">2</a></li>
-  <li><a href="._lecture8-bs002.html">3</a></li>
-  <li><a href="._lecture8-bs003.html">4</a></li>
-  <li><a href="._lecture8-bs004.html">5</a></li>
-  <li><a href="._lecture8-bs005.html">6</a></li>
-  <li><a href="._lecture8-bs006.html">7</a></li>
-  <li><a href="._lecture8-bs007.html">8</a></li>
-  <li><a href="._lecture8-bs008.html">9</a></li>
-  <li><a href="._lecture8-bs009.html">10</a></li>
+<li><a href="._lecture8-bs036.html">&laquo;</a></li>
+  <li><a href="._lecture8-bs000.html">1</a></li>
+  <li><a href="">...</a></li>
+  <li><a href="._lecture8-bs029.html">30</a></li>
+  <li><a href="._lecture8-bs030.html">31</a></li>
+  <li><a href="._lecture8-bs031.html">32</a></li>
+  <li><a href="._lecture8-bs032.html">33</a></li>
+  <li><a href="._lecture8-bs033.html">34</a></li>
+  <li><a href="._lecture8-bs034.html">35</a></li>
+  <li><a href="._lecture8-bs035.html">36</a></li>
+  <li><a href="._lecture8-bs036.html">37</a></li>
+  <li class="active"><a href="._lecture8-bs037.html">38</a></li>
+  <li><a href="._lecture8-bs038.html">39</a></li>
+  <li><a href="._lecture8-bs039.html">40</a></li>
+  <li><a href="._lecture8-bs040.html">41</a></li>
+  <li><a href="._lecture8-bs041.html">42</a></li>
+  <li><a href="._lecture8-bs042.html">43</a></li>
+  <li><a href="._lecture8-bs043.html">44</a></li>
+  <li><a href="._lecture8-bs044.html">45</a></li>
+  <li><a href="._lecture8-bs045.html">46</a></li>
+  <li><a href="._lecture8-bs046.html">47</a></li>
   <li><a href="">...</a></li>
   <li><a href="._lecture8-bs074.html">75</a></li>
-  <li><a href="._lecture8-bs001.html">&raquo;</a></li>
+  <li><a href="._lecture8-bs038.html">&raquo;</a></li>
 </ul>
 <!-- ------------------- end of main content --------------- -->
 </div>  <!-- end container -->
@@ -438,7 +457,7 @@ MathJax.Hub.Config({
 </footer>
 -->
 <center style="font-size:80%">
-<!-- copyright --> &copy; 2013-2022, Benjamin Hall and Morten Hjorth-Jensen. Released under CC Attribution-NonCommercial 4.0 license
+<!-- copyright only on the titlepage -->
 </center>
 </body>
 </html>

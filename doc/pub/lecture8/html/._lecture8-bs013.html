@@ -382,50 +382,64 @@ MathJax.Hub.Config({
 </div> <!-- end of navigation bar -->
 <div class="container">
 <p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p> <!-- add vertical space -->
-<a name="part0000"></a>
-<!-- ------------------- main content ---------------------- -->
-<div class="jumbotron">
-<center>
-<h1>Many-body theory and nuclear few- and many-body systems</h1>
-</center>  <!-- document title -->
+<a name="part0013"></a>
+<!-- !split -->
+<h2 id="full-configuration-interaction-theory" class="anchor">Full Configuration Interaction Theory </h2>
+<div class="panel panel-default">
+<div class="panel-body">
+<!-- subsequent paragraphs come in larger fonts, so start with a paragraph -->
+<p>We rewrite </p>
+$$
+|\Psi_0\rangle=C_0|\Phi_0\rangle+\sum_{ai}C_i^a|\Phi_i^a\rangle+\sum_{abij}C_{ij}^{ab}|\Phi_{ij}^{ab}\rangle+\dots,
+$$
 
-<!-- author(s): Benjamin Hall and Morten Hjorth-Jensen -->
-<center>
-<b>Benjamin Hall and Morten Hjorth-Jensen</b> 
-</center>
-<!-- institution -->
-<center>
-<b><a href="http://www.frib.msu.edu/" target="_self">Facility for Rare Isotope Beams and National Superconducting Cyclotron Laboratory</a> and <a href="https://www.pa.msu.edu/" target="_self">Department of Physics and Astronomy</a>, <a href="http://www.msu.edu/" target="_self">Michigan State University</a>, East Lansing, MI 48824, USA</b>
-</center>
-<br>
-<center>
-<h4>Jun 21, 2022</h4>
-</center> <!-- date -->
-<br>
+<p>in a more compact form as </p>
+$$
+|\Psi_0\rangle=\sum_{PH}C_H^P\Phi_H^P=\left(\sum_{PH}C_H^P\hat{A}_H^P\right)|\Phi_0\rangle,
+$$
 
+<p>where \( H \) stands for \( 0,1,\dots,n \) hole states and \( P \) for \( 0,1,\dots,n \) particle states. 
+Our requirement of unit normalization gives
+</p>
+$$
+\langle \Psi_0 | \Phi_0 \rangle = \sum_{PH}|C_H^P|^2= 1,
+$$
 
+<p>and the energy can be written as </p>
+$$
+E= \langle \Psi_0 | \hat{H} |\Phi_0 \rangle= \sum_{PP'HH'}C_H^{*P}\langle \Phi_H^P | \hat{H} |\Phi_{H'}^{P'} \rangle C_{H'}^{P'}.
+$$
+</div>
+</div>
 
-<p><a href="._lecture8-bs001.html" class="btn btn-primary btn-lg">Read &raquo;</a></p>
-
-
-</div> <!-- end jumbotron -->
 
 <p>
 <!-- navigation buttons at the bottom of the page -->
 <ul class="pagination">
-  <li class="active"><a href="._lecture8-bs000.html">1</a></li>
-  <li><a href="._lecture8-bs001.html">2</a></li>
-  <li><a href="._lecture8-bs002.html">3</a></li>
-  <li><a href="._lecture8-bs003.html">4</a></li>
-  <li><a href="._lecture8-bs004.html">5</a></li>
+<li><a href="._lecture8-bs012.html">&laquo;</a></li>
+  <li><a href="._lecture8-bs000.html">1</a></li>
+  <li><a href="">...</a></li>
   <li><a href="._lecture8-bs005.html">6</a></li>
   <li><a href="._lecture8-bs006.html">7</a></li>
   <li><a href="._lecture8-bs007.html">8</a></li>
   <li><a href="._lecture8-bs008.html">9</a></li>
   <li><a href="._lecture8-bs009.html">10</a></li>
+  <li><a href="._lecture8-bs010.html">11</a></li>
+  <li><a href="._lecture8-bs011.html">12</a></li>
+  <li><a href="._lecture8-bs012.html">13</a></li>
+  <li class="active"><a href="._lecture8-bs013.html">14</a></li>
+  <li><a href="._lecture8-bs014.html">15</a></li>
+  <li><a href="._lecture8-bs015.html">16</a></li>
+  <li><a href="._lecture8-bs016.html">17</a></li>
+  <li><a href="._lecture8-bs017.html">18</a></li>
+  <li><a href="._lecture8-bs018.html">19</a></li>
+  <li><a href="._lecture8-bs019.html">20</a></li>
+  <li><a href="._lecture8-bs020.html">21</a></li>
+  <li><a href="._lecture8-bs021.html">22</a></li>
+  <li><a href="._lecture8-bs022.html">23</a></li>
   <li><a href="">...</a></li>
   <li><a href="._lecture8-bs074.html">75</a></li>
-  <li><a href="._lecture8-bs001.html">&raquo;</a></li>
+  <li><a href="._lecture8-bs014.html">&raquo;</a></li>
 </ul>
 <!-- ------------------- end of main content --------------- -->
 </div>  <!-- end container -->
@@ -438,7 +452,7 @@ MathJax.Hub.Config({
 </footer>
 -->
 <center style="font-size:80%">
-<!-- copyright --> &copy; 2013-2022, Benjamin Hall and Morten Hjorth-Jensen. Released under CC Attribution-NonCommercial 4.0 license
+<!-- copyright only on the titlepage -->
 </center>
 </body>
 </html>

@@ -356,7 +356,7 @@ MathJax.Hub.Config({
      <!-- navigation toc: --> <li><a href="._lecture8-bs055.html#ex-7" style="font-size: 80%;">Exercise 8: When does CCSD truncate?</a></li>
      <!-- navigation toc: --> <li><a href="._lecture8-bs056.html#non-hermiticity" style="font-size: 80%;">Non-hermiticity</a></li>
      <!-- navigation toc: --> <li><a href="._lecture8-bs057.html#ex-8" style="font-size: 80%;">Exercise 9: Compute the matrix element \( \overline{H}_{ab}^{ij}\equiv \langle ij\vert \overline{H_N}\vert ab\rangle \)</a></li>
-     <!-- navigation toc: --> <li><a href="._lecture8-bs058.html#ex-9" style="font-size: 80%;">Example: The contribution of \( [F, T_2] \) to \( \overline{H_N} \)</a></li>
+     <!-- navigation toc: --> <li><a href="#ex-9" style="font-size: 80%;">Example: The contribution of \( [F, T_2] \) to \( \overline{H_N} \)</a></li>
      <!-- navigation toc: --> <li><a href="._lecture8-bs059.html#ccd-approximation" style="font-size: 80%;">CCD Approximation</a></li>
      <!-- navigation toc: --> <li><a href="._lecture8-bs060.html#ex-12" style="font-size: 80%;">Exercise 10: Derive the CCD equations!</a></li>
      <!-- navigation toc: --> <li><a href="._lecture8-bs061.html#ex-13" style="font-size: 80%;">Exercise 11: Computational scaling of CCD</a></li>
@@ -382,50 +382,86 @@ MathJax.Hub.Config({
 </div> <!-- end of navigation bar -->
 <div class="container">
 <p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p> <!-- add vertical space -->
-<a name="part0000"></a>
-<!-- ------------------- main content ---------------------- -->
-<div class="jumbotron">
-<center>
-<h1>Many-body theory and nuclear few- and many-body systems</h1>
-</center>  <!-- document title -->
+<a name="part0058"></a>
+<!-- !split -->
+<h2 id="ex-9" class="anchor">Example: The contribution of \( [F, T_2] \) to \( \overline{H_N} \)</h2>
 
-<!-- author(s): Benjamin Hall and Morten Hjorth-Jensen -->
-<center>
-<b>Benjamin Hall and Morten Hjorth-Jensen</b> 
-</center>
-<!-- institution -->
-<center>
-<b><a href="http://www.frib.msu.edu/" target="_self">Facility for Rare Isotope Beams and National Superconducting Cyclotron Laboratory</a> and <a href="https://www.pa.msu.edu/" target="_self">Department of Physics and Astronomy</a>, <a href="http://www.msu.edu/" target="_self">Michigan State University</a>, East Lansing, MI 48824, USA</b>
-</center>
-<br>
-<center>
-<h4>Jun 21, 2022</h4>
-</center> <!-- date -->
-<br>
+<p>The commutator \( [F, T_2] \) consists of two-body and one-body terms. Let
+us compute first the two-body term, as it results from a single
+contraction (i.e. a single application of \( [a_p, a^\dagger_q] =
+\delta_p^q \)). We denote this as \( [F, T_2]_{2b} \) and find
+</p>
 
+$$
+\begin{align*}
+[F, T_2]_{2b} &= \frac{1}{4}\sum_{pq}\sum_{rsuv} f_p^q t_{ij}^{ab}\left[a^\dagger_q a_p, a^\dagger_a a^\dagger_b a_j a_i \right]_{2b} \\
+&= \frac{1}{4}\sum_{pq}\sum_{abij} f_p^q t_{ij}^{ab}\delta_p^a a^\dagger_q a^\dagger_b a_j a_i  \\
+&- \frac{1}{4}\sum_{pq}\sum_{abij} f_p^q t_{ij}^{ab}\delta_p^b a^\dagger_q a^\dagger_a a_j a_i  \\
+&- \frac{1}{4}\sum_{pq}\sum_{abij} f_p^q t_{ij}^{ab}\delta_q^j a^\dagger_a a^\dagger_b a_p a_i  \\
+&+ \frac{1}{4}\sum_{pq}\sum_{abij} f_p^q t_{ij}^{ab}\delta_q^i a^\dagger_a a^\dagger_b a_p a_j  \\
+&= \frac{1}{4}\sum_{qbij}\left(\sum_{a} f_a^q t_{ij}^{ab}\right)a^\dagger_q a^\dagger_b a_j a_i  \\
+&- \frac{1}{4}\sum_{qaij}\left(\sum_{b} f_b^q t_{ij}^{ab}\right)a^\dagger_q a^\dagger_a a_j a_i  \\
+&- \frac{1}{4}\sum_{pabi}\left(\sum_{j} f_p^j t_{ij}^{ab}\right)a^\dagger_a a^\dagger_b a_p a_i  \\
+&+ \frac{1}{4}\sum_{pabj}\left(\sum_{i} f_p^i t_{ij}^{ab}\right)a^\dagger_a a^\dagger_b a_p a_j  \\
+&= \frac{1}{2}\sum_{qbij}\left(\sum_{a} f_a^q t_{ij}^{ab}\right)a^\dagger_q a^\dagger_b a_j a_i  \\
+&- \frac{1}{2}\sum_{pabi}\left(\sum_{j} f_p^j t_{ij}^{ab}\right)a^\dagger_a a^\dagger_b a_p a_i  .
+\end{align*}
+$$
 
+<p>Here we exploited the antisymmetry \( t_{ij}^{ab} = -t_{ji}^{ab} =
+-t_{ij}^{ba} = t_{ji}^{ba} \) in the last step. Using \( a^\dagger_q a^\dagger_b a_j a_i = -a^\dagger_b a^\dagger_q a_j a_i  \) and \( a^\dagger_a a^\dagger_b a_p a_i = a^\dagger_a a^\dagger_b a_i a_p \), we can make the expression 
+manifest antisymmetric, i.e.
+</p>
 
-<p><a href="._lecture8-bs001.html" class="btn btn-primary btn-lg">Read &raquo;</a></p>
+$$
+\begin{align*}
+[F, T_2]_{2b}
+&= \frac{1}{4}\sum_{qbij}\left[\sum_{a} \left(f_a^q t_{ij}^{ab}-f_a^b t_{ij}^{qa}\right)\right]a^\dagger_q a^\dagger_b a_j a_i  \\
+&- \frac{1}{4}\sum_{pabi}\left[\sum_{j} \left(f_p^j t_{ij}^{ab}-f_i^j t_{pj}^{ab}\right)\right]a^\dagger_a a^\dagger_b a_p a_i  .
+\end{align*}
+$$
 
+<p>Thus, the contribution of \( [F, T_2]_{2b} \) to the matrix element \( \overline{H}_{ij}^{ab} \) is  </p>
+$$
+\begin{align*}
+\overline{H}_{ij}^{ab} \leftarrow  \sum_{c} \left(f_c^a t_{ij}^{cb}-f_c^b t_{ij}^{ac}\right) - \sum_{k} \left(f_j^k t_{ik}^{ab}-f_i^k t_{jk}^{ab}\right)
+\end{align*}
+$$
 
-</div> <!-- end jumbotron -->
+<p>Here we used an arrow to indicate that this is just one contribution
+to this matrix element.  We see that the derivation straight forward,
+but somewhat tedious. As no one likes to commute too much (neither in
+this example nor when going to and from work), and so we need a better
+approach. This is where diagramms come in handy.
+</p>
 
 <p>
 <!-- navigation buttons at the bottom of the page -->
 <ul class="pagination">
-  <li class="active"><a href="._lecture8-bs000.html">1</a></li>
-  <li><a href="._lecture8-bs001.html">2</a></li>
-  <li><a href="._lecture8-bs002.html">3</a></li>
-  <li><a href="._lecture8-bs003.html">4</a></li>
-  <li><a href="._lecture8-bs004.html">5</a></li>
-  <li><a href="._lecture8-bs005.html">6</a></li>
-  <li><a href="._lecture8-bs006.html">7</a></li>
-  <li><a href="._lecture8-bs007.html">8</a></li>
-  <li><a href="._lecture8-bs008.html">9</a></li>
-  <li><a href="._lecture8-bs009.html">10</a></li>
+<li><a href="._lecture8-bs057.html">&laquo;</a></li>
+  <li><a href="._lecture8-bs000.html">1</a></li>
+  <li><a href="">...</a></li>
+  <li><a href="._lecture8-bs050.html">51</a></li>
+  <li><a href="._lecture8-bs051.html">52</a></li>
+  <li><a href="._lecture8-bs052.html">53</a></li>
+  <li><a href="._lecture8-bs053.html">54</a></li>
+  <li><a href="._lecture8-bs054.html">55</a></li>
+  <li><a href="._lecture8-bs055.html">56</a></li>
+  <li><a href="._lecture8-bs056.html">57</a></li>
+  <li><a href="._lecture8-bs057.html">58</a></li>
+  <li class="active"><a href="._lecture8-bs058.html">59</a></li>
+  <li><a href="._lecture8-bs059.html">60</a></li>
+  <li><a href="._lecture8-bs060.html">61</a></li>
+  <li><a href="._lecture8-bs061.html">62</a></li>
+  <li><a href="._lecture8-bs062.html">63</a></li>
+  <li><a href="._lecture8-bs063.html">64</a></li>
+  <li><a href="._lecture8-bs064.html">65</a></li>
+  <li><a href="._lecture8-bs065.html">66</a></li>
+  <li><a href="._lecture8-bs066.html">67</a></li>
+  <li><a href="._lecture8-bs067.html">68</a></li>
   <li><a href="">...</a></li>
   <li><a href="._lecture8-bs074.html">75</a></li>
-  <li><a href="._lecture8-bs001.html">&raquo;</a></li>
+  <li><a href="._lecture8-bs059.html">&raquo;</a></li>
 </ul>
 <!-- ------------------- end of main content --------------- -->
 </div>  <!-- end container -->
@@ -438,7 +474,7 @@ MathJax.Hub.Config({
 </footer>
 -->
 <center style="font-size:80%">
-<!-- copyright --> &copy; 2013-2022, Benjamin Hall and Morten Hjorth-Jensen. Released under CC Attribution-NonCommercial 4.0 license
+<!-- copyright only on the titlepage -->
 </center>
 </body>
 </html>

@@ -370,7 +370,7 @@ MathJax.Hub.Config({
      <!-- navigation toc: --> <li><a href="._lecture8-bs069.html#simple-model" style="font-size: 80%;">Simple model</a></li>
      <!-- navigation toc: --> <li><a href="._lecture8-bs070.html#setting-up-the-system" style="font-size: 80%;">Setting up the system</a></li>
      <!-- navigation toc: --> <li><a href="._lecture8-bs071.html#extended-model" style="font-size: 80%;">Extended model</a></li>
-     <!-- navigation toc: --> <li><a href="._lecture8-bs072.html#eigenstates-of-h-0" style="font-size: 80%;">Eigenstates of \( H_0 \)</a></li>
+     <!-- navigation toc: --> <li><a href="#eigenstates-of-h-0" style="font-size: 80%;">Eigenstates of \( H_0 \)</a></li>
      <!-- navigation toc: --> <li><a href="._lecture8-bs073.html#density-matrices" style="font-size: 80%;">Density matrices</a></li>
      <!-- navigation toc: --> <li><a href="._lecture8-bs074.html#more-on-density-matrices" style="font-size: 80%;">More on density matrices</a></li>
 
@@ -382,50 +382,60 @@ MathJax.Hub.Config({
 </div> <!-- end of navigation bar -->
 <div class="container">
 <p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p> <!-- add vertical space -->
-<a name="part0000"></a>
-<!-- ------------------- main content ---------------------- -->
-<div class="jumbotron">
-<center>
-<h1>Many-body theory and nuclear few- and many-body systems</h1>
-</center>  <!-- document title -->
+<a name="part0072"></a>
+<!-- !split -->
+<h2 id="eigenstates-of-h-0" class="anchor">Eigenstates of \( H_0 \) </h2>
 
-<!-- author(s): Benjamin Hall and Morten Hjorth-Jensen -->
-<center>
-<b>Benjamin Hall and Morten Hjorth-Jensen</b> 
-</center>
-<!-- institution -->
-<center>
-<b><a href="http://www.frib.msu.edu/" target="_self">Facility for Rare Isotope Beams and National Superconducting Cyclotron Laboratory</a> and <a href="https://www.pa.msu.edu/" target="_self">Department of Physics and Astronomy</a>, <a href="http://www.msu.edu/" target="_self">Michigan State University</a>, East Lansing, MI 48824, USA</b>
-</center>
-<br>
-<center>
-<h4>Jun 21, 2022</h4>
-</center> <!-- date -->
-<br>
+<p>These computational basis states define also the eigenstates of the non-interacting  Hamiltonian</p>
+$$
+H_0\vert 00 \rangle = \epsilon_{00}\vert 00 \rangle,
+$$
 
+$$
+H_0\vert 10 \rangle = \epsilon_{10}\vert 10 \rangle,
+$$
 
+$$
+H_0\vert 01 \rangle = \epsilon_{01}\vert 01 \rangle,
+$$
 
-<p><a href="._lecture8-bs001.html" class="btn btn-primary btn-lg">Read &raquo;</a></p>
+<p>and</p>
+$$
+H_0\vert 11 \rangle = \epsilon_{11}\vert 11 \rangle.
+$$
 
+<p>The interacting part of the Hamiltonian \( H_{\mathrm{I}} \) is given by the tensor product of two \( \sigma_x \) and \( \sigma_z \)  matrices, respectively, that is</p>
+$$
+H_{\mathrm{I}}=H_x\sigma_x\otimes\sigma_x+H_z\sigma_z\otimes\sigma_z,
+$$
 
-</div> <!-- end jumbotron -->
+<p>where \( H_x \) and \( H_z \) are interaction strength parameters. Our final Hamiltonian matrix is given by</p>
+$$
+\boldsymbol{H}=\begin{bmatrix} \epsilon_{00}+H_z & 0 & 0 & H_x \\
+                       0  & \epsilon_{10}-H_z & H_x & 0 \\
+		       0 & H_x & \epsilon_{01}+H_z & 0 \\
+		       H_x & 0 & 0 & \epsilon_{11} -H_z \end{bmatrix}.
+$$
+
 
 <p>
 <!-- navigation buttons at the bottom of the page -->
 <ul class="pagination">
-  <li class="active"><a href="._lecture8-bs000.html">1</a></li>
-  <li><a href="._lecture8-bs001.html">2</a></li>
-  <li><a href="._lecture8-bs002.html">3</a></li>
-  <li><a href="._lecture8-bs003.html">4</a></li>
-  <li><a href="._lecture8-bs004.html">5</a></li>
-  <li><a href="._lecture8-bs005.html">6</a></li>
-  <li><a href="._lecture8-bs006.html">7</a></li>
-  <li><a href="._lecture8-bs007.html">8</a></li>
-  <li><a href="._lecture8-bs008.html">9</a></li>
-  <li><a href="._lecture8-bs009.html">10</a></li>
+<li><a href="._lecture8-bs071.html">&laquo;</a></li>
+  <li><a href="._lecture8-bs000.html">1</a></li>
   <li><a href="">...</a></li>
+  <li><a href="._lecture8-bs064.html">65</a></li>
+  <li><a href="._lecture8-bs065.html">66</a></li>
+  <li><a href="._lecture8-bs066.html">67</a></li>
+  <li><a href="._lecture8-bs067.html">68</a></li>
+  <li><a href="._lecture8-bs068.html">69</a></li>
+  <li><a href="._lecture8-bs069.html">70</a></li>
+  <li><a href="._lecture8-bs070.html">71</a></li>
+  <li><a href="._lecture8-bs071.html">72</a></li>
+  <li class="active"><a href="._lecture8-bs072.html">73</a></li>
+  <li><a href="._lecture8-bs073.html">74</a></li>
   <li><a href="._lecture8-bs074.html">75</a></li>
-  <li><a href="._lecture8-bs001.html">&raquo;</a></li>
+  <li><a href="._lecture8-bs073.html">&raquo;</a></li>
 </ul>
 <!-- ------------------- end of main content --------------- -->
 </div>  <!-- end container -->
@@ -438,7 +448,7 @@ MathJax.Hub.Config({
 </footer>
 -->
 <center style="font-size:80%">
-<!-- copyright --> &copy; 2013-2022, Benjamin Hall and Morten Hjorth-Jensen. Released under CC Attribution-NonCommercial 4.0 license
+<!-- copyright only on the titlepage -->
 </center>
 </body>
 </html>

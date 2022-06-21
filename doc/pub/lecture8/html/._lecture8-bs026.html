@@ -382,50 +382,53 @@ MathJax.Hub.Config({
 </div> <!-- end of navigation bar -->
 <div class="container">
 <p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p> <!-- add vertical space -->
-<a name="part0000"></a>
-<!-- ------------------- main content ---------------------- -->
-<div class="jumbotron">
-<center>
-<h1>Many-body theory and nuclear few- and many-body systems</h1>
-</center>  <!-- document title -->
+<a name="part0026"></a>
+<!-- !split -->
+<h2 id="rewriting-the-fci-equation-more-to-add" class="anchor">Rewriting the FCI equation, more to add  </h2>
 
-<!-- author(s): Benjamin Hall and Morten Hjorth-Jensen -->
-<center>
-<b>Benjamin Hall and Morten Hjorth-Jensen</b> 
-</center>
-<!-- institution -->
-<center>
-<b><a href="http://www.frib.msu.edu/" target="_self">Facility for Rare Isotope Beams and National Superconducting Cyclotron Laboratory</a> and <a href="https://www.pa.msu.edu/" target="_self">Department of Physics and Astronomy</a>, <a href="http://www.msu.edu/" target="_self">Michigan State University</a>, East Lansing, MI 48824, USA</b>
-</center>
-<br>
-<center>
-<h4>Jun 21, 2022</h4>
-</center> <!-- date -->
-<br>
+<p>The observant reader will however see that we need an equation for \( C_{jk}^{bc} \) and \( C_{jkl}^{bcd} \) as well.
+To find equations for these coefficients we need then to continue our multiplications from the left with the various
+\( \Phi_{H}^P \) terms. 
+</p>
 
+<p>For \( C_{jk}^{bc} \) we need then</p>
+$$
+\langle \Phi_{ij}^{ab} | \hat{H} -E| \Phi_0\rangle + \sum_{kc}\langle \Phi_{ij}^{ab} | \hat{H} -E|\Phi_{k}^{c} \rangle C_{k}^{c}+
+$$
 
+$$
+\sum_{cdkl}\langle \Phi_{ij}^{ab} | \hat{H} -E|\Phi_{kl}^{cd} \rangle C_{kl}^{cd}+\sum_{cdeklm}\langle \Phi_{ij}^{ab} | \hat{H} -E|\Phi_{klm}^{cde} \rangle C_{klm}^{cde}+\sum_{cdefklmn}\langle \Phi_{ij}^{ab} | \hat{H} -E|\Phi_{klmn}^{cdef} \rangle C_{klmn}^{cdef}=0,
+$$
 
-<p><a href="._lecture8-bs001.html" class="btn btn-primary btn-lg">Read &raquo;</a></p>
-
-
-</div> <!-- end jumbotron -->
+<p>and we can isolate the coefficients \( C_{kl}^{cd} \) in a similar way as we did for the coefficients \( C_{i}^{a} \). </p>
 
 <p>
 <!-- navigation buttons at the bottom of the page -->
 <ul class="pagination">
-  <li class="active"><a href="._lecture8-bs000.html">1</a></li>
-  <li><a href="._lecture8-bs001.html">2</a></li>
-  <li><a href="._lecture8-bs002.html">3</a></li>
-  <li><a href="._lecture8-bs003.html">4</a></li>
-  <li><a href="._lecture8-bs004.html">5</a></li>
-  <li><a href="._lecture8-bs005.html">6</a></li>
-  <li><a href="._lecture8-bs006.html">7</a></li>
-  <li><a href="._lecture8-bs007.html">8</a></li>
-  <li><a href="._lecture8-bs008.html">9</a></li>
-  <li><a href="._lecture8-bs009.html">10</a></li>
+<li><a href="._lecture8-bs025.html">&laquo;</a></li>
+  <li><a href="._lecture8-bs000.html">1</a></li>
+  <li><a href="">...</a></li>
+  <li><a href="._lecture8-bs018.html">19</a></li>
+  <li><a href="._lecture8-bs019.html">20</a></li>
+  <li><a href="._lecture8-bs020.html">21</a></li>
+  <li><a href="._lecture8-bs021.html">22</a></li>
+  <li><a href="._lecture8-bs022.html">23</a></li>
+  <li><a href="._lecture8-bs023.html">24</a></li>
+  <li><a href="._lecture8-bs024.html">25</a></li>
+  <li><a href="._lecture8-bs025.html">26</a></li>
+  <li class="active"><a href="._lecture8-bs026.html">27</a></li>
+  <li><a href="._lecture8-bs027.html">28</a></li>
+  <li><a href="._lecture8-bs028.html">29</a></li>
+  <li><a href="._lecture8-bs029.html">30</a></li>
+  <li><a href="._lecture8-bs030.html">31</a></li>
+  <li><a href="._lecture8-bs031.html">32</a></li>
+  <li><a href="._lecture8-bs032.html">33</a></li>
+  <li><a href="._lecture8-bs033.html">34</a></li>
+  <li><a href="._lecture8-bs034.html">35</a></li>
+  <li><a href="._lecture8-bs035.html">36</a></li>
   <li><a href="">...</a></li>
   <li><a href="._lecture8-bs074.html">75</a></li>
-  <li><a href="._lecture8-bs001.html">&raquo;</a></li>
+  <li><a href="._lecture8-bs027.html">&raquo;</a></li>
 </ul>
 <!-- ------------------- end of main content --------------- -->
 </div>  <!-- end container -->
@@ -438,7 +441,7 @@ MathJax.Hub.Config({
 </footer>
 -->
 <center style="font-size:80%">
-<!-- copyright --> &copy; 2013-2022, Benjamin Hall and Morten Hjorth-Jensen. Released under CC Attribution-NonCommercial 4.0 license
+<!-- copyright only on the titlepage -->
 </center>
 </body>
 </html>

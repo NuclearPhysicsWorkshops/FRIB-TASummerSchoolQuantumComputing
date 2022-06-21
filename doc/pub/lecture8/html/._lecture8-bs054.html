@@ -351,7 +351,7 @@ MathJax.Hub.Config({
      <!-- navigation toc: --> <li><a href="._lecture8-bs051.html#ex-6" style="font-size: 80%;">Exercise 6: How many unknowns?</a></li>
      <!-- navigation toc: --> <li><a href="._lecture8-bs052.html#approximations" style="font-size: 80%;">Approximations</a></li>
      <!-- navigation toc: --> <li><a href="._lecture8-bs053.html#structure-of-equations" style="font-size: 80%;">Structure of equations</a></li>
-     <!-- navigation toc: --> <li><a href="._lecture8-bs054.html#ex-6b" style="font-size: 80%;">Exercise 7: Why is CCD not exact?</a></li>
+     <!-- navigation toc: --> <li><a href="#ex-6b" style="font-size: 80%;">Exercise 7: Why is CCD not exact?</a></li>
      <!-- navigation toc: --> <li><a href="._lecture8-bs055.html#computing-the-similarity-transformed-hamiltonian" style="font-size: 80%;">Computing the similarity-transformed Hamiltonian</a></li>
      <!-- navigation toc: --> <li><a href="._lecture8-bs055.html#ex-7" style="font-size: 80%;">Exercise 8: When does CCSD truncate?</a></li>
      <!-- navigation toc: --> <li><a href="._lecture8-bs056.html#non-hermiticity" style="font-size: 80%;">Non-hermiticity</a></li>
@@ -382,50 +382,73 @@ MathJax.Hub.Config({
 </div> <!-- end of navigation bar -->
 <div class="container">
 <p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p> <!-- add vertical space -->
-<a name="part0000"></a>
-<!-- ------------------- main content ---------------------- -->
-<div class="jumbotron">
-<center>
-<h1>Many-body theory and nuclear few- and many-body systems</h1>
-</center>  <!-- document title -->
+<a name="part0054"></a>
+<!-- !split -->
 
-<!-- author(s): Benjamin Hall and Morten Hjorth-Jensen -->
-<center>
-<b>Benjamin Hall and Morten Hjorth-Jensen</b> 
-</center>
-<!-- institution -->
-<center>
-<b><a href="http://www.frib.msu.edu/" target="_self">Facility for Rare Isotope Beams and National Superconducting Cyclotron Laboratory</a> and <a href="https://www.pa.msu.edu/" target="_self">Department of Physics and Astronomy</a>, <a href="http://www.msu.edu/" target="_self">Michigan State University</a>, East Lansing, MI 48824, USA</b>
-</center>
-<br>
-<center>
-<h4>Jun 21, 2022</h4>
-</center> <!-- date -->
-<br>
+<!-- --- begin exercise --- -->
+<h2 id="ex-6b" class="anchor">Exercise 7: Why is CCD not exact?</h2>
 
+<p>Above we argued that a similarity transformation preserves all eigenvalues. Nevertheless, the CCD correlation energy is not the exact correlation energy. Explain!</p>
 
+<!-- --- begin answer of exercise --- -->
 
-<p><a href="._lecture8-bs001.html" class="btn btn-primary btn-lg">Read &raquo;</a></p>
+<p>
+<p><a class="glyphicon glyphicon-hand-right showdetails" data-toggle="collapse"
+ data-target="#exer_7_1" style="font-size: 80%;"></a>
+</p>
+<a href="#exer_7_1" data-toggle="collapse">
+<p>
+<b>Answer.</b>
+</p>
+</a>
+<div class="collapse-group">
+<p><div class="collapse" id="exer_7_1">
 
+<p>The CCD approximation does not make \( \vert\Phi_0\rangle \) an exact
+eigenstate of \( \overline{H_N} \); it is only an eigenstate when the
+similarity-transformed Hamiltonian is truncated to at most 2p-2h
+states. The full \( \overline{H_N} \), with \( T=T_2 \), would involve
+six-body terms (do you understand this?), and this full Hamiltonian
+would reproduce the exact correlation energy. Thus CCD is a similarity
+transformation plus a truncation, which decouples the ground state only
+from 2p-2h states.
+</p>
 
-</div> <!-- end jumbotron -->
+</div></p>
+</div>
+</p>
+
+<!-- --- end answer of exercise --- -->
+
+<!-- --- end exercise --- -->
 
 <p>
 <!-- navigation buttons at the bottom of the page -->
 <ul class="pagination">
-  <li class="active"><a href="._lecture8-bs000.html">1</a></li>
-  <li><a href="._lecture8-bs001.html">2</a></li>
-  <li><a href="._lecture8-bs002.html">3</a></li>
-  <li><a href="._lecture8-bs003.html">4</a></li>
-  <li><a href="._lecture8-bs004.html">5</a></li>
-  <li><a href="._lecture8-bs005.html">6</a></li>
-  <li><a href="._lecture8-bs006.html">7</a></li>
-  <li><a href="._lecture8-bs007.html">8</a></li>
-  <li><a href="._lecture8-bs008.html">9</a></li>
-  <li><a href="._lecture8-bs009.html">10</a></li>
+<li><a href="._lecture8-bs053.html">&laquo;</a></li>
+  <li><a href="._lecture8-bs000.html">1</a></li>
+  <li><a href="">...</a></li>
+  <li><a href="._lecture8-bs046.html">47</a></li>
+  <li><a href="._lecture8-bs047.html">48</a></li>
+  <li><a href="._lecture8-bs048.html">49</a></li>
+  <li><a href="._lecture8-bs049.html">50</a></li>
+  <li><a href="._lecture8-bs050.html">51</a></li>
+  <li><a href="._lecture8-bs051.html">52</a></li>
+  <li><a href="._lecture8-bs052.html">53</a></li>
+  <li><a href="._lecture8-bs053.html">54</a></li>
+  <li class="active"><a href="._lecture8-bs054.html">55</a></li>
+  <li><a href="._lecture8-bs055.html">56</a></li>
+  <li><a href="._lecture8-bs056.html">57</a></li>
+  <li><a href="._lecture8-bs057.html">58</a></li>
+  <li><a href="._lecture8-bs058.html">59</a></li>
+  <li><a href="._lecture8-bs059.html">60</a></li>
+  <li><a href="._lecture8-bs060.html">61</a></li>
+  <li><a href="._lecture8-bs061.html">62</a></li>
+  <li><a href="._lecture8-bs062.html">63</a></li>
+  <li><a href="._lecture8-bs063.html">64</a></li>
   <li><a href="">...</a></li>
   <li><a href="._lecture8-bs074.html">75</a></li>
-  <li><a href="._lecture8-bs001.html">&raquo;</a></li>
+  <li><a href="._lecture8-bs055.html">&raquo;</a></li>
 </ul>
 <!-- ------------------- end of main content --------------- -->
 </div>  <!-- end container -->
@@ -438,7 +461,7 @@ MathJax.Hub.Config({
 </footer>
 -->
 <center style="font-size:80%">
-<!-- copyright --> &copy; 2013-2022, Benjamin Hall and Morten Hjorth-Jensen. Released under CC Attribution-NonCommercial 4.0 license
+<!-- copyright only on the titlepage -->
 </center>
 </body>
 </html>

@@ -360,7 +360,7 @@ MathJax.Hub.Config({
      <!-- navigation toc: --> <li><a href="._lecture8-bs059.html#ccd-approximation" style="font-size: 80%;">CCD Approximation</a></li>
      <!-- navigation toc: --> <li><a href="._lecture8-bs060.html#ex-12" style="font-size: 80%;">Exercise 10: Derive the CCD equations!</a></li>
      <!-- navigation toc: --> <li><a href="._lecture8-bs061.html#ex-13" style="font-size: 80%;">Exercise 11: Computational scaling of CCD</a></li>
-     <!-- navigation toc: --> <li><a href="._lecture8-bs062.html#computational-costs" style="font-size: 80%;">Computational costs</a></li>
+     <!-- navigation toc: --> <li><a href="#computational-costs" style="font-size: 80%;">Computational costs</a></li>
      <!-- navigation toc: --> <li><a href="._lecture8-bs063.html#solving-the-ccd-equations" style="font-size: 80%;">Solving the CCD equations</a></li>
      <!-- navigation toc: --> <li><a href="._lecture8-bs064.html#ccd-for-the-pairing-hamiltonian" style="font-size: 80%;">CCD for the pairing Hamiltonian</a></li>
      <!-- navigation toc: --> <li><a href="._lecture8-bs065.html#the-jordan-wigner-transformation" style="font-size: 80%;">The Jordan-Wigner transformation</a></li>
@@ -382,50 +382,65 @@ MathJax.Hub.Config({
 </div> <!-- end of navigation bar -->
 <div class="container">
 <p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p> <!-- add vertical space -->
-<a name="part0000"></a>
-<!-- ------------------- main content ---------------------- -->
-<div class="jumbotron">
-<center>
-<h1>Many-body theory and nuclear few- and many-body systems</h1>
-</center>  <!-- document title -->
+<a name="part0062"></a>
+<!-- !split -->
+<h2 id="computational-costs" class="anchor">Computational costs </h2>
+<p>Note that \( n_u\gg A \) in general. In textbooks, one reads that CCD (and
+CCSD) cost only \( A^2n_u^4 \). Our most expensive diagrams, however are
+\( A^4n_u^4 \). What is going on?
+</p>
 
-<!-- author(s): Benjamin Hall and Morten Hjorth-Jensen -->
-<center>
-<b>Benjamin Hall and Morten Hjorth-Jensen</b> 
-</center>
-<!-- institution -->
-<center>
-<b><a href="http://www.frib.msu.edu/" target="_self">Facility for Rare Isotope Beams and National Superconducting Cyclotron Laboratory</a> and <a href="https://www.pa.msu.edu/" target="_self">Department of Physics and Astronomy</a>, <a href="http://www.msu.edu/" target="_self">Michigan State University</a>, East Lansing, MI 48824, USA</b>
-</center>
-<br>
-<center>
-<h4>Jun 21, 2022</h4>
-</center> <!-- date -->
-<br>
+<p>To understand this puzzle, let us consider the most expensive 2p-2h contribution. We break up the computation into two steps,
+computing first the intermediate
+</p>
+$$
+\begin{align}
+\chi_{ij}^{kl}\equiv {1\over 2} \sum_{cd} \langle kl\vert V\vert cd\rangle t_{ij}^{cd}
+\tag{29}
+\end{align}
+$$
 
+<p>at a cost of \( A^4n_u^2 \), and then </p>
+$$
+\begin{align}
+{1\over 2} \sum_{kl} \chi_{ij}^{kl} t_{kl}^{ab}  
+\tag{30}
+\end{align}
+$$
 
-
-<p><a href="._lecture8-bs001.html" class="btn btn-primary btn-lg">Read &raquo;</a></p>
-
-
-</div> <!-- end jumbotron -->
+<p>at a cost of \( A^4n_u^2 \). This is affordable. The price to pay is the
+storage of the intermediate \( \chi_{ij}^{kl} \), i.e. we traded
+memory for computational cycles. This trick is known as
+&quot;factorization.&quot; 
+</p>
 
 <p>
 <!-- navigation buttons at the bottom of the page -->
 <ul class="pagination">
-  <li class="active"><a href="._lecture8-bs000.html">1</a></li>
-  <li><a href="._lecture8-bs001.html">2</a></li>
-  <li><a href="._lecture8-bs002.html">3</a></li>
-  <li><a href="._lecture8-bs003.html">4</a></li>
-  <li><a href="._lecture8-bs004.html">5</a></li>
-  <li><a href="._lecture8-bs005.html">6</a></li>
-  <li><a href="._lecture8-bs006.html">7</a></li>
-  <li><a href="._lecture8-bs007.html">8</a></li>
-  <li><a href="._lecture8-bs008.html">9</a></li>
-  <li><a href="._lecture8-bs009.html">10</a></li>
+<li><a href="._lecture8-bs061.html">&laquo;</a></li>
+  <li><a href="._lecture8-bs000.html">1</a></li>
+  <li><a href="">...</a></li>
+  <li><a href="._lecture8-bs054.html">55</a></li>
+  <li><a href="._lecture8-bs055.html">56</a></li>
+  <li><a href="._lecture8-bs056.html">57</a></li>
+  <li><a href="._lecture8-bs057.html">58</a></li>
+  <li><a href="._lecture8-bs058.html">59</a></li>
+  <li><a href="._lecture8-bs059.html">60</a></li>
+  <li><a href="._lecture8-bs060.html">61</a></li>
+  <li><a href="._lecture8-bs061.html">62</a></li>
+  <li class="active"><a href="._lecture8-bs062.html">63</a></li>
+  <li><a href="._lecture8-bs063.html">64</a></li>
+  <li><a href="._lecture8-bs064.html">65</a></li>
+  <li><a href="._lecture8-bs065.html">66</a></li>
+  <li><a href="._lecture8-bs066.html">67</a></li>
+  <li><a href="._lecture8-bs067.html">68</a></li>
+  <li><a href="._lecture8-bs068.html">69</a></li>
+  <li><a href="._lecture8-bs069.html">70</a></li>
+  <li><a href="._lecture8-bs070.html">71</a></li>
+  <li><a href="._lecture8-bs071.html">72</a></li>
   <li><a href="">...</a></li>
   <li><a href="._lecture8-bs074.html">75</a></li>
-  <li><a href="._lecture8-bs001.html">&raquo;</a></li>
+  <li><a href="._lecture8-bs063.html">&raquo;</a></li>
 </ul>
 <!-- ------------------- end of main content --------------- -->
 </div>  <!-- end container -->
@@ -438,7 +453,7 @@ MathJax.Hub.Config({
 </footer>
 -->
 <center style="font-size:80%">
-<!-- copyright --> &copy; 2013-2022, Benjamin Hall and Morten Hjorth-Jensen. Released under CC Attribution-NonCommercial 4.0 license
+<!-- copyright only on the titlepage -->
 </center>
 </body>
 </html>

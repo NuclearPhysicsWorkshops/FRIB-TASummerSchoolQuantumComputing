@@ -362,7 +362,7 @@ MathJax.Hub.Config({
      <!-- navigation toc: --> <li><a href="._lecture8-bs061.html#ex-13" style="font-size: 80%;">Exercise 11: Computational scaling of CCD</a></li>
      <!-- navigation toc: --> <li><a href="._lecture8-bs062.html#computational-costs" style="font-size: 80%;">Computational costs</a></li>
      <!-- navigation toc: --> <li><a href="._lecture8-bs063.html#solving-the-ccd-equations" style="font-size: 80%;">Solving the CCD equations</a></li>
-     <!-- navigation toc: --> <li><a href="._lecture8-bs064.html#ccd-for-the-pairing-hamiltonian" style="font-size: 80%;">CCD for the pairing Hamiltonian</a></li>
+     <!-- navigation toc: --> <li><a href="#ccd-for-the-pairing-hamiltonian" style="font-size: 80%;">CCD for the pairing Hamiltonian</a></li>
      <!-- navigation toc: --> <li><a href="._lecture8-bs065.html#the-jordan-wigner-transformation" style="font-size: 80%;">The Jordan-Wigner transformation</a></li>
      <!-- navigation toc: --> <li><a href="._lecture8-bs066.html#explicit-expressions" style="font-size: 80%;">Explicit expressions</a></li>
      <!-- navigation toc: --> <li><a href="._lecture8-bs067.html#replacing-creation-and-annihilation-operators-with-pauli-matrices" style="font-size: 80%;">Replacing creation and annihilation operators with Pauli matrices</a></li>
@@ -382,50 +382,53 @@ MathJax.Hub.Config({
 </div> <!-- end of navigation bar -->
 <div class="container">
 <p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p> <!-- add vertical space -->
-<a name="part0000"></a>
-<!-- ------------------- main content ---------------------- -->
-<div class="jumbotron">
-<center>
-<h1>Many-body theory and nuclear few- and many-body systems</h1>
-</center>  <!-- document title -->
+<a name="part0064"></a>
+<!-- !split -->
+<h2 id="ccd-for-the-pairing-hamiltonian" class="anchor">CCD for the pairing Hamiltonian </h2>
 
-<!-- author(s): Benjamin Hall and Morten Hjorth-Jensen -->
-<center>
-<b>Benjamin Hall and Morten Hjorth-Jensen</b> 
-</center>
-<!-- institution -->
-<center>
-<b><a href="http://www.frib.msu.edu/" target="_self">Facility for Rare Isotope Beams and National Superconducting Cyclotron Laboratory</a> and <a href="https://www.pa.msu.edu/" target="_self">Department of Physics and Astronomy</a>, <a href="http://www.msu.edu/" target="_self">Michigan State University</a>, East Lansing, MI 48824, USA</b>
-</center>
-<br>
-<center>
-<h4>Jun 21, 2022</h4>
-</center> <!-- date -->
-<br>
+<p>You learned about the pairing Hamiltonian earlier in this
+school. Convince yourself that this Hamiltonian does not induce any
+1p-1h excitations. We can then solve the CCD equations for this
+problem. This consists of the following steps
+</p>
 
-
-
-<p><a href="._lecture8-bs001.html" class="btn btn-primary btn-lg">Read &raquo;</a></p>
-
-
-</div> <!-- end jumbotron -->
+<ol>
+<li> Write a function that compute the potential, i.e. it returns a four-indexed array (or tensor). We need \( \langle ab\vert V\vert cd\rangle \), \( \langle ij\vert V\vert kl\rangle \), and \( \langle ab\vert V\vert ij\rangle \). Why is there no \( \langle ab\vert V\vert id\rangle \) or \( \langle ai\vert V\vert jb\rangle \) ?</li>
+<li> Write a function that computes the Fock matrix, i.e. a two-indexed array. We only need \( f_a^b \) and \( f_i^j \). Why?</li> 
+<li> Initialize the cluster amplitudes according to Eq. <a href="._lecture8-bs063.html#mjx-eqn-32">(32)</a>, and solve Eq. <a href="._lecture8-bs063.html#mjx-eqn-31">(31)</a> by iteration. The cluster amplitudes \( T_1 \) and \( T_2 \) are two- and four-indexed arrays, respectively.</li>
+</ol>
+<p>Please note that the contraction of tensors (i.e. the summation over
+common indices in products of tensors) is very user friendly and
+elegant in python when <code>numpy.einsum</code> is used.
+</p>
 
 <p>
 <!-- navigation buttons at the bottom of the page -->
 <ul class="pagination">
-  <li class="active"><a href="._lecture8-bs000.html">1</a></li>
-  <li><a href="._lecture8-bs001.html">2</a></li>
-  <li><a href="._lecture8-bs002.html">3</a></li>
-  <li><a href="._lecture8-bs003.html">4</a></li>
-  <li><a href="._lecture8-bs004.html">5</a></li>
-  <li><a href="._lecture8-bs005.html">6</a></li>
-  <li><a href="._lecture8-bs006.html">7</a></li>
-  <li><a href="._lecture8-bs007.html">8</a></li>
-  <li><a href="._lecture8-bs008.html">9</a></li>
-  <li><a href="._lecture8-bs009.html">10</a></li>
+<li><a href="._lecture8-bs063.html">&laquo;</a></li>
+  <li><a href="._lecture8-bs000.html">1</a></li>
+  <li><a href="">...</a></li>
+  <li><a href="._lecture8-bs056.html">57</a></li>
+  <li><a href="._lecture8-bs057.html">58</a></li>
+  <li><a href="._lecture8-bs058.html">59</a></li>
+  <li><a href="._lecture8-bs059.html">60</a></li>
+  <li><a href="._lecture8-bs060.html">61</a></li>
+  <li><a href="._lecture8-bs061.html">62</a></li>
+  <li><a href="._lecture8-bs062.html">63</a></li>
+  <li><a href="._lecture8-bs063.html">64</a></li>
+  <li class="active"><a href="._lecture8-bs064.html">65</a></li>
+  <li><a href="._lecture8-bs065.html">66</a></li>
+  <li><a href="._lecture8-bs066.html">67</a></li>
+  <li><a href="._lecture8-bs067.html">68</a></li>
+  <li><a href="._lecture8-bs068.html">69</a></li>
+  <li><a href="._lecture8-bs069.html">70</a></li>
+  <li><a href="._lecture8-bs070.html">71</a></li>
+  <li><a href="._lecture8-bs071.html">72</a></li>
+  <li><a href="._lecture8-bs072.html">73</a></li>
+  <li><a href="._lecture8-bs073.html">74</a></li>
   <li><a href="">...</a></li>
   <li><a href="._lecture8-bs074.html">75</a></li>
-  <li><a href="._lecture8-bs001.html">&raquo;</a></li>
+  <li><a href="._lecture8-bs065.html">&raquo;</a></li>
 </ul>
 <!-- ------------------- end of main content --------------- -->
 </div>  <!-- end container -->
@@ -438,7 +441,7 @@ MathJax.Hub.Config({
 </footer>
 -->
 <center style="font-size:80%">
-<!-- copyright --> &copy; 2013-2022, Benjamin Hall and Morten Hjorth-Jensen. Released under CC Attribution-NonCommercial 4.0 license
+<!-- copyright only on the titlepage -->
 </center>
 </body>
 </html>

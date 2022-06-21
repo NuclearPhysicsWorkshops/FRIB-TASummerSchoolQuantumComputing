@@ -367,7 +367,7 @@ MathJax.Hub.Config({
      <!-- navigation toc: --> <li><a href="._lecture8-bs066.html#explicit-expressions" style="font-size: 80%;">Explicit expressions</a></li>
      <!-- navigation toc: --> <li><a href="._lecture8-bs067.html#replacing-creation-and-annihilation-operators-with-pauli-matrices" style="font-size: 80%;">Replacing creation and annihilation operators with Pauli matrices</a></li>
      <!-- navigation toc: --> <li><a href="._lecture8-bs068.html#additional-material-on-level-crossing-and-entanglement" style="font-size: 80%;">Additional material on level crossing and entanglement</a></li>
-     <!-- navigation toc: --> <li><a href="._lecture8-bs069.html#simple-model" style="font-size: 80%;">Simple model</a></li>
+     <!-- navigation toc: --> <li><a href="#simple-model" style="font-size: 80%;">Simple model</a></li>
      <!-- navigation toc: --> <li><a href="._lecture8-bs070.html#setting-up-the-system" style="font-size: 80%;">Setting up the system</a></li>
      <!-- navigation toc: --> <li><a href="._lecture8-bs071.html#extended-model" style="font-size: 80%;">Extended model</a></li>
      <!-- navigation toc: --> <li><a href="._lecture8-bs072.html#eigenstates-of-h-0" style="font-size: 80%;">Eigenstates of \( H_0 \)</a></li>
@@ -382,50 +382,90 @@ MathJax.Hub.Config({
 </div> <!-- end of navigation bar -->
 <div class="container">
 <p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p> <!-- add vertical space -->
-<a name="part0000"></a>
-<!-- ------------------- main content ---------------------- -->
-<div class="jumbotron">
-<center>
-<h1>Many-body theory and nuclear few- and many-body systems</h1>
-</center>  <!-- document title -->
+<a name="part0069"></a>
+<!-- !split -->
+<h2 id="simple-model" class="anchor">Simple model </h2>
 
-<!-- author(s): Benjamin Hall and Morten Hjorth-Jensen -->
-<center>
-<b>Benjamin Hall and Morten Hjorth-Jensen</b> 
-</center>
-<!-- institution -->
-<center>
-<b><a href="http://www.frib.msu.edu/" target="_self">Facility for Rare Isotope Beams and National Superconducting Cyclotron Laboratory</a> and <a href="https://www.pa.msu.edu/" target="_self">Department of Physics and Astronomy</a>, <a href="http://www.msu.edu/" target="_self">Michigan State University</a>, East Lansing, MI 48824, USA</b>
-</center>
-<br>
-<center>
-<h4>Jun 21, 2022</h4>
-</center> <!-- date -->
-<br>
+<p>We let our hamiltonian depend linearly on a strength parameter \( z \)</p>
 
+$$
+       H=H_0+\lambda H_\mathrm{I},
+$$
 
+<p>with \( \lambda \in [0,1] \), where the limits \( \lambda=0 \) and \( \lambda=1 \)
+represent the non-interacting (or unperturbed) and fully interacting
+system, respectively.  The model is an eigenvalue problem with only
+two available states, which we label \( \vert 0\rangle \) and \( \vert
+1\rangle \), respectively. Below we will let state \( \vert 0 \rangle \)
+represent the lowest state (often referred to as model-space state)
+eigenvalue whereas state \( \vert 1\rangle \) represents the eigenvalue of
+the excluded space.  The non-interacting solutions to our problem are
+</p>
 
-<p><a href="._lecture8-bs001.html" class="btn btn-primary btn-lg">Read &raquo;</a></p>
+$$
+\begin{equation}
+       H_0\vert 0 \rangle =\epsilon_0\vert 0 \rangle,
+\tag{34}
+\end{equation}
+$$
 
+<p>and</p>
+$$
+\begin{equation}
+       H_0\vert 1\rangle =\epsilon_1\vert 1\rangle,
+\tag{35}
+\end{equation}
+$$
 
-</div> <!-- end jumbotron -->
+<p>with \( \epsilon_0 < \epsilon_1 \). We label the off-diagonal matrix
+elements \( X \), while \( X_0=\langle 0 \vert H_I\vert 0 \rangle \) and
+\( X_1=\langle 1 \vert H_1\vert 1 \rangle \).  The exact eigenvalue
+problem
+</p>
+
+$$
+\begin{equation}
+\left(\begin{array}{cc}\epsilon_0+\lambda X_0 &\lambda X \\
+zX &\epsilon_1+\lambda X_1 \end{array}\right)
+\tag{36}
+\end{equation}
+$$
+
+<p>yields</p>
+$$
+\begin{eqnarray}
+\tag{37}
+     E(\lambda)=&\frac{1}{2}\left\{\epsilon_0 +\epsilon_1 +\lambda X_0
+     +\lambda X_1 \pm \left(
+     \epsilon_1 -\epsilon_0 +\lambda X_1-\lambda X_0\right) \right. \\ \nonumber
+     & \left. \times\sqrt{1+\frac{4\lambda^2X^2}{\left(
+     \epsilon_1 -\epsilon_0 +\lambda X_1-\lambda X_0\right)^2}}
+     \right\}.
+\end{eqnarray}
+$$
+
 
 <p>
 <!-- navigation buttons at the bottom of the page -->
 <ul class="pagination">
-  <li class="active"><a href="._lecture8-bs000.html">1</a></li>
-  <li><a href="._lecture8-bs001.html">2</a></li>
-  <li><a href="._lecture8-bs002.html">3</a></li>
-  <li><a href="._lecture8-bs003.html">4</a></li>
-  <li><a href="._lecture8-bs004.html">5</a></li>
-  <li><a href="._lecture8-bs005.html">6</a></li>
-  <li><a href="._lecture8-bs006.html">7</a></li>
-  <li><a href="._lecture8-bs007.html">8</a></li>
-  <li><a href="._lecture8-bs008.html">9</a></li>
-  <li><a href="._lecture8-bs009.html">10</a></li>
+<li><a href="._lecture8-bs068.html">&laquo;</a></li>
+  <li><a href="._lecture8-bs000.html">1</a></li>
   <li><a href="">...</a></li>
+  <li><a href="._lecture8-bs061.html">62</a></li>
+  <li><a href="._lecture8-bs062.html">63</a></li>
+  <li><a href="._lecture8-bs063.html">64</a></li>
+  <li><a href="._lecture8-bs064.html">65</a></li>
+  <li><a href="._lecture8-bs065.html">66</a></li>
+  <li><a href="._lecture8-bs066.html">67</a></li>
+  <li><a href="._lecture8-bs067.html">68</a></li>
+  <li><a href="._lecture8-bs068.html">69</a></li>
+  <li class="active"><a href="._lecture8-bs069.html">70</a></li>
+  <li><a href="._lecture8-bs070.html">71</a></li>
+  <li><a href="._lecture8-bs071.html">72</a></li>
+  <li><a href="._lecture8-bs072.html">73</a></li>
+  <li><a href="._lecture8-bs073.html">74</a></li>
   <li><a href="._lecture8-bs074.html">75</a></li>
-  <li><a href="._lecture8-bs001.html">&raquo;</a></li>
+  <li><a href="._lecture8-bs070.html">&raquo;</a></li>
 </ul>
 <!-- ------------------- end of main content --------------- -->
 </div>  <!-- end container -->
@@ -438,7 +478,7 @@ MathJax.Hub.Config({
 </footer>
 -->
 <center style="font-size:80%">
-<!-- copyright --> &copy; 2013-2022, Benjamin Hall and Morten Hjorth-Jensen. Released under CC Attribution-NonCommercial 4.0 license
+<!-- copyright only on the titlepage -->
 </center>
 </body>
 </html>
