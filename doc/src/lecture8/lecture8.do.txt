@@ -412,7 +412,7 @@ For a model space which comprises the first for major shells only $0s$, $0p$, $1
 \left (\begin{array}{c} 40 \\ 8\end{array} \right) =\frac{40!}{(32)!8!}\sim 10^{9}, 
 \]
 !et
-and multiplying this with the number of proton Slater determinants we end up with approximately with a dimensionality $d$ of $d\sim 10^{18}$.
+and multiplying this with the number of proton Slater determinants we end up with a dimensionality $d$ of $d\sim 10^{18}$.
 !eblock
 
 
@@ -425,41 +425,6 @@ This number can be reduced if we look at specific symmetries only. However, the 
 * For larger dimensionalities iterative eigenvalue solvers like Lanczos' method are used. The most efficient codes at present can handle matrices of $d\sim 10^{10}$. 
 !eblock
 
-
-!split 
-===== A non-practical way of solving the eigenvalue problem =====
-!bblock
-To see this, we look at the contributions arising from 
-!bt
-\[
-\langle \Phi_H^P | = \langle \Phi_0|
-\]
-!et
-in  Eq.~(ref{eq:fullci}), that is we multiply with $\langle \Phi_0 |$
-from the left in 
-!bt
-\[
-(\hat{H} -E)\sum_{P'H'}C_{H'}^{P'}|\Phi_{H'}^{P'} \rangle=0. 
-\]
-!et
-If we assume that we have a two-body operator at most, Slater's rule gives then an equation for the 
-correlation energy in terms of $C_i^a$ and $C_{ij}^{ab}$ only.  We get then
-!bt
-\[
-\langle \Phi_0 | \hat{H} -E| \Phi_0\rangle + \sum_{ai}\langle \Phi_0 | \hat{H} -E|\Phi_{i}^{a} \rangle C_{i}^{a}+
-\sum_{abij}\langle \Phi_0 | \hat{H} -E|\Phi_{ij}^{ab} \rangle C_{ij}^{ab}=0,
-\]
-!et
-or 
-!bt
-\[
-E-E_0 =\Delta E=\sum_{ai}\langle \Phi_0 | \hat{H}|\Phi_{i}^{a} \rangle C_{i}^{a}+
-\sum_{abij}\langle \Phi_0 | \hat{H}|\Phi_{ij}^{ab} \rangle C_{ij}^{ab},
-\]
-!et
-where the energy $E_0$ is the reference energy and $\Delta E$ defines the so-called correlation energy.
-The single-particle basis functions  could be the results of a Hartree-Fock calculation or just the eigenstates of the non-interacting part of the Hamiltonian. 
-!eblock
 
 
 !split 
