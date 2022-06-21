@@ -3,6 +3,16 @@ AUTHOR: Benjamin Hall and Morten Hjorth-Jensen {copyright, 2013-present|CC BY-NC
 DATE:  today
 
 !split
+===== Aims with this set of lectures =====
+
+* Provide a link between standard many-body methods and quantum computing
+* Introduce models from nuclear physics that we will study, pairing and Lipkin model (tomorrow)
+* Rewrite these models in terms of Hamilotnians that can be used in quantum computing
+* Give details on how we can study these models with quantum computing algorithms and discuss their pros and cons
+* and much more
+
+
+!split
 ===== Classical many-body methods and quantum computing =====
 
 Classical many-body methods in quantum mechanics often trade
@@ -45,6 +55,7 @@ state $\vert 0\rangle$ or $\vert 1\rangle$ with probability $|c_0|^2$ or $|c_1|^
 respectively. These coefficients are referred to as amplitudes and
 could be any complex number as long as the measurement probabilities
 are normalized, that is $|c_0|^2 + |c_1|^2 = 1$.
+
 
 
 !split
