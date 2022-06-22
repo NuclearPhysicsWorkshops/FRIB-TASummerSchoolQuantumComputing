@@ -126,10 +126,10 @@ broadcasted via zoom for those who cannot attend in person. The zoom link will b
 - 4pm-6pm: Hands-on sessions and problem solving (BH, JW & all)
 
 ### Wednesday June 22
-- 830am-930am: Noise, error correction and mitigation, part I (RL)
-- 930am-1030am: Noise, error correction and mitigation, part II (RL)
+- 830am-930am: Noise, error correction and mitigation, part I (RL), video of lecture of Ryan at https://youtu.be/kTEId-fQhFY
+- 930am-1030am: Noise, error correction and mitigation, part II (RL), video of lecture of Ryan at https://youtu.be/kTEId-fQhFY
 - 1030am-11am: Break, coffee, tea etc
-- 11am-12pm: Implementing error mitigation, hands-on part (RL)
+- 11am-12pm: Implementing error mitigation, hands-on part (RL), video of lecture of Ryan at https://youtu.be/kTEId-fQhFY
 - 12pm-130pm: Lunch
 - 130pm-230pm: Wrapping up and defining nuclear many-body system to study for hands-on session and possible advanced topics (JB, BH, MHJ & all)
 - 230pm-330pm: Start hands-on session
