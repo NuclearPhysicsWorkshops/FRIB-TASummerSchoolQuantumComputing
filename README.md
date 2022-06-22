@@ -129,9 +129,9 @@ broadcasted via zoom for those who cannot attend in person. The zoom link will b
 - 830am-930am: Noise, error correction and mitigation, part I (RL), video of lecture of Ryan at https://youtu.be/kTEId-fQhFY
 - 930am-1030am: Noise, error correction and mitigation, part II (RL), video of lecture of Ryan at https://youtu.be/kTEId-fQhFY
 - 1030am-11am: Break, coffee, tea etc
-- 11am-12pm: Implementing error mitigation, hands-on part (RL), video of lecture of Ryan at https://youtu.be/kTEId-fQhFY
+- 11am-12pm: Implementing error mitigation, hands-on part (RL), video of lecture of Ryan at https://youtu.be/kTEId-fQhFY (same link for all three of Ryan's sessions)
 - 12pm-130pm: Lunch
-- 130pm-230pm: Wrapping up and defining nuclear many-body system to study for hands-on session and possible advanced topics (JB, BH, MHJ & all)
+- 130pm-230pm: Wrapping up and defining nuclear many-body system to study for hands-on session and possible advanced topics (JB, BH, MHJ & all). Video of lecture at https://youtu.be/2EwsNNcHplk
 - 230pm-330pm: Start hands-on session
 - 330pm-4pm: Break, coffee, tea etc
 - 4pm-6pm: Hands-on sessions and problem solving (all)
