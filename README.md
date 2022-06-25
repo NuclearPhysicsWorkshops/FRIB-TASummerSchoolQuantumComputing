@@ -27,7 +27,7 @@ with the basic ideas of quantum computing. Thereafter, through
 examples from nuclear physics, we will elucidate how different quantum
 algorithms can be used to study these systems. The results from
 various quantum computing algorithms will be compared to standard
-nuclear few- and many-body methods 
+nuclear few- and many-body methods.
 
 ## Organizers:
 Alexei Bazavov (MSU), Scott Bogner (MSU), Heiko Hergert (MSU), Matthew Hirn (MSU), Morten Hjorth-Jensen (MSU), Dean Lee (MSU), Huey-Wen Lin (MSU), and Andrea Shindler (MSU)
